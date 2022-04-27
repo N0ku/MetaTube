@@ -1,0 +1,17 @@
+:root {
+    --primary-color: rgb(185, 15, 15);
+    --secondary-color: rgb(158, 12, 12);
+
+    --dark-theme: rgb(22, 22, 22);
+    --dark-text: rgb(255, 255, 255);
+
+    --bright-theme: rgb(255, 255, 255);
+    --bright-text: rgb(20, 20, 20);
+
+    --font: 'Roboto', sans-serif;
+    --font-Xsmall: 0.6rem;
+    --font-small: 0.9rem;
+    --font-medium: 1.15rem;
+    --font-large: 1.8rem;
+    --font-Xlarge: 2.3rem;
+}
