@@ -22,3 +22,4 @@ if (empty($_GET['name']) == false) {
 
 require_once __DIR__ . '/template.php';
 
+trait_exists
