@@ -58,8 +58,11 @@
     .filter-box-menu{
         width: 33%;
     }
-    .filter-box-menu-button{
+    .filter-box-menu-button1, .filter-box-menu-button2, .filter-box-menu-button3{
         font-size: var(--font-medium);
+        width: 70%;
+        background-color: var(--dark-theme);
+        color: var(--dark-text);
     }
     #search-page{
         background-color: var(--dark-theme);
@@ -90,4 +93,11 @@
     }
     #search-filter-form{
         width: 100%;
+    }
+    #apply-filter{
+        justify-content: center;
+        width: 100%;
+    }
+    #filter-button{
+        width: 30%;
     }

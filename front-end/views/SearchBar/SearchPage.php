@@ -8,6 +8,17 @@
     <?php 
     $en_json = file_get_contents('wordingUtils/en.json'); 
     $decoded_en_json = json_decode($en_json, true);
+    if(isset($_GET["filter_upload_date"])){
+        $_filters["up_date"] = $_GET["filter_upload_date"];
+    }
+    if(isset($_GET["filter_type"])){
+        $_filters["type"] = $_GET["filter_type"];
+    }
+    if(isset($_GET["filter_order_by"])){
+        $_filters["ord_by"] = $_GET["filter_order_by"];
+    }
+    
+
     ?>
 </head>
 <body>
@@ -18,8 +29,8 @@
                 <div id="filter-box" class="row">
                     <div class="column filter-box-menu">
                         <label class="filter-box-title"><?php echo($enJson["global"]['filter-box-title1']) ?></label>
-                        <select name="filter-box-menu-button1" selected="selected">
-                        <option value="">No filter</option>
+                        <select name="filter_upload_date" class="filter-box-menu-button1">
+                            <option></option>
                             <option value="<?php echo($enJson["global"]['filter-box-menu-button1']) ?>"><?php echo($enJson["global"]['filter-box-menu-button1']) ?></option>
                             <option value="<?php echo($enJson["global"]['filter-box-menu-button2']) ?>"><?php echo($enJson["global"]['filter-box-menu-button2']) ?></option>
                             <option value="<?php echo($enJson["global"]['filter-box-menu-button3']) ?>"><?php echo($enJson["global"]['filter-box-menu-button3']) ?></option>
@@ -28,8 +39,8 @@
                     </div>
                     <div class="column filter-box-menu">
                         <label class="filter-box-title"><?php echo($enJson["global"]['filter-box-title2']) ?></label>
-                        <select name="filter-box-menu-button2">
-                            <option value="">No filter</option>
+                        <select name="filter_type" class="filter-box-menu-button2">
+                            <option></option>
                             <option value="<?php echo($enJson["global"]['filter-box-menu-button5']) ?>"><?php echo($enJson["global"]['filter-box-menu-button5']) ?></option>
                             <option value="<?php echo($enJson["global"]['filter-box-menu-button6']) ?>"><?php echo($enJson["global"]['filter-box-menu-button6']) ?></option>
                             <option value="<?php echo($enJson["global"]['filter-box-menu-button7']) ?>"><?php echo($enJson["global"]['filter-box-menu-button7']) ?></option>
@@ -37,16 +48,16 @@
                     </div>
                     <div class="column filter-box-menu">
                         <label class="filter-box-title"><?php echo($enJson["global"]['filter-box-title3']) ?></label>
-                        <select name="filter-box-menu-button3">
-                            <option value="">No filter</option>
+                        <select name="filter_order_by" class="filter-box-menu-button3">
+                            <option></option>
                             <option value="<?php echo($enJson["global"]['filter-box-menu-button8']) ?>"><?php echo($enJson["global"]['filter-box-menu-button8']) ?></option>
                             <option value="<?php echo($enJson["global"]['filter-box-menu-button9']) ?>"><?php echo($enJson["global"]['filter-box-menu-button9']) ?></option>
                             <option value="<?php echo($enJson["global"]['filter-box-menu-button10']) ?>"><?php echo($enJson["global"]['filter-box-menu-button10']) ?></option>
                             <option value="<?php echo($enJson["global"]['filter-box-menu-button11']) ?>"><?php echo($enJson["global"]['filter-box-menu-button11']) ?></option>
                         </select>
                     </div>
-                    <div class="column filter-box-menu">
-                    <button type="submit" class="filter-button" id="apply-filter">Apply</button>
+                    <div class="row" id="apply-filter">
+                    <button type="submit" class="filter-button" id="filter-button">Apply</button>
                     </div>
                 </div>
             </form>
