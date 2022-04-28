@@ -8,7 +8,7 @@
 </head>
 <body>
     <section id="search-page">
-        <button v-on:click="displayFilter" type="button" id="filter-button">{{ t('search.filter-button') }}</button>
+        <button onclick="displayFilter()" type="button" id="filter-button">{{ t('search.filter-button') }}</button>
         <div id="search-page-content" class="row">
             <div id="filter-box" class="row">
                 <div class="column filter-box-menu">
@@ -34,12 +34,12 @@
             </div>
             <div class="column search-card">
                 <div class="row">
-                    <img src="../../assets/img/kokomi.jpeg" class="video-img" alt="CUCUMBER POWER">
+                    <img src="./assets/img/kokomi.jpeg" class="video-img" alt="CUCUMBER POWER">
                     <div class="searchpage-description-side">
                         <h3 class="filter-box-title video-title">{{ t('search.filter-box-title') }}</h3>
                         <p class="video-text video-watch-count">{{ t('search.video-watch-count') }}</p>
                         <div class="row">
-                            <img src="../../assets/img/metatuber.jpeg" alt="channel icon" class="searchpage-channel-icon">
+                            <img src="./assets/img/metatuber.jpeg" alt="channel icon" class="searchpage-channel-icon">
                             <p class="searchpage-channel-name">{{ t('search.searchpage-channel-name') }}</p>
                         </div>
                         <p class="video-text video-description">{{ t('search.video-description') }}</p>
@@ -48,12 +48,12 @@
             </div>
             <div class="column search-card">
                 <div class="row">
-                    <img src="../../assets/img/kokomi.jpeg" class="video-img" alt="CUCUMBER POWER">
+                    <img src="./assets/img/kokomi.jpeg" class="video-img" alt="CUCUMBER POWER">
                     <div class="searchpage-description-side">
                         <h3 class="filter-box-title video-title">{{ t('search.filter-box-title') }}</h3>
                         <p class="video-text video-watch-count">{{ t('search.video-watch-count') }}</p>
                         <div class="row">
-                            <img src="../../assets/img/metatuber.jpeg" alt="channel icon" class="searchpage-channel-icon">
+                            <img src="./assets/img/metatuber.jpeg" alt="channel icon" class="searchpage-channel-icon">
                             <p class="searchpage-channel-name">{{ t('search.searchpage-channel-name') }}</p>
                         </div>
                         <p class="video-text video-description">{{ t('search.video-description') }}</p>
@@ -62,12 +62,12 @@
             </div>
             <div class="column search-card">
                 <div class="row">
-                    <img src="../../assets/img/kokomi.jpeg" class="video-img" alt="CUCUMBER POWER">
+                    <img src="./assets/img/kokomi.jpeg" class="video-img" alt="CUCUMBER POWER">
                     <div class="searchpage-description-side">
                         <h3 class="filter-box-title video-title">{{ t('search.filter-box-title') }}</h3>
                         <p class="video-text video-watch-count">{{ t('search.video-watch-count') }}</p>
                         <div class="row">
-                            <img src="../../assets/img/metatuber.jpeg" alt="channel icon" class="searchpage-channel-icon">
+                            <img src="./assets/img/metatuber.jpeg" alt="channel icon" class="searchpage-channel-icon">
                             <p class="searchpage-channel-name">{{ t('search.searchpage-channel-name') }}</p>
                         </div>
                         <p class="video-text video-description">{{ t('search.video-description') }}</p>
@@ -76,6 +76,5 @@
             </div>
         </div>
     </section>
-    <script src="SearchPage.js"></script>
 </body>
 </html>

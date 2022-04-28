@@ -17,7 +17,7 @@
             />
             <div class="search-button">
             <img class="search-icon"
-                src="../../assets/img/magnifying-glass-solid.svg"
+                src="./assets/img/magnifying-glass-solid.svg"
                 alt="magnifying glass" @click="fonctionDeRecherche"
             />
             </div>
