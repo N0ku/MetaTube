@@ -17,12 +17,11 @@ if(isset($_POST['but_upload'])){
        die("Upload failed with error code " . $_FILES['file']['error']);
     }
   }
-
-  $maxsize = 52428800000000000000; 
+  $maxsize = 1000000000000;
    if(isset($_FILES['file']['name']) && $_FILES['file']['name'] != ''){
        $name = $_FILES['file']['name'];
-       $target_dir = "videos/";
-       $target_file = "/Users/celian/projet/MetaTube/back-end/temp/" . $_FILES["file"]["name"];
+       $path_key = "C:/";
+       $target_file = "C:/Users/Ruiseki/sprint/MetaTube/back-end/temp/" . $_FILES["file"]["name"];
 
        // Select file type
        $extension = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -37,19 +36,17 @@ if(isset($_POST['but_upload'])){
              $_SESSION['message'] = $_FILES["file"];
           }else{
             $_SESSION['message'] = $_FILES['file'];
-
+             
              // Upload
              if(move_uploaded_file($_FILES['file']['tmp_name'],$target_file)){
                // Insert record
                $_SESSION['message'] = $_FILES['file'];
-               
-               $query = "INSERT INTO video(id,buffer,date,privacy) VALUES(1, '".$buffer."','2022-4-28','public')";
+               $query = "INSERT INTO video(id,buffer,date,privacy) VALUES(1, '".$_FILES['file']['name']."','2022-4-28','public')";
 
                mysqli_query($con,$query);
                $_SESSION['message'] = "Upload successfully.";
              }
           }
-
        }else{
           $_SESSION['message'] = "Invalid file extension.";
        }
@@ -66,13 +63,8 @@ function php_func(){
 ?>
 
 <?php ob_start() ?>
-<!doctype html> 
-<html> 
-    <head>
-        <title>Upload and Store video to MySQL Database with PHP</title>
-  </head>
   
-  <body>
+  <div>
 
     <!-- Upload response -->
     <?php 
@@ -88,13 +80,13 @@ function php_func(){
 
     <button onclick="clickMe()"> Click </button>
 
-<script>
-    function clickMe(){
-      var result = "<?php php_func(); ?>";
-      console.log(result);
-    }
+   <script>
+      function clickMe(){
+         var result = "<?php php_func(); ?>";
+         console.log(result);
+      }
 
-</script>
-  </body>
-</html>
+   </script>   
+</div>
+
 <?php $upload = ob_get_clean() ?>

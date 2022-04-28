@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <title><?= $enJson['global']['title'] ?></title>
@@ -15,7 +16,6 @@
 
     </div>
     <!-- Add js library and script here -->
-    <script src="./assets/js/script-menu.js"></script>
 </body>
 
 </html>
