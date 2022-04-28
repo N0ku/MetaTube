@@ -1,5 +1,6 @@
 <?php
 
+
 session_start();
 if(empty( $_POST['email']) ||  empty( $_POST['username']) || empty( $_POST['password']) ){
     $_SESSION['signup_error']= "remplissez vos champs";

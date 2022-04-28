@@ -4,7 +4,7 @@ ob_start()
 ?><
 
  <div class="wrapper--register">
-        <form class="form--register" action="http://93.16.2.231:8081/actions/login_action" method="POST">
+        <form class="form--register" action="hhttp://127.0.0.1:8081/actions/register_action" method="POST">
             <h2>Please fill the form to connect:</h2>
             <label for="username">Adress Email</label>
             <input
