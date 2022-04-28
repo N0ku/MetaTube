@@ -73,10 +73,10 @@
                <hr />
                <div class="drop-profil">
                   <label class="switch">
-                  <span class="switch__span">Sombre </span>
+                  <span class="switch__span"><?= $enJson['profile']['navBar']['labelThemeDark'] ?> </span>
                   <input class="switch__input" type="checkbox" />
                   <i class="switch__icon"></i>
-                  <span class="switch__span">Clair</span>
+                  <span class="switch__span"><?= $enJson['profile']['navBar']['labelThemeBright'] ?></span>
                   </label>
                </div>
                <!-- LINK TO CHANNEL -->
@@ -99,7 +99,7 @@
                         <circle cx="12" cy="7" r="4"></circle>
                      </svg>
                   </div>
-                  My Channel
+                  <?= $enJson['profile']['navBar']['buttonChannel'] ?>
                </a>
                <!-- LINK TO BUY A -->
                <a href="/" class="drop-profil">
@@ -121,7 +121,7 @@
                            ></path>
                      </svg>
                   </div>
-                  Subscription
+                  <?= $enJson['profile']['navBar']['buttonSubscription'] ?>
                </a>
                <!-- LINK TO SIGN OUT -->
                <a href="/" class="drop-profil">
@@ -146,7 +146,7 @@
                         <line x1="21" y1="12" x2="9" y2="12"></line>
                      </svg>
                   </div>
-                  Sign Out
+                  <?= $enJson['profile']['navBar']['buttonSignOut'] ?>
                </a>
                <!-- LINK TO GO ON PROFIL -->
                <a href="/profils" class="drop-profil">
@@ -168,7 +168,7 @@
                            ></path>
                      </svg>
                   </div>
-                  Mon Compte
+                  <?= $enJson['profile']['navBar']['buttonAccount'] ?>
                </a>
                <!-- LINK TO DATA -->
                <a href="/" class="drop-profil">
@@ -189,10 +189,10 @@
                            ></path>
                      </svg>
                   </div>
-                  Your data in Meta Tube
+                  <?= $enJson['profile']['navBar']['buttonData'] ?>
                </a>
                <hr />
-               <a href="/" class="drop-profil" >  Restricted Mode: Off</a>
+               <a href="/" class="drop-profil" ><?= $enJson['profile']['navBar']['buttonRestricted'] ?></a>
             </div>
          </div>
       </div>

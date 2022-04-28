@@ -1,5 +1,18 @@
 {
     "global": {
         "title": "MetaTube"
+    },
+    "profile":{
+        "navBar":{
+            "buttonLogin" : "Login",
+            "buttonChannel" : "My Channel",
+            "butotnSubscription" : "Subscription",
+            "buttonSignOut" : "Sign Out",
+            "buttonAccount" : "My Account",
+            "buttonData" : "Your data in Meta Tube",
+            "buttonRestricted" : "Restricted Mode : Off",
+            "labelThemeDark" : "Dark",
+            "labelThemeBright" : "Bright"
+        }
     }
 }

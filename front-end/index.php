@@ -43,5 +43,3 @@ switch ($request[0]) {
 }
 
 require_once __DIR__ . '/template.php';
-
-trait_exists
