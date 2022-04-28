@@ -13,6 +13,7 @@ sqlConn.connect();
 
 // test
 app.get('/users/', (req,res) => {
+    console.log("GET - /users/");
     sqlConn.query('SELECT * FROM user', function(error, results) {
         if(error) throw error;
         res.status(200).json(results);
@@ -21,6 +22,7 @@ app.get('/users/', (req,res) => {
 
 // for uploading a video
 app.get('/upload/:data', (req,res) => {
+    console.log("GET - /upload");
     const data = JSON.parse(req.params.data);
     /*
     {
@@ -45,6 +47,7 @@ app.get('/upload/:data', (req,res) => {
 
 // for researching a video
 app.get('/search/:data', (req,res) => {
+    console.log("GET - /search");
     const data = JSON.parse(req.params.data);
     /*
     {
@@ -78,14 +81,15 @@ app.get('/search/:data', (req,res) => {
 });
 
 app.get('/video/:id', (req, res) => {
-    sqlCon.query(`SELECT * FROM video WHERE id = ${Number.parseInt(req.params.id)}`, function(error, results) {
+    console.log("GET - /video");
+    sqlConn.query(`SELECT * FROM video WHERE id = ${Number.parseInt(req.params.id)}`, function(error, results) {
         if(error) throw error;
         res.status(200).json(results);
     });
 });
 
 app.get('/channel/:id', (req, res) => {
-    
+    console.log("GET - /channel");
 });
 
 app.listen(8081, () => {
