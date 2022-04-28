@@ -20,5 +20,7 @@ if (empty($_GET['name']) == false) {
     $pageName = "Home";
 }
 
+
+include __DIR__ . ('/views/Channel/Upload.php');
 require_once __DIR__ . '/template.php';
 
