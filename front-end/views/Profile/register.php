@@ -1,7 +1,7 @@
  <?php 
 $title ="Register";
 ob_start() ?>
-<div class="wrapper--register">
+<div>
         <form class="form--register" @submit="checkForm">
             <h2>Please fill the form to create an account :</h2>
 
