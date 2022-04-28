@@ -1,4 +1,4 @@
- <?php 
+<?php 
 $title ="login";
 ob_start() 
 ?><

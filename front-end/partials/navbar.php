@@ -17,7 +17,7 @@
             <line x1="3" y1="18" x2="21" y2="18"></line>
          </svg>
          <button class="btn--logo--nav">
-            <router-link to="/" ><img src="../asset/meta.svg" id="logo--metatube" alt=""> </router-link>
+         <a href="/"><img src="" id="logo--metatube" alt="fou un logo"></a>
          </button>
       </div>
       <div class="navbar--center">
@@ -45,62 +45,19 @@
       </div>
       <div class="navbar--side">
          <div class="btn--navbar--icon">
-            <router-link to="/">
-               <svg
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="navbar--logo"
-                  >
-                  <polygon points="23 7 16 12 23 17 23 7"></polygon>
-                  <rect
-                     x="1"
-                     y="5"
-                     width="15"
-                     height="14"
-                     rx="2"
-                     ry="2"
-                     ></rect>
-               </svg
-                  >
-            </router-link>
+            <a href="http://"></a>
          </div>
          <div class="btn--navbar--icon">
-            <router-link to="/"
-               >
-               <svg
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="navbar--logo"
-                  >
-                  <path
-                     d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"
-                     ></path>
-                  <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-               </svg
-                  >
-            </router-link>
+            <a href=""></a>
          </div>
-         <div v-if="awesome" class="btn--navbar--register">
-            <router-link to="/login">Login</router-link>
+         <div class="btn--navbar--register">
+            <a href="/login">Login</a>
          </div>
-         <div v-else class="dropdown">
+         <div  class="dropdown">
             <img
                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzslQrjpEHSPbE3teWMa1qA8fUwgRlbg4bGA&usqp=CAU"
                alt=""
                style="width: 60px; border-radius: 50%"
-               @click="myFunction"
                class="dropbtn"
                />
             <div id="myDropdown" class="dropdown-content">
@@ -121,7 +78,7 @@
                   <span class="switch__span">Clair</span>
                   </label>
                </div>
-               <router-link class="drop--element" to="/">
+               <a href="/" class="drop--element">
                   <div>
                      <svg
                         viewBox="0 0 24 24"
@@ -141,9 +98,8 @@
                      </svg>
                   </div>
                   Votre chaine
-               </router-link
-                  >
-               <router-link to="/" class="drop-profil">
+               </a>
+               <a href="/" class="drop-profil">
                   <div>
                      <svg
                         viewBox="0 0 24 24"
@@ -163,9 +119,8 @@
                      </svg>
                   </div>
                   Achats et abonnement
-               </router-link
-                  >
-               <router-link to="/" class="drop-profil">
+               </a>
+               <a href="/" class="drop-profil">
                   <div>
                      <svg
                         viewBox="0 0 24 24"
@@ -188,9 +143,8 @@
                      </svg>
                   </div>
                   Déconnexion
-               </router-link
-                  >
-               <router-link to="/settings" class="drop-profil">
+               </a>
+               <a href="/profils" class="drop-profil">
                   <div>
                      <svg
                         viewBox="0 0 24 24"
@@ -209,10 +163,9 @@
                            ></path>
                      </svg>
                   </div>
-                  Paramètres
-               </router-link
-                  >
-               <router-link to="/" class="drop-profil">
+                  Mon Compte
+               </a>
+               <a href="/" class="drop-profil">
                   <div>
                      <svg
                         viewBox="0 0 24 24"
@@ -231,9 +184,8 @@
                      </svg>
                   </div>
                   Vos données dans Meta Tube
-               </router-link
-                  >
-               <router-link to="/" class="drop-profil">
+               </a>
+               <a href="/" class="drop-profil" >
                   <div>
                      <svg
                         viewBox="0 0 24 24"
@@ -253,15 +205,33 @@
                      </svg>
                   </div>
                   Envoyer des commentaires
-               </router-link
-                  >
+               </a>
                <hr />
-               <router-link to="/" class="drop-profil">
-                  Mode Restreint
-               </router-link
-                  >
+               <a href="/" class="drop-profil" >  Mode Restreint</a>
             </div>
          </div>
       </div>
    </div>
 </nav>
+<script>
+   const dropprofil = document.getElementById("dropdown");
+   dropprofil.onclick= myFunction();
+   function myFunction() {
+       document.getElementById("myDropdown").classList.toggle("show");
+   }
+   
+   //Close the dropdown if the user clicks outside of it
+   window.onclick = function (event) {
+       if (!event.target.matches(".dropbtn")) {
+           const dropdowns = document.getElementsByClassName("dropdown-content");
+           var i;
+           for (i = 0; i < dropdowns.length; i++) {
+               const openDropdown = dropdowns[i];
+               if (openDropdown.classList.contains("show")) {
+                   openDropdown.classList.remove("show");
+               }
+           }
+       }
+   };
+   
+</script>

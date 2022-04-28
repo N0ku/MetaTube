@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/navbar.css">
+    <link rel="stylesheet" href="./assets/css/register.css">
 </head>
 
 <body>
@@ -17,7 +18,6 @@
 
     </div>
     <!-- Add js library and script here -->
-
     <!-- <script src="./assets/js/script-menu.js"></script> -->
 </body>
 
