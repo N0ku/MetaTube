@@ -9,11 +9,7 @@ body {
     margin: 0;
 }
 
-.content {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
+
 
 .home-videos-grid {
     display: flex;
