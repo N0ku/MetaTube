@@ -5,10 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <?php
+
+    ?>
 </head>
 <body>
+    <!-- The entire searchbar-->
     <div id="search-bar">
         <div id="searchbar" class="row">
+            <!-- The form where we get the result from the url -->
             <form method="GET" class="nav-search-box" action="">
                 <input
                 type="text"

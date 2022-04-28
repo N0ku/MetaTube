@@ -89,7 +89,7 @@
         color: var(--dark-text);
     }
     .searchpage-description-side{
-        width: 30%;
+        width: 50%;
     }
     #search-filter-form{
         width: 100%;

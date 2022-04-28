@@ -8,6 +8,7 @@
     <?php 
     $en_json = file_get_contents('wordingUtils/en.json'); 
     $decoded_en_json = json_decode($en_json, true);
+    //We get filters from the url
     if(isset($_GET["filter_upload_date"])){
         $_filters["up_date"] = $_GET["filter_upload_date"];
     }
@@ -17,14 +18,17 @@
     if(isset($_GET["filter_order_by"])){
         $_filters["ord_by"] = $_GET["filter_order_by"];
     }
+    echo($_filters["up_date"]);
+    echo($_filters["type"]);
+    echo($_filters["ord_by"]);
     
-
     ?>
 </head>
 <body>
     <section id="search-page">
         <button onclick="displayFilter()" type="button" class="filter-button"><?php echo($enJson["global"]['filter-button']) ?></button>
         <div id="search-page-content" class="row">
+            <!-- Filter Menu with 3 columns: Upload date / Type / Order by -->
             <form method="GET" action="/front-end" id="search-filter-form">
                 <div id="filter-box" class="row">
                     <div class="column filter-box-menu">
@@ -62,6 +66,7 @@
                 </div>
             </form>
             
+            <!-- We duplicate video cards with a template video card-->
             <?php foreach($decoded_en_json['searches'] as $searched) {?>
                 <div class="column search-card">
                     <div class="row">
@@ -82,4 +87,4 @@
     </section>
 </body>
 </html>
-<?php //src(unknown)?>
+<?php?>
