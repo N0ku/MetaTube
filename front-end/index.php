@@ -20,5 +20,26 @@ if (empty($_GET['name']) == false) {
     $pageName = "Home";
 }
 
+$request = explode('?',$_SERVER['REQUEST_URI']);
+
+switch ($request[0]) {
+    case '/':
+        require_once __DIR__ . '/../src/pages/home.php';
+        break;
+    case '/login':
+        require_once __DIR__ . '/../src/pages/login.php';
+        break;
+    case '/register':
+        require_once __DIR__ . '/../src/pages/register.php';
+        break;
+    case '/deconnexion':
+        require_once __DIR__. '/action/disconnect.php';
+        break;
+    case '/profils':
+        require_once __DIR__ . '/../src/pages/profils.php';
+        break;
+
+}
+
 require_once __DIR__ . '/template.php';
 
