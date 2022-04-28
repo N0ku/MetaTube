@@ -1,7 +1,7 @@
 <?php ob_start();
 $page = "Subscriptions"; ?>
 
-<div class="explorer-container">
+<div class="Subscription-container">
 
     <h1>Subscriptions Page</h1>
 

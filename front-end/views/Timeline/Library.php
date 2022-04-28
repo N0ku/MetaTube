@@ -1,7 +1,7 @@
 <?php ob_start();
 $page = "Library"; ?>
 
-<div class="explorer-container">
+<div class="Library-container">
 
     <h1>Library Page</h1>
 

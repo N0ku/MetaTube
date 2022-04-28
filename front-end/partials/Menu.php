@@ -65,15 +65,15 @@
             </div>
             <div class="nav-item">
                 <img src="assets/img/Menu-svg/history.svg" alt="" srcset="" class="nav-logo" />
-                <p>History</p>
+                <a href="index.php?name=History"><p>History</p></a>
             </div>
             <div class="nav-item">
                 <img src="assets/img/Menu-svg/watchlater.svg" alt="" srcset="" class="nav-logo" />
-                <p>Watch Later</p>
+                <a href="index.php?name=WatchLater"><p>Watch Later</p>
             </div>
             <div class="nav-item">
                 <img src="assets/img/Menu-svg/like.svg" alt="" srcset="" class="nav-logo" />
-                <p>Liked Videos</p>
+                <a href="index.php?name=LikedVideo"><p>Liked Videos</p>
             </div>
             <div class="nav-item">
                 <img src="assets/img/Menu-svg/angle-down-solid.svg" alt="" srcset="" class="nav-logo" />
