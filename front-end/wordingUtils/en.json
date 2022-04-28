@@ -1,5 +1,15 @@
 {
     "global": {
         "title": "MetaTube"
+    },
+    "creation":{
+        "createTitle":"Voici comment les autres vous verront",
+        "create": "Créer  une chaîne",
+        "name":"Nom",
+        "Image":"./assets/img/default-user-img.jpeg",
+        "Import": "Importer une photo",
+        "cancel": "Annuler"
+  
+  
     }
 }

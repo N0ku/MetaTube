@@ -20,5 +20,5 @@ if (empty($_GET['name']) == false) {
     $pageName = "Home";
 }
 
-require_once __DIR__ . '/template.php';
+require_once __DIR__ . '/channel.php';
 
