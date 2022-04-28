@@ -23,21 +23,21 @@ if (empty($_GET['name']) == false) {
 $request = explode('?',$_SERVER['REQUEST_URI']);
 
 switch ($request[0]) {
-    case '/':
-        require_once __DIR__ . '/../src/pages/home.php';
-        break;
+     /* case '/':
+        require_once __DIR__ . '/views/Profile/home.php';
+        break; */
     case '/login':
-        require_once __DIR__ . '/../src/pages/login.php';
-        break;
+        require_once __DIR__ . '/views/Profile/login.php';
+        break; 
     case '/register':
-        require_once __DIR__ . '/../src/pages/register.php';
+        require_once __DIR__ . '/views/Profile/register.php';
         break;
-    case '/deconnexion':
+    /*  case '/deconnexion':
         require_once __DIR__. '/action/disconnect.php';
-        break;
+        break; */
     case '/profils':
-        require_once __DIR__ . '/../src/pages/profils.php';
-        break;
+        require_once __DIR__ . '/views/Profile/profils.php';
+        break; 
 
 }
 

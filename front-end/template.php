@@ -11,11 +11,11 @@
     <!-- Put all components here -->
     <div class="content">
 
-        <div></div>
+        <a href="/register">bouge</a>
 
     </div>
     <!-- Add js library and script here -->
-    <script src="./assets/js/script-menu.js"></script>
+    <!-- <script src="./assets/js/script-menu.js"></script> -->
 </body>
 
 </html>
