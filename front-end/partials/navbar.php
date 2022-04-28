@@ -17,7 +17,7 @@
             <line x1="3" y1="18" x2="21" y2="18"></line>
          </svg>
          <button class="btn--logo--nav">
-         <a href="/"><img src="" id="logo--metatube" alt="fou un logo"></a>
+         <a href="/"><?php require_once __DIR__."/../assets/img/meta.svg"?></a>
          </button>
       </div>
       <div class="navbar--center">

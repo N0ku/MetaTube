@@ -2,7 +2,7 @@
 $title ="login";
 ob_start() 
 ?>
- <div>
+ <div class="wrap--from">
         <form class="form--register" action="http://93.16.2.231:8081/actions/login_action" method="POST">
             <h2>Please fill the form to connect:</h2>
             <label for="username">Adress Email</label>
