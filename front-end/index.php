@@ -20,6 +20,6 @@ if (empty($_GET['name']) == false) {
     $pageName = "Home";
 }
 
-include __DIR__ . '/views/Timeline/Home.php'; // $page 
+include __DIR__ . '/views/Timeline/' . $pageName. '.php'; // $page 
 include __DIR__ . "/partials/Menu.php"; // $menu
 require_once __DIR__ . '/template.php';

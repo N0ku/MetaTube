@@ -19,4 +19,3 @@ function openMenu() {
     root.style.setProperty('--video-content-padding', '20px');
     root.style.setProperty('--video-content-minwidth', '220px');
 }
-

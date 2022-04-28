@@ -13,6 +13,7 @@
     align-items: center;
     height: 100%;
     overflow: hidden;
+    width: 100%;
 }
 
 .short-menu {
@@ -73,7 +74,8 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    padding: 20px 20px 20px 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .nav-item-short:hover {
@@ -110,7 +112,7 @@
     background-color: var(--background-color-nav);
     width: 100%;
     min-width: 290px;
-    max-width: 340px;
+    max-width: 300px;
     flex-direction: column;
     scroll-behavior: smooth;
     overflow-y: scroll;
