@@ -8,41 +8,41 @@
 </head>
 <body>
     <section id="search-page">
-        <button onclick="displayFilter()" type="button" id="filter-button"><?php $enJson['search']['filter-button'] ?></button>
+        <button onclick="displayFilter()" type="button" id="filter-button"><?php echo($enJson['search']['filter-button']) ?></button>
         <div id="search-page-content" class="row">
             <div id="filter-box" class="row">
                 <div class="column filter-box-menu">
-                    <h3 class="filter-box-title"><?php $enJson['search']['filter-box-title1'] ?></h3>
-                    <a onclick="" class="filter-box-menu-button"><?php $enJson['search']['filter-box-menu-button1'] ?></a>
-                    <a onclick="" class="filter-box-menu-button"><?php $enJson['search']['filter-box-menu-button2'] ?></a>
-                    <a onclick="" class="filter-box-menu-button"><?php $enJson['search']['filter-box-menu-button3'] ?></a>
-                    <a onclick="" class="filter-box-menu-button"><?php $enJson['search']['filter-box-menu-button4'] ?></a>
+                    <h3 class="filter-box-title"><?php echo($enJson['search']['filter-box-title1']) ?></h3>
+                    <a onclick="" class="filter-box-menu-button"><?php echo($enJson['search']['filter-box-menu-button1']) ?></a>
+                    <a onclick="" class="filter-box-menu-button"><?php echo($enJson['search']['filter-box-menu-button2']) ?></a>
+                    <a onclick="" class="filter-box-menu-button"><?php echo($enJson['search']['filter-box-menu-button3']) ?></a>
+                    <a onclick="" class="filter-box-menu-button"><?php echo($enJson['search']['filter-box-menu-button4']) ?></a>
                 </div>
                 <div class="column filter-box-menu">
-                    <h3 class="filter-box-title"><?php $enJson['search']['filter-box-title2'] ?></h3>
-                    <a onclick="" class="filter-box-menu-button"><?php $enJson['search']['filter-box-menu-button5'] ?></a>
-                    <a onclick="" class="filter-box-menu-button"><?php $enJson['search']['filter-box-menu-button6'] ?></a>
-                    <a onclick="" class="filter-box-menu-button"><?php $enJson['search']['filter-box-menu-button7'] ?></a>
+                    <h3 class="filter-box-title"><?php echo($enJson['search']['filter-box-title2']) ?></h3>
+                    <a onclick="" class="filter-box-menu-button"><?php echo($enJson['search']['filter-box-menu-button5']) ?></a>
+                    <a onclick="" class="filter-box-menu-button"><?php echo($enJson['search']['filter-box-menu-button6']) ?></a>
+                    <a onclick="" class="filter-box-menu-button"><?php echo($enJson['search']['filter-box-menu-button7']) ?></a>
                 </div>
                 <div class="column filter-box-menu">
                     <h3 class="filter-box-title"><?php $enJson['search']['filter-box-title3'] ?></h3>
-                    <a onclick="" class="filter-box-menu-button"><?php $enJson['search']['filter-box-menu-button8'] ?></a>
-                    <a onclick="" class="filter-box-menu-button"><?php $enJson['search']['filter-box-menu-button9'] ?></a>
-                    <a onclick="" class="filter-box-menu-button"><?php $enJson['search']['filter-box-menu-button10'] ?></a>
-                    <a onclick="" class="filter-box-menu-button"><?php $enJson['search']['filter-box-menu-button11'] ?></a>
+                    <a onclick="" class="filter-box-menu-button"><?php echo($enJson['search']['filter-box-menu-button8']) ?></a>
+                    <a onclick="" class="filter-box-menu-button"><?php echo($enJson['search']['filter-box-menu-button9']) ?></a>
+                    <a onclick="" class="filter-box-menu-button"><?php echo($enJson['search']['filter-box-menu-button10']) ?></a>
+                    <a onclick="" class="filter-box-menu-button"><?php echo($enJson['search']['filter-box-menu-button11']) ?></a>
                 </div>
             </div>
             <div class="column search-card">
                 <div class="row">
                     <img src="./assets/img/kokomi.jpeg" class="video-img" alt="CUCUMBER POWER">
                     <div class="searchpage-description-side">
-                        <h3 class="filter-box-title video-title"><?php $enJson['search']['filter-box-title'] ?></h3>
-                        <p class="video-text video-watch-count"><?php $enJson['search']['video-watch-count'] ?></p>
+                        <h3 class="filter-box-title video-title"><?php echo($enJson['search']['filter-box-title']) ?></h3>
+                        <p class="video-text video-watch-count"><?php echo($enJson['search']['video-watch-count']) ?></p>
                         <div class="row">
                             <img src="./assets/img/metatuber.jpeg" alt="channel icon" class="searchpage-channel-icon">
-                            <p class="searchpage-channel-name"><?php $enJson['search']['searchpage-channel-name'] ?></p>
+                            <p class="searchpage-channel-name"><?php echo($enJson['search']['searchpage-channel-name']) ?></p>
                         </div>
-                        <p class="video-text video-description"><?php $enJson['search']['video-description'] ?></p>
+                        <p class="video-text video-description"><?php echo($enJson['search']['video-description']) ?></p>
                     </div>
                 </div>
             </div>
@@ -50,13 +50,13 @@
                 <div class="row">
                     <img src="./assets/img/kokomi.jpeg" class="video-img" alt="CUCUMBER POWER">
                     <div class="searchpage-description-side">
-                        <h3 class="filter-box-title video-title"><?php $enJson['search']['filter-box-title'] ?></h3>
-                        <p class="video-text video-watch-count"><?php $enJson['search']['video-watch-count'] ?></p>
+                        <h3 class="filter-box-title video-title"><?php echo($enJson['search']['filter-box-title']) ?></h3>
+                        <p class="video-text video-watch-count"><?php echo($enJson['search']['video-watch-count']) ?></p>
                         <div class="row">
                             <img src="./assets/img/metatuber.jpeg" alt="channel icon" class="searchpage-channel-icon">
-                            <p class="searchpage-channel-name"><?php $enJson['search']['searchpage-channel-name'] ?></p>
+                            <p class="searchpage-channel-name"><?php echo($enJson['search']['searchpage-channel-name']) ?></p>
                         </div>
-                        <p class="video-text video-description"><?php $enJson['search']['video-description'] ?></p>
+                        <p class="video-text video-description"><?php echo($enJson['search']['video-description']) ?></p>
                     </div>
                 </div>
             </div>
