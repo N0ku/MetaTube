@@ -4,12 +4,11 @@ $Json = file_get_contents('./wordingUtils/en.json');
  
 $enJson = json_decode($Json, true);
 
-
 // Prevent the user from going on non-existing pages
 session_start();
 require_once __DIR__.'/../back-end/db.php'; 
 $page_title = 'Unknown page?';
-$existing_pages = ['Home'];
+$existing_pages = ['Home', 'Explorer', 'Subscriptions' , 'Library', 'History', 'LikedVideo', 'WatchLater'];
 
 if (empty($_GET['name']) == false) {
     if (in_array($_GET['name'], $existing_pages)) {
@@ -42,4 +41,7 @@ switch ($request[0]) {
 
 }
 
+=======
+include __DIR__ . '/views/Timeline/' . $pageName. '.php'; // $page 
+include __DIR__ . "/partials/Menu.php"; // $menu
 require_once __DIR__ . '/template.php';

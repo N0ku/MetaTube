@@ -43,6 +43,35 @@
             "placeholderConfirmPassword": "Write your password again",
             "buttonRegister": "Register",
             "buttonToLogin": "I have an account"
+        },
+    "menu": {
+        "nav-elements": {
+            "Home": "Home",
+            "Explorer": "Explorer",
+            "Subscriptions": "Subscriptions",
+            "Library": "Library",
+            "History": "History",
+            "YourVideos": "Your Videos",
+            "WatchLaters": "Watch Laters",
+            "LikedVideos": "Liked Videos",
+            "More": "More",
+            "Less": "Less"
+        },
+        "titles": {
+            "subscriptions": "SUBSCRIPTIONS",
+            "others": "OTHERS YOUTUBE CONTENTS"
+        },
+        "footer": {
+            "link1": "Link1",
+            "link2": "Link2",
+            "link3": "Link3",
+            "link4": "Link4",
+            "link5": "Link5",
+            "copyright": "© 2022 Metatubes -L1 Alt Cergy/Paris ❤️"
         }
+    },
+    "home": {
+        "views": "views",
+        "date": "ago"
     }
 }
