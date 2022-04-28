@@ -19,7 +19,6 @@ app.get('/users/', (req,res) => {
     });
 });
 
-
 // for uploading a video
 app.get('/upload/:data', (req,res) => {
     const data = JSON.parse(req.params.data);
@@ -76,6 +75,17 @@ app.get('/search/:data', (req,res) => {
         if(error) throw error;
         
     });
+});
+
+app.get('/video/:id', (req, res) => {
+    sqlCon.query(`SELECT * FROM video WHERE id = ${Number.parseInt(req.params.id)}`, function(error, results) {
+        if(error) throw error;
+        res.status(200).json(results);
+    });
+});
+
+app.get('/channel/:id', (req, res) => {
+    
 });
 
 app.listen(8081, () => {
