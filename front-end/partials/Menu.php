@@ -52,50 +52,51 @@
 
     <div class="nav-body">
         <div class="nav-items">
-            <div class="nav-item">
-                <img src="assets/img/Menu-svg/Home.svg" alt="" srcset="" class="nav-logo" />
-                <a href="index.php?name=Home">
+            <a href="index.php?name=Home" class="menu-link">
+                <div class="nav-item">
+                    <img src="assets/img/Menu-svg/Home.svg" alt="" srcset="" class="nav-logo" />
                     <p>Home</p>
-                </a>
-            </div>
-            <div class="nav-item">
-                <img src="assets/img/Menu-svg/compass.svg" alt="" srcset="" class="nav-logo" />
-                <a href="index.php?name=Explorer">
+                </div>
+            </a>
+            <a href="index.php?name=Explorer" class="menu-link">
+                <div class="nav-item">
+                    <img src="assets/img/Menu-svg/compass.svg" alt="" srcset="" class="nav-logo" />
                     <p>Explorer</p>
-                </a>
-            </div>
-            <div class="nav-item">
-                <img src="assets/img/Menu-svg/sublogo.svg" alt="" srcset="" class="nav-logo" />
-                <a href="index.php?name=Subscriptions">
+                </div>
+            </a>
+            <a href="index.php?name=Subscriptions" class="menu-link">
+                <div class="nav-item">
+                    <img src="assets/img/Menu-svg/sublogo.svg" alt="" srcset="" class="nav-logo" />
                     <p>Subscriptions</p>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
 
         <div class="nav-items">
-            <div class="nav-item">
-                <img src="assets/img/Menu-svg/library.svg" alt="" srcset="" class="nav-logo" />
-                <a href="index.php?name=Library">
+            <a href="index.php?name=Library" class="menu-link">
+                <div class="nav-item">
+                    <img src="assets/img/Menu-svg/library.svg" alt="" srcset="" class="nav-logo" />
                     <p>Library</p>
-                </a>
-            </div>
-            <div class="nav-item">
-                <img src="assets/img/Menu-svg/history.svg" alt="" srcset="" class="nav-logo" />
-                <a href="index.php?name=History">
+                </div>
+            </a>
+            <a href="index.php?name=History" class="menu-link">
+                <div class="nav-item">
+                    <img src="assets/img/Menu-svg/history.svg" alt="" srcset="" class="nav-logo" />
                     <p>History</p>
-                </a>
-            </div>
-            <div class="nav-item">
-                <img src="assets/img/Menu-svg/watchlater.svg" alt="" srcset="" class="nav-logo" />
-                <a href="index.php?name=WatchLater">
+                </div>
+            </a>
+            <a href="index.php?name=WatchLater" class="menu-link">
+                <div class="nav-item">
+                    <img src="assets/img/Menu-svg/watchlater.svg" alt="" srcset="" class="nav-logo" />
                     <p>Watch Later</p>
-            </div>
-            <div class="nav-item">
-                <img src="assets/img/Menu-svg/like.svg" alt="" srcset="" class="nav-logo" />
-                <a href="index.php?name=LikedVideo">
+                </div>
+            </a>
+            <a href="index.php?name=LikedVideo" class="menu-link">
+                <div class="nav-item">
+                    <img src="assets/img/Menu-svg/like.svg" alt="" srcset="" class="nav-logo" />
                     <p>Liked Videos</p>
-                </a>
-            </div>
+                </div>
+            </a>
             <div class="nav-item">
                 <img src="assets/img/Menu-svg/angle-down-solid.svg" alt="" srcset="" class="nav-logo" />
                 <p>More</p>
@@ -105,14 +106,6 @@
             <strong class="title-subscriptions">
                 SUBSCRIPTIONS
             </strong>
-            <div class="nav-item">
-                <img src="assets/img/Menu-svg/angle-down-solid.svg" alt="" srcset="" class="nav-logo" />
-                <p>More</p>
-            </div>
-            <div class="nav-item">
-                <img src="assets/img/Menu-svg/angle-down-solid.svg" alt="" srcset="" class="nav-logo" />
-                <p>More</p>
-            </div>
         </div>
 
         <div class="menu-subscriptions nav-items">
@@ -120,41 +113,11 @@
                 OTHERS YOUTUBE CONTENTS
             </strong>
 
-            <div class="nav-item">
-                <img src="assets/img/Menu-svg/angle-down-solid.svg" alt="" srcset="" class="nav-logo" />
-                <p>More</p>
-            </div>
-            <div class="nav-item">
-                <img src="assets/img/Menu-svg/angle-down-solid.svg" alt="" srcset="" class="nav-logo" />
-                <p>More</p>
-            </div>
-            <div class="nav-item">
-                <img src="assets/img/Menu-svg/angle-down-solid.svg" alt="" srcset="" class="nav-logo" />
-                <p>More</p>
-            </div>
-            <div class="nav-item">
-                <img src="assets/img/Menu-svg/angle-down-solid.svg" alt="" srcset="" class="nav-logo" />
-                <p>More</p>
-            </div>
+
         </div>
 
         <div class="nav-items">
-            <div class="nav-item">
-                <img src="/assets/img/Menu-svg/angle-down-solid.svg" alt="" srcset="" class="nav-logo" />
-                <p>More</p>
-            </div>
-            <div class="nav-item">
-                <img src="/assets/img/Menu-svg/angle-down-solid.svg" alt="" srcset="" class="nav-logo" />
-                <p>More</p>
-            </div>
-            <div class="nav-item">
-                <img src="/assets/img/Menu-svg/angle-down-solid.svg" alt="" srcset="" class="nav-logo" />
-                <p>More</p>
-            </div>
-            <div class="nav-item">
-                <img src="/assets/img/Menu-svg/angle-down-solid.svg" alt="" srcset="" class="nav-logo" />
-                <p>More</p>
-            </div>
+
         </div>
 
         <div class="nav-items menu-footer">

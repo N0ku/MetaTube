@@ -189,6 +189,7 @@
 
 .nav-item:hover {
     background-color: var(--elements-hover);
+    padding-left:var(--margin-left-nav-item) ;
 }
 
 .menu-subscriptions {
