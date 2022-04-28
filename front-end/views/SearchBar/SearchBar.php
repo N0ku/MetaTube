@@ -9,7 +9,7 @@
 <body>
     <div id="search-bar">
         <div id="searchbar" class="row">
-            <form method="POST" class="nav-search-box" action="">
+            <form method="GET" class="nav-search-box" action="">
                 <input
                 type="text"
                 name="searchbar-content"

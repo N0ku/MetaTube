@@ -2,7 +2,7 @@
     body{
         margin: 0px;
     }
-    #filter-button{
+    .filter-button{
         padding: 1%;
         font-size: var(--font-medium);
         background-color: var(--dark-theme);
@@ -87,4 +87,7 @@
     }
     .searchpage-description-side{
         width: 30%;
+    }
+    #search-filter-form{
+        width: 100%;
     }

@@ -12,30 +12,44 @@
 </head>
 <body>
     <section id="search-page">
-        <button onclick="displayFilter()" type="button" id="filter-button"><?php echo($enJson["global"]['filter-button']) ?></button>
+        <button onclick="displayFilter()" type="button" class="filter-button"><?php echo($enJson["global"]['filter-button']) ?></button>
         <div id="search-page-content" class="row">
-            <div id="filter-box" class="row">
-                <div class="column filter-box-menu">
-                    <h3 class="filter-box-title"><?php echo($enJson["global"]['filter-box-title1']) ?></h3>
-                    <input type="radio" onclick="" name="filter-box-menu-button1" class="filter-box-menu-button"><?php echo($enJson["global"]['filter-box-menu-button1']) ?></input>
-                    <input type="radio" onclick="" name="filter-box-menu-button1" class="filter-box-menu-button"><?php echo($enJson["global"]['filter-box-menu-button2']) ?></input>
-                    <input type="radio" onclick="" name="filter-box-menu-button1" class="filter-box-menu-button"><?php echo($enJson["global"]['filter-box-menu-button3']) ?></input>
-                    <input type="radio" onclick="" name="filter-box-menu-button1" class="filter-box-menu-button"><?php echo($enJson["global"]['filter-box-menu-button4']) ?></input>
+            <form method="GET" action="/front-end" id="search-filter-form">
+                <div id="filter-box" class="row">
+                    <div class="column filter-box-menu">
+                        <label class="filter-box-title"><?php echo($enJson["global"]['filter-box-title1']) ?></label>
+                        <select name="filter-box-menu-button1" selected="selected">
+                        <option value="">No filter</option>
+                            <option value="<?php echo($enJson["global"]['filter-box-menu-button1']) ?>"><?php echo($enJson["global"]['filter-box-menu-button1']) ?></option>
+                            <option value="<?php echo($enJson["global"]['filter-box-menu-button2']) ?>"><?php echo($enJson["global"]['filter-box-menu-button2']) ?></option>
+                            <option value="<?php echo($enJson["global"]['filter-box-menu-button3']) ?>"><?php echo($enJson["global"]['filter-box-menu-button3']) ?></option>
+                            <option value="<?php echo($enJson["global"]['filter-box-menu-button4']) ?>"><?php echo($enJson["global"]['filter-box-menu-button4']) ?></option>
+                        </select>
+                    </div>
+                    <div class="column filter-box-menu">
+                        <label class="filter-box-title"><?php echo($enJson["global"]['filter-box-title2']) ?></label>
+                        <select name="filter-box-menu-button2">
+                            <option value="">No filter</option>
+                            <option value="<?php echo($enJson["global"]['filter-box-menu-button5']) ?>"><?php echo($enJson["global"]['filter-box-menu-button5']) ?></option>
+                            <option value="<?php echo($enJson["global"]['filter-box-menu-button6']) ?>"><?php echo($enJson["global"]['filter-box-menu-button6']) ?></option>
+                            <option value="<?php echo($enJson["global"]['filter-box-menu-button7']) ?>"><?php echo($enJson["global"]['filter-box-menu-button7']) ?></option>
+                        </select>
+                    </div>
+                    <div class="column filter-box-menu">
+                        <label class="filter-box-title"><?php echo($enJson["global"]['filter-box-title3']) ?></label>
+                        <select name="filter-box-menu-button3">
+                            <option value="">No filter</option>
+                            <option value="<?php echo($enJson["global"]['filter-box-menu-button8']) ?>"><?php echo($enJson["global"]['filter-box-menu-button8']) ?></option>
+                            <option value="<?php echo($enJson["global"]['filter-box-menu-button9']) ?>"><?php echo($enJson["global"]['filter-box-menu-button9']) ?></option>
+                            <option value="<?php echo($enJson["global"]['filter-box-menu-button10']) ?>"><?php echo($enJson["global"]['filter-box-menu-button10']) ?></option>
+                            <option value="<?php echo($enJson["global"]['filter-box-menu-button11']) ?>"><?php echo($enJson["global"]['filter-box-menu-button11']) ?></option>
+                        </select>
+                    </div>
+                    <div class="column filter-box-menu">
+                    <button type="submit" class="filter-button" id="apply-filter">Apply</button>
+                    </div>
                 </div>
-                <div class="column filter-box-menu">
-                    <h3 class="filter-box-title"><?php echo($enJson["global"]['filter-box-title2']) ?></h3>
-                    <input type="radio" onclick="" name="filter-box-menu-button2" class="filter-box-menu-button"><?php echo($enJson["global"]['filter-box-menu-button5']) ?></input>
-                    <input type="radio" onclick="" name="filter-box-menu-button2" class="filter-box-menu-button"><?php echo($enJson["global"]['filter-box-menu-button6']) ?></input>
-                    <input type="radio" onclick="" name="filter-box-menu-button2" class="filter-box-menu-button"><?php echo($enJson["global"]['filter-box-menu-button7']) ?></input>
-                </div>
-                <div class="column filter-box-menu">
-                    <h3 class="filter-box-title"><?php echo($enJson["global"]['filter-box-title3']) ?></h3>
-                    <input type="radio" onclick="" name="filter-box-menu-button3" class="filter-box-menu-button"><?php echo($enJson["global"]['filter-box-menu-button8']) ?></input>
-                    <input type="radio" onclick="" name="filter-box-menu-button3" class="filter-box-menu-button"><?php echo($enJson["global"]['filter-box-menu-button9']) ?></input>
-                    <input type="radio" onclick="" name="filter-box-menu-button3" class="filter-box-menu-button"><?php echo($enJson["global"]['filter-box-menu-button10']) ?></input>
-                    <input type="radio" onclick="" name="filter-box-menu-button3" class="filter-box-menu-button"><?php echo($enJson["global"]['filter-box-menu-button11']) ?></input>
-                </div>
-            </div>
+            </form>
             
             <?php foreach($decoded_en_json['searches'] as $searched) {?>
                 <div class="column search-card">

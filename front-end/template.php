@@ -12,6 +12,7 @@
 <body>
     <!-- Put all components here -->
     <div class="content">
+        
         <?php require_once "views/SearchBar/Searchbar.php" ?>
         <?php require_once "views/SearchBar/SearchPage.php" ?>
 
