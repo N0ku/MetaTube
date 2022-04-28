@@ -23,6 +23,6 @@ $page_title = "Home"; ?>
     </div>
     <?php
     }
-    ?>ta
+    ?>
 </div>
 <?php $page = ob_get_clean() ?>
