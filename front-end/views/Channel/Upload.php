@@ -4,9 +4,27 @@ function debug_to_console($data) {
     $output = $data;
     if (is_array($output))
         $output = implode(',', $output);
-
 }
-include("../back-end/actions/uploadVideo.php");
+
+
+include "/Users/celian/Documents/MetaTube/back-end/actions/uploadVideo.php";
+$id = giveId();
+
+
+$opts = array(
+   'http'=>array(
+     'method'=>"GET",
+   )
+ );
+ 
+ $context = stream_context_create($opts);
+ 
+$fp = fopen('http://93.16.2.231:8081/video/' . $id, 'r', false, $context);
+ fpassthru($fp);
+ fclose($fp);
+ var_dump($context);
+
+
 
 if(isset($_POST['but_upload'])){
   
@@ -78,15 +96,7 @@ function php_func(){
       <input type='submit' value='Upload' name='but_upload'>
     </form>
 
-    <button onclick="clickMe()"> Click </button>
 
-   <script>
-      function clickMe(){
-         var result = "<?php php_func(); ?>";
-         console.log(result);
-      }
-
-   </script>   
 </div>
 
 <?php $upload = ob_get_clean() ?>
