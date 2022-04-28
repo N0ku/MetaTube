@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title><?= $enJson['global']['title'] ?></title>
     <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/SearchBar.css">
+    <link rel="stylesheet" href="./assets/css/SearchPage.css">
 </head>
 
 <body>
