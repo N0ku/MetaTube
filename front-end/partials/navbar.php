@@ -24,7 +24,7 @@
          <input
             type="text"
             class="navbar__center__input"
-            placeholder="Search"
+            placeholder=" <?= $enJson['profile']['navBar']['placeolderSearch'] ?>"
             />
          <button class="navbar__center__search-btn">
             <svg

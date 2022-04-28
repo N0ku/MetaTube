@@ -3,57 +3,51 @@ $title ="Register";
 ob_start() ?>
 <div class="wrap--from">
         <form class="form--register" @submit="checkForm">
-            <h2>Please fill the form to create an account :</h2>
+            <h2><?= $enJson['register']['form']['titleRegister'] ?></h2>
 
-            <label for="firstname">First Name</label>
+            <label for="firstname"><?= $enJson['register']['form']['labelFirstName'] ?></label>
             <input
                 class="input--register"
                 type="text"
-                placeholder="First Name"
+                placeholder="<?= $enJson['register']['form']['placeholderFirstName'] ?>"
                 id="firstname"
             />
-            <p id="errorfirstname" class="error--register"></p>
-            <label for="lastname">Last Name</label>
+            <label for="lastname"><?= $enJson['register']['form']['labellastName'] ?></label>
             <input
                 class="input--register"
                 type="text"
-                placeholder="Last Name"
+                placeholder="<?= $enJson['register']['form']['placeholderLastName'] ?>"
                 id="lastname"
             />
-            <p id="errorlastname" class="error--register"></p>
-            <label for="dateofbirthday">Date of Birthday</label>
+            <label for="dateofbirthday"><?= $enJson['register']['form']['labelBirthday'] ?></label>
             <input
                 class="input--register"
                 type="date"
                 id="dateofbirthday"
             />
-            <p id="errordate" class="error--register"></p>
-            <label for="email">Address Email</label>
+            <label for="email"><?= $enJson['register']['form']['labelAdress'] ?></label>
             <input
                 class="input--register"
                 type="text"
-                placeholder="Address Email"
+                placeholder="<?= $enJson['register']['form']['placeholderAdress'] ?>"
                 id="email"
             />
-            <p id="erroremail" class="error--register"></p>
-            <label for="password">Password</label>
+            <label for="password"><?= $enJson['register']['form']['labelPassword'] ?></label>
             <input
                 class="input--register"
                 type="password"
-                placeholder="Password"
+                placeholder="<?= $enJson['register']['form']['placeholderPassword'] ?>"
                 id="password"
             />
-            <p id="errorpassword" class="error--register"></p>
-            <label for="confirm-passord">Confirm Password</label>
+            <label for="confirm-passord"><?= $enJson['register']['form']['labelConfirmPassword'] ?></label>
             <input
                 class="input--register"
                 type="password"
-                placeholder="Confirm Password"
+                placeholder="<?= $enJson['register']['form']['placeholderConfirmPassword'] ?>"
                 id="confirm-password"
             />
-            <p id="errorconfirm" class="error--register"></p>
-            <button class="btn--register">Register</button>
-             <a href="/login">I have an account</a>
+            <button class="btn--register"><?= $enJson['register']['form']['buttonRegister'] ?></button>
+             <a href="/login"><?= $enJson['register']['form']['buttonToLogin'] ?></a>
         </form>
     </div>
     <?php $content = ob_get_clean(); 
