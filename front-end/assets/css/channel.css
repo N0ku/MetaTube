@@ -1,5 +1,8 @@
 .bloc-modal{
+    display: none;
     position: fixed;
+    visibility: hidden;
+    opacity:0;
     top: 0%;
     bottom: 0%;
     left: 0%;
@@ -12,7 +15,16 @@
     align-content: center;
 }
 
-.overlay{
+.bloc-modal.show, .feature-channel-modal-overlay-channel.show{
+   display: flex;
+   visibility:visible;
+   opacity: 1;
+}
+
+.feature-channel-modal-overlay-channel{
+    display: none;
+    visibility: hidden;
+    opacity:0;
     background: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0%;
@@ -31,9 +43,7 @@
     background: #f1f1f1;
     color: #333;
     position: fixed;
- 
     width: 25%;
-
     border-radius: 10px;
   
     
@@ -46,7 +56,7 @@
     align-items: center;
     padding: 0vh 5vh;
 }
-.channel-profile{
+.feature-channel-modal-profile{
     padding:10% 0%;
     align-items: center;
 }
@@ -64,7 +74,7 @@
 	align-items: center;
 	align-content: center;
 }
-.control-btn{
+.feature-channel-control-btn{
     width: 100%;
     padding-top:1% ;    
 }

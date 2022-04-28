@@ -19,6 +19,7 @@ if (empty($_GET['name']) == false) {
 }else {
     $pageName = "Home";
 }
-
 require_once __DIR__ . '/channel.php';
+//require_once __DIR__ . '/template.php';
+//require_once __DIR__ . '/upload.php';
 
