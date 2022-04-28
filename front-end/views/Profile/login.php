@@ -4,7 +4,7 @@ ob_start()
 ?><
 
  <div class="wrapper--register">
-        <form class="form--register" action="http://93.16.2.231:8081/back-end/actions/login_action" method="POST">
+        <form class="form--register" action="http://93.16.2.231:8081/actions/login_action" method="POST">
             <h2>Please fill the form to connect:</h2>
             <label for="username">Adress Email</label>
             <input
@@ -16,8 +16,7 @@ ob_start()
             />
             <p id="erroremail" class="error--register"></p>
             <label for="password">Password</label>
-            <input
-            input type="submit" id='submit' value='Connexion'
+            <input type="submit" id='submit' value='Connexion'
             />
             <p id="errorpasslog" class="error--register"></p>
             <button class="btn--register">Login</button>
@@ -25,5 +24,5 @@ ob_start()
              <a href="/register">I don't have any account</a>
         </form>
     </div>
-    <button onclick="frre()">Presse</button>
+    <button>Presse</button>
 <?php $content = ob_get_clean(); 
