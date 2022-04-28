@@ -13,25 +13,27 @@
             <a href="index.php?name=Home" class="menu-link">
                 <div class="nav-item-short">
                     <img src="assets/img/Menu-svg/Home.svg" alt="" srcset="" class="nav-logo-short" />
-                    <p>Home</p>
+                    <p>
+                        <?= $enJson['menu']['nav-elements']['Home'] ?>
+                    </p>
                 </div>
             </a>
             <a href="index.php?name=Explorer" class="menu-link">
                 <div class="nav-item-short">
                     <img src="assets/img/Menu-svg/compass.svg" alt="" srcset="" class="nav-logo-short" />
-                    <p>Explorer</p>
+                    <p> <?= $enJson['menu']['nav-elements']['Explorer'] ?></p>
                 </div>
             </a>
             <a href="index.php?name=Subscriptions" class="menu-link">
                 <div class="nav-item-short">
                     <img src="assets/img/Menu-svg/sublogo.svg" alt="" srcset="" class="nav-logo-short" />
-                    <p>Subscriptions</p>
+                    <p> <?= $enJson['menu']['nav-elements']['Subscriptions'] ?></p>
                 </div>
             </a>
             <a href="index.php?name=Library" class="menu-link">
                 <div class="nav-item-short">
                     <img src="assets/img/Menu-svg/library.svg" alt="" srcset="" class="nav-logo-short" />
-                    <p>Library</p>
+                    <p><?= $enJson['menu']['nav-elements']['Library'] ?></p>
                 </div>
             </a>
         </div>
@@ -55,19 +57,19 @@
             <a href="index.php?name=Home" class="menu-link">
                 <div class="nav-item">
                     <img src="assets/img/Menu-svg/Home.svg" alt="" srcset="" class="nav-logo" />
-                    <p>Home</p>
+                    <p><?= $enJson['menu']['nav-elements']['Home'] ?></p>
                 </div>
             </a>
             <a href="index.php?name=Explorer" class="menu-link">
                 <div class="nav-item">
                     <img src="assets/img/Menu-svg/compass.svg" alt="" srcset="" class="nav-logo" />
-                    <p>Explorer</p>
+                    <p><?= $enJson['menu']['nav-elements']['Explorer'] ?></p>
                 </div>
             </a>
             <a href="index.php?name=Subscriptions" class="menu-link">
                 <div class="nav-item">
                     <img src="assets/img/Menu-svg/sublogo.svg" alt="" srcset="" class="nav-logo" />
-                    <p>Subscriptions</p>
+                    <p><?= $enJson['menu']['nav-elements']['Subscriptions'] ?></p>
                 </div>
             </a>
         </div>
@@ -76,25 +78,25 @@
             <a href="index.php?name=Library" class="menu-link">
                 <div class="nav-item">
                     <img src="assets/img/Menu-svg/library.svg" alt="" srcset="" class="nav-logo" />
-                    <p>Library</p>
+                    <p><?= $enJson['menu']['nav-elements']['Library'] ?></p>
                 </div>
             </a>
             <a href="index.php?name=History" class="menu-link">
                 <div class="nav-item">
                     <img src="assets/img/Menu-svg/history.svg" alt="" srcset="" class="nav-logo" />
-                    <p>History</p>
+                    <p><?= $enJson['menu']['nav-elements']['History'] ?></p>
                 </div>
             </a>
             <a href="index.php?name=WatchLater" class="menu-link">
                 <div class="nav-item">
                     <img src="assets/img/Menu-svg/watchlater.svg" alt="" srcset="" class="nav-logo" />
-                    <p>Watch Later</p>
+                    <p><?= $enJson['menu']['nav-elements']['WatchLaters'] ?></p>
                 </div>
             </a>
             <a href="index.php?name=LikedVideo" class="menu-link">
                 <div class="nav-item">
                     <img src="assets/img/Menu-svg/like.svg" alt="" srcset="" class="nav-logo" />
-                    <p>Liked Videos</p>
+                    <p><?= $enJson['menu']['nav-elements']['LikedVideos'] ?></p>
                 </div>
             </a>
             <div class="nav-item">
@@ -104,13 +106,13 @@
         </div>
         <div class="menu-subscriptions">
             <strong class="title-subscriptions">
-                SUBSCRIPTIONS
+                <?= $enJson['menu']['titles']['subscriptions'] ?>
             </strong>
         </div>
 
         <div class="menu-subscriptions nav-items">
             <strong class="title-others">
-                OTHERS YOUTUBE CONTENTS
+                <?= $enJson['menu']['titles']['others'] ?>
             </strong>
 
 
@@ -122,14 +124,14 @@
 
         <div class="nav-items menu-footer">
             <div class="links">
-                <a class="menu-text-footer">link</a>
-                <a class="menu-text-footer">link</a>
-                <a class="menu-text-footer">link</a>
-                <a class="menu-text-footer">link</a>
-                <a class="menu-text-footer">link</a>
+                <a class="menu-text-footer"><?= $enJson['menu']['footer']['link1'] ?></a>
+                <a class="menu-text-footer"><?= $enJson['menu']['footer']['link2'] ?></a>
+                <a class="menu-text-footer"><?= $enJson['menu']['footer']['link3'] ?></a>
+                <a class="menu-text-footer"><?= $enJson['menu']['footer']['link4'] ?></a>
+                <a class="menu-text-footer"><?= $enJson['menu']['footer']['link5'] ?></a>
             </div>
             <a class="menu-text-footer copyright">
-                © 2022 Metatubes -L1 Alt Cergy/Paris ❤️
+                <?= $enJson['menu']['footer']['copyright'] ?>
             </a>
         </div>
     </div>

@@ -6,6 +6,12 @@
     --background-color-nav: rgba(22, 22, 22, 0.781);
 }
 
+@keyframes smoothPadding {
+    to {
+        padding-left: var(--margin-left-nav-item);
+    }
+}
+
 .sticky-menu {
     flex-direction: column;
     display: flex;
@@ -189,7 +195,7 @@
 
 .nav-item:hover {
     background-color: var(--elements-hover);
-    padding-left:var(--margin-left-nav-item) ;
+    animation: smoothPadding 280ms 1 forwards;
 }
 
 .menu-subscriptions {
@@ -238,11 +244,11 @@
     font-size: 10px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.menu-link{
+.menu-link {
     width: 100%;
     height: fit-content;
     display: flex;
