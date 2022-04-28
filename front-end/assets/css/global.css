@@ -18,3 +18,10 @@
 body{
     background-color:var(--dark-theme);
 }
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+    margin-top: 5%;
+}

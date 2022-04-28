@@ -18,6 +18,9 @@
 
     </div>
     <!-- Add js library and script here -->
+    <!-- choose one -->
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <!-- <script src="./assets/js/script-menu.js"></script> -->
 </body>
 

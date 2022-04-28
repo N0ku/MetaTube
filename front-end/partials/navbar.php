@@ -45,10 +45,10 @@
       </div>
       <div class="navbar--side">
          <div class="btn--navbar--icon">
-            <a href="http://"></a>
+            <a href="/"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg></a>
          </div>
          <div class="btn--navbar--icon">
-            <a href=""></a>
+            <a href="/"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></a>
          </div>
          <div class="btn--navbar--register">
             <a href="/login">Login</a>
@@ -57,6 +57,7 @@
             <img
                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzslQrjpEHSPbE3teWMa1qA8fUwgRlbg4bGA&usqp=CAU"
                alt=""
+               onclick="myFunction()"
                style="width: 60px; border-radius: 50%"
                class="dropbtn"
                />
@@ -78,6 +79,7 @@
                   <span class="switch__span">Clair</span>
                   </label>
                </div>
+               <!-- LINK TO CHANNEL -->
                <a href="/" class="drop--element">
                   <div>
                      <svg
@@ -97,8 +99,9 @@
                         <circle cx="12" cy="7" r="4"></circle>
                      </svg>
                   </div>
-                  Votre chaine
+                  My Channel
                </a>
+               <!-- LINK TO BUY A -->
                <a href="/" class="drop-profil">
                   <div>
                      <svg
@@ -118,8 +121,9 @@
                            ></path>
                      </svg>
                   </div>
-                  Achats et abonnement
+                  Subscription
                </a>
+               <!-- LINK TO SIGN OUT -->
                <a href="/" class="drop-profil">
                   <div>
                      <svg
@@ -142,8 +146,9 @@
                         <line x1="21" y1="12" x2="9" y2="12"></line>
                      </svg>
                   </div>
-                  Déconnexion
+                  Sign Out
                </a>
+               <!-- LINK TO GO ON PROFIL -->
                <a href="/profils" class="drop-profil">
                   <div>
                      <svg
@@ -165,6 +170,7 @@
                   </div>
                   Mon Compte
                </a>
+               <!-- LINK TO DATA -->
                <a href="/" class="drop-profil">
                   <div>
                      <svg
@@ -183,31 +189,10 @@
                            ></path>
                      </svg>
                   </div>
-                  Vos données dans Meta Tube
-               </a>
-               <a href="/" class="drop-profil" >
-                  <div>
-                     <svg
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="css-i6dzq1"
-                        >
-                        <line x1="22" y1="2" x2="11" y2="13"></line>
-                        <polygon
-                           points="22 2 15 22 11 13 2 9 22 2"
-                           ></polygon>
-                     </svg>
-                  </div>
-                  Envoyer des commentaires
+                  Your data in Meta Tube
                </a>
                <hr />
-               <a href="/" class="drop-profil" >  Mode Restreint</a>
+               <a href="/" class="drop-profil" >  Restricted Mode: Off</a>
             </div>
          </div>
       </div>
@@ -215,7 +200,6 @@
 </nav>
 <script>
    const dropprofil = document.getElementById("dropdown");
-   dropprofil.onclick= myFunction();
    function myFunction() {
        document.getElementById("myDropdown").classList.toggle("show");
    }

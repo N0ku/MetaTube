@@ -14,15 +14,15 @@ ob_start()
                 placeholder="Address Email"
                 id="mailLogin"
             />
-            <p id="erroremail" class="error--register"></p>
             <label for="password">Password</label>
-            <input type="submit" id='submit' value='Connexion'
+            <input class="input--register"
+                type="password"
+                placeholder="Password"
+                id="passwordLogin"
             />
-            <p id="errorpasslog" class="error--register"></p>
             <button class="btn--register">Login</button>
             <br />
              <a href="/register">I don't have any account</a>
         </form>
     </div>
-    <button>Presse</button>
 <?php $content = ob_get_clean(); 
