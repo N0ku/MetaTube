@@ -7,21 +7,23 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="searchbar" class="row">
-        <form method="POST" class="nav-search-box" action="">
-            <input
-            type="text"
-            name="searchbar-content"
-            id="searchbar-content"
-            placeholder="Search Pradish"
-            />
-            <div class="search-button">
-            <img class="search-icon"
-                src="./assets/img/magnifying-glass-solid.svg"
-                alt="magnifying glass" @click="fonctionDeRecherche"
-            />
-            </div>
-        </form>
+    <div id="search-bar">
+        <div id="searchbar" class="row">
+            <form method="POST" class="nav-search-box" action="">
+                <input
+                type="text"
+                name="searchbar-content"
+                id="searchbar-content"
+                placeholder="Search Pradish"
+                />
+                <div class="search-button">
+                <img class="search-icon"
+                    src="./assets/img/magnifying-glass-solid.svg"
+                    alt="magnifying glass" @click="fonctionDeRecherche"
+                />
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>

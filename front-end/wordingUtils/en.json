@@ -1,78 +1,48 @@
 {
     "global": {
-        "title": "MetaTube"
+        "title": "MetaTube",
+        "filter-button": "Filters",
+        "filter-box-title1": "Upload date",
+        "filter-box-title2": "Type", 
+        "filter-box-title3": "Order by",
+        "filter-box-menu-button1": "Last hour",
+        "filter-box-menu-button2": "This week",
+        "filter-box-menu-button3": "This month",
+        "filter-box-menu-button4": "This year",
+        "filter-box-menu-button5": "Video",
+        "filter-box-menu-button6": "Playlist",
+        "filter-box-menu-button7": "Channel",
+        "filter-box-menu-button8": "Relevance",
+        "filter-box-menu-button9": "Upload date",
+        "filter-box-menu-button10": "View count",
+        "filter-box-menu-button11": "Submit"
     },
     "searches": {
         "search1": {
-            "filter-button": "Filters",
-            "filter-box-title1": "Upload date",
-            "filter-box-title2": "Type", 
-            "filter-box-title3": "Order by",
-            "filter-box-menu-button1": "Last hour",
-            "filter-box-menu-button2": "This week",
-            "filter-box-menu-button3": "This month",
-            "filter-box-menu-button4": "This year",
-            "filter-box-menu-button5": "Video",
-            "filter-box-menu-button6": "Playlist",
-            "filter-box-menu-button7": "Channel",
-            "filter-box-menu-button8": "Relevance",
-            "filter-box-menu-button9": "Upload date",
-            "filter-box-menu-button10": "View count",
-            "filter-box-menu-button11": "Submit",
-            "filter-box-title": "Video title",
             "video-watch-count": "View count",
             "video-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate tellus non dolor viverra pretium. Sed neque ipsum, ultrices et vehicula id, imperdiet id neque. Donec iaculis a sapien ut lobortis. Cras aliquet id ex vitae scelerisque. Vestibulum rhoncus, velit sit amet pellentesque sodales, nisi arcu semper lorem, quis placerat quam sapien in orci. Sed quis feugiat tortor. Integer cursus metus sem, at dapibus lectus ultricies nec. Ut malesuada diam convallis sem feugiat sagittis. Suspendisse at neque malesuada, mattis felis sed, dictum ex.",
             "searchpage-channel-name": "Musculated Gooba",
-            "video-img": "./assets/img/kokomi.jpeg",
-            "searchpage-channel-icon": "./assets/img/metatuber.jpeg"
+            "video-img": "assets/img/kokomi.jpeg",
+            "searchpage-channel-icon": "assets/img/metatuber.jpeg",
+            "filter-box-title": "Video title"
         },
         
         "search2": {
-            "filter-button": "Filters",
-            "filter-box-title1": "Upload date",
-            "filter-box-title2": "Type", 
-            "filter-box-title3": "Order by",
-            "filter-box-menu-button1": "Last hour",
-            "filter-box-menu-button2": "This week",
-            "filter-box-menu-button3": "This month",
-            "filter-box-menu-button4": "This year",
-            "filter-box-menu-button5": "Video",
-            "filter-box-menu-button6": "Playlist",
-            "filter-box-menu-button7": "Channel",
-            "filter-box-menu-button8": "Relevance",
-            "filter-box-menu-button9": "Upload date",
-            "filter-box-menu-button10": "View count",
-            "filter-box-menu-button11": "Submit",
-            "filter-box-title": "Video title",
             "video-watch-count": "View count",
             "video-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate tellus non dolor viverra pretium. Sed neque ipsum, ultrices et vehicula id, imperdiet id neque. Donec iaculis a sapien ut lobortis. Cras aliquet id ex vitae scelerisque. Vestibulum rhoncus, velit sit amet pellentesque sodales, nisi arcu semper lorem, quis placerat quam sapien in orci. Sed quis feugiat tortor. Integer cursus metus sem, at dapibus lectus ultricies nec. Ut malesuada diam convallis sem feugiat sagittis. Suspendisse at neque malesuada, mattis felis sed, dictum ex.",
             "searchpage-channel-name": "Musculated Gooba",
-            "video-img": "./assets/img/cucumber.jpeg",
-            "searchpage-channel-icon": "./assets/img/metatuber.jpeg"
+            "video-img": "assets/img/cucumber.jpeg",
+            "searchpage-channel-icon": "assets/img/metatuber.jpeg",
+            "filter-box-title": "Video title"
         },
 
         "search3": {
-            "filter-button": "Filters",
-            "filter-box-title1": "Upload date",
-            "filter-box-title2": "Type", 
-            "filter-box-title3": "Order by",
-            "filter-box-menu-button1": "Last hour",
-            "filter-box-menu-button2": "This week",
-            "filter-box-menu-button3": "This month",
-            "filter-box-menu-button4": "This year",
-            "filter-box-menu-button5": "Video",
-            "filter-box-menu-button6": "Playlist",
-            "filter-box-menu-button7": "Channel",
-            "filter-box-menu-button8": "Relevance",
-            "filter-box-menu-button9": "Upload date",
-            "filter-box-menu-button10": "View count",
-            "filter-box-menu-button11": "Submit",
-            "filter-box-title": "Video title",
             "video-watch-count": "View count",
             "video-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate tellus non dolor viverra pretium. Sed neque ipsum, ultrices et vehicula id, imperdiet id neque. Donec iaculis a sapien ut lobortis. Cras aliquet id ex vitae scelerisque. Vestibulum rhoncus, velit sit amet pellentesque sodales, nisi arcu semper lorem, quis placerat quam sapien in orci. Sed quis feugiat tortor. Integer cursus metus sem, at dapibus lectus ultricies nec. Ut malesuada diam convallis sem feugiat sagittis. Suspendisse at neque malesuada, mattis felis sed, dictum ex.",
             "searchpage-channel-name": "Musculated Gooba",
-            "video-img": "./assets/img/cucumber.jpeg",
-            "searchpage-channel-icon": "./assets/img/metatuber.jpeg"
+            "video-img": "assets/img/cucumber.jpeg",
+            "searchpage-channel-icon": "assets/img/metatuber.jpeg",
+            "filter-box-title": "Video title"
         }
     }
 }

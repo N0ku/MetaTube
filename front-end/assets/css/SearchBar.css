@@ -6,7 +6,7 @@
   --background-color-search-button:rgb(51, 51, 51);
 }
 
-#app{
+#search-bar{
   background-color: var(--dark-theme);
 }
 

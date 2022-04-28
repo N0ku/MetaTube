@@ -25,6 +25,7 @@
     }
     .video-watch-count{
         margin-top: 0px;
+        color: var(--dark-text);
     }
     .video-text{
         font-size: var(--font-small);
@@ -47,6 +48,7 @@
         font-size: var(--font-large);
         padding: 0px;
         margin: 0px;
+        color: var(--dark-text);
     }
     .search-card{
         width: 90%;
@@ -64,17 +66,24 @@
     }
     #search-page-content{
         justify-content: center;
+        color: var(--dark-text);
     }
     .video-img{
         width: 350px;
         height: 200px;
         margin-right: 16px;
     }
+    .video-description{
+        color: var(--dark-text);
+    }
     .searchpage-channel-icon{
         width: 60px;
         height: 60px;
         border-radius: 50px;
         margin-right: 10%;
+    }
+    .searchpage-channel-name{
+        color: var(--dark-text);
     }
     .searchpage-description-side{
         width: 30%;
