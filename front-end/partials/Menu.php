@@ -73,7 +73,7 @@
             </div>
             <div class="nav-item">
                 <img src="assets/img/Menu-svg/like.svg" alt="" srcset="" class="nav-logo" />
-                <a href="index.php?name=LikedVideo"><p>Liked Videos</p>
+                <a href="index.php?name=LikedVideo"><p>Liked Videos</p></a>
             </div>
             <div class="nav-item">
                 <img src="assets/img/Menu-svg/angle-down-solid.svg" alt="" srcset="" class="nav-logo" />
