@@ -17,3 +17,10 @@
     --font-large: 1.8rem;
     --font-Xlarge: 2.3rem;
 }
+body{
+    background-color:var(--dark-theme);
+}
+.content{
+    overflow: scroll;
+    margin-top: 5%;
+}
