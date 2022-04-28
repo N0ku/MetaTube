@@ -12,19 +12,19 @@
         <div class="short-menu-items">
             <div class="nav-item-short">
                 <img src="assets/img/Menu-svg/Home.svg" alt="" srcset="" class="nav-logo-short" />
-                <p>Home</p>
+                <a href="index.php?name=Home"><p>Home</p></a>
             </div>
             <div class="nav-item-short">
                 <img src="assets/img/Menu-svg/compass.svg" alt="" srcset="" class="nav-logo-short" />
-                <p>Explorer</p>
+                <a href="index.php?name=Explorer"><p>Explorer</p></a>
             </div>
             <div class="nav-item-short">
                 <img src="assets/img/Menu-svg/sublogo.svg" alt="" srcset="" class="nav-logo-short" />
-                <p>Subscriptions</p>
+                <a href="index.php?name=Subscriptions"><p>Subscriptions</p></a>
             </div>
             <div class="nav-item-short">
                 <img src="assets/img/Menu-svg/library.svg" alt="" srcset="" class="nav-logo-short" />
-                <p>Library</p>
+                <a href="index.php?name=Library"><p>Library</p></a>
             </div>
         </div>
     </div>
@@ -46,22 +46,22 @@
         <div class="nav-items">
             <div class="nav-item">
                 <img src="assets/img/Menu-svg/Home.svg" alt="" srcset="" class="nav-logo" />
-                <p>Home</p>
+                <a href="index.php?name=Home"><p>Home</p></a>
             </div>
             <div class="nav-item">
                 <img src="assets/img/Menu-svg/compass.svg" alt="" srcset="" class="nav-logo" />
-                <p>Explorer</p>
+                <a href="index.php?name=Explorer"><p>Explorer</p></a>
             </div>
             <div class="nav-item">
                 <img src="assets/img/Menu-svg/sublogo.svg" alt="" srcset="" class="nav-logo" />
-                <p>Subscriptions</p>
+                <a href="index.php?name=Subscriptions"><p>Subscriptions</p></a>
             </div>
         </div>
 
         <div class="nav-items">
             <div class="nav-item">
                 <img src="assets/img/Menu-svg/library.svg" alt="" srcset="" class="nav-logo" />
-                <p>Library</p>
+                <a href="index.php?name=Library"><p>Library</p></a>
             </div>
             <div class="nav-item">
                 <img src="assets/img/Menu-svg/history.svg" alt="" srcset="" class="nav-logo" />

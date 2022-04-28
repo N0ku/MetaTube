@@ -3,7 +3,7 @@ $page_title = "Home"; ?>
 <div class="home-videos-grid">
     <?php
     $allVideoJson = json_decode('');
-    foreach ($allVideoJson as $video) { ?>
+    //foreach ($allVideoJson as $video) { ?>
 
     <div class="home-video-content">
         <img src="assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
@@ -22,7 +22,7 @@ $page_title = "Home"; ?>
         </div>
     </div>
     <?php
-    }
+    //}
     ?>
 </div>
 <?php $page = ob_get_clean() ?>
