@@ -16,6 +16,7 @@
         <?= $page; ?>
     </div>
     <!-- Add js library and script here -->
+    <script src="./assets/js/Jquery.js"></script>
     <script src="./assets/js/script-menu.js"></script>
 </body>
 
