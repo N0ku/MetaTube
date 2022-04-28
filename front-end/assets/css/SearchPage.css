@@ -1,0 +1,81 @@
+
+    body{
+        margin: 0px;
+    }
+    #filter-button{
+        padding: 1%;
+        font-size: var(--font-medium);
+        background-color: var(--dark-theme);
+        color: var(--dark-text);
+        margin-top: 30px;
+        margin-left: 5%;
+    }
+    .row{
+        display: flex;
+        flex-direction: row;
+        flex-wrap : wrap;
+    }
+    .column{
+        display: flex;
+        flex-direction: column;
+        flex-wrap : wrap;
+    }
+    .video-title{
+        margin-bottom: 0px;
+    }
+    .video-watch-count{
+        margin-top: 0px;
+    }
+    .video-text{
+        font-size: var(--font-small);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* number of lines to show */
+                line-clamp: 2; 
+        -webkit-box-orient: vertical;
+    }
+    #filter-box{
+        display : none;
+        width: 90%;
+        padding: 2%;
+        border-bottom: 1px solid var(--dark-text);
+        background-color: var(--dark-theme);
+        color: var(--dark-text);
+    }
+    .filter-box-title{
+        font-size: var(--font-large);
+        padding: 0px;
+        margin: 0px;
+    }
+    .search-card{
+        width: 90%;
+        margin-top: 16px;
+        color: var(--dark-text);
+    }
+    .filter-box-menu{
+        width: 33%;
+    }
+    .filter-box-menu-button{
+        font-size: var(--font-medium);
+    }
+    #search-page{
+        background-color: var(--dark-theme);
+    }
+    #search-page-content{
+        justify-content: center;
+    }
+    .video-img{
+        width: 350px;
+        height: 200px;
+        margin-right: 16px;
+    }
+    .searchpage-channel-icon{
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+        margin-right: 10%;
+    }
+    .searchpage-description-side{
+        width: 30%;
+    }
