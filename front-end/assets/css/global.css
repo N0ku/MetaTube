@@ -22,12 +22,16 @@
     --hamburger-button-active: rgb(72, 72, 72);
     --menu-border-color: rgb(115, 115, 115);
     --background-color-nav: rgba(32, 32, 32, 1);
-    
+
 }
-body{
-    background-color:var(--dark-theme);
+
+body {
+    background-color: var(--dark-theme);
 }
-.content{
-    overflow: scroll;
-    margin-top: 5%;
+
+.content {
+    margin-top: 89px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
