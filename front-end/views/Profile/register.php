@@ -50,4 +50,4 @@ ob_start() ?>
              <a href="/login"><?= $enJson['register']['form']['buttonToLogin'] ?></a>
         </form>
     </div>
-    <?php $content = ob_get_clean(); 
+    <?php $pageName = ob_get_clean(); 

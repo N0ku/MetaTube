@@ -6,10 +6,10 @@ $page_title = "Home"; ?>
     //foreach ($allVideoJson as $video) { ?>
 
     <div class="home-video-content">
-        <img src="assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
         <div class="below-content">
             <div class="below-content-img">
-                <img src="assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
+                <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
             </div>
             <div class="below-content-text">
                 <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
@@ -22,10 +22,235 @@ $page_title = "Home"; ?>
         </div>
     </div>
     <div class="home-video-content">
-        <img src="assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
         <div class="below-content">
             <div class="below-content-img">
-                <img src="assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
+                <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
+            </div>
+            <div class="below-content-text">
+                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                <p class="video-channel-name">Name of the chanel</p>
+                <div class="video-infos">
+                    <p class="video-number-views">200k views</p>
+                    <p class="video-date">2 weeks ago</p>
+                </div>
+            </div>
+        </div>
+    </div> <div class="home-video-content">
+        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+        <div class="below-content">
+            <div class="below-content-img">
+                <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
+            </div>
+            <div class="below-content-text">
+                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                <p class="video-channel-name">Name of the chanel</p>
+                <div class="video-infos">
+                    <p class="video-number-views">200k views</p>
+                    <p class="video-date">2 weeks ago</p>
+                </div>
+            </div>
+        </div>
+    </div> <div class="home-video-content">
+        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+        <div class="below-content">
+            <div class="below-content-img">
+                <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
+            </div>
+            <div class="below-content-text">
+                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                <p class="video-channel-name">Name of the chanel</p>
+                <div class="video-infos">
+                    <p class="video-number-views">200k views</p>
+                    <p class="video-date">2 weeks ago</p>
+                </div>
+            </div>
+        </div>
+    </div> <div class="home-video-content">
+        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+        <div class="below-content">
+            <div class="below-content-img">
+                <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
+            </div>
+            <div class="below-content-text">
+                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                <p class="video-channel-name">Name of the chanel</p>
+                <div class="video-infos">
+                    <p class="video-number-views">200k views</p>
+                    <p class="video-date">2 weeks ago</p>
+                </div>
+            </div>
+        </div>
+    </div> <div class="home-video-content">
+        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+        <div class="below-content">
+            <div class="below-content-img">
+                <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
+            </div>
+            <div class="below-content-text">
+                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                <p class="video-channel-name">Name of the chanel</p>
+                <div class="video-infos">
+                    <p class="video-number-views">200k views</p>
+                    <p class="video-date">2 weeks ago</p>
+                </div>
+            </div>
+        </div>
+    </div> <div class="home-video-content">
+        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+        <div class="below-content">
+            <div class="below-content-img">
+                <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
+            </div>
+            <div class="below-content-text">
+                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                <p class="video-channel-name">Name of the chanel</p>
+                <div class="video-infos">
+                    <p class="video-number-views">200k views</p>
+                    <p class="video-date">2 weeks ago</p>
+                </div>
+            </div>
+        </div>
+    </div> <div class="home-video-content">
+        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+        <div class="below-content">
+            <div class="below-content-img">
+                <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
+            </div>
+            <div class="below-content-text">
+                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                <p class="video-channel-name">Name of the chanel</p>
+                <div class="video-infos">
+                    <p class="video-number-views">200k views</p>
+                    <p class="video-date">2 weeks ago</p>
+                </div>
+            </div>
+        </div>
+    </div> <div class="home-video-content">
+        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+        <div class="below-content">
+            <div class="below-content-img">
+                <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
+            </div>
+            <div class="below-content-text">
+                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                <p class="video-channel-name">Name of the chanel</p>
+                <div class="video-infos">
+                    <p class="video-number-views">200k views</p>
+                    <p class="video-date">2 weeks ago</p>
+                </div>
+            </div>
+        </div>
+    </div> <div class="home-video-content">
+        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+        <div class="below-content">
+            <div class="below-content-img">
+                <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
+            </div>
+            <div class="below-content-text">
+                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                <p class="video-channel-name">Name of the chanel</p>
+                <div class="video-infos">
+                    <p class="video-number-views">200k views</p>
+                    <p class="video-date">2 weeks ago</p>
+                </div>
+            </div>
+        </div>
+    </div> <div class="home-video-content">
+        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+        <div class="below-content">
+            <div class="below-content-img">
+                <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
+            </div>
+            <div class="below-content-text">
+                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                <p class="video-channel-name">Name of the chanel</p>
+                <div class="video-infos">
+                    <p class="video-number-views">200k views</p>
+                    <p class="video-date">2 weeks ago</p>
+                </div>
+            </div>
+        </div>
+    </div> <div class="home-video-content">
+        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+        <div class="below-content">
+            <div class="below-content-img">
+                <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
+            </div>
+            <div class="below-content-text">
+                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                <p class="video-channel-name">Name of the chanel</p>
+                <div class="video-infos">
+                    <p class="video-number-views">200k views</p>
+                    <p class="video-date">2 weeks ago</p>
+                </div>
+            </div>
+        </div>
+    </div> <div class="home-video-content">
+        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+        <div class="below-content">
+            <div class="below-content-img">
+                <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
+            </div>
+            <div class="below-content-text">
+                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                <p class="video-channel-name">Name of the chanel</p>
+                <div class="video-infos">
+                    <p class="video-number-views">200k views</p>
+                    <p class="video-date">2 weeks ago</p>
+                </div>
+            </div>
+        </div>
+    </div> <div class="home-video-content">
+        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+        <div class="below-content">
+            <div class="below-content-img">
+                <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
+            </div>
+            <div class="below-content-text">
+                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                <p class="video-channel-name">Name of the chanel</p>
+                <div class="video-infos">
+                    <p class="video-number-views">200k views</p>
+                    <p class="video-date">2 weeks ago</p>
+                </div>
+            </div>
+        </div>
+    </div> <div class="home-video-content">
+        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+        <div class="below-content">
+            <div class="below-content-img">
+                <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
+            </div>
+            <div class="below-content-text">
+                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                <p class="video-channel-name">Name of the chanel</p>
+                <div class="video-infos">
+                    <p class="video-number-views">200k views</p>
+                    <p class="video-date">2 weeks ago</p>
+                </div>
+            </div>
+        </div>
+    </div> <div class="home-video-content">
+        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+        <div class="below-content">
+            <div class="below-content-img">
+                <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
+            </div>
+            <div class="below-content-text">
+                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                <p class="video-channel-name">Name of the chanel</p>
+                <div class="video-infos">
+                    <p class="video-number-views">200k views</p>
+                    <p class="video-date">2 weeks ago</p>
+                </div>
+            </div>
+        </div>
+    </div> <div class="home-video-content">
+        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+        <div class="below-content">
+            <div class="below-content-img">
+                <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
             </div>
             <div class="below-content-text">
                 <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
@@ -37,200 +262,9 @@ $page_title = "Home"; ?>
             </div>
         </div>
     </div>
-    <div class="home-video-content">
-        <img src="assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
-        <div class="below-content">
-            <div class="below-content-img">
-                <img src="assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
-            </div>
-            <div class="below-content-text">
-                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
-                <p class="video-channel-name">Name of the chanel</p>
-                <div class="video-infos">
-                    <p class="video-number-views">200k views</p>
-                    <p class="video-date">2 weeks ago</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="home-video-content">
-        <img src="assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
-        <div class="below-content">
-            <div class="below-content-img">
-                <img src="assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
-            </div>
-            <div class="below-content-text">
-                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
-                <p class="video-channel-name">Name of the chanel</p>
-                <div class="video-infos">
-                    <p class="video-number-views">200k views</p>
-                    <p class="video-date">2 weeks ago</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="home-video-content">
-        <img src="assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
-        <div class="below-content">
-            <div class="below-content-img">
-                <img src="assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
-            </div>
-            <div class="below-content-text">
-                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
-                <p class="video-channel-name">Name of the chanel</p>
-                <div class="video-infos">
-                    <p class="video-number-views">200k views</p>
-                    <p class="video-date">2 weeks ago</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="home-video-content">
-        <img src="assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
-        <div class="below-content">
-            <div class="below-content-img">
-                <img src="assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
-            </div>
-            <div class="below-content-text">
-                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
-                <p class="video-channel-name">Name of the chanel</p>
-                <div class="video-infos">
-                    <p class="video-number-views">200k views</p>
-                    <p class="video-date">2 weeks ago</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="home-video-content">
-        <img src="assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
-        <div class="below-content">
-            <div class="below-content-img">
-                <img src="assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
-            </div>
-            <div class="below-content-text">
-                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
-                <p class="video-channel-name">Name of the chanel</p>
-                <div class="video-infos">
-                    <p class="video-number-views">200k views</p>
-                    <p class="video-date">2 weeks ago</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="home-video-content">
-        <img src="assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
-        <div class="below-content">
-            <div class="below-content-img">
-                <img src="assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
-            </div>
-            <div class="below-content-text">
-                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
-                <p class="video-channel-name">Name of the chanel</p>
-                <div class="video-infos">
-                    <p class="video-number-views">200k views</p>
-                    <p class="video-date">2 weeks ago</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="home-video-content">
-        <img src="assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
-        <div class="below-content">
-            <div class="below-content-img">
-                <img src="assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
-            </div>
-            <div class="below-content-text">
-                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
-                <p class="video-channel-name">Name of the chanel</p>
-                <div class="video-infos">
-                    <p class="video-number-views">200k views</p>
-                    <p class="video-date">2 weeks ago</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="home-video-content">
-        <img src="assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
-        <div class="below-content">
-            <div class="below-content-img">
-                <img src="assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
-            </div>
-            <div class="below-content-text">
-                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
-                <p class="video-channel-name">Name of the chanel</p>
-                <div class="video-infos">
-                    <p class="video-number-views">200k views</p>
-                    <p class="video-date">2 weeks ago</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="home-video-content">
-        <img src="assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
-        <div class="below-content">
-            <div class="below-content-img">
-                <img src="assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
-            </div>
-            <div class="below-content-text">
-                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
-                <p class="video-channel-name">Name of the chanel</p>
-                <div class="video-infos">
-                    <p class="video-number-views">200k views</p>
-                    <p class="video-date">2 weeks ago</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="home-video-content">
-        <img src="assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
-        <div class="below-content">
-            <div class="below-content-img">
-                <img src="assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
-            </div>
-            <div class="below-content-text">
-                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
-                <p class="video-channel-name">Name of the chanel</p>
-                <div class="video-infos">
-                    <p class="video-number-views">200k views</p>
-                    <p class="video-date">2 weeks ago</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="home-video-content">
-        <img src="assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
-        <div class="below-content">
-            <div class="below-content-img">
-                <img src="assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
-            </div>
-            <div class="below-content-text">
-                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
-                <p class="video-channel-name">Name of the chanel</p>
-                <div class="video-infos">
-                    <p class="video-number-views">200k views</p>
-                    <p class="video-date">2 weeks ago</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="home-video-content">
-        <img src="assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
-        <div class="below-content">
-            <div class="below-content-img">
-                <img src="assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
-            </div>
-            <div class="below-content-text">
-                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
-                <p class="video-channel-name">Name of the chanel</p>
-                <div class="video-infos">
-                    <p class="video-number-views">200k views</p>
-                    <p class="video-date">2 weeks ago</p>
-                </div>
-            </div>
-        </div>
-    </div>
+   
     <?php
     //}
     ?>
 </div>
-<?php $page = ob_get_clean() ?>
+<?php $pageName = ob_get_clean() ?>

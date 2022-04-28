@@ -1,8 +1,10 @@
 const menu = document.getElementsByClassName("hamburger-menu-container");
 const menuShort = document.getElementsByClassName('short-menu');
 const root = document.documentElement;
+const burgerButton = document.getElementsByClassName("hamburger-button-home");
 
 function closeMenu() {
+    burgerButton[0].setAttribute("onclick", "openMenu()")
     menuShort[0].style.display = "flex";
     menu[0].style.display = "none"
     menu[0].style.transform = "translateX(var(--menu-width-close))";
@@ -11,6 +13,7 @@ function closeMenu() {
 }
 
 function openMenu() {
+    burgerButton[0].setAttribute("onclick", "closeMenu()")
     menuShort[0].style.display = "none";
     menu[0].style.display = "flex"
     menu[0].style.transform = "translateX(var(--menu-width))";

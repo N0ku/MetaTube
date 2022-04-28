@@ -1,11 +1,3 @@
-:root {
-    --margin-left-nav-item: 24px;
-    --title-menu-color: #aaa;
-    --hamburger-button-active: rgb(72, 72, 72);
-    --menu-border-color: rgb(115, 115, 115);
-    --background-color-nav: rgba(22, 22, 22, 0.781);
-}
-
 @keyframes smoothPadding {
     to {
         padding-left: var(--margin-left-nav-item);
@@ -23,6 +15,9 @@
 }
 
 .short-menu {
+    margin-top: 1%;
+    border-top-style:solid ;
+    border-top-color:white ;
     overflow: hidden;
     position: sticky;
     top: 0;
@@ -109,6 +104,9 @@
 }
 
 .hamburger-menu-container {
+    margin-top: 1%;
+    border-top-style:solid ;
+    border-top-color:white ;
     top: 0;
     left: 0;
     position: sticky;

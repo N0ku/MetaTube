@@ -43,7 +43,8 @@
             "placeholderConfirmPassword": "Write your password again",
             "buttonRegister": "Register",
             "buttonToLogin": "I have an account"
-        },
+        }
+    },
     "menu": {
         "nav-elements": {
             "Home": "Home",

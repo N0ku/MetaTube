@@ -24,4 +24,4 @@ ob_start()
              <a href="/register"><?= $enJson['login']['form']['buttonToRegister'] ?></a>
         </form>
     </div>
-<?php $content = ob_get_clean(); 
+<?php $pageName = ob_get_clean(); 
