@@ -10,30 +10,30 @@
             </div>
         </div>
         <div class="short-menu-items">
-            <div class="nav-item-short">
-                <img src="assets/img/Menu-svg/Home.svg" alt="" srcset="" class="nav-logo-short" />
-                <a href="index.php?name=Home">
+            <a href="index.php?name=Home" class="menu-link">
+                <div class="nav-item-short">
+                    <img src="assets/img/Menu-svg/Home.svg" alt="" srcset="" class="nav-logo-short" />
                     <p>Home</p>
-                </a>
-            </div>
-            <div class="nav-item-short">
-                <img src="assets/img/Menu-svg/compass.svg" alt="" srcset="" class="nav-logo-short" />
-                <a href="index.php?name=Explorer">
+                </div>
+            </a>
+            <a href="index.php?name=Explorer" class="menu-link">
+                <div class="nav-item-short">
+                    <img src="assets/img/Menu-svg/compass.svg" alt="" srcset="" class="nav-logo-short" />
                     <p>Explorer</p>
-                </a>
-            </div>
-            <div class="nav-item-short">
-                <img src="assets/img/Menu-svg/sublogo.svg" alt="" srcset="" class="nav-logo-short" />
-                <a href="index.php?name=Subscriptions">
+                </div>
+            </a>
+            <a href="index.php?name=Subscriptions" class="menu-link">
+                <div class="nav-item-short">
+                    <img src="assets/img/Menu-svg/sublogo.svg" alt="" srcset="" class="nav-logo-short" />
                     <p>Subscriptions</p>
-                </a>
-            </div>
-            <div class="nav-item-short">
-                <img src="assets/img/Menu-svg/library.svg" alt="" srcset="" class="nav-logo-short" />
-                <a href="index.php?name=Library">
+                </div>
+            </a>
+            <a href="index.php?name=Library" class="menu-link">
+                <div class="nav-item-short">
+                    <img src="assets/img/Menu-svg/library.svg" alt="" srcset="" class="nav-logo-short" />
                     <p>Library</p>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
     </div>
 </div>
