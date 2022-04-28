@@ -3,7 +3,9 @@ $page = "Subscriptions"; ?>
 
 <div class="Subscription-container">
 
-    <h1>Subscriptions Page</h1>
+    <div class="home-video-content">
+
+    </div>
 
 </div>
 

@@ -12,19 +12,27 @@
         <div class="short-menu-items">
             <div class="nav-item-short">
                 <img src="assets/img/Menu-svg/Home.svg" alt="" srcset="" class="nav-logo-short" />
-                <a href="index.php?name=Home"><p>Home</p></a>
+                <a href="index.php?name=Home">
+                    <p>Home</p>
+                </a>
             </div>
             <div class="nav-item-short">
                 <img src="assets/img/Menu-svg/compass.svg" alt="" srcset="" class="nav-logo-short" />
-                <a href="index.php?name=Explorer"><p>Explorer</p></a>
+                <a href="index.php?name=Explorer">
+                    <p>Explorer</p>
+                </a>
             </div>
             <div class="nav-item-short">
                 <img src="assets/img/Menu-svg/sublogo.svg" alt="" srcset="" class="nav-logo-short" />
-                <a href="index.php?name=Subscriptions"><p>Subscriptions</p></a>
+                <a href="index.php?name=Subscriptions">
+                    <p>Subscriptions</p>
+                </a>
             </div>
             <div class="nav-item-short">
                 <img src="assets/img/Menu-svg/library.svg" alt="" srcset="" class="nav-logo-short" />
-                <a href="index.php?name=Library"><p>Library</p></a>
+                <a href="index.php?name=Library">
+                    <p>Library</p>
+                </a>
             </div>
         </div>
     </div>
@@ -46,34 +54,47 @@
         <div class="nav-items">
             <div class="nav-item">
                 <img src="assets/img/Menu-svg/Home.svg" alt="" srcset="" class="nav-logo" />
-                <a href="index.php?name=Home"><p>Home</p></a>
+                <a href="index.php?name=Home">
+                    <p>Home</p>
+                </a>
             </div>
             <div class="nav-item">
                 <img src="assets/img/Menu-svg/compass.svg" alt="" srcset="" class="nav-logo" />
-                <a href="index.php?name=Explorer"><p>Explorer</p></a>
+                <a href="index.php?name=Explorer">
+                    <p>Explorer</p>
+                </a>
             </div>
             <div class="nav-item">
                 <img src="assets/img/Menu-svg/sublogo.svg" alt="" srcset="" class="nav-logo" />
-                <a href="index.php?name=Subscriptions"><p>Subscriptions</p></a>
+                <a href="index.php?name=Subscriptions">
+                    <p>Subscriptions</p>
+                </a>
             </div>
         </div>
 
         <div class="nav-items">
             <div class="nav-item">
                 <img src="assets/img/Menu-svg/library.svg" alt="" srcset="" class="nav-logo" />
-                <a href="index.php?name=Library"><p>Library</p></a>
+                <a href="index.php?name=Library">
+                    <p>Library</p>
+                </a>
             </div>
             <div class="nav-item">
                 <img src="assets/img/Menu-svg/history.svg" alt="" srcset="" class="nav-logo" />
-                <a href="index.php?name=History"><p>History</p></a>
+                <a href="index.php?name=History">
+                    <p>History</p>
+                </a>
             </div>
             <div class="nav-item">
                 <img src="assets/img/Menu-svg/watchlater.svg" alt="" srcset="" class="nav-logo" />
-                <a href="index.php?name=WatchLater"><p>Watch Later</p>
+                <a href="index.php?name=WatchLater">
+                    <p>Watch Later</p>
             </div>
             <div class="nav-item">
                 <img src="assets/img/Menu-svg/like.svg" alt="" srcset="" class="nav-logo" />
-                <a href="index.php?name=LikedVideo"><p>Liked Videos</p></a>
+                <a href="index.php?name=LikedVideo">
+                    <p>Liked Videos</p>
+                </a>
             </div>
             <div class="nav-item">
                 <img src="assets/img/Menu-svg/angle-down-solid.svg" alt="" srcset="" class="nav-logo" />

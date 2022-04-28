@@ -3,7 +3,9 @@ $page = "WatchLater"; ?>
 
 <div class="WatchLater-container">
 
-    <h1>Video to watch later</h1>
+    <div class="home-video-content">
+
+    </div>
 
 </div>
 

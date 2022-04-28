@@ -3,7 +3,9 @@ $page = "Library"; ?>
 
 <div class="Library-container">
 
-    <h1>Library Page</h1>
+    <div class="home-video-content">
+
+    </div>
 
 </div>
 
