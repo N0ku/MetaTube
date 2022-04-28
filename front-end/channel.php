@@ -22,10 +22,10 @@
                 <img class="img-profile" src="<?php echo $enJson['creation']['Image'] ?>" alt="">
                 <input class="btn-image"type="button" value="<?php echo $enJson['creation']['Import'] ?>">
                 <label id="info_name">Nom :</label>
-                <input type="text" id="name" name="user_name">
+                <input class="feature-channel-modal-username" type="text">
             </div>
             <div class="feature-channel-control-btn">
-                <input class="btn-create" type="button" value="<?php echo $enJson['creation']['create'] ?>">
+                <button class="btn-create" onclick="feature_create_account()"  ><?php echo $enJson['creation']['create'] ?></button>
                 <button class="btn-cancel" onclick="feature_remove_accountCreator_function()"><?php echo $enJson['creation']['cancel'] ?></button>
             </div>
             

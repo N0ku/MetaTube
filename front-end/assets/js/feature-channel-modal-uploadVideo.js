@@ -5,8 +5,6 @@ const modalCreationAccount = document.querySelector(".feature-channel-modal-over
 function feature_open_upload_function(){
     modalUploadVideo.classList.add("show");
     modalCreationAccount.classList.add("show");
-    console.log(modalUploadVideo);
-    console.log(modalCreationAccount);
 
 
 }
