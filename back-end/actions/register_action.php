@@ -10,6 +10,7 @@ if(empty( $_POST['email']) ||  empty( $_POST['username']) || empty( $_POST['pass
 if(!ctype_alnum($_POST['username'])){
     $_SESSION['signup_error']= "Pseudo invalide";
     header("Location: index.php?name=Register ");
+
     die();
 }
 $profilNull = 'https://images.unsplash.com/photo-1551373884-8a0750074df7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80';
@@ -17,6 +18,7 @@ $email =filter_var($_POST['email'],FILTER_VALIDATE_EMAIL);
 if($email == false){
     $_SESSION['signup_error']= "Email invaldie";
     header("Location: index.php?name=Register ");
+
     die();
 }
 $password = hash('sha256',$_POST['password']);
@@ -46,5 +48,6 @@ $query->execute([
     ':photoProfil' => $profilNull
 ]);
 header("Location: index.php?name=Login ");
+
 
 ?>
