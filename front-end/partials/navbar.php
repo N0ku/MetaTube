@@ -13,7 +13,8 @@
             </div>
             <button class="btn--logo--nav">
                 <div class="header-menu">
-                    <img src="./front-end/assets/img/Logo/LogoMetatube.svg" class="logo-header-menu" />
+                    <p class="meta-rgb"> META</p>
+                    <p class="logo-header-menu"> tube</p>
                 </div>
             </button>
         </div>
