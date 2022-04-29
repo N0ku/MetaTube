@@ -1,9 +1,9 @@
  <?php 
 $title ="Register";
 ob_start() ?>
-<div class="wrap--from">
-        <form class="form--register" @submit="checkForm">
-            <h2><?= $enJson['register']['form']['titleRegister'] ?></h2>
+<div>
+        <form class="form--register" action="/back-end/actions/register_action.php" method="POST">
+            <h2>Please fill the form to create an account :</h2>
 
             <label for="firstname"><?= $enJson['register']['form']['labelFirstName'] ?></label>
             <input

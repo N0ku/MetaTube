@@ -1,27 +1,42 @@
 <?php 
 $title ="login";
-ob_start() 
+ob_start();
+//require_once __DIR__ .'/../../../back-end/actions/login_action.php';
 ?>
- <div class="wrap--from">
-        <form class="form--register" action="http://93.16.2.231:8081/actions/login_action" method="POST">
-            <h2><?= $enJson['login']['form']['titleLogin'] ?></h2>
-            <label for="mailLogin"><?= $enJson['login']['form']['adress'] ?></label>
+
+ <div class="wrapper--register">
+        <form class="form--register" action="/back-end/actions/login_action.php" method="POST">
+            <h2>Please fill the form to connect:</h2>
+            <?php if(isset($_SESSION['signup_error'])) { ?>
+              <div style="color:red;">
+                <?= $_SESSION['signup_error'] ?>
+              </div>
+            <?php 
+                unset($_SESSION['signup_error']);
+            } 
+            ?>
+            <label for="username">Adresse Email</label>
             <input
         
                 class="input--register"
                 type="text"
                 placeholder="<?= $enJson['login']['form']['placeholderAdress'] ?>"
                 id="mailLogin"
+                name="username"
             />
             <label for="password"><?= $enJson['login']['form']['password'] ?></label>
             <input class="input--register"
-                type="password"
-                placeholder="<?= $enJson['login']['form']['placeholderPassword'] ?>"
+                type="text"
+                placeholder="Password"
                 id="passwordLogin"
+                name="password"
             />
-            <button class="btn--register"><?= $enJson['login']['form']['buttonLogin'] ?></button>
+            <input type="submit" id='submit' value='Connexion' >
             <br />
              <a href="/register"><?= $enJson['login']['form']['buttonToRegister'] ?></a>
         </form>
+        <script>
+
+        </script>
     </div>
 <?php $content = ob_get_clean(); 

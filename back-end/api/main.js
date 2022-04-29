@@ -1,5 +1,5 @@
-const   express = require('express'),
-        mysql = require('mysql');
+const express = require('express'),
+mysql = require('mysql');
 const app = express();
 
 var connection = mysql.createConnection({
@@ -15,6 +15,7 @@ app.get('/users', (req,res) => {
     connection.query('SELECT * FROM user', function(error, results, fields) {
         if(error) throw error;
         res.status(200).json(results);
+        return results;
     });
 });
 
