@@ -5,7 +5,6 @@ $enJson = json_decode($Json, true);
 
 // Prevent the user from going on non-existing pages
 session_start();
-require_once __DIR__ . '/back-end/db.php';
 $page_title = 'Unknown page?';
 $existing_pages = ['Home', 'Explorer', 'Subscriptions', 'Library', 'History', 'LikedVideo', 'WatchLater', 'Profile', 'Register', 'Login'];
 
@@ -21,6 +20,7 @@ if (empty($_GET['name']) == false) {
 
     include  __DIR__ . '/front-end/views/pages/' . $pageName . '.php'; // $page 
     include   __DIR__ . "/front-end/partials/Menu.php"; // $menu
-    include   __DIR__ . "/front-end/partials/navBar.php"; // $navBar
+    include   __DIR__ . "/front-end/partials/Navbar.php"; // $navBar
 
 require_once './template.php';
+?>

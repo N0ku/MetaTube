@@ -15,7 +15,7 @@ $data = $query->fetch(PDO::FETCH_ASSOC);
 
 if( empty($_POST['username']) || empty( $_POST['password'])){
     $_SESSION['signup_error']= "Remplissez tous les champs";
-    header("Location: /login ");
+    header("Location: index.php?name=Login ");
     die();
 }
 
@@ -29,11 +29,11 @@ if ($res["username"] == $data["username"] && $password == $data["password"] ){
 }else{
     if($res["username"] != $data["username"]){
     $_SESSION['signup_error']= "The email you entered isn’t connected to an account. Find your account and log in.";
-    header("Location: /login");
+    header("Location: index.php?name=Login ");
     die();
     }else{
     $_SESSION['signup_error']= "The password you’ve entered is incorrect.";
-    header("Location: /login");
+    header("Location: index.php?name=Login ");
     die();}
 
 }

@@ -6,8 +6,8 @@
     <title><?= $enJson['global']['title'] ?></title>
 
     <link rel="stylesheet" href="./front-end/assets/css/global.css">
-    <link rel="stylesheet" href="./front-end/partials/navbar.css">
-    <link rel="stylesheet" href="./front-end/views/pages/register.css">
+    <link rel="stylesheet" href="./front-end/partials/navBar.css">
+    <link rel="stylesheet" href="./front-end/views/pages/Register.css">
     <link rel="stylesheet" href="./front-end/partials/Menu.css">
     <link rel="stylesheet" href="./front-end/views/pages/Home.css">
 </head>
