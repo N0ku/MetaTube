@@ -84,8 +84,12 @@ app.get('/search/:data', (req,res) => {
 app.get('/video/:id', (req, res) => {
     console.log("GET - /video");
     sqlConn.query(`SELECT * FROM video WHERE id = ${req.params.id}`, function(error, results) {
-        if(error) throw error;
-        res.status(200).json(results);
+        if(error)
+        {
+            if(error.errno == 1054) res.status(200).json([]);
+            else throw error;
+        }
+        else res.status(200).json(results);
     });
 });
 
