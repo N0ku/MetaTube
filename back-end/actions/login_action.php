@@ -33,9 +33,8 @@ if ($res["username"] == $data["username"] && $password == $data["password"] ){
     die();
     }else{
     $_SESSION['signup_error']= $enJson['form']['error']['password'];
-    header("Location: index.php?name=Login ");
+    header("Location: /index.php?name=Login ");
     die();}
 
 }
 
-?>
