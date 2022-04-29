@@ -4,6 +4,12 @@
     height: fit-content;
 }
 
+.explorer-categories{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .explorer-container * {
     color: white;
     max-height: 116px;
@@ -11,21 +17,15 @@
 
 .categories-grid {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: center;
 }
 
 .category-explorer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
     background-color: rgb(33, 33, 33);
-    width: 210px;
+    width: 200px;
     border-radius: 5px;
-    padding: 0 30px;
+    margin: 30px 10px;
 }
 
 
