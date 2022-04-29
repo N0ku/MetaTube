@@ -33,10 +33,10 @@ ob_start();
             />
             <input type="submit" id='submit' value='Connexion' >
             <br />
-             <a href="/register"><?= $enJson['login']['form']['buttonToRegister'] ?></a>
+             <a href="index.php?name=Register"><?= $enJson['login']['form']['buttonToRegister'] ?></a>
         </form>
         <script>
 
         </script>
     </div>
-<?php $content = ob_get_clean(); 
+<?php $pageName = ob_get_clean(); 

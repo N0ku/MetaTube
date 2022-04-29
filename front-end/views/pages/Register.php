@@ -47,7 +47,7 @@ ob_start() ?>
                 id="confirm-password"
             />
             <button class="btn--register"><?= $enJson['register']['form']['buttonRegister'] ?></button>
-             <a href="/login"><?= $enJson['register']['form']['buttonToLogin'] ?></a>
+             <a href="index.php?name=Login"><?= $enJson['register']['form']['buttonToLogin'] ?></a>
         </form>
     </div>
-    <?php $content = ob_get_clean(); 
+    <?php $pageName = ob_get_clean(); 

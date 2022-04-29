@@ -9,4 +9,4 @@ $page = "WatchLater"; ?>
 
 </div>
 
-<?php $page = ob_get_clean() ?>
+<?php $pageName = ob_get_clean() ?>
