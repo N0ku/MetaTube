@@ -37,7 +37,7 @@ $sql = 'INSERT INTO user(id,email, username, password, profilePicture, birthday)
 
 $query = $db->prepare($sql);
 $query->execute([
-    ':id' => 'frsfggdgrg',
+    ':id' => 'frsfggdgrg12',
 	':email' => $email,
 	':pseudo' => $_POST['username'],
 	':password' => $password,
