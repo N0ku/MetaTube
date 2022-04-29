@@ -21,7 +21,7 @@
     --title-menu-color: #aaa;
     --hamburger-button-active: rgb(72, 72, 72);
     --menu-border-color: rgb(115, 115, 115);
-    --background-color-nav: rgba(32, 32, 32, 1);
+    --background-color-nav: #202020f3;
 
 }
 
@@ -29,9 +29,20 @@ body {
     background-color: var(--dark-theme);
 }
 
-.content {
-    margin-top: 89px;
-    display: flex;
-    flex-direction: row;
+.page-content {
     width: 100%;
+    overflow: scroll;
+}
+
+.page-content div {
+    height: 2000px;
+}
+
+.content {
+    position: fixed;
+    display: flex;
+}
+
+.menus {
+    margin-top: 88px;
 }
