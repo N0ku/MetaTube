@@ -12,7 +12,7 @@ var sqlConn = mysql.createConnection({
 sqlConn.connect();
 
 // test
-app.get('/users/', (req,res) => {
+app.get('/users', (req,res) => {
     console.log("GET - /users/");
     sqlConn.query('SELECT * FROM user', function(error, results) {
         if(error) throw error;
@@ -20,7 +20,7 @@ app.get('/users/', (req,res) => {
     });
 });
 
-// for uploading a video
+// video upload
 app.get('/upload/:data', (req,res) => {
     console.log("GET - /upload");
     const data = JSON.parse(req.params.data);
@@ -45,7 +45,7 @@ app.get('/upload/:data', (req,res) => {
     });
 });
 
-// for researching a video
+// videos search
 app.get('/search/:data', (req,res) => {
     console.log("GET - /search");
     const data = JSON.parse(req.params.data);
@@ -74,22 +74,33 @@ app.get('/search/:data', (req,res) => {
         - Send a good respons with all different exit code
 
     */
-    sqlConn.query(`SELECT * FROM video WHERE videoName LIKE %${data.filterBoxTitle}%`, function(error, results) {
+    sqlConn.query(`SELECT * FROM video WHERE title LIKE %${data.filterBoxTitle}%`, function(error, results) {
         if(error) throw error;
         
     });
 });
 
+// get video
 app.get('/video/:id', (req, res) => {
     console.log("GET - /video");
-    sqlConn.query(`SELECT * FROM video WHERE id = ${Number.parseInt(req.params.id)}`, function(error, results) {
+    sqlConn.query(`SELECT * FROM video WHERE id = ${req.params.id}`, function(error, results) {
         if(error) throw error;
         res.status(200).json(results);
     });
 });
 
+// get channel
 app.get('/channel/:id', (req, res) => {
     console.log("GET - /channel");
+    console.log(`   Searching for the id "${req.params.id}"`);
+    sqlConn.query(`SELECT * FROM channel WHERE id = ${req.params.id}`, function(error, results) {
+        if(error)
+        {
+            if(error.errno == 1054) res.status(200).json([]);
+            else throw error;
+        }
+        else res.status(200).json(results);
+    });
 });
 
 app.listen(8081, () => {
