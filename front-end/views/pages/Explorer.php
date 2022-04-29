@@ -63,7 +63,13 @@ $page = "Explorer"; ?>
     </div>
 
     <div class="creator-rise">
-        <div class="creator-rise-content"></div>
+        <div class="creator-rise-content">
+            <div class="creator-rise-content-channel">
+                <img src="" alt="" class="creator-rise-content-channel-img">
+                <p class="creator-rise-content-name"></p>
+                <p class="creator-rise-content-tag"></p>
+            </div>
+        </div>
     </div>
 
 </div>

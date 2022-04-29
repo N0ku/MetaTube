@@ -74,5 +74,8 @@
     "home": {
         "views": "views",
         "date": "ago"
+    },
+    "explore":{
+        "rise":"Creator on the rise"
     }
 }
