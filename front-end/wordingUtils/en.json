@@ -3,12 +3,12 @@
         "title": "MetaTube"
     },
     "creation":{
-        "createTitle":"Voici comment les autres vous verront",
-        "create": "Créer  une chaîne",
-        "name":"Nom",
+        "createTitle":"Need Title",
+        "create": "Create u CreatorChannel",
+        "name":"Name",
         "Image":"./assets/img/default-user-img.jpeg",
-        "Import": "Importer une photo",
-        "cancel": "Annuler"
+        "Import": "Importer picture",
+        "cancel": "Cancel   "
   
     },
     "profile": {

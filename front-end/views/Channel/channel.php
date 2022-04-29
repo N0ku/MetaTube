@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title><?= $enJson['global']['title'] ?></title>
-    <link rel="stylesheet" href="./assets/css/global.css">
-    <link rel="stylesheet" href="./assets/css/channel.css">
-</head>
-
+<?php ob_start() ?>
 <body>
-<button class="feature-channel-modal-creationAccount-open" onclick="feature_open_accountCreator_function()"><?php echo $enJson['creation']['create'] ?></button>
-
+    
     <!-- Put all components here -->
     <div class="bloc-modal">
-         <div class="feature-channel-modal-overlay-channel"></div> 
+        <div class="feature-channel-modal-overlay-channel"></div> 
         <div class="modal-card">
             <div class="title">
                 <p class="title-create"><?php echo $enJson['creation']['createTitle'] ?></p>
@@ -29,13 +19,12 @@
                 <button class="btn-cancel" onclick="feature_remove_accountCreator_function()"><?php echo $enJson['creation']['cancel'] ?></button>
             </div>
             
-
+            
         </div>
-    
+        
     </div>
 
     <!-- Add js library and script here -->
-    <script src="./assets/js/feature-channel-modal-createCreator.js"></script>
-</body>
 
-</html>
+</body>
+<?php $channelCreation = ob_get_clean() ?>

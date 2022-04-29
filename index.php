@@ -43,5 +43,9 @@ switch ($request[0]) {
 include  __DIR__ . '/front-end/views/Timeline/' . $pageName . '.php'; // $page 
 include   __DIR__ . "/front-end/partials/Menu.php"; // $menu
 include   __DIR__ . "/front-end/partials/navBar.php"; // $navBar
+include   __DIR__ . "/front-end/views/Channel/channel.php"; // $navBar
+include   __DIR__ . "/front-end/views/Channel/upload.php"; // $navBar
+
+
 
 require_once './template.php';

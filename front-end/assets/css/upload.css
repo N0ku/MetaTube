@@ -10,6 +10,10 @@ body {
   font-family: Raleway, Helvetica, sans-serif;
   background: #f1f1f1;
 }
+.drop--element--btn--account{
+  border:0;
+  background-color:rgba(0,0,0,0);
+}
 
 .feature-channel-modal-open {
   padding: 10px 14px;

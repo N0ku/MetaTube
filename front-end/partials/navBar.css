@@ -40,7 +40,7 @@
     padding:10px 30px;
     background: #858585;
 }
-.btn--navbar--icon {
+.btn--navbar--icon, .btn--navbar--icon--upload--video {
     padding: 10px 30px;
     border-radius: 100px;
 }
