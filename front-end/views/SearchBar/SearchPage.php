@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <?php 
     $en_json = file_get_contents('wordingUtils/en.json'); 
     $decoded_en_json = json_decode($en_json, true);
@@ -28,7 +22,7 @@
         <button onclick="displayFilter()" type="button" class="filterButton"><?php echo($decoded_en_json["global"]['filterButton']) ?></button>
         <div id="searchPageContent" class="row">
             <!-- Filter Menu with 3 columns: Upload date / Type / Order by -->
-            <form method="GET" action="/front-end" id="searchFilterForm">
+            <form method="GET" action="/front-end/template.php" id="searchFilterForm">
                 <div id="filterBox" class="row">
                     <div class="column filterBoxMenu">
                         <label class="filterBoxTitle"><?php echo($decoded_en_json["global"]['filterBoxTitle1']) ?></label>
@@ -45,7 +39,7 @@
                         <select name="filter_type" class="filterBoxMenuButton2">
                             <option></option>
                             <option value="<?php echo($decoded_en_json["global"]['filterBoxMenuButton5']) ?>"><?php echo($decoded_en_json["global"]['filterBoxMenuButton5']) ?></option>
-                            <option value="<?php echo($decoded_en_json["global"]['filterBoxMenuButton6']) ?>"><?php echo($decoded_en_json["global"]['filterBoxBenuButton6']) ?></option>
+                            <option value="<?php echo($decoded_en_json["global"]['filterBoxMenuButton6']) ?>"><?php echo($decoded_en_json["global"]['filterBoxMenuButton6']) ?></option>
                             <option value="<?php echo($decoded_en_json["global"]['filterBoxMenuButton7']) ?>"><?php echo($decoded_en_json["global"]['filterBoxMenuButton7']) ?></option>
                         </select>
                     </div>

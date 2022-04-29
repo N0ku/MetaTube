@@ -1,35 +1,29 @@
-<!DOCTYPE html>
 <head>
-    <html lang="en">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <?php
+session_start();
 
+// SearchBar request content
 if(isset($_GET["searchbar_content"])){
     $_filters["srch_cntnt"] = $_GET["searchbar_content"];
-    echo($_filters["srch_cntnt"]);
-}
-if(isset($_GET["filter_upload_date"])){
-    $_filters["up_date"] = $_GET["filter_upload_date"];
-    echo($_filters["up_date"]);
 }else{
+    $_filters["srch_cntnt"] = "";
+}
+
+
+// GET (or attribute default) value for filters.
+echo $_filters["up_date"];
+if(!isset($_filters["up_date"])){
     $_filters["up_date"] = "";
 }
-if(isset($_GET["filter_type"])){
-    $_filters["type"] = $_GET["filter_type"];
-    echo($_filters["type"]);
-}else{
+if(!isset($_filters["type"])){
     $_filters["type"] = "";
 }
-if(isset($_GET["filter_order_by"])){
-    $_filters["ord_by"] = $_GET["filter_order_by"];
-    echo($_filters["ord_by"]);
-}else{
+if(!isset($_filters["ord_by"])){
     $_filters["ord_by"] = "";
 }
-$array = ['SearchBarContent' => $_filters["srch_cntnt"], ];
+
+//coucou je suis un commentaire.
+$array = ['SearchBarContent' => $_filters["srch_cntnt"], "filters" => ["uploadDate" => $_filters["up_date"], "filterType" => $_filters["type"], "orderBy" => $_filters["ord_by"] ] ];
 echo json_encode($array, JSON_PRETTY_PRINT);
 ?>
 </head>
