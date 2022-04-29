@@ -4,34 +4,34 @@
 <div class="filter-bar-container">
     <ul class="list-filter">
         <li class="filters-element">
-            <a href="">Tous</a>
+            <a class="filter-text" href="">Tous</a>
         </li>
         <li class="filters-element">
-            <a href="">Jeux Vidéos</a>
+            <a class="filter-text" href="">Jeux Vidéos</a>
         </li>
         <li class="filters-element">
-            <a href="">Anime</a>
+            <a class="filter-text" href="">Anime</a>
         </li>
         <li class="filters-element">
-            <a href="">Sport</a>
+            <a class="filter-text" href="">Sport</a>
         </li>
         <li class="filters-element">
-            <a href="">Apple</a>
+            <a class="filter-text" href="">Apple</a>
         </li>
         <li class="filters-element">
-            <a href="">Mix</a>
+            <a class="filter-text" href="">Mix</a>
         </li>
         <li class="filters-element">
-            <a href="">Vidéos Mise en ligne Récemment</a>
+            <a class="filter-text" href="">Vidéos Mise en ligne Récemment</a>
         </li>
         <li class="filters-element">
-            <a href="">En direct</a>
+            <a class="filter-text" href="">En direct</a>
         </li>
         <li class="filters-element">
-            <a href="">Nouveautés</a>
+            <a class="filter-text" href="">Nouveautés</a>
         </li>
         <li class="filters-element">
-            <a href="">Regardées</a>
+            <a class="filter-text" href="">Regardées</a>
         </li>
     </ul>
 
