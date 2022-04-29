@@ -103,7 +103,7 @@
     z-index: 300;
     border-top-style: solid;
     border-top-color: white;
-    top: var(--header-height);
+    top: var(--navBar-height);
     left: 0;
     position: sticky;
     overflow: hidden;

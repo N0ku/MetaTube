@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="./front-end/partials/navbar.css">
     <link rel="stylesheet" href="./front-end/views/pages/register.css">
     <link rel="stylesheet" href="./front-end/partials/Menu.css">
-    <link rel="stylesheet" href="./front-end/views/Timeline/Home.css">
-    <link rel="stylesheet" href="./front-end/views/Timeline/Explorer.css">
-    <link rel="stylesheet" href="./front-end/partials/FilterBar.css">
+    <link rel="stylesheet" href="./front-end/views/pages/Home.css">
+    <link rel="stylesheet" href="./front-end/views/pages/Explorer.css">
+    <link rel="stylesheet" href="./front-end/views/components/FilterBar.css">
 </head>
 
 <body>
@@ -28,7 +28,9 @@
         </div>
         <div class="page-content">
             <div class="page">
-                <?= $filterbar ?>
+                <?php if ($homeBar == "Home") {
+                    echo $filterbar;
+                } ?>
                 <?= $pageName ?>
             </div>
         </div>

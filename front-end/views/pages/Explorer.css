@@ -1,5 +1,5 @@
 .explorer-container {
-    margin-top: var(--header-height);
+    margin-top: var(--height-page);
     width: 100%;
     height: fit-content;
 }
@@ -37,7 +37,7 @@
     align-items: flex-start;
 }
 
-.category-explorer-title{
+.category-explorer-title {
     font-family: var(--font);
     font-weight: bold;
 }
