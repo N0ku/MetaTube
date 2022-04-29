@@ -134,6 +134,11 @@ a {
     max-width: 20%;
 }
 
+.navbar__center__search-btn:active{
+    background-color: rgb(139, 139, 139);
+    box-shadow: inset black 0px 0px 5px;
+}
+
 .profil--connect--user {
     border-radius: 50%;
 }

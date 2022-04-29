@@ -22,8 +22,8 @@
             "videoWatchCount": "1234 views",
             "videoDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate tellus non dolor viverra pretium. Sed neque ipsum, ultrices et vehicula id, imperdiet id neque. Donec iaculis a sapien ut lobortis. Cras aliquet id ex vitae scelerisque. Vestibulum rhoncus, velit sit amet pellentesque sodales, nisi arcu semper lorem, quis placerat quam sapien in orci. Sed quis feugiat tortor. Integer cursus metus sem, at dapibus lectus ultricies nec. Ut malesuada diam convallis sem feugiat sagittis. Suspendisse at neque malesuada, mattis felis sed, dictum ex.",
             "searchpageChannelName": "Musculated Gooba",
-            "videoImg": "assets/img/kokomi.jpeg",
-            "searchpageChannelIcon": "assets/img/metatuber.jpeg",
+            "videoImg": "./front-end/assets/img/kokomi.jpeg",
+            "searchpageChannelIcon": "./front-end/assets/img/metatuber.jpeg",
             "filterBoxTitle": "I LEAVE METATUBE"
         },
         
@@ -31,8 +31,8 @@
             "videoWatchCount": "666 views",
             "videoDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate tellus non dolor viverra pretium. Sed neque ipsum, ultrices et vehicula id, imperdiet id neque. Donec iaculis a sapien ut lobortis. Cras aliquet id ex vitae scelerisque. Vestibulum rhoncus, velit sit amet pellentesque sodales, nisi arcu semper lorem, quis placerat quam sapien in orci. Sed quis feugiat tortor. Integer cursus metus sem, at dapibus lectus ultricies nec. Ut malesuada diam convallis sem feugiat sagittis. Suspendisse at neque malesuada, mattis felis sed, dictum ex.",
             "searchpageChannelName": "The gardening for noobs",
-            "videoImg": "assets/img/cucumber.jpeg",
-            "searchpageChannelIcon": "assets/img/bonhomme-baton.jpeg",
+            "videoImg": "./front-end/assets/img/cucumber.jpeg",
+            "searchpageChannelIcon": "./front-end/assets/img/bonhomme-baton.jpeg",
             "filterBoxTitle": "How to have the best cucumbers?"
         },
 
@@ -40,8 +40,8 @@
             "videoWatchCount": "4321 views",
             "videoDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate tellus non dolor viverra pretium. Sed neque ipsum, ultrices et vehicula id, imperdiet id neque. Donec iaculis a sapien ut lobortis. Cras aliquet id ex vitae scelerisque. Vestibulum rhoncus, velit sit amet pellentesque sodales, nisi arcu semper lorem, quis placerat quam sapien in orci. Sed quis feugiat tortor. Integer cursus metus sem, at dapibus lectus ultricies nec. Ut malesuada diam convallis sem feugiat sagittis. Suspendisse at neque malesuada, mattis felis sed, dictum ex.",
             "searchpageChannelName": "Musculated Gooba",
-            "videoImg": "assets/img/cucumber.jpeg",
-            "searchpageChannelIcon": "assets/img/metatuber.jpeg",
+            "videoImg": "./front-end/assets/img/cucumber.jpeg",
+            "searchpageChannelIcon": "./front-end/assets/img/metatuber.jpeg",
             "filterBoxTitle": "I HAVE SO MUCH CUCUMBERS!"
         }
     },

@@ -31,7 +31,7 @@
             class="navbar__center__input"
             placeholder=" <?= $enJson['profile']['navBar']['placeolderSearch'] ?>"
             />
-         <button class="navbar__center__search-btn">
+         <button class="navbar__center__search-btn" onclick="window.location.href = 'index.php?name=SearchPage';">
             <svg
                viewBox="0 0 24 24"
                width="24"

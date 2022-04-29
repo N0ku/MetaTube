@@ -1,6 +1,6 @@
 <head>
     <?php 
-    $en_json = file_get_contents('wordingUtils/en.json'); 
+    $en_json = file_get_contents('./front-end/wordingUtils/en.json'); 
     $decoded_en_json = json_decode($en_json, true);
     //We get filters from the url
     if(isset($_GET["filter_upload_date"])){

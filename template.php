@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="./front-end/views/pages/register.css">
     <link rel="stylesheet" href="./front-end/partials/Menu.css">
     <link rel="stylesheet" href="./front-end/views/pages/Home.css">
+    <link rel="stylesheet" href="./front-end/assets/css/SearchPage.css">
 </head>
 
 <body>
 <?php if ($pageName != "404"){ echo $navBar; }?>
       
-    <?= $navBar; ?>
     <div class="content">
         <div class="menus">
         <?php if ($pageName != "404"){ echo $menu; }?>
@@ -31,6 +31,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
         integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="./front-end/assets/js/script-menu.js"></script>
+    <script src="./front-end/assets/js/SearchPage.js"></script>
 
 </body>
 
