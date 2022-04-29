@@ -14,6 +14,15 @@ function feature_remove_accountCreator_function(){
 
 function feature_create_account(){
  const modalGetAccountName = document.querySelector(".feature-channel-modal-username").value;
- console.log(modalGetAccountName);
+ var modalAccountName = document.querySelector(".feature-channel-modal-username");
+ if(modalGetAccountName == ""){
+    modalAccountName.style.border ="1px solid red";
+    console.log(modalAccountName)
+ }
+ else{
+     modalAccountName.style.border ="1px solid black";
+     console.log(modalGetAccountName);
+ }
+ 
 }
 
