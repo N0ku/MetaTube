@@ -6,7 +6,7 @@ ob_start();
 
  <div class="wrap--form">
         <form class="form--register" action="/back-end/actions/login_action.php" id="form" method="POST">
-            <h2><?= $enJson['form']['login']['titleLogin'] ?><h2/>
+            <h2><?= $enJson['form']['login']['titleLogin'] ?></h2>
                 <?php if(isset($_SESSION['signup_error'])) { ?>
               <div style="color:red;">
                 <?= $_SESSION['signup_error'] ?>

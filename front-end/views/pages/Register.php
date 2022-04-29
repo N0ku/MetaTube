@@ -33,7 +33,7 @@
          <div class="wrap--input">
             <label for="dateofbirthday"><?= $enJson['form']['register']['labelBirthday'] ?></label>
             <input
-               name="dateofbirthday"
+               name="dateBirth"
                class="input--register"
                type="date"
                id="dateofbirthday"

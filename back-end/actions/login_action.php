@@ -28,7 +28,7 @@ if ($res["username"] == $data["username"] && $password == $data["password"] ){
     header('Location: /index.php?name=Home');
 }else{
     if($res["username"] != $data["username"]){
-    $_SESSION['signup_error']= $enJson['form']['error']['signup'];
+    $_SESSION['signup_error']= "sd";
     header("Location: /index.php?name=Login ");
     die();
     }else{
