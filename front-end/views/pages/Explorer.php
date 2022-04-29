@@ -3,10 +3,7 @@ $page = "Explorer"; ?>
 
 <div class="explorer-container">
 
-    <h1>Explorer Page</h1>
-    <div class="home-video-content">
-
-    </div>
+    <h1>HEEEEEEYYYYYYYYYYYYYY</h1>
 
 </div>
 

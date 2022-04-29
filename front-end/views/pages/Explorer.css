@@ -1,0 +1,10 @@
+.explorer-container {
+    margin-top: var(--header-height);
+    background-color: red;
+    width: 100%;
+    height: 100%;
+}
+
+.explorer-container * {
+    color: white;
+}

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./front-end/views/pages/register.css">
     <link rel="stylesheet" href="./front-end/partials/Menu.css">
     <link rel="stylesheet" href="./front-end/views/pages/Home.css">
+    <link rel="stylesheet" href="./front-end/views/pages/Explorer.css">
 </head>
 
 <body>
