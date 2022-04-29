@@ -90,6 +90,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .nav-items {
@@ -183,7 +185,11 @@
 .logo-header-menu {
     margin-top: 5px;
     margin-bottom: 5px;
-    width: 200px;
+    color: var(--dark-text);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: var(--font);
+    width: fit-content;
     height: 50px;
 }
 
