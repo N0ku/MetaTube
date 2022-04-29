@@ -4,7 +4,7 @@
 <div class="filter-bar-container">
     <ul class="list-filter">
         <li class="filters-element">
-            <a class="filter-text" href="">Tous</a>
+            <a class="filter-text" href="/index.php?name=Home">Tous</a>
         </li>
         <li class="filters-element">
             <a class="filter-text" href="">Jeux Vidéos</a>
