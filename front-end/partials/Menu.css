@@ -15,19 +15,14 @@
 }
 
 .short-menu {
-    margin-top: 1%;
-    border-top-style:solid ;
-    border-top-color:white ;
+    z-index: 300;
+    border-top-style: solid;
+    border-top-color: white;
     overflow: hidden;
-    position: sticky;
-    top: 0;
-    left: 0;
-    height: 100vh;
+    height: 100%;
     width: 10%;
     min-width: 100px;
     display: flex;
-    left: 0;
-    top: 0;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -104,10 +99,10 @@
 }
 
 .hamburger-menu-container {
-    margin-top: 1%;
-    border-top-style:solid ;
-    border-top-color:white ;
-    top: 0;
+    z-index: 300;
+    border-top-style: solid;
+    border-top-color: white;
+    top: 88px;
     left: 0;
     position: sticky;
     overflow: hidden;
