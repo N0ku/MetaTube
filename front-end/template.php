@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./front-end/assets/css/navbar.css">
     <link rel="stylesheet" href="./front-end/assets/css/register.css">
 </head>
- <?php require_once __DIR__ . "/../front-end/partials/navbar.php" ?>
+ <?php require_once __DIR__ . "/partials/navbar.php" ?>
 <body>
    
     <div class="content">

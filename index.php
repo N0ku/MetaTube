@@ -42,8 +42,8 @@ switch ($request[0]) {
 
 }
 
-include __DIR__ . '/views/Timeline/' . $pageName. '.php'; // $page 
-include __DIR__ . "/partials/Menu.php"; // $menu
-require_once __DIR__ . '/template.php';
-require_once './front-end/template.php';
+include __DIR__ . '/front-end/views/Timeline/' . $pageName. '.php'; // $page 
+include __DIR__ . "/front-end/partials/Menu.php"; // $menu
+require_once __DIR__ . '/front-end/template.php';
+require_once '/front-end/template.php';
 
