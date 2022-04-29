@@ -18,10 +18,15 @@
     if(isset($_GET["filter_order_by"])){
         $_filters["ord_by"] = $_GET["filter_order_by"];
     }
-    echo($_filters["up_date"]);
-    echo($_filters["type"]);
-    echo($_filters["ord_by"]);
-    
+    try{
+        echo($_filters["up_date"]);
+        echo($_filters["type"]);
+        echo($_filters["ord_by"]);
+    }
+    catch(e){
+
+    }
+
     ?>
 </head>
 <body>
