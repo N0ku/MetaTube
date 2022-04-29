@@ -7,17 +7,19 @@
 
     <link rel="stylesheet" href="./front-end/assets/css/global.css">
     <link rel="stylesheet" href="./front-end/partials/navbar.css">
-    <link rel="stylesheet" href="./front-end/assets/css/register.css">
+    <link rel="stylesheet" href="./front-end/views/pages/register.css">
     <link rel="stylesheet" href="./front-end/partials/Menu.css">
-    <link rel="stylesheet" href="./front-end/views/Timeline/Home.css">
+    <link rel="stylesheet" href="./front-end/views/pages/Home.css">
 </head>
 <body>
    
     <div class="content">
 
-        <?= $navBar; ?>
-        <?= $menu; ?>
-       <?= $pageName ?>
+    <?php if ($pageName != "404")  {
+      echo $navBar; 
+      echo $menu; }?>
+      
+      <?= $pageName ?>
       
     </div>
     <!-- Add js library and script here -->
