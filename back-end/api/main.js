@@ -11,6 +11,8 @@ var sqlConn = mysql.createConnection({
 
 sqlConn.connect();
 
+app.use(express.json());
+
 // test
 app.get('/users', (req,res) => {
     console.log("GET - /users/");
@@ -21,9 +23,8 @@ app.get('/users', (req,res) => {
 });
 
 // for uploading a video
-app.get('/upload/:data', (req,res) => {
-    console.log("GET - /upload");
-    const data = JSON.parse(req.params.data);
+app.post('/upload', (req,res) => {
+    console.log("POST - /upload");
     /*
     {
         "id":"",
@@ -38,11 +39,12 @@ app.get('/upload/:data', (req,res) => {
                 TO DO
         - Make all exit code
     */
-    sqlConn.query(`INSERT INTO video (id, creator, title, description, privacy)
+    /* sqlConn.query(`INSERT INTO video (id, creator, title, description, privacy)
     VALUES (${data.id}, ${data.creator}, ${data.title}, ${data.description}, ${data.privacy})`, function(error) {
         if(error) throw error;
         res.status(200);
-    });
+    
+    }); */
 });
 
 // videos search
