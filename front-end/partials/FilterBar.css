@@ -12,6 +12,8 @@ ul.list-filter {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0;
+    background-color: rgb(22, 22, 22);
 }
 
 .filters-element{
@@ -24,4 +26,6 @@ ul.list-filter {
     display: flex;
     font-weight: bold;
     background-color:gray;
+    margin: 12px;
+    margin-left: 0;
 }

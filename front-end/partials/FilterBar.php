@@ -3,7 +3,6 @@
 
 <div class="filter-bar-container">
     <ul class="list-filter">
-        <button><</button>
         <li class="filters-element">
             <a href="">Tous</a>
         </li>
@@ -14,19 +13,10 @@
             <a href="">Anime</a>
         </li>
         <li class="filters-element">
-            <a href="">Manga</a>
-        </li>
-        <li class="filters-element">
             <a href="">Sport</a>
         </li>
         <li class="filters-element">
             <a href="">Apple</a>
-        </li>
-        <li class="filters-element">
-            <a href="">Samsung</a>
-        </li>
-        <li class="filters-element">
-            <a href="">Musculation</a>
         </li>
         <li class="filters-element">
             <a href="">Mix</a>
@@ -43,8 +33,6 @@
         <li class="filters-element">
             <a href="">Regardées</a>
         </li>
-        <button>></button>
-
     </ul>
 
 </div>

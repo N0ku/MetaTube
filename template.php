@@ -16,13 +16,13 @@
 <body>
 
     <?= $navBar; ?>
-    <?= $filterbar ?>
     <div class="content">
         <div class="menus">
             <?= $menu; ?>
         </div>
         <div class="page-content">
             <div class="page">
+                <?= $filterbar ?>
                 <?= $pageName ?>
             </div>
         </div>

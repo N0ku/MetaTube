@@ -34,10 +34,6 @@ body {
     overflow: scroll;
 }
 
-.page-content div {
-    height: 2000px;
-}
-
 .content {
     position: fixed;
     display: flex;
