@@ -19,7 +19,7 @@ if (empty($_GET['name']) == false) {
         $pageName = "404";
     }
 } else {
-    $pageName = "Home";
+    header('Location: index.php?name=Home');
 }
 
 include __DIR__ . '/front-end/views/components/FilterBar.php'; // $filterbar
