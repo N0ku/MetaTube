@@ -24,10 +24,11 @@ $password = $_POST['password'];
 $password = hash('sha256',$_POST['password']);
 
 
-if ($res["username"] == $data["username"] && $password == $data["password"] ){
+if ($res["username"] == $data["email"] && $password == $data["password"] ){
+     $_SESSION['user']= $data;
     header('Location: /index.php?name=Home');
 }else{
-    if($res["username"] != $data["username"]){
+    if($res["username"] != $data["email"]){
     $_SESSION['signup_error']= "sd";
     header("Location: /index.php?name=Login ");
     die();
