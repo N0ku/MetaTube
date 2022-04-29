@@ -34,6 +34,8 @@
                 <?= $pageName ?>
             </div>
         </div>
+
+
     </div>
     <!-- Add js library and script here -->
     <script src="/front-end/assets/js/script-menu.js"></script>
