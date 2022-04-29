@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="./front-end/assets/css/register.css">
     <link rel="stylesheet" href="./front-end/partials/Menu.css">
     <link rel="stylesheet" href="./front-end/views/Timeline/Home.css">
+    <link rel="stylesheet" href="./front-end/partials/FilterBar.css">
 </head>
 
 <body>
 
     <?= $navBar; ?>
+    <?= $filterbar ?>
     <div class="content">
         <div class="menus">
             <?= $menu; ?>
