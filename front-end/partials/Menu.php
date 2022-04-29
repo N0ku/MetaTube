@@ -58,6 +58,7 @@
             </a>
         </div>
 
+        <div class="border"></div>
         <div class="nav-items">
             <a href="index.php?name=Library" class="menu-link">
                 <div class="nav-item">
@@ -124,23 +125,26 @@
                 <p>More</p>
             </div>
         </div>
+        <div class="border"></div>
         <div class="menu-subscriptions">
             <strong class="title-subscriptions">
                 <?= $enJson['menu']['titles']['subscriptions'] ?>
             </strong>
         </div>
+        <div class="border"></div>
 
         <div class="menu-subscriptions nav-items">
             <strong class="title-others">
                 <?= $enJson['menu']['titles']['others'] ?>
             </strong>
-
+            <div class="border"></div>
 
         </div>
 
         <div class="nav-items">
 
         </div>
+        <div class="border"></div>
 
         <div class="nav-items menu-footer">
             <div class="links">

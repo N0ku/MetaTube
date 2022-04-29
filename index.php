@@ -9,6 +9,8 @@ session_start();
 require_once __DIR__ . '/back-end/db.php';
 $page_title = 'Unknown page?';
 $existing_pages = ['Home', 'Explorer', 'Subscriptions', 'Library', 'History', 'LikedVideo', 'WatchLater', 'Profile', 'Register', 'Login'];
+$homeBar = $_GET['name'];
+
 
 if (empty($_GET['name']) == false) {
     if (in_array($_GET['name'], $existing_pages)) {
@@ -17,12 +19,13 @@ if (empty($_GET['name']) == false) {
         $pageName = "404";
     }
 } else {
-    $pageName = "Home";
+    header('Location: index.php?name=Home');
 }
 
-    include  __DIR__ . '/front-end/views/pages/' . $pageName . '.php'; // $page 
-    include   __DIR__ . "/front-end/partials/Menu.php"; // $menu
-    include   __DIR__ . "/front-end/partials/navBar.php"; // $navBar
+include __DIR__ . '/front-end/views/components/FilterBar.php'; // $filterbar
+include  __DIR__ . '/front-end/views/pages/' . $pageName . '.php'; // $page 
+include   __DIR__ . "/front-end/partials/Menu.php"; // $menu
+include   __DIR__ . "/front-end/partials/navBar.php"; // $navBar
 
 
 include __DIR__ . '/front-end/views/Channel/Upload.php';

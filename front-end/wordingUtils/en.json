@@ -48,7 +48,7 @@
     "menu": {
         "nav-elements": {
             "Home": "Home",
-            "Explorer": "Explorer",
+            "Explorer": "Explore",
             "Subscriptions": "Subscriptions",
             "Library": "Library",
             "History": "History",
@@ -74,5 +74,8 @@
     "home": {
         "views": "views",
         "date": "ago"
+    },
+    "explore":{
+        "rise":"Creator on the rise"
     }
 }

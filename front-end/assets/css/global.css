@@ -22,7 +22,9 @@
     --hamburger-button-active: rgb(72, 72, 72);
     --menu-border-color: rgb(115, 115, 115);
     --background-color-nav: #202020f3;
-
+    --header-height: 208px;
+    --navBar-height: 88px;
+    --height-page: 98px;
 }
 
 body {
@@ -39,11 +41,16 @@ body {
     height: 2000px;
 }
 
+.page {
+    width: 100%;
+}
+
 .content {
     position: fixed;
     display: flex;
+    width: 100%;
 }
 
 .menus {
-    margin-top: 88px;
+    margin-top: var(--navBar-height);
 }

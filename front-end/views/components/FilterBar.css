@@ -1,0 +1,39 @@
+.filter-bar-container {
+    position: fixed;
+    display: flex;
+    top: var(--navBar-height);
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: fit-content !important;
+    width: 100%;
+    border-top: 0.5px rgb(65, 64, 64) solid;
+    border-bottom: 0.5px rgb(65, 64, 64) solid;
+}
+
+ul.list-filter {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-color: var(--background-color-nav);
+}
+
+.filters-element {
+    width: 100%;
+    list-style: none;
+    font-family: 'Arial';
+    text-align: center;
+    border: 1px solid lightslategray;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    font-weight: bold;
+    background-color: gray;
+    margin: 12px;
+    margin-left: 0;
+}
