@@ -66,6 +66,7 @@
     }
     #searchPage{
         background-color: var(--dark-theme);
+        margin-top: 88px;
     }
     #searchPageContent{
         justify-content: center;

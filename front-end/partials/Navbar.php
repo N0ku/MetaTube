@@ -21,13 +21,16 @@
          </svg>
          </div> 
          <button class="btn--logo--nav">
-         <div class="header-menu">
-        <img src="./front-end/assets/img/Logo/LogoMetatube.svg" class="logo-header-menu" />
-    </div>         </button>
+            <div class="header-menu">
+               <a href="./index.php">
+                  <img src="./front-end/assets/img/Logo/LogoMetatube.svg" class="logo-header-menu" />
+               </a>
+            </div>         
+         </button>
       </div>
-      <div class="navbar--center">
+      <form method="POST" action="./back-end/actions/filters.php" class="navbar--center">
          <input
-            type="text"
+            type="text" name="searchBar"
             class="navbar__center__input"
             placeholder=" <?= $enJson['profile']['navBar']['placeolderSearch'] ?>"
             />
@@ -47,7 +50,8 @@
                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
          </button>
-      </div>
+      </form>
+      
       <div class="navbar--side">
          <div class="btn--navbar--icon">
             <a ><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg></a>

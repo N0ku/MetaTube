@@ -1,8 +1,20 @@
 <head>
-    <?php
-    $en_json = file_get_contents('./front-end/wordingUtils/en.json'); 
+    <?php 
+    $en_json = file_get_contents('wordingUtils/en.json'); 
     $decoded_en_json = json_decode($en_json, true);
-    session_start();
+    //We get filters from the url
+    if(isset($_GET["filter_upload_date"])){
+        $_filters["up_date"] = $_GET["filter_upload_date"];
+        echo($_filters["up_date"]);
+    }
+    if(isset($_GET["filter_type"])){
+        $_filters["type"] = $_GET["filter_type"];
+        echo($_filters["type"]);
+    }
+    if(isset($_GET["filter_order_by"])){
+        $_filters["ord_by"] = $_GET["filter_order_by"];
+        echo($_filters["ord_by"]);
+    }
     ?>
 </head>
 <body>
@@ -10,12 +22,12 @@
         <button onclick="displayFilter()" type="button" class="filterButton"><?php echo($decoded_en_json["global"]['filterButton']) ?></button>
         <div id="searchPageContent" class="row">
             <!-- Filter Menu with 3 columns: Upload date / Type / Order by -->
-            <form method="post" action="./back-end/actions/filters.php" id="searchFilterForm">
+            <form method="GET" action="/front-end/template.php" id="searchFilterForm">
                 <div id="filterBox" class="row">
                     <div class="column filterBoxMenu">
                         <label class="filterBoxTitle"><?php echo($decoded_en_json["global"]['filterBoxTitle1']) ?></label>
                         <select name="filter_upload_date" class="filterBoxMenuButton1">
-                            <option><?php if(isset($_SESSION["up_date"])){ echo $_SESSION["up_date"];} ?> </option>
+                            <option></option>
                             <option value="<?php echo($decoded_en_json["global"]['filterBoxMenuButton1']) ?>"><?php echo($decoded_en_json["global"]['filterBoxMenuButton1']) ?></option>
                             <option value="<?php echo($decoded_en_json["global"]['filterBoxMenuButton2']) ?>"><?php echo($decoded_en_json["global"]['filterBoxMenuButton2']) ?></option>
                             <option value="<?php echo($decoded_en_json["global"]['filterBoxMenuButton3']) ?>"><?php echo($decoded_en_json["global"]['filterBoxMenuButton3']) ?></option>
@@ -25,7 +37,7 @@
                     <div class="column filterBoxMenu">
                         <label class="filterBoxTitle"><?php echo($decoded_en_json["global"]['filterBoxTitle2']) ?></label>
                         <select name="filter_type" class="filterBoxMenuButton2">
-                            <option><?php if(isset($_SESSION["type"])){ echo $_SESSION["type"];} ?></option>
+                            <option></option>
                             <option value="<?php echo($decoded_en_json["global"]['filterBoxMenuButton5']) ?>"><?php echo($decoded_en_json["global"]['filterBoxMenuButton5']) ?></option>
                             <option value="<?php echo($decoded_en_json["global"]['filterBoxMenuButton6']) ?>"><?php echo($decoded_en_json["global"]['filterBoxMenuButton6']) ?></option>
                             <option value="<?php echo($decoded_en_json["global"]['filterBoxMenuButton7']) ?>"><?php echo($decoded_en_json["global"]['filterBoxMenuButton7']) ?></option>
@@ -34,7 +46,7 @@
                     <div class="column filterBoxMenu">
                         <label class="filterBoxTitle"><?php echo($decoded_en_json["global"]['filterBoxTitle3']) ?></label>
                         <select name="filter_order_by" class="filterBoxMenuButton3">
-                            <option><?php if(isset($_SESSION["ord_by"])){ echo $_SESSION["ord_by"];} ?></option>
+                            <option></option>
                             <option value="<?php echo($decoded_en_json["global"]['filterBoxMenuButton8']) ?>"><?php echo($decoded_en_json["global"]['filterBoxMenuButton8']) ?></option>
                             <option value="<?php echo($decoded_en_json["global"]['filterBoxMenuButton9']) ?>"><?php echo($decoded_en_json["global"]['filterBoxMenuButton9']) ?></option>
                             <option value="<?php echo($decoded_en_json["global"]['filterBoxMenuButton10']) ?>"><?php echo($decoded_en_json["global"]['filterBoxMenuButton10']) ?></option>
@@ -47,9 +59,6 @@
                 </div>
             </form>
             
-            <?php 
-            ?>
-
             <!-- We duplicate video cards with a template video card-->
             <?php foreach($decoded_en_json['searches'] as $searched) {?>
                 <div class="column searchCard">
