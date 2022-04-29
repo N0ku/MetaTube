@@ -1,9 +1,11 @@
 <?php ob_start();
 $page_title = "Home"; ?>
+
 <div class="home-videos-grid">
     <?php
     $allVideoJson = json_decode('');
-    //foreach ($allVideoJson as $video) { ?>
+    //foreach ($allVideoJson as $video) { 
+    ?>
 
     <div class="home-video-content">
         <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />

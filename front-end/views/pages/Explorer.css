@@ -1,0 +1,43 @@
+.explorer-container {
+    margin-top: var(--height-page);
+    width: 100%;
+    height: fit-content;
+}
+
+.explorer-categories{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.explorer-container * {
+    color: white;
+    max-height: 116px;
+}
+
+.categories-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category-explorer {
+    background-color: rgb(33, 33, 33);
+    width: 200px;
+    border-radius: 5px;
+    margin: 30px 10px;
+}
+
+
+.category-content {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.category-explorer-title {
+    font-family: var(--font);
+    font-weight: bold;
+}
