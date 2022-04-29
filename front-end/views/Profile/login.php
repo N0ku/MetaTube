@@ -36,7 +36,7 @@ ob_start();
              <a href="/register">I don't have any account</a>
         </form>
         <script>
-            
+
         </script>
     </div>
 <?php $content = ob_get_clean(); 
