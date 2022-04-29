@@ -22,7 +22,7 @@
             $_filters["ord_by"] = "";
         }
 
-        //coucou je suis un commentaire.
+        // hey i'm a comment
         $array = ['SearchBarContent' => $_filters["srch_cntnt"], "filters" => ["uploadDate" => $_filters["up_date"], "filterType" => $_filters["type"], "orderBy" => $_filters["ord_by"] ] ];
         echo json_encode($array, JSON_PRETTY_PRINT);
     ?>

@@ -59,14 +59,14 @@
                         <div class="searchpageDescriptionSide">
                             <h3 class="filterBoxTitle videoTitle"><?php echo($searched['filterBoxTitle']) ?></h3>
                             <p class="videoText videoWatchCount"><?php echo($searched['videoWatchCount']) ?></p>
-                            <div class="row">
+                            <a href="" class="row">
                                 <img src= "<?php echo($searched['searchpageChannelIcon'])?>" alt="channel icon" class="searchpageChannelIcon">
                                 <p class="searchpageChannelName"><?php echo($searched['searchpageChannelName']) ?></p>
-                            </div>
+                            </a>
                             <p class="videoText videoDescription"><?php echo($searched['videoDescription']) ?></p>
                         </div>
                     </div>
-                </div>
+            </div>
             <?php } ?>
         </div>
     </section>
