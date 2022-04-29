@@ -2,7 +2,7 @@
 $title ="Register";
 ob_start() ?>
 <div>
-        <form class="form--register" @submit="checkForm">
+        <form class="form--register" action="/back-end/actions/register_action.php" method="POST">
             <h2>Please fill the form to create an account :</h2>
 
             <label for="firstname">First Name</label>

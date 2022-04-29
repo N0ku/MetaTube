@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <title><?= $enJson['global']['title'] ?> | <?= $title ?></title>
 
-    <link rel="stylesheet" href="./assets/css/global.css">
-    <link rel="stylesheet" href="./assets/css/navbar.css">
-    <link rel="stylesheet" href="./assets/css/register.css">
+    <link rel="stylesheet" href="./front-end/assets/css/global.css">
+    <link rel="stylesheet" href="./front-end/assets/css/navbar.css">
+    <link rel="stylesheet" href="./front-end/assets/css/register.css">
 </head>
 
 <body>
     <?php require_once __DIR__ . "/../front-end/partials/navbar.php" ?>
     <div class="content">
 
-    <?php echo $content; ?>
+     <?php echo $content; ?> 
 
     </div>
     <!-- Add js library and script here -->

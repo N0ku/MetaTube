@@ -1,9 +1,10 @@
 <?php
-
-
+require_once __DIR__. '/../db.php';
 session_start();
+
+
 if(empty( $_POST['email']) ||  empty( $_POST['username']) || empty( $_POST['password']) ){
-    $_SESSION['signup_error']= "remplissez vos champs";
+    $_SESSION['signup_error']= "r";
     header("Location: /register ");
     die();
 }
@@ -23,7 +24,7 @@ if($email == false){
 $password = hash('sha256',$_POST['password']);
 
 $sql = 'SELECT * FROM users WHERE  email = :email OR  username = :pseudo';
-$query = $conn->prepare($sql);
+$query = $db->prepare($sql);
 
 $query->execute([
     ':email' => $email,
@@ -39,7 +40,7 @@ if($data){
 }
 $sql = 'INSERT INTO users(email, username, password, photoProfil) VALUES (:email, :pseudo, :password, :photoProfil)';
 
-$query = $conn->prepare($sql);
+$query = $db->prepare($sql);
 $query->execute([
 	':email' => $email,
 	':pseudo' => $_POST['username'],
