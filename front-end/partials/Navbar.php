@@ -32,7 +32,7 @@
          <input
             type="text" name="searchBar"
             class="navbar__center__input"
-            placeholder=" <?= $enJson['profile']['navBar']['placeolderSearch'] ?>"
+            placeholder=" <?= $_SESSION["srch_cntnt"] ?>"
             />
          <button class="navbar__center__search-btn" onclick="window.location.href = 'index.php?name=SearchPage';">
             <svg

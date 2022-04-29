@@ -48,6 +48,7 @@
             </form>
             
             <?php 
+               
             ?>
 
             <!-- We duplicate video cards with a template video card-->
