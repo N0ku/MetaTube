@@ -4,25 +4,11 @@
    <div class="box--navbar">
       <div class="navbar--side">
          <div class="hamburger-button-home" onclick="openMenu()">
-         <svg
-            viewBox="0 0 24 24"
-            width="24"
-            height="24"
-            stroke="currentColor"
-            stroke-width="2"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="navbar--logo"
-            >
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-         </svg>
+          <img src="./front-end/assets/img/Logo/menu.svg" class="logo-menu" />
          </div> 
          <button class="btn--logo--nav">
          <div class="header-menu">
-        <img src="./front-end/assets/img/Logo/LogoMetatube.svg" class="logo-header-menu" />
+        <img src="./front-end/assets/img/Logo/meta.svg" class="logo-header-menu" />
     </div>         </button>
       </div>
       <div class="navbar--center">
@@ -154,7 +140,7 @@
                   <?= $enJson['profile']['navBar']['buttonSignOut'] ?>
                </a>
                <!-- LINK TO GO ON PROFIL -->
-               <a href="/profils" class="drop-profil">
+               <a href="index.php?name=Profile" class="drop-profil">
                   <div>
                      <svg
                         viewBox="0 0 24 24"
