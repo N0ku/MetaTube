@@ -45,6 +45,8 @@ include   __DIR__ . "/front-end/partials/Menu.php"; // $menu
 include   __DIR__ . "/front-end/partials/navBar.php"; // $navBar
 include   __DIR__ . "/front-end/views/Channel/channel.php"; // $navBar
 include   __DIR__ . "/front-end/views/Channel/upload.php"; // $navBar
+include   __DIR__ . "/front-end/views/Channel/channel_page.php"; // $navBar
+
 
 
 

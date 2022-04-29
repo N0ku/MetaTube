@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./front-end/views/Timeline/Home.css">
     <link rel="stylesheet" href="./front-end/assets/css/channel.css">
     <link rel="stylesheet" href="./front-end/assets/css/upload.css">
+    <link rel="stylesheet" href="./front-end/assets/css/channelPage.css">
 
 </head>
 <body>
@@ -22,7 +23,9 @@
        <?= $channelVideoUpload ?>
         <?= $navBar; ?>
         <?= $menu; ?>
-       <?= $pageName ?>
+        <?= $channel_page; ?>
+
+       <!-- <?= $pageName ?> -->
        
 
 

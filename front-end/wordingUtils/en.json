@@ -11,6 +11,18 @@
         "cancel": "Cancel   "
   
     },
+    "channel":{
+        "HomeSelection":"Home",
+        "VideoSelection":"Videos",
+        "PlaylistsSelection":"Playlists",
+        "ChannelSelection":"Channels",
+        "AboutUsSelection":"About Us",
+        "LockerSelection":"Locker",
+        "introduction":"Video Intro",
+        "videoOnline":"Video Online",
+        "popular":"Video Popular",
+        "play":"./assets/img/Channel/play.png"
+    },
     "profile": {
         "navBar": {
             "placeolderSearch": "Search",
