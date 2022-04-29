@@ -8,7 +8,7 @@ $enJson = json_decode($Json, true);
 session_start();
 require_once __DIR__ . '/back-end/db.php';
 $page_title = 'Unknown page?';
-$existing_pages = ['Home', 'Explorer', 'Subscriptions', 'Library', 'History', 'LikedVideo', 'WatchLater'];
+$existing_pages = ['Home', 'Explorer', 'Subscriptions', 'Library', 'History', 'LikedVideo', 'WatchLater', 'Profile', 'Register', 'Login'];
 
 if (empty($_GET['name']) == false) {
     if (in_array($_GET['name'], $existing_pages)) {
@@ -20,25 +20,10 @@ if (empty($_GET['name']) == false) {
     $pageName = "Home";
 }
 
-/* $request = explode('?', $_SERVER['REQUEST_URI']);
+    include  __DIR__ . '/front-end/views/pages/' . $pageName . '.php'; // $page 
+    include   __DIR__ . "/front-end/partials/Menu.php"; // $menu
+    include   __DIR__ . "/front-end/partials/navBar.php"; // $navBar
 
-switch ($request[0]) {
-        case '/':
-        require_once __DIR__ . '/front-end/views/Timeline/home.php';
-        break;
-    case '/login':
-        require_once __DIR__ . '/front-end/views/Profile/login.php';
-        break;
-    case '/register':
-        require_once __DIR__ . '/front-end/views/Profile/register.php';
-        break;
-        /*  case '/deconnexion':
-        require_once __DIR__. '/action/disconnect.php';
-        break; */
-    /*case '/profils':
-        require_once __DIR__ . '/front-end/views/Profile/profils.php';
-        break;
-} */
 
 include __DIR__ . '/front-end/views/Channel/Upload.php';
 //include  __DIR__ . '/front-end/views/Timeline/' . $pageName . '.php'; // $page 
