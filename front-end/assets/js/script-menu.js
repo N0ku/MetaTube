@@ -11,7 +11,6 @@ function closeMenu() {
     menu[0].style.display = "none"
     root.style.setProperty('--video-content-width', '20%');
     root.style.setProperty('--video-content-padding', '30px');
-    root.style.setProperty('--video-content-minwidth', '220px');
 }
 
 function openMenu() {
@@ -22,5 +21,4 @@ function openMenu() {
     menu[0].style.display = "flex";
     root.style.setProperty('--video-content-width', '15%');
     root.style.setProperty('--video-content-padding', '20px');
-    root.style.setProperty('--video-content-minwidth', '220px');
 }

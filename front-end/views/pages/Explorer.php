@@ -65,9 +65,14 @@ $page = "Explorer"; ?>
     <div class="creator-rise">
         <div class="creator-rise-content">
             <div class="creator-rise-content-channel">
-                <img src="" alt="" class="creator-rise-content-channel-img">
-                <p class="creator-rise-content-name"></p>
-                <p class="creator-rise-content-tag"></p>
+                <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="creator-rise-content-channel-img">
+                <p class="creator-rise-content-name">Michou</p>
+                <p class="creator-rise-content-tag"><?= $enJson['explore']['rise'] ?></p>
+            </div>
+            <div class="creator-rise-grid">
+                <div class="creator-rise-video">
+
+                </div>
             </div>
         </div>
     </div>

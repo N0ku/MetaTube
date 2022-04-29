@@ -30,10 +30,6 @@ body {
     background-color: rgb(12, 12, 12);
 }
 
-.home-video-content * {
-    max-height: 220px;
-}
-
 .home-video-content:hover {
     cursor: pointer;
 }
