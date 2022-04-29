@@ -3,7 +3,7 @@ require_once __DIR__. '/../db.php';
 session_start();
 $res = $_POST;
 
-$sql = 'SELECT * FROM user WHERE username = :username';
+$sql = 'SELECT * FROM user WHERE email = :username';
 
 $query = $db->prepare($sql);
 
