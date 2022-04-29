@@ -4,6 +4,9 @@ $user = "codeur"; /* User */
 $password = "coding"; /* Password */
 $dbname = "metatube"; /* Database name */
 
+// $apiUrl = 'http://93.16.2.231:8081/';
+$apiUrl = 'http://127.0.0.1:8081/';
+
 $con = mysqli_connect($host, $user, $password,$dbname);
 // Check connection
 if (!$con) {
@@ -59,3 +62,91 @@ function giveId(){
  }
  return $id;
 }
+
+
+
+
+
+function debug_to_console($data) {
+  $output = $data;
+  if (is_array($output))
+      $output = implode(',', $output);
+}
+
+
+function checkid($id){
+  $opts = array(
+    'http'=>array(
+      'method'=>"GET",
+    )
+  );
+
+  $context = stream_context_create($opts);
+
+  $fp = fopen($apiUrl . 'video/' . $id, 'r', false, $context);
+  fpassthru($fp);
+  fclose($fp);
+  var_dump($context);
+}
+
+
+function upload() {
+  $id = giveId();
+  if(array_key_exists('file', $_FILES)){
+    if ($_FILES['file']['error'] === UPLOAD_ERR_OK) {
+        echo 'upload was successful';
+    } else {
+        die("Upload failed with error code " . $_FILES['file']['error']);
+    }
+  }
+  $maxsize = 1000000000000;
+    if(isset($_FILES['file']['name']) && $_FILES['file']['name'] != ''){
+        $name = $id;
+        // $path_ke y = "C:/Users/Ruiseki/sprint/metatube/storage/video/";
+        $path_key = "/Users/celian/Documents/MetaTube/storage/";
+        $target_file = $path_key . $_FILES["file"]["name"];
+
+        // Select file type
+        $extension = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+        // Valid file extensions
+        $extensions_arr = array("mp4","avi","3gp","mov","mpeg");
+
+        // Check extension
+        if( in_array($extension,$extensions_arr) ) {
+          // Check file size
+          if(($_FILES['file']['size'] >= $maxsize) || ($_FILES["file"]["size"] == 0)) {
+              
+          }
+          else {
+              // Upload
+              if(move_uploaded_file($_FILES['file']['tmp_name'],$id . '.' . $extension)) {
+                $data = array(
+                  "id"          => $id,
+                  "creator"     => "00000000000000000000",
+                  "title"       => "Rick Rolled",
+                  "description" => "I like trains",
+                  "privacy"     => "public",
+                );
+                
+                $option = array(
+                  'http' => array(
+                    'method' => 'POST',
+                    'content' => json_encode($data),
+                    'header' => "Content-Type: application/json\r\n" . "Accept: application/json\r\n"
+                  )
+                );
+                $context = stream_context_create($option);
+                $result = file_get_contents($apiUrl . 'upload', false, $context);
+                $response = json_decode($result);
+              }
+            }
+        }else{
+          $_SESSION['message'] = "Invalid file extension.";
+        }
+    }else{
+        $_SESSION['message'] = "Please select a file.";
+    }
+    header('location: index.php');
+    exit;
+  }
