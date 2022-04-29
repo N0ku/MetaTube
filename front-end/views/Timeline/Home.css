@@ -25,13 +25,13 @@ body {
     width: var(--video-content-width);
     min-width: var(--video-content-minwidth);
     height: fit-content;
-    max-height: 200px;
+    max-height: 220px;
     overflow: hidden;
     background-color: rgb(12, 12, 12);
 }
 
 .home-video-content * {
-    max-height: 200px;
+    max-height: 220px;
 }
 
 .home-video-content:hover {
