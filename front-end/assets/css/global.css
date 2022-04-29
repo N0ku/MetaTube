@@ -2,7 +2,7 @@
     --primary-color: rgb(185, 15, 15);
     --secondary-color: rgb(158, 12, 12);
 
-    --dark-theme: rgb(22, 22, 22);
+    --dark-theme: rgb(12, 12, 12);
     --dark-text: rgb(255, 255, 255);
 
     --bright-theme: rgb(255, 255, 255);
@@ -32,6 +32,7 @@ body {
 .page-content {
     width: 100%;
     overflow: scroll;
+    background-color: var(--dark-theme);
 }
 
 .page-content div {

@@ -16,7 +16,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: rgb(12, 12, 12);
+    background-color: var(--dark-theme);
     margin-top:88px;
 }
 
