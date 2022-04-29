@@ -34,6 +34,7 @@ body {
     width: 100%;
     overflow: scroll;
     background-color: var(--dark-theme);
+    margin-top:15px;
 }
 
 .page-content div {
