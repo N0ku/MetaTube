@@ -16,7 +16,7 @@
 ul.list-filter {
     width: 100%;
     display: inline-flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 0;
     margin: 0;
@@ -24,16 +24,29 @@ ul.list-filter {
 }
 
 .filters-element {
-    width: 100%;
     list-style: none;
     font-family: 'Arial';
     text-align: center;
-    border: 1px solid lightslategray;
-    border-radius: 10px;
+    border: 1px solid rgb(71, 80, 87);
+    border-radius: 60px;
     padding: 10px;
-    display: flex;
-    font-weight: bold;
-    background-color: gray;
+    background-color:rgb(65, 64, 64);
     margin: 12px;
     margin-left: 0;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.filters-element:hover{
+    background-color: #727171;
+    cursor: pointer;
+    opacity: 2;
+}
+
+.filters-element:active{
+    background-color: white;
+}
+
+.filter-text:active{
+    color: black;
 }
