@@ -27,7 +27,6 @@
             </div>
         </div>
 
-      <?= $upload; ?>
 
     </div>
     <!-- Add js library and script here -->
