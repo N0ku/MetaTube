@@ -9,8 +9,8 @@
     text-decoration: none;
     height: fit-content !important;
     width: 100%;
-    border-top: 0.5px rgb(65, 64, 64) solid;
-    border-bottom: 0.5px rgb(65, 64, 64) solid;
+    border-top: 0.5px var(--elements-border) solid;
+    border-bottom: 0.5px var(--elements-border) solid;
 }
 
 ul.list-filter {
@@ -30,23 +30,23 @@ ul.list-filter {
     border: 1px solid rgb(71, 80, 87);
     border-radius: 60px;
     padding: 10px;
-    background-color:rgb(65, 64, 64);
+    background-color: rgb(65, 64, 64);
     margin: 12px;
     margin-left: 0;
     opacity: 0.8;
     transition: 0.3s;
 }
 
-.filters-element:hover{
+.filters-element:hover {
     background-color: #727171;
     cursor: pointer;
     opacity: 2;
 }
 
-.filters-element:active{
-    background-color: white;
+.filters-element:active {
+    background-color: var(--dark-text);
 }
 
-.filter-text:active{
-    color: black;
+.filter-text:active {
+    color: var(--bright-text);
 }

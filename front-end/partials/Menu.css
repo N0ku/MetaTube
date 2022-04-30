@@ -28,7 +28,7 @@
 }
 
 .border {
-    border-top: 0.5px rgb(87, 87, 87) solid;
+    border-top: 0.5px var(--elements-border) solid;
     width: 90%;
 }
 
@@ -104,7 +104,7 @@
 .hamburger-menu-container {
     z-index: 300;
     border-top-style: solid;
-    border-top-color: white;
+    border-top-color: var(--dark-text);
     top: var(--navBar-height);
     left: 0;
     position: sticky;
