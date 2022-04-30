@@ -11,6 +11,8 @@ var sqlConn = mysql.createConnection({
 
 sqlConn.connect();
 
+app.use(express.json());
+
 // test
 app.get('/users', (req,res) => {
     console.log("GET - /users/");
@@ -20,11 +22,12 @@ app.get('/users', (req,res) => {
     });
 });
 
-// video upload
-app.get('/upload/:data', (req,res) => {
-    console.log("GET - /upload");
-    const data = JSON.parse(req.params.data);
-    /*
+// for uploading a video
+app.post('/upload', (req,res) => {
+    console.log("POST - /upload");
+    const data = req.body;
+
+    /* DATA FORMAT
     {
         "id":"",
         "creator":"",
@@ -34,12 +37,19 @@ app.get('/upload/:data', (req,res) => {
     }
     */
 
+    console.log(`Video id : ${data.id}`);
+    console.log(`Creator id : ${data.creator}`);
+    console.log(`Title : ${data.title}`);
+    console.log(`Description : ${data.description}`);
+    console.log(`Privacy : ${data.privacy}`);
+
     /*
                 TO DO
         - Make all exit code
     */
+
     sqlConn.query(`INSERT INTO video (id, creator, title, description, privacy)
-    VALUES (${data.id}, ${data.creator}, ${data.title}, ${data.description}, ${data.privacy})`, function(error) {
+                    VALUES ('${data.id}', '${data.creator}', '${data.title}', '${data.description}', '${data.privacy}')`, function(error) {
         if(error) throw error;
         res.status(200);
     });
@@ -82,7 +92,7 @@ app.get('/search/:data', (req,res) => {
 
 // get video
 app.get('/video/:id', (req, res) => {
-    console.log("GET - /video");
+    console.log("GET - /video/");
     sqlConn.query(`SELECT * FROM video WHERE id = ${req.params.id}`, function(error, results) {
         if(error)
         {
