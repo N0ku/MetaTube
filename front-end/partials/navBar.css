@@ -42,7 +42,7 @@
     background: #858585;
 }
 .btn--navbar--icon, .btn--navbar--icon--upload--video {
-    padding: 10px 30px;
+    padding: 3px 30px;
     border-radius: 100px;
 }
 
@@ -235,4 +235,31 @@ a {
     font-family: var(--font);
     width: fit-content;
     height: 50px;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: var(--font-Xsmall);
+}
+   
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }

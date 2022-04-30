@@ -8,7 +8,7 @@ $enJson = json_decode($Json, true);
 session_start();
 require_once __DIR__ . '/back-end/db.php';
 $page_title = 'Unknown page?';
-$existing_pages = ['Home', 'Explorer', 'Subscriptions', 'Library', 'History', 'LikedVideo', 'WatchLater', 'Profile', 'Register', 'Login'];
+$existing_pages = ['Home', 'Explorer', 'Subscriptions', 'Library', 'History', 'LikedVideo', 'WatchLater', 'Profile', 'Register', 'Login', 'channel_page', 'Upload'];
 $homeBar = $_GET['name'];
 
 
@@ -26,9 +26,8 @@ include __DIR__ . '/front-end/views/components/FilterBar.php'; // $filterbar
 include  __DIR__ . '/front-end/views/pages/' . $pageName . '.php'; // $page 
 include   __DIR__ . "/front-end/partials/Menu.php"; // $menu
 include   __DIR__ . "/front-end/partials/navBar.php"; // $navBar
-include   __DIR__ . "/front-end/views/Channel/channel.php"; // $navBar
-include   __DIR__ . "/front-end/views/Channel/upload.php"; // $navBar
-include   __DIR__ . "/front-end/views/Channel/channel_page.php"; // $navBar
+include __DIR__ . '/front-end/views/pages/upload.php'; //$channelVideoUpload
+include __DIR__ . '/front-end/views/pages/channel.php';
 
 
 

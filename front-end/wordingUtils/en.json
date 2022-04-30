@@ -34,7 +34,12 @@
             "buttonData": "Your data in Meta Tube",
             "buttonRestricted": "Restricted Mode : Off",
             "labelThemeDark": "Dark",
-            "labelThemeBright": "Bright"
+            "labelThemeBright": "Bright",
+            "tooltipSearch": "Search something",
+            "tooltipLogin" : "Log in your account",
+            "tooltipUpload" : "Upload a video",
+            "tooltipNotification" : "Notifications",
+            "tooltipMeta" : "MetaTube Homepage"
         }
     },
     "login": {

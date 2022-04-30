@@ -23,7 +23,6 @@
     <?php if ($pageName != "404") {
         echo $navBar;
     } ?>
-
     <div class="content">
         <div class="menus">
             <?php if ($pageName != "404") {
@@ -38,13 +37,12 @@
                 <?= $pageName ?>
             </div>
         </div>
-
-
+        <?= $channelVideoUpload ?>
     </div>
     <!-- Add js library and script here -->
+    <script src="/front-end/assets/js/feature-channel-modal-createCreator.js"></script>
     <script src="/front-end/assets/js/script-menu.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="/front-end/assets/js/script-explorer.js"></script>
 </body>
 
