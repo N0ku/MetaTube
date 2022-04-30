@@ -1,0 +1,1 @@
+<div class="error"> 404 Error : Page not found </div> 

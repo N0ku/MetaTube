@@ -9,18 +9,15 @@ body {
     margin: 0;
 }
 
-.content {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
+
 
 .home-videos-grid {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: rgb(12, 12, 12);
+    background-color: var(--dark-theme);
+    margin-top: var(--header-height);
 }
 
 .home-video-content {
@@ -28,6 +25,7 @@ body {
     width: var(--video-content-width);
     min-width: var(--video-content-minwidth);
     height: fit-content;
+    max-height: 220px;
     overflow: hidden;
     background-color: rgb(12, 12, 12);
 }
@@ -65,7 +63,6 @@ body {
     flex-wrap: nowrap;
     justify-content: space-between;
     font-family: var(--font);
-    color: rgb(124, 124, 124);
 }
 
 .video-channel-name {

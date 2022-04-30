@@ -69,7 +69,7 @@
     "menu": {
         "nav-elements": {
             "Home": "Home",
-            "Explorer": "Explorer",
+            "Explorer": "Explore",
             "Subscriptions": "Subscriptions",
             "Library": "Library",
             "History": "History",
@@ -95,5 +95,18 @@
     "home": {
         "views": "views",
         "date": "ago"
+    },
+    "explore": {
+        "rise": "Creator on the rise",
+        "Trending":"Trending",
+        "Music":"Music",
+        "Movies":"Movies & Shows",
+        "Live":"Live",
+        "Gaming":"Gaming",
+        "News":"News",
+        "Sports":"Sports",
+        "Learning":"Learning",
+        "Fashion":"Fashion & Beauty",
+        "TrendingTitle":"Trending Videos"
     }
 }
