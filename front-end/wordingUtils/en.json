@@ -76,6 +76,16 @@
         "date": "ago"
     },
     "explore": {
-        "rise": "Creator on the rise"
+        "rise": "Creator on the rise",
+        "Trending":"Trending",
+        "Music":"Music",
+        "Movies":"Movies & Shows",
+        "Live":"Live",
+        "Gaming":"Gaming",
+        "News":"News",
+        "Sports":"Sports",
+        "Learning":"Learning",
+        "Fashion":"Fashion & Beauty",
+        "TrendingTitle":"Trending Videos"
     }
 }

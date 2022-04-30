@@ -26,10 +26,6 @@
     height: fit-content;
 }
 
-.explorer-container * {
-    color: white;
-}
-
 .categories-grid {
     display: flex;
     flex-wrap: wrap;
@@ -43,7 +39,10 @@
     border-radius: 5px;
     margin: 30px 10px;
     height: 116px;
+}
 
+.category-explorer:hover {
+    background-color: var(--elements-hover);
 }
 
 .category-content {
@@ -55,9 +54,15 @@
     align-items: flex-start;
 }
 
+.category-content img {
+    width: 32px;
+    height: 32px;
+}
+
 .category-explorer-title {
     font-family: var(--font);
     font-weight: bold;
+    color: var(--dark-text);
 }
 
 /* Creator rise Category */
@@ -86,6 +91,7 @@
 .creator-rise-content-name {
     font-family: var(--font);
     font-size: 20px;
+    color: var(--dark-text);
 }
 
 .creator-rise-content-tag {
@@ -101,6 +107,78 @@
     border-radius: 2px;
 }
 
-.creator-rise-grid {}
+.creator-rise-video {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    overflow: hidden;
+}
 
-.creator-rise-video {}
+.border-explore {
+    border-top: 0.5px var(--elements-border) solid;
+    margin: 0 auto;
+    width: 95%;
+}
+
+/* Trending videos */
+
+.trending-title {
+    font-size: var(--font-medium);
+    font-family: var(--font);
+    font-weight: bold;
+    margin-left: 7%;
+    color: var(--dark-text);
+}
+
+.thumbnail-trend-explorer {
+    height: 150px;
+    object-fit: cover;
+    min-width: 250px;
+}
+
+.trending-video-content {
+    padding: var(--video-content-padding);
+    width: 80%;
+    min-width: var(--video-content-minwidth);
+    height: fit-content;
+    max-height: 220px;
+    overflow: hidden;
+    background-color: rgb(12, 12, 12);
+    display: flex;
+    flex-direction: row;
+}
+
+.next-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 15px;
+}
+
+.next-content-infos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.next-content-infos p {
+    margin: 0;
+    padding-right: 7px;
+    font-family: var(--font);
+}
+
+.trending-video-content:hover {
+    cursor: pointer;
+}
+
+.explorer-video-title {
+    width: 100%;
+    color: var(--dark-text);
+    font-family: var(--font);
+}
+
+.explorer-video-channel-name:hover {
+    color: var(--dark-theme);
+    -webkit-text-stroke: black;
+}

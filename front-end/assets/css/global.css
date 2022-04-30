@@ -9,6 +9,7 @@
     --bright-text: rgb(20, 20, 20);
 
     --elements-hover: rgb(42, 42, 42);
+    --elements-border: rgb(65, 64, 64);
 
     --font: 'Roboto', sans-serif;
     --font-Xsmall: 0.6rem;
@@ -25,6 +26,8 @@
     --header-height: 208px;
     --navBar-height: 88px;
     --height-page: 98px;
+
+    --video-elements: rgb(148, 148, 148);
 }
 
 body {
@@ -53,4 +56,8 @@ body {
 
 .menus {
     margin-top: var(--navBar-height);
+}
+
+.explorer-video-channel-name, .explorer-video-number-views, .explorer-video-date, .explorer-description, .video-number-views, .video-date, .video-channel-name  {
+color: var(--video-elements);
 }
