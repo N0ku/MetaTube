@@ -2,7 +2,7 @@
 
 include "back-end/actions/uploadVideo.php";
 
-if(isset($_POST['but_upload'])){ upload(); }
+if(isset($_POST['but_upload'])){ upload(); }  
 ?>
 
 <?php ob_start() ?>
@@ -24,4 +24,4 @@ if(isset($_POST['but_upload'])){ upload(); }
 
 </div>
 
-<?php $upload = ob_get_clean() ?>
+<?php $pageName = ob_get_clean() ?>

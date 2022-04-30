@@ -15,7 +15,7 @@
 
 <body>
       
-      <?= $upload; ?>
+      <?= $pageName; ?>
 
     </div>
     <!-- Add js library and script here -->
