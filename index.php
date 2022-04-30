@@ -8,7 +8,7 @@ $enJson = json_decode($Json, true);
 session_start();
 require_once __DIR__ . '/back-end/db.php';
 $page_title = 'Unknown page?';
-$existing_pages = ['Home', 'Explorer', 'Subscriptions', 'Library', 'History', 'LikedVideo', 'WatchLater', 'Profile', 'Register', 'Login'];
+$existing_pages = ['Home', 'Explorer', 'Subscriptions', 'Library', 'History', 'LikedVideo', 'WatchLater', 'Profile', 'Register', 'Login', '404'];
 $homeBar = $_GET['name'];
 
 
@@ -17,6 +17,7 @@ if (empty($_GET['name']) == false) {
         $pageName = $_GET['name'];
     } else {
         $pageName = "404";
+        header('Location: index.php?name=404');
     }
 } else {
     header('Location: index.php?name=Home');

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./front-end/views/pages/Home.css">
     <link rel="stylesheet" href="./front-end/views/pages/Explorer.css">
     <link rel="stylesheet" href="./front-end/views/components/FilterBar.css">
+    <link rel="stylesheet" href="./front-end/views/pages/404.css">
 </head>
 
 <body>
@@ -31,7 +32,9 @@
                 <?php if ($homeBar == "Home") {
                     echo $filterbar;
                 } ?>
-                <?= $pageName ?>
+                <?php if ($pageName != "404") {
+                    echo $pageName;
+                } ?>
             </div>
         </div>
 
