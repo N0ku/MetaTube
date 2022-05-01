@@ -1,8 +1,10 @@
 <?php
 
-//include "back-end/actions/uploadVideo.php";
+include "back-end/actions/uploadVideo.php";
 
-//if(isset($_POST['but_upload'])){ upload(); }  
+if (isset($_POST['but_upload'])) {
+   upload();
+}
 
 ob_start() ?>
 
@@ -14,7 +16,17 @@ ob_start() ?>
       <div class="modal">
          <button class="feature-channel-modal-close" onclick="feature_remove_upload_function()">X</button>
          <h1 id="feature-channel-modal-container-title">Upload</h1>
-         <p id="feature-channel-modal-container-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nam exercitationem nihil veritatis sapiente quia.</p>
+         <form method="post" action="" enctype='multipart/form-data'>
+            <label for="video">Choose a video</label>
+            <input type='file' name='video' />
+            <label for="title">Enter the title</label>
+            <input type="text" name="title">
+            <label for="title">Enter the description</label>
+            <input type="text" name="description">
+            <label for="video">Choose a thumbnail</label>
+            <input type='file' name='thumbnail' />
+            <input type='submit' value='Upload' name='but_upload'>
+         </form>
          <div>
 
             <!-- Upload response -->
@@ -24,13 +36,7 @@ ob_start() ?>
                unset($_SESSION['message']);
             }
             ?>
-            <form method="post" action="" enctype='multipart/form-data'>
-               <div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
-                  <p>Drag one or more files to this Drop Zone ...</p>
-               </div>
-               <input type='file' name='file' />
-               <input type='submit' value='Upload' name='but_upload'>
-            </form>
+
          </div>
       </div>
 
