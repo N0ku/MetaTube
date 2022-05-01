@@ -66,7 +66,7 @@ a {
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .navbar--logo {
@@ -75,14 +75,17 @@ a {
 
 .wrapper--navbar {
     background-color: var(--background-color-nav);
-    padding: 12px 10px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 300;
     backdrop-filter: blur(10px);
-
+    height: var(--navBar-height);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar--side {
@@ -236,4 +239,7 @@ a {
     font-family: var(--font);
     width: fit-content;
     height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

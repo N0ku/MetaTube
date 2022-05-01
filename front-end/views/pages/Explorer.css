@@ -67,9 +67,18 @@
 
 /* Creator rise Category */
 
+.creator-rise {
+    width: 100%;
+}
+
 .creator-rise-content {
     width: 100%;
+    height: 100%;
+}
 
+.creator-rise-grid {
+    width: 100%;
+    height: 100%;
 }
 
 .creator-rise-content-channel {
@@ -107,17 +116,55 @@
     border-radius: 2px;
 }
 
+.creator-rise-grid {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
 .creator-rise-video {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     overflow: hidden;
+    height: 100%;
 }
+
 
 .border-explore {
     border-top: 0.5px var(--elements-border) solid;
     margin: 0 auto;
     width: 95%;
+}
+
+.next, .prev {
+    width: 60px;
+    min-height: 220px;
+    box-shadow: 50px 0px 10px 0px rgb(12, 12, 12);
+    border: 0px solid red;
+    border-style: none;
+    align-self: center;
+    background-color: rgb(12, 12, 12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    cursor: pointer;
+}
+.prev{
+    display: none;
+}
+
+.next {
+    box-shadow: -30px 0px 10px 0px rgb(12, 12, 12);
+}
+
+.next img, .prev img {
+    width: 20px;
+    height: 20px;
 }
 
 /* Trending videos */

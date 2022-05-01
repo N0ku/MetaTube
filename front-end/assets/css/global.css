@@ -23,12 +23,15 @@
     --hamburger-button-active: rgb(72, 72, 72);
     --menu-border-color: rgb(115, 115, 115);
     --background-color-nav: #202020f3;
-    --header-height: 208px;
-    --navBar-height: 88px;
+    --header-height: 120px;
+    --navBar-height: 56px;
     --height-page: 98px;
 
     --video-elements: rgb(148, 148, 148);
 }
+
+/* CSS common to all pages as well as the CSS of components that can be/are on all pages */
+/* /!\  Please never changed values without notice here except for variables /!\ */
 
 body {
     background-color: var(--dark-theme);
@@ -58,6 +61,9 @@ body {
     margin-top: var(--navBar-height);
 }
 
-.explorer-video-channel-name, .explorer-video-number-views, .explorer-video-date, .explorer-description, .video-number-views, .video-date, .video-channel-name  {
-color: var(--video-elements);
+/* Components */
+
+.explorer-video-channel-name, .explorer-video-number-views, .explorer-video-date, .explorer-description, .video-number-views, .video-date, .video-channel-name {
+    color: var(--video-elements);
 }
+

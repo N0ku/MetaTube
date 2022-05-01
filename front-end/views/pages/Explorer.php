@@ -75,7 +75,10 @@ $page = "Explorer"; ?>
                 <p class="creator-rise-content-tag"><?= $enJson['explore']['rise'] ?></p>
             </div>
             <div class="creator-rise-grid">
+                <button class="prev"><img src="/front-end/assets/img/prev.svg" alt="prev">
+                </button>
                 <div class="creator-rise-video">
+
                     <div class="home-video-content">
                         <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
                         <div class="below-content">
@@ -157,6 +160,8 @@ $page = "Explorer"; ?>
                         </div>
                     </div>
                 </div>
+                <button class="next"><img src="/front-end/assets/img/next.svg" alt="next">
+                </button>
             </div>
         </div>
         <!-- Creator Rise --END -->
