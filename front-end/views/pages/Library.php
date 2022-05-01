@@ -1,4 +1,5 @@
-<?php ob_start(); $page = "Library"; ?>
+<?php ob_start();
+$page = "Library"; ?>
 
 <div class="Library-container">
 

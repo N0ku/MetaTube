@@ -40,6 +40,7 @@ app.post('/upload/video', (req, res) => {
     console.log(`Video id : ${data.id}`);
     console.log(`Creator id : ${data.creator}`);
     console.log(`Title : ${data.title}`);
+    console.log(`Thumbnail : ${data.thumbnail}`);
     console.log(`Description : ${data.description}`);
     console.log(`Privacy : ${data.privacy}`);
 
@@ -47,9 +48,18 @@ app.post('/upload/video', (req, res) => {
                 TO DO
         - Make all exit code
     */
+    
+    let query;
+    if (data.thumbnail == '')
+    {
+		query = `INSERT INTO video (id, creator, title, description, privacy) VALUES ('${data.id}', '${data.creator}', '${data.title}', '${data.description}', '${data.privacy}')`;
+    }
+    else
+    {
+		query = `INSERT INTO video (id, creator, title, thumbnail, description, privacy) VALUES ('${data.id}', '${data.creator}', '${data.title}', '${data.thumbnail}', '${data.description}', '${data.privacy}')`;
+    }
 
-    sqlConn.query(`INSERT INTO video (id, creator, title, description, privacy)
-                    VALUES ('${data.id}', '${data.creator}', '${data.title}', '${data.description}', '${data.privacy}')`, function(error) {
+    sqlConn.query(query, function(error) {
         if(error) throw error;
         res.status(200);
     });

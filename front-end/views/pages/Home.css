@@ -17,7 +17,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     background-color: var(--dark-theme);
-    margin-top:88px;
+    margin-top: var(--header-height);
 }
 
 .home-video-content {
@@ -28,10 +28,6 @@ body {
     max-height: 220px;
     overflow: hidden;
     background-color: rgb(12, 12, 12);
-}
-
-.home-video-content * {
-    max-height: 220px;
 }
 
 .home-video-content:hover {
@@ -67,7 +63,6 @@ body {
     flex-wrap: nowrap;
     justify-content: space-between;
     font-family: var(--font);
-    color: rgb(124, 124, 124);
 }
 
 .video-channel-name {
