@@ -14,7 +14,7 @@ sqlConn.connect();
 app.use(express.json());
 
 // test
-app.get('/users', (req,res) => {
+app.get('/users', (req, res) => {
     console.log("GET - /users/");
     sqlConn.query('SELECT * FROM user', function(error, results) {
         if(error) throw error;
@@ -22,9 +22,9 @@ app.get('/users', (req,res) => {
     });
 });
 
-// for uploading a video
-app.post('/upload', (req,res) => {
-    console.log("POST - /upload");
+// upload video
+app.post('/upload/video', (req, res) => {
+    console.log("POST - /upload/video");
     const data = req.body;
 
     /* DATA FORMAT
@@ -50,6 +50,54 @@ app.post('/upload', (req,res) => {
 
     sqlConn.query(`INSERT INTO video (id, creator, title, description, privacy)
                     VALUES ('${data.id}', '${data.creator}', '${data.title}', '${data.description}', '${data.privacy}')`, function(error) {
+        if(error) throw error;
+        res.status(200);
+    });
+});
+
+// create user
+app.post('/upload/user', (req, res) => {
+    console.log("POST - /upload/user");
+    const data = req.body;
+
+    /* DATA FORMAT
+    {
+        "id":"",
+        "username":"",
+        "email":"",
+        "password":""
+    }
+    */
+
+    console.log(`User id : ${data.id}`);
+    console.log(`Username : ${data.username}`);
+    console.log(`email : ${data.email}`);
+    console.log(`password : ${data.password}`);
+
+    sqlConn.query(`INSERT INTO user (id, username, email, password) VALUES ('${data.id}', '${data.username}', '${data.email}', '${data.password}')`, function(error) {
+        if(error) throw error;
+        res.status(200);
+    });
+});
+
+// create channel
+app.post('/upload/channel', (req, res) => {
+    console.log("POST - /upload/user");
+    const data = req.body;
+
+    /* DATA FORMAT
+    {
+        "id":"",
+        "channelName":"",
+        "channelProfilePicture":""
+    }
+    */
+
+    console.log(`User id : ${data.id}`);
+    console.log(`channelName : ${data.channelName}`);
+    console.log(`channelProfilePicture : ${data.channelProfilePicture}`);
+
+    sqlConn.query(`INSERT INTO channel (id, channelName, channelProfilePicture) VALUES ('${data.id}', '${data.channelName}', '${data.channelProfilePicture}')`, function(error) {
         if(error) throw error;
         res.status(200);
     });
