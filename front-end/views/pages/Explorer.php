@@ -71,12 +71,11 @@ $page = "Explorer"; ?>
         <div class="creator-rise-content">
             <div class="creator-rise-content-channel">
                 <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="creator-rise-content-channel-img">
-                <p class="creator-rise-content-name">Michou</p>
+                <p class="creator-rise-content-name">Robin</p>
                 <p class="creator-rise-content-tag"><?= $enJson['explore']['rise'] ?></p>
             </div>
             <div class="creator-rise-grid">
-                <button class="prev"><img src="/front-end/assets/img/prev.svg" alt="prev">
-                </button>
+
                 <div class="creator-rise-video">
 
                     <div class="home-video-content">
@@ -159,6 +158,40 @@ $page = "Explorer"; ?>
                             </div>
                         </div>
                     </div>
+                    <div class="home-video-content">
+                        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+                        <div class="below-content">
+                            <div class="below-content-img">
+                                <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
+                            </div>
+                            <div class="below-content-text">
+                                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                                <p class="video-channel-name">Name of the chanel</p>
+                                <div class="video-infos">
+                                    <p class="video-number-views">200k views</p>
+                                    <p class="video-date">2 weeks ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-video-content">
+                        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+                        <div class="below-content">
+                            <div class="below-content-img">
+                                <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
+                            </div>
+                            <div class="below-content-text">
+                                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                                <p class="video-channel-name">Name of the chanel</p>
+                                <div class="video-infos">
+                                    <p class="video-number-views">200k views</p>
+                                    <p class="video-date">2 weeks ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="prev hide-arrow"><img src="/front-end/assets/img/prev.svg" alt="prev">
+                    </button>
                 </div>
                 <button class="next"><img src="/front-end/assets/img/next.svg" alt="next">
                 </button>
