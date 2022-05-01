@@ -50,15 +50,13 @@ app.post('/upload/video', (req, res) => {
     */
     
     let query;
-    if (data.thumbnail == undefined)
+    if (data.thumbnail == '')
     {
-		query = `INSERT INTO video (id, creator, title, description, privacy)
-                    VALUES ('${data.id}', '${data.creator}', '${data.title}', '${data.description}', '${data.privacy}'`;
+		query = `INSERT INTO video (id, creator, title, description, privacy) VALUES ('${data.id}', '${data.creator}', '${data.title}', '${data.description}', '${data.privacy}')`;
     }
     else
     {
-		query = `INSERT INTO video (id, creator, title, thumbnail, description, privacy)
-                    VALUES ('${data.id}', '${data.creator}', '${data.title}', '${data.thumbnail}', '${data.description}', '${data.privacy}'`;
+		query = `INSERT INTO video (id, creator, title, thumbnail, description, privacy) VALUES ('${data.id}', '${data.creator}', '${data.title}', '${data.thumbnail}', '${data.description}', '${data.privacy}')`;
     }
 
     sqlConn.query(query, function(error) {
