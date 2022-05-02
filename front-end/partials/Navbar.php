@@ -53,7 +53,7 @@
             </div>
             <div class="dropdown">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzslQrjpEHSPbE3teWMa1qA8fUwgRlbg4bGA&usqp=CAU"
-                    alt="" onclick="myFunction()" style="width: 40px; border-radius: 50%;" class="dropbtn" />
+                    alt="" onclick="myFunction()" style="width: 40px; b " class="dropbtn" />
                 <div id="myDropdown" class="dropdown-content">
                     <div class="drop-profil">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzslQrjpEHSPbE3teWMa1qA8fUwgRlbg4bGA&usqp=CAU"

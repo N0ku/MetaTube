@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+
 :root {
     --primary-color: rgb(185, 15, 15);
     --secondary-color: rgb(158, 12, 12);
@@ -35,9 +37,11 @@
     --video-elements: rgb(148, 148, 148);
 }
 
+
 .content {
     overflow: scroll;
 }
+
 /* CSS common to all pages as well as the CSS of components that can be/are on all pages */
 /* /!\  Please never changed values without notice here except for variables /!\ */
 
