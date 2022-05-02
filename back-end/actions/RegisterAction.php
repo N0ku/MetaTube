@@ -5,7 +5,7 @@ session_start();
 $id = giveId();
 $email = $_POST['email'];
 $profilNull = 'https://images.unsplash.com/photo-1551373884-8a0750074df7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80';
-if( empty($_POST['username']) || empty( $_POST['password']) || empty( $_POST['dateBirth']) || empty( $_POST['email']) ){
+if( empty($_POST['username']) || empty( $_POST['password']) || empty( $_POST['dateBirth']) || empty( $_POST['email'] || empty($_FILES['avatar'])) ){
     header("Location: /index.php?name=Login ");
     die();
 }
@@ -14,6 +14,32 @@ if(!ctype_alnum($_POST['username'])){
     header("Location: index.php?name=Register ");
     die();
 }
+if(!empty($_POST['dateBirth'])){
+
+function HowOldAreYou($date_naissance){
+    $am = $date_naissance;
+    $an = explode('/', date('d/m/Y'));
+    print_r ($am);
+    print_r ($an);
+    if(($am[1] < $an[1]) || (($am[1] == $an[1]) && ($am[0] <= $an[0]))) return $an[2] - $am[2];
+        return $an[2] - $am[2] - 1;
+}
+    $dateBirth =explode("-",$_POST['dateBirth']);
+    $newbirth = array_reverse($dateBirth);
+    $yearsUser = HowOldAreYou($newbirth);
+    if($yearsUser < 13){
+        $_SESSION['signup_error']= "Sorry access to Meta Tube is reserved to the person over 13 years.";
+        header("Location: /index.php?name=Register ");
+        die();
+    } 
+
+}
+if(!empty($_FILES['avatar'])){
+    $tmpName = $_FILES['avatar']['tmp_name'];
+    $imgData = base64_encode(file_get_contents($tmpName));
+     
+}
+
 
 $password = hash('sha256',$_POST['password']);
 
@@ -34,14 +60,15 @@ if($data){
 }
 
 
-$sql = 'INSERT INTO user(id,email, username, password, profilePicture, birthday) VALUES (:id,:email, :pseudo, :password, :photoProfil, :dateBirth)';
+$sql = 'INSERT INTO user(id,email, username, password, profilePicture, birthday,years) VALUES (:id,:email, :pseudo, :password, :photoProfil, :dateBirth,:years)';
 $query = $db->prepare($sql);
 $query->execute([
     ':id' => $id,
 	':email' => $email,
 	':pseudo' => $_POST['username'],
 	':password' => $password,
-    ':photoProfil' => $profilNull,
-    ':dateBirth' => $_POST['dateBirth']
+    ':photoProfil' => $imgData,
+    ':dateBirth' => $_POST['dateBirth'],
+     ':years'=>$yearsUser   
 ]);
 header("Location: /index.php?name=Login ");
