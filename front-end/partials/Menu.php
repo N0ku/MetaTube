@@ -138,8 +138,34 @@
                 <img src="./front-end/assets/img/Menu-svg/beauty-fashion-logo.svg" alt="Fashion & Beauty" srcset="" class="nav-logo" />
                 <p><?= $enJson['menu']['nav-elements']['Fashion & Beauty'] ?></p>
             </div>
-
+            <div class="border"></div>
+            <div class="border"></div>
+            <a href="index.php?name=Settings" class="menu-link">
+                <div class="nav-item">
+                    <img src="./front-end/assets/img/Menu-svg/Settings.svg" alt="" srcset="" class="nav-logo" />
+                    <p><?= $enJson['menu']['nav-elements']['Settings'] ?></p>
+                </div>
+            </a>
+            <a href="index.php?name=Report" class="menu-link">
+                <div class="nav-item">
+                    <img src="./front-end/assets/img/Menu-svg/Report.svg" alt="" srcset="" class="nav-logo" />
+                    <p><?= $enJson['menu']['nav-elements']['Report'] ?></p>
+                </div>
+            </a>
+            <a href="index.php?name=Help" class="menu-link">
+                <div class="nav-item">
+                    <img src="./front-end/assets/img/Menu-svg/Help.svg" alt="" srcset="" class="nav-logo" />
+                    <p><?= $enJson['menu']['nav-elements']['Help'] ?></p>
+                </div>
+            </a>
+            <a href="index.php?name=SendFeedback" class="menu-link">
+                <div class="nav-item">
+                    <img src="./front-end/assets/img/Menu-svg/SendFeedback.svg" alt="" srcset="" class="nav-logo" />
+                    <p><?= $enJson['menu']['nav-elements']['SendFeedback'] ?></p>
+                </div>
+            </a>
         </div>
+
 
         <div class="nav-items menu-footer">
             <div class="border"></div>

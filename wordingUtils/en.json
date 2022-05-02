@@ -160,7 +160,11 @@
             "Sports":"Sports",
             "Learning":"Learning",
             "News":"News",
-            "Fashion & Beauty":"Fashion & Beauty"
+            "Fashion & Beauty":"Fashion & Beauty",
+            "Settings":"Settings",
+            "Report":"Report History",
+            "Help":"Help",
+            "SendFeedback":"Send Feedback"
         },
         "titles": {
             "subscriptions": "SUBSCRIPTIONS",
