@@ -20,8 +20,6 @@ if( empty($_POST['username']) || empty( $_POST['password'])){
     die();
 }
 
-$password = $_POST['password'];
-
 $password = hash('sha256',$_POST['password']);
 
 
