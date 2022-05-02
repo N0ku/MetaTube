@@ -79,6 +79,8 @@
     background:#48ff00;
   }50% {
     background:#00ffd5;
+    transform: rotate(0.5turn);
+
   }60% {
     background:#002bff;
   }
@@ -92,6 +94,7 @@
     background:#ff0000;
   }
   100% {
+    transform: rotate(0.5turn);
     background:initial;
   }
 }
