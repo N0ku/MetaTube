@@ -8,7 +8,9 @@
             <div class="feature-channel-navigation-container-zone1">
                <div class="feature-channel-navigation-container-profil">
                   <div class="feature-channel-navigation-container-profilPicture">
-                     <img class="img-profile" src="<?php echo $enJson['creation']['Image'] ?>" alt="">
+                    <button>
+                    <img class="img-profile" src="<?php echo $enJson['creation']['Image'] ?>" alt="">
+                    </button>
                   </div>
                   <div class="feature-channel-navigation-userInformation">
                      <h3>Name</h3>
@@ -66,7 +68,7 @@
             <button><?php echo $enJson['channel']['videoOnline'] ?></button>
             <button><img src="./assets/img/Channel/play.png" alt=""></button>
          </div>
-         <div class="feature-channel-video-popular"><button><?php echo $enJson['channel']['popular'] ?></button< /div>
+         <div class="feature-channel-video-popular"><button><?php echo $enJson['channel']['popular'] ?></button</div>
          </div>
       </div>
 

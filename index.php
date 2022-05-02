@@ -29,7 +29,4 @@ include   __DIR__ . "/front-end/partials/navBar.php"; // $navBar
 include __DIR__ . '/front-end/views/pages/upload.php'; //$channelVideoUpload
 include __DIR__ . '/front-end/views/pages/channel.php';
 
-
-
-
 require_once './template.php';
