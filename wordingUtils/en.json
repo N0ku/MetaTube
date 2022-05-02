@@ -151,7 +151,16 @@
             "WatchLaters": "Watch Laters",
             "LikedVideos": "Liked Videos",
             "More": "More",
-            "Less": "Less"
+            "Less": "Less",
+            "MetaTube Premium":"MetaTube Premium",
+            "Movies and Shows":"Movies and Shows",
+            "Gaming":"Gaming",
+            "Live":"Live",
+            "Music":"Music",
+            "Sports":"Sports",
+            "Learning":"Learning",
+            "News":"News",
+            "Fashion & Beauty":"Fashion & Beauty"
         },
         "titles": {
             "subscriptions": "SUBSCRIPTIONS",

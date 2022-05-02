@@ -96,13 +96,49 @@
                 <?= $enJson['menu']['titles']['subscriptions'] ?>
             </strong>
         </div>
-        <div class="border"></div>
 
         <div class="menu-subscriptions nav-items">
+            <div class="border"></div>
             <strong class="title-others">
                 <?= $enJson['menu']['titles']['others'] ?>
             </strong>
-            <div class="border"></div>
+            <div class="nav-item">
+                <img src="./front-end/assets/img/Menu-svg/ytb-premium.svg" alt="MetaTube Premium" srcset="" class="nav-logo" />
+                <p><?= $enJson['menu']['nav-elements']['MetaTube Premium'] ?></p>
+            </div>
+            <div class="nav-item">
+                <img src="./front-end/assets/img/Menu-svg/movies.svg" alt="Movies and Shows" srcset="" class="nav-logo" />
+                <p><?= $enJson['menu']['nav-elements']['Movies and Shows'] ?></p>
+            </div>
+            <div class="nav-item">
+                <img src="./front-end/assets/img/Menu-svg/gaming-logo.svg" alt="Gaming" srcset="" class="nav-logo" />
+                <p><?= $enJson['menu']['nav-elements']['Gaming'] ?></p>
+            </div>
+            <div class="nav-item">
+                <img src="./front-end/assets/img/Menu-svg/live-logo.svg" alt="Live" srcset="" class="nav-logo" />
+                <p><?= $enJson['menu']['nav-elements']['Live'] ?></p>
+            </div>
+            <div class="nav-item">
+                <img src="./front-end/assets/img/Menu-svg/music-logo.svg" alt="Music" srcset="" class="nav-logo" />
+                <p><?= $enJson['menu']['nav-elements']['Music'] ?></p>
+            </div>
+            <div class="nav-item">
+                <img src="./front-end/assets/img/Menu-svg/sports-logo.svg" alt="Sports" srcset="" class="nav-logo" />
+                <p><?= $enJson['menu']['nav-elements']['Sports'] ?></p>
+            </div>
+            <div class="nav-item">
+                <img src="./front-end/assets/img/Menu-svg/learning-logo.svg" alt="Learning" srcset="" class="nav-logo" />
+                <p><?= $enJson['menu']['nav-elements']['Learning'] ?></p>
+            </div>
+            <div class="nav-item">
+                <img src="./front-end/assets/img/Menu-svg/news-logo.svg" alt="News" srcset="" class="nav-logo" />
+                <p><?= $enJson['menu']['nav-elements']['News'] ?></p>
+            </div>
+            <div class="nav-item">
+                <img src="./front-end/assets/img/Menu-svg/beauty-fashion-logo.svg" alt="Fashion & Beauty" srcset="" class="nav-logo" />
+                <p><?= $enJson['menu']['nav-elements']['Fashion & Beauty'] ?></p>
+            </div>
+
         </div>
 
         <div class="nav-items menu-footer">
