@@ -40,6 +40,15 @@ ob_start();
 
 
 <script>
+    $(function(){
+        <?php
+        if(isset($_SESSION['toastr']))
+        {
+            echo 'toastr.'.$_SESSION['toastr']['type'].'("'.$_SESSION['toastr']['message'].'", "'.$_SESSION['toastr']['title'].'")';
+            unset($_SESSION['toastr']);
+        }
+        ?>          
+    });
     var data = [];
     data.push(document.getElementById('mailLogin'));
     data.push(document.getElementById('passwordLogin'));
@@ -51,21 +60,18 @@ ob_start();
             }
         }
     });
-
     form.onsubmit = (e) => {
         for (var i in data) {
             if (data[i].value == 0) {
                 e.preventDefault();
                 data[i].placeholder = ('Put your ' + data[i].id);
                 data[i].classList.add("show-error-connection");
-
-                $(function() {
-                    toastr.success('Hé, <b>ça marche !</b>', 'Test');
-                });
-
             }
-
         }
+        setTimeout(() => {$(function() {
+		 toastr.error('<?= $enJson['form']['error']['signup'] ?>', '');
+	});}, 200);
+        
     }
 </script>
 <?php $pageName = ob_get_clean();

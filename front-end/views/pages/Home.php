@@ -6,6 +6,7 @@ $page_title = "Home"; ?>
     $allVideoJson = json_decode('');
     //foreach ($allVideoJson as $video) { 
     ?>
+    
 
     <a href="index.php?name=Watch">
         <div class="home-video-content">
@@ -858,4 +859,16 @@ $page_title = "Home"; ?>
     //}
     ?>
 </div>
+
+<script>
+    $(function(){
+        <?php
+        if(isset($_SESSION['toastr']))
+        {
+            echo 'toastr.'.$_SESSION['toastr']['type'].'("'.$_SESSION['toastr']['message'].'", "'.$_SESSION['toastr']['title'].'")';
+            unset($_SESSION['toastr']);
+        }
+        ?>          
+    });
+</script>
 <?php $pageName = ob_get_clean() ?>
