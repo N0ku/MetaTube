@@ -48,4 +48,4 @@ if (isset($_POST['but_upload'])) {
 
 </div>
 
-<?php $pageName = ob_get_clean() ?>
+<?php $channelVideoUpload = ob_get_clean() ?>

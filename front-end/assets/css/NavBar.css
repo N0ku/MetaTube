@@ -136,7 +136,8 @@ a {
     color: #858585;
     border: none;
     margin: 0;
-    width: 85px;
+    width: 4%;
+    text-align: center;
 }
 
 .navbar__center__search-btn:active{
