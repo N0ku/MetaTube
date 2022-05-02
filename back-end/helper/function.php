@@ -93,7 +93,7 @@ function getApi($route)
 
   $context = stream_context_create($opts);
 
-  $fp = fopen('http://93.16.2.231:8081/' . 'video/' . $id, 'r', false, $context);
+  $fp = fopen('http://93.16.2.231:8081/' . $route, 'r', false, $context);
   $data = stream_get_contents($fp);
   fclose($fp);
 
