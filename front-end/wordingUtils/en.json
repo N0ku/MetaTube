@@ -53,22 +53,43 @@
             "buttonToRegister": "I don't have any account"
         }
     },
-    "register": {
-        "form": {
+    "form": {
+        "login": {
+            "titleLogin": "Please fill the form to connect:",
+            "adress": "Adress Email",
+            "placeholderAdress": "Write your adress email",
+            "password": "Password",
+            "placeholderPassword": "Write your password",
+            "buttonLogin": "Login",
+            "buttonToRegister": "I don't have any account"
+        },
+        "register": {
             "titleRegister": "Please fill the form to create an account :",
-            "labelFirstName": "First Name",
-            "placeholderFirstName": "Write your first name",
-            "labellastName": "Last Name",
-            "placeholderLastName": "Write your last name",
+            "labelProfile": "Select a photo",
+            "labelPseudo": "Pseudo",
+            "placeholderPseudo": "Write a pseudo",
             "labelBirthday": "Date of Birth",
             "labelAdress": "Adress Email",
             "placeholderAdress": "Write your adress email",
             "labelPassword": "Password",
             "placeholderPassword": "Write your password",
-            "labelConfirmPassword": "Password",
-            "placeholderConfirmPassword": "Write your password again",
             "buttonRegister": "Register",
             "buttonToLogin": "I have an account"
+        },
+        "updatePass": {
+            "modalBtn": "Update your password",
+            "labelAdress": "Adress Email",
+            "placeholderAdress": "Confirm your adress email",
+            "labelPassword": "Password",
+            "placeholderPassword": "Write your new password",
+            "buttonUpdate": "Update your password"
+        },
+        "deleteAccount": {
+            "modalBtn": "Delete Your Account",
+            "title": "Delete Account",
+            "question": "Are you sure you want to delete your account?",
+            "buttonCancel": "Cancel",
+            "buttonDelete": "Delete"
         }
     },
     "menu": {
