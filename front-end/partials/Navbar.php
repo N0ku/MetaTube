@@ -28,10 +28,17 @@ ob_start() ?>
 
         <div class="navbar--side">
             <div class="btn--navbar--icon--upload--video tooltip">
-                <a onclick="feature_open_upload_function()">
+                 <?php if (empty($_SESSION['user'])) { ?>
+                <a href="index.php?name=Home" >
                     <img src="./front-end/assets/img/Logo/video.svg" alt="">
                 </a>
                 <span class="tooltiptext"><?= $enJson['profile']['navBar']['tooltipUpload'] ?></span>
+                <?php } else { ?>
+                        <a onclick="feature_open_upload_function()">
+                    <img src="./front-end/assets/img/Logo/video.svg" alt="">
+                </a>
+                <span class="tooltiptext"><?= $enJson['profile']['navBar']['tooltipUpload'] ?></span>
+                <?php }?>
             </div>
             <div class="btn--navbar--icon tooltip">
                 <a href="/">

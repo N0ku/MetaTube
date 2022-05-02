@@ -34,6 +34,7 @@
     <?php if ($pageName != "404") {
         echo $navBar;
     } ?>
+    
     <div class="content">
         <div class="menus">
             <?php if ($pageName != "404") {
