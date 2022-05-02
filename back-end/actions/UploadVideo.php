@@ -1,18 +1,4 @@
-<?php function checkid($id)
-{
-	/*$opts = array(
-'http' => array(
-'method' => "GET",
-)
-);
-
-$context = stream_context_create($opts);
-
-$fp = fopen($apiUrl . 'video/' . $id, 'r', false, $context);
-fpassthru($fp);
-fclose($fp);
-var_dump($context);*/
-}
+<?php
 
 function upload()
 {
@@ -56,7 +42,7 @@ function upload()
 
 					$data = array(
 						"id" => $id,
-						"creator" => "00000000000000000000",
+						"creator" => $_SESSION['user']['id'],
 						"title" => $_POST['title'],
 						"description" => $_POST['description'],
 						"privacy" => "public",

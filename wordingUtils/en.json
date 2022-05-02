@@ -15,6 +15,7 @@
         "tooltipSearch": "Search something",
         "tooltipLogin" : "Log in your account",
         "tooltipUpload" : "Upload a video",
+        "tooltipUploadNoConnect" : "Connect you to Upload Video",
         "tooltipNotification" : "Notifications",
         "tooltipMeta" : "MetaTube Homepage"
     }
@@ -69,12 +70,12 @@
     },
 
     "creation":{
-        "createTitle":"Need Title",
-        "create": "Create u CreatorChannel",
+        "createTitle":"Here how the others will see you",
+        "create": "Create a Channel",
         "name":"Name",
         "Image":"./assets/img/Channel/play.png",
         "Import": "Importer picture",
-        "cancel": "Cancel   "
+        "cancel": "Cancel"
   
     },
 

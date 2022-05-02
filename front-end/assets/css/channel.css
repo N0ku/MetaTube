@@ -15,6 +15,7 @@
     align-items: stretch;
     align-content: center;
     margin-top: 10%;
+    z-index: 10;
 }
 
 .bloc-modal.show, .feature-channel-modal-overlay-channel.show{
