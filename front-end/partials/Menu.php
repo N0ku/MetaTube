@@ -34,8 +34,6 @@
     </div>
 </div>
 <?php } ?>
-
-
 <div class="hamburger-menu-container">
 
 
@@ -87,42 +85,6 @@
                     <p><?= $enJson['menu']['nav-elements']['LikedVideos'] ?></p>
                 </div>
             </a>
-            <a href="index.php?name=LikedVideo" class="menu-link">
-                <div class="nav-item">
-                    <img src="./front-end/assets/img/Menu-svg/like.svg" alt="" srcset="" class="nav-logo" />
-                    <p><?= $enJson['menu']['nav-elements']['LikedVideos'] ?></p>
-                </div>
-            </a>
-            <a href="index.php?name=LikedVideo" class="menu-link">
-                <div class="nav-item">
-                    <img src="./front-end/assets/img/Menu-svg/like.svg" alt="" srcset="" class="nav-logo" />
-                    <p><?= $enJson['menu']['nav-elements']['LikedVideos'] ?></p>
-                </div>
-            </a>
-            <a href="index.php?name=LikedVideo" class="menu-link">
-                <div class="nav-item">
-                    <img src="./front-end/assets/img/Menu-svg/like.svg" alt="" srcset="" class="nav-logo" />
-                    <p><?= $enJson['menu']['nav-elements']['LikedVideos'] ?></p>
-                </div>
-            </a>
-            <a href="index.php?name=LikedVideo" class="menu-link">
-                <div class="nav-item">
-                    <img src="./front-end/assets/img/Menu-svg/like.svg" alt="" srcset="" class="nav-logo" />
-                    <p><?= $enJson['menu']['nav-elements']['LikedVideos'] ?></p>
-                </div>
-            </a>
-            <a href="index.php?name=LikedVideo" class="menu-link">
-                <div class="nav-item">
-                    <img src="./front-end/assets/img/Menu-svg/like.svg" alt="" srcset="" class="nav-logo" />
-                    <p><?= $enJson['menu']['nav-elements']['LikedVideos'] ?></p>
-                </div>
-            </a>
-            <a href="index.php?name=LikedVideo" class="menu-link">
-                <div class="nav-item">
-                    <img src="./front-end/assets/img/Menu-svg/like.svg" alt="" srcset="" class="nav-logo" />
-                    <p><?= $enJson['menu']['nav-elements']['LikedVideos'] ?></p>
-                </div>
-            </a>
             <div class="nav-item">
                 <img src="./front-end/assets/img/Menu-svg/angle-down-solid.svg" alt="" srcset="" class="nav-logo" />
                 <p>More</p>
@@ -141,26 +103,29 @@
                 <?= $enJson['menu']['titles']['others'] ?>
             </strong>
             <div class="border"></div>
-
         </div>
-
-        <div class="nav-items">
-
-        </div>
-        <div class="border"></div>
 
         <div class="nav-items menu-footer">
+            <div class="border"></div>
             <div class="links">
-                <a class="menu-text-footer"><?= $enJson['menu']['footer']['link1'] ?></a>
-                <a class="menu-text-footer"><?= $enJson['menu']['footer']['link2'] ?></a>
-                <a class="menu-text-footer"><?= $enJson['menu']['footer']['link3'] ?></a>
-                <a class="menu-text-footer"><?= $enJson['menu']['footer']['link4'] ?></a>
-                <a class="menu-text-footer"><?= $enJson['menu']['footer']['link5'] ?></a>
+                <a class="menu-text-footer" href="https://about.youtube/"><?= $enJson['menu']['footer']['About'] ?></a>
+                <a class="menu-text-footer" href="https://blog.youtube/"><?= $enJson['menu']['footer']['Press'] ?></a>
+                <a class="menu-text-footer" href="https://www.youtube.com/howyoutubeworks/policies/copyright/"><?= $enJson['menu']['footer']['Copyright'] ?></a>
+                <a class="menu-text-footer" href="https://www.youtube.com/t/contact_us/"><?= $enJson['menu']['footer']['Contact us'] ?></a>
+                <a class="menu-text-footer" href="https://www.youtube.com/creators/"><?= $enJson['menu']['footer']['Creators'] ?></a>
+                <a class="menu-text-footer" href="https://www.youtube.com/ads/"><?= $enJson['menu']['footer']['Advertise'] ?></a>
+                <a class="menu-text-footer" href="https://developers.google.com/youtube"><?= $enJson['menu']['footer']['Developers'] ?></a>
+                <a class="menu-text-footer" href="https://support.google.com/youtube/contact/FR_Complaints"><?= $enJson['menu']['footer']['Report hateful content under LCEN'] ?></a>
+                <a class="menu-text-footer" href="https://www.youtube.com/t/terms"><?= $enJson['menu']['footer']['Terms'] ?></a>
+                <a class="menu-text-footer" href="https://policies.google.com/privacy?hl=en"><?= $enJson['menu']['footer']['Privacy'] ?></a>
+                <a class="menu-text-footer" href="https://www.youtube.com/howyoutubeworks/policies/community-guidelines/"><?= $enJson['menu']['footer']['Policy & Safety'] ?></a>
+                <a class="menu-text-footer" href="https://www.youtube.com/howyoutubeworks/?utm_campaign=ytgen&utm_source=ythp&utm_medium=LeftNav&utm_content=txt&u=https%3A%2F%2Fwww.youtube.com%2Fhowyoutubeworks%3Futm_source%3Dythp%26utm_medium%3DLeftNav%26utm_campaign%3Dytgen"><?= $enJson['menu']['footer']['How YouTube works'] ?></a>
+                <a class="menu-text-footer" href="https://www.youtube.com/new"><?= $enJson['menu']['footer']['Test new features'] ?></a>  
             </div>
-            <a class="menu-text-footer copyright">
-                <?= $enJson['menu']['footer']['copyright'] ?>
-            </a>
         </div>
+        <a class="menu-text-footer copyright">
+                <?= $enJson['menu']['footer']['copyright'] ?>
+        </a>
     </div>
 </div>
 

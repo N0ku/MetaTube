@@ -155,14 +155,22 @@
         },
         "titles": {
             "subscriptions": "SUBSCRIPTIONS",
-            "others": "OTHERS YOUTUBE CONTENTS"
+            "others": "MORE FROM METATUBE"
         },
         "footer": {
-            "link1": "Link1",
-            "link2": "Link2",
-            "link3": "Link3",
-            "link4": "Link4",
-            "link5": "Link5",
+            "About": "About",
+            "Press": "Press",
+            "Copyright": "Copyright",
+            "Contact us": "Contact us",
+            "Creators": "Creators",
+            "Advertise":"Advertise",
+            "Developers":"Developers",
+            "Report hateful content under LCEN":"Report hateful content under LCEN",
+            "Terms":"Terms",
+            "Privacy":"Privacy",
+            "Policy & Safety":"Policy & Safety",
+            "How YouTube works":"How YouTube works",
+            "Test new features":"Test new features",
             "copyright": "© 2022 Metatubes -L1 Alt Cergy/Paris ❤️"
         }
     },
