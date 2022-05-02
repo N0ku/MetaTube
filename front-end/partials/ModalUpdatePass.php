@@ -1,8 +1,8 @@
  <button class="buttonModale" onclick="document.getElementById('password').style.display='block'">Update password</button>
          <div id="password" class="modal">
-            <span onclick="document.getElementById('password').style.display='none'" class="close" title="Close Modal">&times;</span>
+            
             <form class="modal-content" enctype="multipart/form-data"  id="form" method="post" action="/back-end/actions/update_password.php">
-               
+               <span onclick="document.getElementById('password').style.display='none'" class="close" title="Close Modal">&times;</span>
                <div class="wrapper-part-profile">
                   <div>
                      <label class="label-form" for="email"><?= $enJson['form']['updatePass']['labelAdress'] ?></label>
