@@ -40,27 +40,17 @@
         </div>
 
 
-    <?php 
-    if ($pageName != "404" )  {
-       
-        echo $navBar;
-        echo $menu;
-     }
-      ?>
-      
-      <?= $pageName ?>
-      
     </div>
     <!-- Add js library and script here -->
     <script src="./front-end/assets/js/script-menu.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script> 
-    <script src="./front-end/assets/js/toastr.min.js"></script> 
-    <script src="./front-end/assets/js/toastr.js.map"></script> 
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./front-end/assets/js/toastr.min.js"></script>
+    <script src="./front-end/assets/js/toastr.js.map"></script>
     <script src="./front-end/assets/js/SearchPage.js"></script>
     <script src="/front-end/assets/js/script-explorer.js"></script>
 
     <script>
-      toastr.options = {
+        toastr.options = {
             "closeButton": true,
             "debug": false,
             "newestOnTop": false,
@@ -76,7 +66,7 @@
             "hideEasing": "linear",
             "showMethod": "fadeIn",
             "hideMethod": "fadeOut"
-          }
+        }
     </script>
 
 
