@@ -9,6 +9,7 @@ session_start();
 require_once __DIR__ . '/back-end/db.php';
 $page_title = 'Unknown page?';
 $existing_pages = ['Home', 'Explorer', 'Subscriptions', 'Library', 'History', 'LikedVideo', 'WatchLater', 'Profile', 'Register', 'Login', '404'];
+
 $homeBar = $_GET['name'];
 
 
