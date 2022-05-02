@@ -11,7 +11,9 @@
             <img class="previewProfile"  src="/front-end/assets/img/Logo/Banner.svg">
          </div>
 </div>
+
 <div class="feature-channel-flex-items">
+   
 
    <div class="feature-channel-navigation-container">
 
@@ -30,7 +32,8 @@
             </div>
          </div>
          <div class="feature-channel-navigation-optionChannelPage">
-            <h3>Border Zone</h3>
+            <button class="feature-channel-btn-customChannel">CUSTOMIZE THE CHANNEL </button>
+            <button class="feature-channel-btn-metaStudio">EDIT YOUR VIDEOS </button>
          </div>
 
       </div>
@@ -75,8 +78,33 @@
 
    </div>
 </div>
+<div class="feature-channel-separator"></div>
+
+<div class="feature-channel-flex-container-item">   
+<h3>Video Online</h3>
 <div class="feature-channel-flex-items">
-   <div class="feature-channel-video-intro"><?php echo $enJson['channel']['introduction'] ?></div>
+   <div class="home-video-content">
+        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+        <div class="below-content">
+            <div class="below-content-img">
+                <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
+            </div>
+            <div class="below-content-text">
+                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                <p class="video-channel-name">Name of the chanel</p>
+                <div class="video-infos">
+                    <p class="video-number-views">200k views</p>
+                    <p class="video-date">2 weeks ago</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   </div>
+   
+   </div>
+
+   </div>
    <div class="feature-channel-video-online">
       <button><?php echo $enJson['channel']['videoOnline'] ?></button>
       <button><img src="./assets/img/Channel/play.png" alt=""></button>
