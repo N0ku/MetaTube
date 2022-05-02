@@ -14,18 +14,21 @@ connection.connect();
 app.use(express.json());
 
 // test
-app.get('/users', (req,res) => {
-    connection.query('SELECT * FROM user', function(error, results, fields) {
+app.get('/users', (req, res) => {
+    console.log("GET - /users/");
+    sqlConn.query('SELECT * FROM user', function(error, results) {
         if(error) throw error;
         res.status(200).json(results);
         return results;
     });
 });
 
-// for uploading a video
-app.post('/upload', (req,res) => {
-    console.log("POST - /upload");
-    /*
+// upload video
+app.post('/upload/video', (req, res) => {
+    console.log("POST - /upload/video");
+    const data = req.body;
+
+    /* DATA FORMAT
     {
         "id":"",
         "creator":"",
@@ -35,16 +38,80 @@ app.post('/upload', (req,res) => {
     }
     */
 
+    console.log(`Video id : ${data.id}`);
+    console.log(`Creator id : ${data.creator}`);
+    console.log(`Title : ${data.title}`);
+    console.log(`Thumbnail : ${data.thumbnail}`);
+    console.log(`Description : ${data.description}`);
+    console.log(`Privacy : ${data.privacy}`);
+
     /*
                 TO DO
         - Make all exit code
     */
-    /* sqlConn.query(`INSERT INTO video (id, creator, title, description, privacy)
-    VALUES (${data.id}, ${data.creator}, ${data.title}, ${data.description}, ${data.privacy})`, function(error) {
+    
+    let query;
+    if (data.thumbnail == '')
+    {
+		query = `INSERT INTO video (id, creator, title, description, privacy) VALUES ('${data.id}', '${data.creator}', '${data.title}', '${data.description}', '${data.privacy}')`;
+    }
+    else
+    {
+		query = `INSERT INTO video (id, creator, title, thumbnail, description, privacy) VALUES ('${data.id}', '${data.creator}', '${data.title}', '${data.thumbnail}', '${data.description}', '${data.privacy}')`;
+    }
+
+    sqlConn.query(query, function(error) {
         if(error) throw error;
         res.status(200);
-    
-    }); */
+    });
+});
+
+// create user
+app.post('/upload/user', (req, res) => {
+    console.log("POST - /upload/user");
+    const data = req.body;
+
+    /* DATA FORMAT
+    {
+        "id":"",
+        "username":"",
+        "email":"",
+        "password":""
+    }
+    */
+
+    console.log(`User id : ${data.id}`);
+    console.log(`Username : ${data.username}`);
+    console.log(`email : ${data.email}`);
+    console.log(`password : ${data.password}`);
+
+    sqlConn.query(`INSERT INTO user (id, username, email, password) VALUES ('${data.id}', '${data.username}', '${data.email}', '${data.password}')`, function(error) {
+        if(error) throw error;
+        res.status(200);
+    });
+});
+
+// create channel
+app.post('/upload/channel', (req, res) => {
+    console.log("POST - /upload/user");
+    const data = req.body;
+
+    /* DATA FORMAT
+    {
+        "id":"",
+        "channelName":"",
+        "channelProfilePicture":""
+    }
+    */
+
+    console.log(`User id : ${data.id}`);
+    console.log(`channelName : ${data.channelName}`);
+    console.log(`channelProfilePicture : ${data.channelProfilePicture}`);
+
+    sqlConn.query(`INSERT INTO channel (id, channelName, channelProfilePicture) VALUES ('${data.id}', '${data.channelName}', '${data.channelProfilePicture}')`, function(error) {
+        if(error) throw error;
+        res.status(200);
+    });
 });
 
 // videos search
@@ -84,7 +151,7 @@ app.get('/search/:data', (req,res) => {
 
 // get video
 app.get('/video/:id', (req, res) => {
-    console.log("GET - /video");
+    console.log("GET - /video/");
     sqlConn.query(`SELECT * FROM video WHERE id = ${req.params.id}`, function(error, results) {
         if(error)
         {

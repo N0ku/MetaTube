@@ -17,7 +17,7 @@ try {
 }
 catch (Exception $e) {
 	// sinon on die(), cela fait 'crasher' le site internet avec un message d'erreur
-	die('Erreur MySQL, maintenance en cours.' . $e->getMessage());
+	//die('Erreur MySQL, maintenance en cours.' . $e->getMessage());
 }
 
 // si tout est OK, nous avons accès à la variable $db permettant d'intéragir avec la BDD

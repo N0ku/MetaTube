@@ -30,7 +30,7 @@ $data = $query->fetch(PDO::FETCH_ASSOC);
 if($data){
     $_SESSION['signup_error']= "Email / pseudo deja utilise";
     header(" index.php?name=Register");
-    die();
+    //die();
 }
 
 
@@ -45,5 +45,3 @@ $query->execute([
     ':dateBirth' => $_POST['dateBirth']
 ]);
 header("Location: /index.php?name=Login ");
-
-?>
