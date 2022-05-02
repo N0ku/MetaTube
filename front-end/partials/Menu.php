@@ -1,6 +1,6 @@
 <?php ob_start() ?>
 <?php if ($pageName != 'Watch') {
-    ?>
+?>
 <div class="short-menu">
     <div class="sticky-menu">
         <div class="short-menu-items">

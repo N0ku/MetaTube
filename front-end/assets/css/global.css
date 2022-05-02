@@ -37,7 +37,6 @@
 
 .content {
     overflow: scroll;
-    margin-top: 5%;
 }
 /* CSS common to all pages as well as the CSS of components that can be/are on all pages */
 /* /!\  Please never changed values without notice here except for variables /!\ */

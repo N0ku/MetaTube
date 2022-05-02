@@ -77,278 +77,258 @@ $page = "Explorer"; ?>
             <div class="creator-rise-grid">
 
                 <div class="creator-rise-video">
-                    <<<<<<< HEAD <div class="home-video-content">
-                        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
-                        <div class="below-content">
-                            <div class="below-content-img">
-                                <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
-                            </div>
-                            <div class="below-content-text">
-                                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
-                                <p class="video-channel-name">Name of the chanel</p>
-                                <div class="video-infos">
-                                    <p class="video-number-views">200k views</p>
-                                    <p class="video-date">2 weeks ago</p>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-                <div class="home-video-content">
-                    <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
-                    <div class="below-content">
-                        <div class="below-content-img">
-                            <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
-                        </div>
-                        <div class="below-content-text">
-                            <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
-                            <p class="video-channel-name">Name of the chanel</p>
-                            <div class="video-infos">
-                                <p class="video-number-views">200k views</p>
-                                <p class="video-date">2 weeks ago</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="home-video-content">
-                    <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
-                    <div class="below-content">
-                        <div class="below-content-img">
-                            <img src="/front-end/assets/img/Home/sadkitty.gif" alt="" class="video-channel-img" />
-                        </div>
-                        <div class="below-content-text">
-                            <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
-                            <p class="video-channel-name">Name of the chanel</p>
-                            <div class="video-infos">
-                                <p class="video-number-views">200k views</p>
-                                <p class="video-date">2 weeks ago</p>
-                                =======
-                                <a href="index.php?name=Watch">
-                                    <div class="home-video-content">
-                                        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail"
-                                            class="thumbnail" />
-                                        <div class="below-content">
-                                            <div class="below-content-img">
-                                                <img src="/front-end/assets/img/Home/sadkitty.gif" alt=""
-                                                    class="video-channel-img" />
-                                            </div>
-                                            <div class="below-content-text">
-                                                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
-                                                <p class="video-channel-name">Name of the chanel</p>
-                                                <div class="video-infos">
-                                                    <p class="video-number-views">200k views</p>
-                                                    <p class="video-date">2 weeks ago</p>
-                                                </div>
-                                                >>>>>>> develop
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="index.php?name=Watch">
-                                    <div class="home-video-content">
-                                        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail"
-                                            class="thumbnail" />
-                                        <div class="below-content">
-                                            <div class="below-content-img">
-                                                <img src="/front-end/assets/img/Home/sadkitty.gif" alt=""
-                                                    class="video-channel-img" />
-                                            </div>
-                                            <div class="below-content-text">
-                                                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
-                                                <p class="video-channel-name">Name of the chanel</p>
-                                                <div class="video-infos">
-                                                    <p class="video-number-views">200k views</p>
-                                                    <p class="video-date">2 weeks ago</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="index.php?name=Watch">
-                                    <div class="home-video-content">
-                                        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail"
-                                            class="thumbnail" />
-                                        <div class="below-content">
-                                            <div class="below-content-img">
-                                                <img src="/front-end/assets/img/Home/sadkitty.gif" alt=""
-                                                    class="video-channel-img" />
-                                            </div>
-                                            <div class="below-content-text">
-                                                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
-                                                <p class="video-channel-name">Name of the chanel</p>
-                                                <div class="video-infos">
-                                                    <p class="video-number-views">200k views</p>
-                                                    <p class="video-date">2 weeks ago</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="index.php?name=Watch">
-                                    <div class="home-video-content">
-                                        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail"
-                                            class="thumbnail" />
-                                        <div class="below-content">
-                                            <div class="below-content-img">
-                                                <img src="/front-end/assets/img/Home/sadkitty.gif" alt=""
-                                                    class="video-channel-img" />
-                                            </div>
-                                            <div class="below-content-text">
-                                                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
-                                                <p class="video-channel-name">Name of the chanel</p>
-                                                <div class="video-infos">
-                                                    <p class="video-number-views">200k views</p>
-                                                    <p class="video-date">2 weeks ago</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="index.php?name=Watch">
-                                    <div class="home-video-content">
-                                        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail"
-                                            class="thumbnail" />
-                                        <div class="below-content">
-                                            <div class="below-content-img">
-                                                <img src="/front-end/assets/img/Home/sadkitty.gif" alt=""
-                                                    class="video-channel-img" />
-                                            </div>
-                                            <div class="below-content-text">
-                                                <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
-                                                <p class="video-channel-name">Name of the chanel</p>
-                                                <div class="video-infos">
-                                                    <p class="video-number-views">200k views</p>
-                                                    <p class="video-date">2 weeks ago</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <button class="next"><img src="/front-end/assets/img/next.svg" alt="next">
-                            </button>
-                        </div>
-                    </div>
-                    <!-- Creator Rise --END -->
-                    <div class="border-explore"></div>
-                </div>
 
-                <!-- Trending --START -->
-                <div class="trending">
-                    <p class="trending-title"><?= $enJson['explore']['TrendingTitle'] ?></p>
-                    <div class="trending-video-grid">
-                        <a href="index.php?name=Watch">
-                            <div class="trending-video-content">
-                                <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail"
-                                    class="thumbnail-trend-explorer" />
-                                <div class="next-content">
-                                    <strong class="explorer-video-title">I'M THE TITLE OF THE VIDEO</strong>
-                                    <div class="next-content-infos">
-                                        <p class="explorer-video-channel-name">Name of the chanel</p>
-                                        <p class="explorer-video-number-views">200k views</p>
-                                        <p class="explorer-video-date">2 weeks ago</p>
+                    <a href="index.php?name=Watch">
+                        <div class="home-video-content">
+                            <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+                            <div class="below-content">
+                                <div class="below-content-img">
+                                    <img src="/front-end/assets/img/Home/sadkitty.gif" alt=""
+                                        class="video-channel-img" />
+                                </div>
+                                <div class="below-content-text">
+                                    <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                                    <p class="video-channel-name">Name of the chanel</p>
+                                    <div class="video-infos">
+                                        <p class="video-number-views">200k views</p>
+                                        <p class="video-date">2 weeks ago</p>
                                     </div>
-                                    <p class="explorer-description">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, odit
-                                        temporibus. Iste
-                                        autem,
-                                        quas ducimus ut saepe explicabo eveniet harum minima illo fuga, hic corrupti ex
-                                        aliquam, a
-                                        voluptatum eligendi.
-                                    </p>
                                 </div>
                             </div>
-                        </a>
-                        <a href="index.php?name=Watch">
-                            <div class="trending-video-content">
-                                <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail"
-                                    class="thumbnail-trend-explorer" />
-                                <div class="next-content">
-                                    <strong class="explorer-video-title">I'M THE TITLE OF THE VIDEO</strong>
-                                    <div class="next-content-infos">
-                                        <p class="explorer-video-channel-name">Name of the chanel</p>
-                                        <p class="explorer-video-number-views">200k views</p>
-                                        <p class="explorer-video-date">2 weeks ago</p>
+                        </div>
+                    </a>
+                    <a href="index.php?name=Watch">
+                        <div class="home-video-content">
+                            <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+                            <div class="below-content">
+                                <div class="below-content-img">
+                                    <img src="/front-end/assets/img/Home/sadkitty.gif" alt=""
+                                        class="video-channel-img" />
+                                </div>
+                                <div class="below-content-text">
+                                    <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                                    <p class="video-channel-name">Name of the chanel</p>
+                                    <div class="video-infos">
+                                        <p class="video-number-views">200k views</p>
+                                        <p class="video-date">2 weeks ago</p>
                                     </div>
-                                    <p class="explorer-description">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, odit
-                                        temporibus. Iste
-                                        autem,
-                                        quas ducimus ut saepe explicabo eveniet harum minima illo fuga, hic corrupti ex
-                                        aliquam, a
-                                        voluptatum eligendi.
-                                    </p>
                                 </div>
                             </div>
-                        </a>
-                        <a href="index.php?name=Watch">
-                            <div class="trending-video-content">
-                                <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail"
-                                    class="thumbnail-trend-explorer" />
-                                <div class="next-content">
-                                    <strong class="explorer-video-title">I'M THE TITLE OF THE VIDEO</strong>
-                                    <div class="next-content-infos">
-                                        <p class="explorer-video-channel-name">Name of the chanel</p>
-                                        <p class="explorer-video-number-views">200k views</p>
-                                        <p class="explorer-video-date">2 weeks ago</p>
+                        </div>
+                    </a>
+                    <a href="index.php?name=Watch">
+                        <div class="home-video-content">
+                            <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+                            <div class="below-content">
+                                <div class="below-content-img">
+                                    <img src="/front-end/assets/img/Home/sadkitty.gif" alt=""
+                                        class="video-channel-img" />
+                                </div>
+                                <div class="below-content-text">
+                                    <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                                    <p class="video-channel-name">Name of the chanel</p>
+                                    <div class="video-infos">
+                                        <p class="video-number-views">200k views</p>
+                                        <p class="video-date">2 weeks ago</p>
                                     </div>
-                                    <p class="explorer-description">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, odit
-                                        temporibus. Iste
-                                        autem,
-                                        quas ducimus ut saepe explicabo eveniet harum minima illo fuga, hic corrupti ex
-                                        aliquam, a
-                                        voluptatum eligendi.
-                                    </p>
                                 </div>
                             </div>
-                        </a>
-                        <a href="index.php?name=Watch">
-                            <div class="trending-video-content">
-                                <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail"
-                                    class="thumbnail-trend-explorer" />
-                                <div class="next-content">
-                                    <strong class="explorer-video-title">I'M THE TITLE OF THE VIDEO</strong>
-                                    <div class="next-content-infos">
-                                        <p class="explorer-video-channel-name">Name of the chanel</p>
-                                        <p class="explorer-video-number-views">200k views</p>
-                                        <p class="explorer-video-date">2 weeks ago</p>
+                        </div>
+                    </a>
+                    <a href="index.php?name=Watch">
+                        <div class="home-video-content">
+                            <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+                            <div class="below-content">
+                                <div class="below-content-img">
+                                    <img src="/front-end/assets/img/Home/sadkitty.gif" alt=""
+                                        class="video-channel-img" />
+                                </div>
+                                <div class="below-content-text">
+                                    <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                                    <p class="video-channel-name">Name of the chanel</p>
+                                    <div class="video-infos">
+                                        <p class="video-number-views">200k views</p>
+                                        <p class="video-date">2 weeks ago</p>
                                     </div>
-                                    <p class="explorer-description">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, odit
-                                        temporibus. Iste
-                                        autem,
-                                        quas ducimus ut saepe explicabo eveniet harum minima illo fuga, hic corrupti ex
-                                        aliquam, a
-                                        voluptatum eligendi.
-                                    </p>
                                 </div>
                             </div>
-                        </a>
-                        <a href="index.php?name=Watch">
-                            <div class="trending-video-content">
-                                <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail"
-                                    class="thumbnail-trend-explorer" />
-                                <div class="next-content">
-                                    <strong class="explorer-video-title">I'M THE TITLE OF THE VIDEO</strong>
-                                    <div class="next-content-infos">
-                                        <p class="explorer-video-channel-name">Name of the chanel</p>
-                                        <p class="explorer-video-number-views">200k views</p>
-                                        <p class="explorer-video-date">2 weeks ago</p>
+                        </div>
+                    </a>
+                    <a href="index.php?name=Watch">
+                        <div class="home-video-content">
+                            <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+                            <div class="below-content">
+                                <div class="below-content-img">
+                                    <img src="/front-end/assets/img/Home/sadkitty.gif" alt=""
+                                        class="video-channel-img" />
+                                </div>
+                                <div class="below-content-text">
+                                    <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                                    <p class="video-channel-name">Name of the chanel</p>
+                                    <div class="video-infos">
+                                        <p class="video-number-views">200k views</p>
+                                        <p class="video-date">2 weeks ago</p>
                                     </div>
-                                    <p class="explorer-description">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, odit
-                                        temporibus. Iste
-                                        autem,
-                                        quas ducimus ut saepe explicabo eveniet harum minima illo fuga, hic corrupti ex
-                                        aliquam, a
-                                        voluptatum eligendi.
-                                    </p>
                                 </div>
                             </div>
-                        </a>
-                    </div>
+                        </div>
+                    </a>
+                    <a href="index.php?name=Watch">
+                        <div class="home-video-content">
+                            <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+                            <div class="below-content">
+                                <div class="below-content-img">
+                                    <img src="/front-end/assets/img/Home/sadkitty.gif" alt=""
+                                        class="video-channel-img" />
+                                </div>
+                                <div class="below-content-text">
+                                    <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                                    <p class="video-channel-name">Name of the chanel</p>
+                                    <div class="video-infos">
+                                        <p class="video-number-views">200k views</p>
+                                        <p class="video-date">2 weeks ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="index.php?name=Watch">
+                        <div class="home-video-content">
+                            <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
+                            <div class="below-content">
+                                <div class="below-content-img">
+                                    <img src="/front-end/assets/img/Home/sadkitty.gif" alt=""
+                                        class="video-channel-img" />
+                                </div>
+                                <div class="below-content-text">
+                                    <strong class="video-title">I'M THE TITLE OF THE VIDEO</strong>
+                                    <p class="video-channel-name">Name of the chanel</p>
+                                    <div class="video-infos">
+                                        <p class="video-number-views">200k views</p>
+                                        <p class="video-date">2 weeks ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <button class="prev hide-arrow"><img src="/front-end/assets/img/prev.svg" alt="prev">
+                    </button>
                 </div>
-                <!-- Trending --END -->
+                <button class="next"><img src="/front-end/assets/img/next.svg" alt="next">
+                </button>
             </div>
+        </div>
+        <!-- Creator Rise --END -->
+        <div class="border-explore"></div>
+    </div>
 
-            <?php $pageName = ob_get_clean() ?>
+    <!-- Trending --START -->
+    <div class="trending">
+        <p class="trending-title"><?= $enJson['explore']['TrendingTitle'] ?></p>
+        <div class="trending-video-grid">
+            <a href="index.php?name=Watch">
+                <div class="trending-video-content">
+                    <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail"
+                        class="thumbnail-trend-explorer" />
+                    <div class="next-content">
+                        <strong class="explorer-video-title">I'M THE TITLE OF THE VIDEO</strong>
+                        <div class="next-content-infos">
+                            <p class="explorer-video-channel-name">Name of the chanel</p>
+                            <p class="explorer-video-number-views">200k views</p>
+                            <p class="explorer-video-date">2 weeks ago</p>
+                        </div>
+                        <p class="explorer-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, odit temporibus. Iste
+                            autem,
+                            quas ducimus ut saepe explicabo eveniet harum minima illo fuga, hic corrupti ex aliquam, a
+                            voluptatum eligendi.
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="index.php?name=Watch">
+                <div class="trending-video-content">
+                    <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail"
+                        class="thumbnail-trend-explorer" />
+                    <div class="next-content">
+                        <strong class="explorer-video-title">I'M THE TITLE OF THE VIDEO</strong>
+                        <div class="next-content-infos">
+                            <p class="explorer-video-channel-name">Name of the chanel</p>
+                            <p class="explorer-video-number-views">200k views</p>
+                            <p class="explorer-video-date">2 weeks ago</p>
+                        </div>
+                        <p class="explorer-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, odit temporibus. Iste
+                            autem,
+                            quas ducimus ut saepe explicabo eveniet harum minima illo fuga, hic corrupti ex aliquam, a
+                            voluptatum eligendi.
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="index.php?name=Watch">
+                <div class="trending-video-content">
+                    <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail"
+                        class="thumbnail-trend-explorer" />
+                    <div class="next-content">
+                        <strong class="explorer-video-title">I'M THE TITLE OF THE VIDEO</strong>
+                        <div class="next-content-infos">
+                            <p class="explorer-video-channel-name">Name of the chanel</p>
+                            <p class="explorer-video-number-views">200k views</p>
+                            <p class="explorer-video-date">2 weeks ago</p>
+                        </div>
+                        <p class="explorer-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, odit temporibus. Iste
+                            autem,
+                            quas ducimus ut saepe explicabo eveniet harum minima illo fuga, hic corrupti ex aliquam, a
+                            voluptatum eligendi.
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="index.php?name=Watch">
+                <div class="trending-video-content">
+                    <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail"
+                        class="thumbnail-trend-explorer" />
+                    <div class="next-content">
+                        <strong class="explorer-video-title">I'M THE TITLE OF THE VIDEO</strong>
+                        <div class="next-content-infos">
+                            <p class="explorer-video-channel-name">Name of the chanel</p>
+                            <p class="explorer-video-number-views">200k views</p>
+                            <p class="explorer-video-date">2 weeks ago</p>
+                        </div>
+                        <p class="explorer-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, odit temporibus. Iste
+                            autem,
+                            quas ducimus ut saepe explicabo eveniet harum minima illo fuga, hic corrupti ex aliquam, a
+                            voluptatum eligendi.
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="index.php?name=Watch">
+                <div class="trending-video-content">
+                    <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail"
+                        class="thumbnail-trend-explorer" />
+                    <div class="next-content">
+                        <strong class="explorer-video-title">I'M THE TITLE OF THE VIDEO</strong>
+                        <div class="next-content-infos">
+                            <p class="explorer-video-channel-name">Name of the chanel</p>
+                            <p class="explorer-video-number-views">200k views</p>
+                            <p class="explorer-video-date">2 weeks ago</p>
+                        </div>
+                        <p class="explorer-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, odit temporibus. Iste
+                            autem,
+                            quas ducimus ut saepe explicabo eveniet harum minima illo fuga, hic corrupti ex aliquam, a
+                            voluptatum eligendi.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Trending --END -->
+</div>
+
+<?php $pageName = ob_get_clean() ?>

@@ -370,7 +370,15 @@ input[type=range].volume::-moz-range-thumb {
 }
 
 @media screen and (max-width: 1200px) {
-   .watch-content{
-       flex-direction: column;
-   }
+    .watch-content {
+        flex-direction: column;
+        justify-content: inherit;
+        align-items: center;
+    }
+
+    .video-lector {
+        width: 90%;
+        height: 100%;
+        margin-top: 88px;
+    }
 }
