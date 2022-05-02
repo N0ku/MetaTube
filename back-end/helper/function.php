@@ -65,3 +65,38 @@ function console_log($data)
   echo 'console.log(' . json_encode($data) . ')';
   echo '</script>';
 }
+
+function postApi($data, $route)
+{
+  $option = array(
+    'http' => array(
+      'method' => 'POST',
+      'content' => json_encode($data),
+      'header' => "Content-Type: application/json\r\n" . "Accept: application/json\r\n"
+    )
+  );
+
+  $context = stream_context_create($option);
+  $result = file_get_contents('http://93.16.2.231:8081/' . $route, false, $context);
+  $response = json_decode($result);
+  return $response;
+}
+
+function getApi($route)
+{
+  $id = 'q12TFuL18592n4l0irF1';
+  $opts = array(
+    'http' => array(
+      'method' => "GET",
+    )
+  );
+
+  $context = stream_context_create($opts);
+
+  $fp = fopen('http://93.16.2.231:8081/' . 'video/' . $id, 'r', false, $context);
+  $data = stream_get_contents($fp);
+  fclose($fp);
+
+  $data = json_decode($data);
+  return $data;
+}
