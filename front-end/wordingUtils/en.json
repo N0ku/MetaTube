@@ -1,6 +1,49 @@
 {
     "global": {
-        "title": "MetaTube"
+        "title": "MetaTube",
+        "filterButton": "Filters",
+        "filterBoxTitle1": "Upload date",
+        "filterBoxTitle2": "Type", 
+        "filterBoxTitle3": "Order by",
+        "filterBoxMenuButton1": "Last hour",
+        "filterBoxMenuButton2": "This week",
+        "filterBoxMenuButton3": "This month",
+        "filterBoxMenuButton4": "This year",
+        "filterBoxMenuButton5": "Video",
+        "filterBoxMenuButton6": "Playlist",
+        "filterBoxMenuButton7": "Channel",
+        "filterBoxMenuButton8": "Relevance",
+        "filterBoxMenuButton9": "Upload date",
+        "filterBoxMenuButton10": "View count",
+        "filterBoxMenuButton11": "Submit"
+    },
+    "searches": {
+        "search1": {
+            "videoWatchCount": "1234 views",
+            "videoDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate tellus non dolor viverra pretium. Sed neque ipsum, ultrices et vehicula id, imperdiet id neque. Donec iaculis a sapien ut lobortis. Cras aliquet id ex vitae scelerisque. Vestibulum rhoncus, velit sit amet pellentesque sodales, nisi arcu semper lorem, quis placerat quam sapien in orci. Sed quis feugiat tortor. Integer cursus metus sem, at dapibus lectus ultricies nec. Ut malesuada diam convallis sem feugiat sagittis. Suspendisse at neque malesuada, mattis felis sed, dictum ex.",
+            "searchpageChannelName": "Musculated Gooba",
+            "videoImg": "./front-end/assets/img/kokomi.jpeg",
+            "searchpageChannelIcon": "./front-end/assets/img/metatuber.jpeg",
+            "filterBoxTitle": "Video under this video don't talk about cucumbers."
+        },
+        
+        "search2": {
+            "videoWatchCount": "666 views",
+            "videoDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate tellus non dolor viverra pretium. Sed neque ipsum, ultrices et vehicula id, imperdiet id neque. Donec iaculis a sapien ut lobortis. Cras aliquet id ex vitae scelerisque. Vestibulum rhoncus, velit sit amet pellentesque sodales, nisi arcu semper lorem, quis placerat quam sapien in orci. Sed quis feugiat tortor. Integer cursus metus sem, at dapibus lectus ultricies nec. Ut malesuada diam convallis sem feugiat sagittis. Suspendisse at neque malesuada, mattis felis sed, dictum ex.",
+            "searchpageChannelName": "The gardening for noobs",
+            "videoImg": "./front-end/assets/img/cucumber.jpeg",
+            "searchpageChannelIcon": "./front-end/assets/img/bonhomme-baton.jpeg",
+            "filterBoxTitle": "How to have the best cucumbers?"
+        },
+
+        "search3": {
+            "videoWatchCount": "4321 views",
+            "videoDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate tellus non dolor viverra pretium. Sed neque ipsum, ultrices et vehicula id, imperdiet id neque. Donec iaculis a sapien ut lobortis. Cras aliquet id ex vitae scelerisque. Vestibulum rhoncus, velit sit amet pellentesque sodales, nisi arcu semper lorem, quis placerat quam sapien in orci. Sed quis feugiat tortor. Integer cursus metus sem, at dapibus lectus ultricies nec. Ut malesuada diam convallis sem feugiat sagittis. Suspendisse at neque malesuada, mattis felis sed, dictum ex.",
+            "searchpageChannelName": "Musculated Gooba",
+            "videoImg": "./front-end/assets/img/cucumber.jpeg",
+            "searchpageChannelIcon": "./front-end/assets/img/metatuber.jpeg",
+            "filterBoxTitle": "I HAVE SO MUCH CUCUMBERS!"
+        }
     },
     "profile": {
         "navBar": {
