@@ -25,6 +25,7 @@
     justify-content: flex-start;
     align-items: center;
     background-color: var(--background-color-nav);
+    
 }
 
 .border {
@@ -75,6 +76,7 @@
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
+    
 }
 
 .nav-item-short:hover {
