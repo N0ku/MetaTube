@@ -6,7 +6,7 @@
         "createTitle":"Need Title",
         "create": "Create u CreatorChannel",
         "name":"Name",
-        "Image":"./assets/img/Channel/play.png",
+        "Image":"/front-end/assets/img/Logo/Banner.svg",
         "Import": "Importer picture",
         "cancel": "Cancel   "
   

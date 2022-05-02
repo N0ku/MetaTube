@@ -21,16 +21,15 @@
 
             <div class="feature-channel-navigation-container-profilPicture">
                <button>
-                  <img class="img-profile" src="<?php echo $enJson['creation']['Image'] ?>" alt="">
+                  <img class="img-profile-channel" src="<?php echo $enJson['creation']['Image'] ?>" alt="">
                </button>
             </div>
             <div class="feature-channel-navigation-userInformation">
-               <h3>Name</h3>
+               <h2>Name</h2>
                <h3>Follower</h3>
             </div>
          </div>
-
-         <div>
+         <div class="feature-channel-navigation-optionChannelPage">
             <h3>Border Zone</h3>
          </div>
 
