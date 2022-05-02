@@ -108,20 +108,31 @@
         <div class="nav-items menu-footer">
             <div class="border"></div>
             <div class="links">
-                <a class="menu-text-footer" href="https://about.youtube/"><?= $enJson['menu']['footer']['About'] ?></a>
-                <a class="menu-text-footer" href="https://blog.youtube/"><?= $enJson['menu']['footer']['Press'] ?></a>
-                <a class="menu-text-footer" href="https://www.youtube.com/howyoutubeworks/policies/copyright/"><?= $enJson['menu']['footer']['Copyright'] ?></a>
-                <a class="menu-text-footer" href="https://www.youtube.com/t/contact_us/"><?= $enJson['menu']['footer']['Contact us'] ?></a>
-                <a class="menu-text-footer" href="https://www.youtube.com/creators/"><?= $enJson['menu']['footer']['Creators'] ?></a>
-                <a class="menu-text-footer" href="https://www.youtube.com/ads/"><?= $enJson['menu']['footer']['Advertise'] ?></a>
-                <a class="menu-text-footer" href="https://developers.google.com/youtube"><?= $enJson['menu']['footer']['Developers'] ?></a>
-                <a class="menu-text-footer" href="https://support.google.com/youtube/contact/FR_Complaints"><?= $enJson['menu']['footer']['Report hateful content under LCEN'] ?></a>
-                <a class="menu-text-footer" href="https://www.youtube.com/t/terms"><?= $enJson['menu']['footer']['Terms'] ?></a>
-                <a class="menu-text-footer" href="https://policies.google.com/privacy?hl=en"><?= $enJson['menu']['footer']['Privacy'] ?></a>
-                <a class="menu-text-footer" href="https://www.youtube.com/howyoutubeworks/policies/community-guidelines/"><?= $enJson['menu']['footer']['Policy & Safety'] ?></a>
-                <a class="menu-text-footer" href="https://www.youtube.com/howyoutubeworks/?utm_campaign=ytgen&utm_source=ythp&utm_medium=LeftNav&utm_content=txt&u=https%3A%2F%2Fwww.youtube.com%2Fhowyoutubeworks%3Futm_source%3Dythp%26utm_medium%3DLeftNav%26utm_campaign%3Dytgen"><?= $enJson['menu']['footer']['How YouTube works'] ?></a>
-                <a class="menu-text-footer" href="https://www.youtube.com/new"><?= $enJson['menu']['footer']['Test new features'] ?></a>  
+                <div class="primary-guide-links">
+                    
+                    <a class="menu-text-footer" href="https://about.youtube/"><?= $enJson['menu']['footer']['About'] ?></a>
+                    <a class="menu-text-footer" href="https://blog.youtube/"><?= $enJson['menu']['footer']['Press'] ?></a>
+                    <a class="menu-text-footer" href="https://www.youtube.com/howyoutubeworks/policies/copyright/"><?= $enJson['menu']['footer']['Copyright'] ?></a>
+                    <a class="menu-text-footer" href="https://www.youtube.com/t/contact_us/"><?= $enJson['menu']['footer']['Contact us'] ?></a>
+                    <a class="menu-text-footer" href="https://www.youtube.com/creators/"><?= $enJson['menu']['footer']['Creators'] ?></a>
+                    <a class="menu-text-footer" href="https://www.youtube.com/ads/"><?= $enJson['menu']['footer']['Advertise'] ?></a>
+                    <a class="menu-text-footer" href="https://developers.google.com/youtube"><?= $enJson['menu']['footer']['Developers'] ?></a>
+                    <a class="menu-text-footer" href="https://support.google.com/youtube/contact/FR_Complaints"><?= $enJson['menu']['footer']['Report hateful content under LCEN'] ?></a>
+                
+                </div>
+                
+                <div class="secondary-guide-links">
+
+                    <a class="menu-text-footer" href="https://www.youtube.com/t/terms"><?= $enJson['menu']['footer']['Terms'] ?></a>
+                    <a class="menu-text-footer" href="https://policies.google.com/privacy?hl=en"><?= $enJson['menu']['footer']['Privacy'] ?></a>
+                    <a class="menu-text-footer" href="https://www.youtube.com/howyoutubeworks/policies/community-guidelines/"><?= $enJson['menu']['footer']['Policy & Safety'] ?></a>
+                    <a class="menu-text-footer" href="https://www.youtube.com/howyoutubeworks/?utm_campaign=ytgen&utm_source=ythp&utm_medium=LeftNav&utm_content=txt&u=https%3A%2F%2Fwww.youtube.com%2Fhowyoutubeworks%3Futm_source%3Dythp%26utm_medium%3DLeftNav%26utm_campaign%3Dytgen"><?= $enJson['menu']['footer']['How YouTube works'] ?></a>
+                    <a class="menu-text-footer" href="https://www.youtube.com/new"><?= $enJson['menu']['footer']['Test new features'] ?></a>  
+                
+                </div>
+
             </div>
+            
         </div>
         <a class="menu-text-footer copyright">
                 <?= $enJson['menu']['footer']['copyright'] ?>
