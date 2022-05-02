@@ -1,17 +1,13 @@
 <?php
-
 $Json = file_get_contents('./front-end/wordingUtils/en.json');
 
 $enJson = json_decode($Json, true);
 
 // Prevent the user from going on non-existing pages
 session_start();
-require_once __DIR__ . '/back-end/db.php';
 $page_title = 'Unknown page?';
-$existing_pages = ['Home', 'Explorer', 'Subscriptions', 'Library', 'History', 'LikedVideo', 'WatchLater', 'Profile', 'Register', 'Login', '404'];
-
+$existing_pages = ['Home', 'Explorer', 'Subscriptions', 'Library', 'History', 'LikedVideo', 'WatchLater', 'Profile', 'Register', 'Login', 'SearchPage','Watch','404'];
 $homeBar = $_GET['name'];
-
 
 if (empty($_GET['name']) == false) {
     if (in_array($_GET['name'], $existing_pages)) {

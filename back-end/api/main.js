@@ -1,24 +1,24 @@
-const   express = require('express'),
-        mysql = require('mysql');
+const express = require('express'),
+mysql = require('mysql');
 const app = express();
 
-var sqlConn = mysql.createConnection({
+var connection = mysql.createConnection({
     host     : '93.16.2.231',
     user     : 'codeur',
     password : 'coding',
     database : 'metatube'
 });
 
-sqlConn.connect();
+connection.connect();
 
 app.use(express.json());
 
 // test
 app.get('/users', (req,res) => {
-    console.log("GET - /users/");
-    sqlConn.query('SELECT * FROM user', function(error, results) {
+    connection.query('SELECT * FROM user', function(error, results, fields) {
         if(error) throw error;
         res.status(200).json(results);
+        return results;
     });
 });
 
