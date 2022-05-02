@@ -11,7 +11,7 @@ ob_start() ?>
                 <button class="btn--logo--nav tooltip">
                     <div class="header-menu">
                         <p class="meta-rgb">Meta</p>
-                        <p class="logo-header-menu">Tube</p>
+                        <p class="logo-header-menu">Tube </p>
                     </div>
                     <span class="tooltiptext"><?= $enJson['profile']['navBar']['tooltipMeta'] ?></span>
                 </button>
