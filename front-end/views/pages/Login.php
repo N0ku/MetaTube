@@ -4,7 +4,12 @@ ob_start();
 //require_once __DIR__ .'/../../../back-end/actions/login_action.php';
 ?>
 
- <div class="wrap--form">
+<?php if (isset($_SESSION['connect']) == true){
+    header('Location: /index.php?name=Home');
+    
+}?> 
+
+ <div class="wrap--form" style="margin-top: 100px">
         <form class="form--register" action="/back-end/actions/login_action.php" id="form" method="POST">
             <h2><?= $enJson['form']['login']['titleLogin'] ?></h2>
                 <?php if(isset($_SESSION['signup_error'])) { ?>
@@ -31,14 +36,16 @@ ob_start();
                 id="passwordLogin"
                 name="password"
             />
+            
             <input type="submit" id='submit' value='<?= $enJson ['form']['login']['buttonLogin'] ?>' >
             <div class="backtoback">
              <a href="index.php?name=Register"><?= $enJson ['form']['login']['buttonToRegister'] ?></a>
             </div>
             
         </form>
-    
     </div>
+
+    
     <script>
     var data = [];
      data.push(document.getElementById('mailLogin'));
@@ -58,10 +65,17 @@ ob_start();
             e.preventDefault();
             data[i].placeholder = ('Put your ' + data[i].id);
             data[i].classList.add("show-error-connection");
+           
+	 $(function() {
+		 toastr.success('Hé, <b>ça marche !</b>', 'Test');
+	});
+
         }
     
     }
 }
+
+
 
 </script>
 <?php $pageName = ob_get_clean(); 

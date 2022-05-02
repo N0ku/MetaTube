@@ -3,6 +3,9 @@
     cursor: pointer;
     border-radius: 50%;
     background: none;
+    width: 60px;
+    border-radius: 50%;
+    height: 60px;
 }
 
 .dropdown {
@@ -19,7 +22,7 @@
     z-index: 1;
     margin: 12px 0px 0px -50px;
     width: 200px;
-    background-color: var( --secondary-color);
+    background-color: var( --dark-theme);
 }
 
 .dropdown-content a {

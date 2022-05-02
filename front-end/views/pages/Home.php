@@ -5,6 +5,18 @@ $page_title = "Home"; ?>
     $allVideoJson = json_decode('');
     //foreach ($allVideoJson as $video) { ?>
 
+<script>
+    $(function(){
+        <?php
+        if(isset($_SESSION['toastr']))
+        {
+            echo 'toastr.'.$_SESSION['toastr']['type'].'("'.$_SESSION['toastr']['message'].'", "'.$_SESSION['toastr']['title'].'")';
+            unset($_SESSION['toastr']);
+        }
+        ?>          
+    });
+</script>
+
     <div class="home-video-content">
         <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail" />
         <div class="below-content">

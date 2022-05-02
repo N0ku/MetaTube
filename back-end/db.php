@@ -4,6 +4,7 @@ header("Access-Control-Allow-Methods: GET, POST, PUT");
 header("Access-Control-Allow-Headers: Content-Type");
 header("content-type:application/json");
 
+require_once __DIR__ . '/helper/function.php';
 require_once  __DIR__ . '/config_db.php';
 
 // Le DSN(data source name) est une chaine de caractere composée d'une partie de la config (sans le user/password)

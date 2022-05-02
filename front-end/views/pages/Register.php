@@ -1,7 +1,10 @@
 <?php 
    $title ="Register";
    ob_start() ?>
-<div class="wrap--form">
+   <?php if (isset($_SESSION['connect']) == true){
+    header('Location: /index.php?name=Home');
+}?>
+<div class="wrap--form" style="margin-top: 40px">
    <form enctype="multipart/form-data" class="form--register" id="form" method="post" action="/back-end/actions/register_action.php">
       <div class="header-from">
          <p><?= $enJson['form']['register']['titleRegister'] ?></p>
@@ -59,6 +62,7 @@
                id="password"
                />
          </div>
+         <!-- <div class="g-recaptcha" data-sitekey="your_site_key"></div> -->
       </div>
       <div>
          <button class="btn--register" id="connexion"><?= $enJson['form']['register']['buttonRegister'] ?></button>
