@@ -11,19 +11,23 @@ var sqlConn = mysql.createConnection({
 
 sqlConn.connect();
 
+app.use(express.json());
+
 // test
-app.get('/users/', (req,res) => {
+app.get('/users', (req, res) => {
+    console.log("GET - /users/");
     sqlConn.query('SELECT * FROM user', function(error, results) {
         if(error) throw error;
         res.status(200).json(results);
     });
 });
 
+// upload video
+app.post('/upload/video', (req, res) => {
+    console.log("POST - /upload/video");
+    const data = req.body;
 
-// for uploading a video
-app.get('/upload/:data', (req,res) => {
-    const data = JSON.parse(req.params.data);
-    /*
+    /* DATA FORMAT
     {
         "id":"",
         "creator":"",
@@ -33,19 +37,85 @@ app.get('/upload/:data', (req,res) => {
     }
     */
 
+    console.log(`Video id : ${data.id}`);
+    console.log(`Creator id : ${data.creator}`);
+    console.log(`Title : ${data.title}`);
+    console.log(`Thumbnail : ${data.thumbnail}`);
+    console.log(`Description : ${data.description}`);
+    console.log(`Privacy : ${data.privacy}`);
+
     /*
                 TO DO
         - Make all exit code
     */
-    sqlConn.query(`INSERT INTO video (id, creator, title, description, privacy)
-    VALUES (${data.id}, ${data.creator}, ${data.title}, ${data.description}, ${data.privacy})`, function(error) {
+    
+    let query;
+    if (data.thumbnail == '')
+    {
+		query = `INSERT INTO video (id, creator, title, description, privacy) VALUES ('${data.id}', '${data.creator}', '${data.title}', '${data.description}', '${data.privacy}')`;
+    }
+    else
+    {
+		query = `INSERT INTO video (id, creator, title, thumbnail, description, privacy) VALUES ('${data.id}', '${data.creator}', '${data.title}', '${data.thumbnail}', '${data.description}', '${data.privacy}')`;
+    }
+
+    sqlConn.query(query, function(error) {
         if(error) throw error;
         res.status(200);
     });
 });
 
-// for researching a video
+// create user
+app.post('/upload/user', (req, res) => {
+    console.log("POST - /upload/user");
+    const data = req.body;
+
+    /* DATA FORMAT
+    {
+        "id":"",
+        "username":"",
+        "email":"",
+        "password":""
+    }
+    */
+
+    console.log(`User id : ${data.id}`);
+    console.log(`Username : ${data.username}`);
+    console.log(`email : ${data.email}`);
+    console.log(`password : ${data.password}`);
+
+    sqlConn.query(`INSERT INTO user (id, username, email, password) VALUES ('${data.id}', '${data.username}', '${data.email}', '${data.password}')`, function(error) {
+        if(error) throw error;
+        res.status(200);
+    });
+});
+
+// create channel
+app.post('/upload/channel', (req, res) => {
+    console.log("POST - /upload/user");
+    const data = req.body;
+
+    /* DATA FORMAT
+    {
+        "id":"",
+        "channelName":"",
+        "channelProfilePicture":""
+    }
+    */
+
+    console.log(`User id : ${data.id}`);
+    console.log(`channelName : ${data.channelName}`);
+    console.log(`channelProfilePicture : ${data.channelProfilePicture}`);
+
+    sqlConn.query(`INSERT INTO channel (id, channelName, channelProfilePicture) VALUES ('${data.id}', '${data.channelName}', '${data.channelProfilePicture}')`, function(error) {
+        if(error) throw error;
+        res.status(200);
+    });
+});
+
+// videos search
 app.get('/search/:data', (req,res) => {
+    console.log("GET - /search");
     const data = JSON.parse(req.params.data);
     /*
     {
@@ -72,9 +142,36 @@ app.get('/search/:data', (req,res) => {
         - Send a good respons with all different exit code
 
     */
-    sqlConn.query(`SELECT * FROM video WHERE videoName LIKE %${data.filterBoxTitle}%`, function(error, results) {
+    sqlConn.query(`SELECT * FROM video WHERE title LIKE %${data.filterBoxTitle}%`, function(error, results) {
         if(error) throw error;
         
+    });
+});
+
+// get video
+app.get('/video/:id', (req, res) => {
+    console.log("GET - /video/");
+    sqlConn.query(`SELECT * FROM video WHERE id = ${req.params.id}`, function(error, results) {
+        if(error)
+        {
+            if(error.errno == 1054) res.status(200).json([]);
+            else throw error;
+        }
+        else res.status(200).json(results);
+    });
+});
+
+// get channel
+app.get('/channel/:id', (req, res) => {
+    console.log("GET - /channel");
+    console.log(`   Searching for the id "${req.params.id}"`);
+    sqlConn.query(`SELECT * FROM channel WHERE id = ${req.params.id}`, function(error, results) {
+        if(error)
+        {
+            if(error.errno == 1054) res.status(200).json([]);
+            else throw error;
+        }
+        else res.status(200).json(results);
     });
 });
 
