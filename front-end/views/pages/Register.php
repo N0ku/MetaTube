@@ -4,8 +4,14 @@
    <?php if (isset($_SESSION['connect']) == true){
     header('Location: /index.php?name=Home');
 }?>
+<div class="backform"></div>
+
 <div class="wrap--form" style="margin-top: 40px">
    <form enctype="multipart/form-data" class="form--register" id="form" method="post" action="/back-end/actions/register_action.php">
+             <div class="close-form">
+                <a href="/index.php?name=Home"><img src="./front-end/assets/img/Logo/x.svg" alt=""></a>
+    
+</div>
       <div class="header-from">
          <p><?= $enJson['form']['register']['titleRegister'] ?></p>
          <?php if(isset($_SESSION['signup_error'])) { ?>

@@ -8,9 +8,15 @@ ob_start();
     header('Location: /index.php?name=Home');
     
 }?> 
+<div class="backform"></div>
 
  <div class="wrap--form" style="margin-top: 100px">
+
         <form class="form--register" action="/back-end/actions/login_action.php" id="form" method="POST">
+            <div class="close-form">
+                <a href="/index.php?name=Home"><img src="./front-end/assets/img/Logo/x.svg" alt=""></a>
+    
+</div>
             <h2><?= $enJson['form']['login']['titleLogin'] ?></h2>
                 <?php if(isset($_SESSION['signup_error'])) { ?>
               <div style="color:red;">
@@ -37,7 +43,7 @@ ob_start();
                 name="password"
             />
             
-            <input type="submit" id='submit' value='<?= $enJson ['form']['login']['buttonLogin'] ?>' >
+            <input class="btn--register" type="submit" id='submit' value='<?= $enJson ['form']['login']['buttonLogin'] ?>' >
             <div class="backtoback">
              <a href="index.php?name=Register"><?= $enJson ['form']['login']['buttonToRegister'] ?></a>
             </div>

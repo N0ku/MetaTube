@@ -8,6 +8,7 @@
             "buttonLogin": "Login",
             "buttonChannel": "My Channel",
             "buttonSubscription": "Subscription",
+            "buttonStudio": "Subscription",
             "buttonSignOut": "Sign Out",
             "buttonAccount": "My Account",
             "buttonData": "Your data in Meta Tube",
@@ -39,6 +40,22 @@
             "buttonRegister": "Register",
             "buttonToLogin": "I have an account"
         },
+        "updatePass": {
+            "modalBtn": "Update your password",
+            "labelAdress": "Adress Email",
+            "placeholderAdress": "Confirm your adress email",
+            "labelPassword": "Password",
+            "placeholderPassword": "Write your new password",
+            "buttonUpdate": "Update your password"
+        },
+        "deleteAccount": {
+            "modalBtn": "Delete Your Account",
+            "title": "Delete Account",
+            "question": "Are you sure you want to delete your account?",
+            "buttonCancel": "Cancel",
+            "buttonDelete": "Delete"
+        },
+
         "error": {
             "signup": "Warning, you have not filled in all the fields",
             "pseudo": "Warning your pseudo is incorrect.",
