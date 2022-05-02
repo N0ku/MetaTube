@@ -1,3 +1,5 @@
+const DatabaseManager = require ('./databaseManager');
+
 module.exports = class channelManager
 {
     static eventListener(app)
@@ -6,7 +8,7 @@ module.exports = class channelManager
         app.get('/channel/:id', (req, res) => { this.mainChannel(req, res) });
     }
 
-    static upload(req, res)
+    static async upload(req, res)
     {
         console.log("POST - /upload/channel");
         const data = req.body;
@@ -23,23 +25,25 @@ module.exports = class channelManager
         console.log(`channelName : ${data.channelName}`);
         console.log(`channelProfilePicture : ${data.channelProfilePicture}`);
 
-        sqlConn.query(`INSERT INTO channel (id, channelName, channelProfilePicture) VALUES ('${data.id}', '${data.channelName}', '${data.channelProfilePicture}')`, function(error) {
-            if(error) throw error;
-            res.status(200);
-        });
+        let result = await DatabaseManager.executeQuery(`INSERT INTO channel (id, channelName, channelProfilePicture) VALUES ('${data.id}', '${data.channelName}', '${data.channelProfilePicture}')`);
+        if( result.error )
+        {
+            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
+            res.status(500).json([]);
+        }
+        else res.status(200).json(result.data);
     }
 
-    static mainChannel(req, res)
+    static async mainChannel(req, res)
     {
         console.log("GET - /channel");
         console.log(`   Searching for the id "${req.params.id}"`);
-        sqlConn.query(`SELECT * FROM channel WHERE id = ${req.params.id}`, function(error, results) {
-            if(error)
-            {
-                if(error.errno == 1054) res.status(200).json([]);
-                else throw error;
-            }
-            else res.status(200).json(results);
-        });
+        let result = await DatabaseManager.executeQuery(`SELECT * FROM channel WHERE id = '${req.params.id}'`);
+        if( result.error )
+        {
+            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
+            res.status(500).json([]);
+        }
+        else res.status(200).json(result.data);
     }
 }

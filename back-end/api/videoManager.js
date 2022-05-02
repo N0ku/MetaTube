@@ -9,7 +9,7 @@ module.exports = class VideoManager
         app.get('/video/:id', (req, res) => { this.mainVideo(req, res) });
     }
 
-    static upload(req, res)
+    static async upload(req, res)
     {
         console.log("POST - /upload/video");
         const data = req.body;
@@ -41,21 +41,22 @@ module.exports = class VideoManager
             query = `INSERT INTO video (id, creator, title, thumbnail, description, privacy) VALUES ('${data.id}', '${data.creator}', '${data.title}', '${data.thumbnail}', '${data.description}', '${data.privacy}')`;
         }
 
-        if( DatabaseManager.executeQuery(query) ) res.status(200);
-        else
+        let result = await DatabaseManager.executeQuery(query);
+        if( result.error ) 
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
             res.status(500);
         }
+        else res.status(200);
     }
 
-    static search(req, res)
+    static async search(req, res)
     {
         console.log("GET - /search");
         const data = JSON.parse(req.params.data);
         /*
         {
-            "filter-box-title":"NomDeLaVideo",
+            "filterBoxTitle":"NomDeLaVideo",
             "filters":{
                 "uploadDate":"2000-12-31",
                 "filterType":"Video",
@@ -75,7 +76,8 @@ module.exports = class VideoManager
                             TO DO
             - Make a perfect query with all filter
         */
-        if( !DatabaseManager.executeQuery(`SELECT * FROM video WHERE title LIKE %${data.filterBoxTitle}%`) )
+        let result = await DatabaseManager.executeQuery(`SELECT * FROM video WHERE title LIKE %${data.filterBoxTitle}%`);
+        if( result.error )
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
             res.status(500);
@@ -87,6 +89,7 @@ module.exports = class VideoManager
     {
         console.log("GET - /video/");
         let data = req.params;
+        console.log(`  id : ${data.id}`);
         let query = `SELECT * FROM video WHERE id = '${data.id}'`;
 
         let result = await DatabaseManager.executeQuery(query);
@@ -95,9 +98,6 @@ module.exports = class VideoManager
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
             res.status(500).json([]);
         }
-        else 
-        {
-            res.status(200).json(result.data);
-        }
+        else res.status(200).json(result.data);
     }
 }

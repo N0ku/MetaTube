@@ -17,28 +17,32 @@ module.exports = class DatabaseManager
 
     static async executeQuery(query)
     {
-        let result = {
-            data:null,
-            error:false
-        };
-        
-        await sqlConn.query(query, function(error, results) {
-            if(error)
-            {
-                console.error(error);
-                result.error = true
-            }
-            else result.data = results;
+        return new Promise(resolve => {
+            let result = {
+                data:null,
+                error:false
+            };
+            sqlConn.query(query, function(error, results) {
+                if(error)
+                {
+                    console.error(error);
+                    result.error = true
+                }
+                else result.data = results;
+                resolve(result);
+            });
         });
-
-        return result;
     }
 
     static connect()
     {
-        sqlConn.connect(function(error)
-        {
-            if(error) console.error(error);
+        sqlConn.connect(function(error) {
+            if(error)
+            {
+                console.error(error);
+                console.log("Connection to the Database : FAILED");
+            }
+            else console.log("Connection to the Database : SUCESS");
         });
     }
 }

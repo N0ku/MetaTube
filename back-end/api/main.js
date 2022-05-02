@@ -4,7 +4,10 @@ const   express = require('express'),
         VideoManager = require('./videoManager'),
         Channelmanager = require('./channelManager'),
         DatabaseManager = require('./databaseManager');
+var     config = require('./config.json');
 const   app = express();
+
+console.log('Starting the server ...');
 
 var sqlConn = DatabaseManager.createConn();
 DatabaseManager.connect();
@@ -24,6 +27,6 @@ app.get('/users', (req, res) => {
     });
 });
 
-app.listen(8081, () => {
-    console.log('listening on port 8081...');
+app.listen(config.port, () => {
+    console.log(`Listening on port ${config.port}`);
 });

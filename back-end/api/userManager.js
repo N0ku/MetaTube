@@ -1,3 +1,5 @@
+const DatabaseManager = require('./databaseManager');
+
 module.exports = class UserManager
 {
     static eventListener(app)
@@ -5,7 +7,7 @@ module.exports = class UserManager
         app.post('upload/user', (req, res) => { this.upload(req, res) });
     }
 
-    static upload(req, res)
+    static async upload(req, res)
     {
         console.log("POST - /upload/user");
         const data = req.body;
@@ -24,9 +26,12 @@ module.exports = class UserManager
         console.log(`email : ${data.email}`);
         console.log(`password : ${data.password}`);
 
-        sqlConn.query(`INSERT INTO user (id, username, email, password) VALUES ('${data.id}', '${data.username}', '${data.email}', '${data.password}')`, function(error) {
-            if(error) throw error;
-            res.status(200);
-        });
+        let result = await DatabaseManager.executeQuery(`INSERT INTO user (id, username, email, password) VALUES ('${data.id}', '${data.username}', '${data.email}', '${data.password}')`);
+        if( result.error )
+        {
+            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
+            res.status(500).json([]);
+        }
+        else res.status(200).json(result.data);
     }
 }
