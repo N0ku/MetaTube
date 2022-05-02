@@ -1,5 +1,6 @@
 <?php ob_start() ?>
-
+<?php if ($pageName != 'Watch') {
+?>
 <div class="short-menu">
     <div class="sticky-menu">
         <div class="short-menu-items">
@@ -32,9 +33,11 @@
         </div>
     </div>
 </div>
+<?php } ?>
+
 
 <div class="hamburger-menu-container">
-    
+
 
     <div class="nav-body">
         <div class="nav-items">
@@ -58,6 +61,7 @@
             </a>
         </div>
 
+        <div class="border"></div>
         <div class="nav-items">
             <a href="index.php?name=Library" class="menu-link">
                 <div class="nav-item">
@@ -83,28 +87,67 @@
                     <p><?= $enJson['menu']['nav-elements']['LikedVideos'] ?></p>
                 </div>
             </a>
+            <a href="index.php?name=LikedVideo" class="menu-link">
+                <div class="nav-item">
+                    <img src="./front-end/assets/img/Menu-svg/like.svg" alt="" srcset="" class="nav-logo" />
+                    <p><?= $enJson['menu']['nav-elements']['LikedVideos'] ?></p>
+                </div>
+            </a>
+            <a href="index.php?name=LikedVideo" class="menu-link">
+                <div class="nav-item">
+                    <img src="./front-end/assets/img/Menu-svg/like.svg" alt="" srcset="" class="nav-logo" />
+                    <p><?= $enJson['menu']['nav-elements']['LikedVideos'] ?></p>
+                </div>
+            </a>
+            <a href="index.php?name=LikedVideo" class="menu-link">
+                <div class="nav-item">
+                    <img src="./front-end/assets/img/Menu-svg/like.svg" alt="" srcset="" class="nav-logo" />
+                    <p><?= $enJson['menu']['nav-elements']['LikedVideos'] ?></p>
+                </div>
+            </a>
+            <a href="index.php?name=LikedVideo" class="menu-link">
+                <div class="nav-item">
+                    <img src="./front-end/assets/img/Menu-svg/like.svg" alt="" srcset="" class="nav-logo" />
+                    <p><?= $enJson['menu']['nav-elements']['LikedVideos'] ?></p>
+                </div>
+            </a>
+            <a href="index.php?name=LikedVideo" class="menu-link">
+                <div class="nav-item">
+                    <img src="./front-end/assets/img/Menu-svg/like.svg" alt="" srcset="" class="nav-logo" />
+                    <p><?= $enJson['menu']['nav-elements']['LikedVideos'] ?></p>
+                </div>
+            </a>
+            <a href="index.php?name=LikedVideo" class="menu-link">
+                <div class="nav-item">
+                    <img src="./front-end/assets/img/Menu-svg/like.svg" alt="" srcset="" class="nav-logo" />
+                    <p><?= $enJson['menu']['nav-elements']['LikedVideos'] ?></p>
+                </div>
+            </a>
             <div class="nav-item">
                 <img src="./front-end/assets/img/Menu-svg/angle-down-solid.svg" alt="" srcset="" class="nav-logo" />
                 <p>More</p>
             </div>
         </div>
+        <div class="border"></div>
         <div class="menu-subscriptions">
             <strong class="title-subscriptions">
                 <?= $enJson['menu']['titles']['subscriptions'] ?>
             </strong>
         </div>
+        <div class="border"></div>
 
         <div class="menu-subscriptions nav-items">
             <strong class="title-others">
                 <?= $enJson['menu']['titles']['others'] ?>
             </strong>
-
+            <div class="border"></div>
 
         </div>
 
         <div class="nav-items">
 
         </div>
+        <div class="border"></div>
 
         <div class="nav-items menu-footer">
             <div class="links">
