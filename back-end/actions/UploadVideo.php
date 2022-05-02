@@ -1,12 +1,12 @@
 <?php
+include './back-end/helper/Function.php';
+
 
 function upload()
 {
 
-	// $_SESSION['message'] = $_FILES;
 
 	$apiUrl = 'http://93.16.2.231:8081/';
-	// $apiUrl = 'http://127.0.0.1:8081/';
 
 	$id = giveId();
 
@@ -49,16 +49,7 @@ function upload()
 						"thumbnail" => $imgData
 					);
 
-					$option = array(
-						'http' => array(
-							'method' => 'POST',
-							'content' => json_encode($data),
-							'header' => "Content-Type: application/json\r\n" . "Accept: application/json\r\n"
-						)
-					);
-					$context = stream_context_create($option);
-					$result = file_get_contents($apiUrl . 'upload/video', false, $context);
-					$response = json_decode($result);
+					postApi($data, 'upload/video');
 				}
 			}
 		} else {
@@ -67,6 +58,6 @@ function upload()
 	} else {
 		$_SESSION['message'] = "Please select a file.";
 	}
-	header('location: index.php?name=channel_page');
+	header('location: index.php?name=ChannelPage');
 	exit;
 }

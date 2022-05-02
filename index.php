@@ -25,7 +25,6 @@ include  __DIR__ . '/front-end/views/pages/' . $pageName . '.php'; // $page
 include  __DIR__ . "/front-end/partials/Menu.php"; // $menu
 include __DIR__ . '/front-end/views/pages/Channel.php';
 include  __DIR__ . "/front-end/partials/NavBar.php"; // $navBar
-include __DIR__ . '/back-end/helper/Function.php';
 
 
 require_once './template.php';
