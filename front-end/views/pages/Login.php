@@ -11,7 +11,7 @@ ob_start();
 
 <div class="wrap--form" style="margin-top: 100px">
 
-    <form class="form--register" action="/back-end/actions/login_action.php" id="form" method="POST">
+    <form class="form--register" action="/back-end/actions/LoginAction.php" id="form" method="POST">
         <div class="close-form">
             <a href="/index.php?name=Home"><img src="./front-end/assets/img/Logo/x.svg" alt=""></a>
 

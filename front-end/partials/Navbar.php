@@ -1,8 +1,4 @@
 <?php
-
-
-
-
 ob_start() ?>
 
 <nav class="wrapper--navbar">
@@ -23,9 +19,7 @@ ob_start() ?>
         </div>
         <form method="POST" action="./back-end/actions/filters.php" class="navbar--center">
 
-            <input type="text" name="searchBar" class="navbar__center__input" placeholder="<?= $enJson['profile']['navBar']['placeHolderSearch'] ?>" value="<?php if ($_SESSION["srch_cntnt"] == null) {
-                                                                                                                                                                echo $_SESSION["srch_cntnt"];
-                                                                                                                                                            }  ?>" />
+            <input type="text" name="searchBar" class="navbar__center__input" placeholder="<?= $enJson['profile']['navBar']['placeHolderSearch'] ?>" />
             <button class="navbar__center__search-btn" onclick="window.location.href = 'index.php?name=SearchPage';">
                 <img src="./front-end/assets/img/Logo/search.svg" alt="">
 
@@ -52,14 +46,14 @@ ob_start() ?>
                 </div>
             <?php } else { ?>
                 <div class="dropdown">
-                    <img src="<?= $_SESSION['user']['profilePicture'] ?>" alt="" onclick="OpenTheDoor()" class="dropbtn" />
+                    <img src="<?= $_SESSION['user']['profilePicture'] ?>" alt="" onclick="OpenTheDoor()" class="dropbtn" width="30px" height="30px" />
                     <div id="myDropdown" class="dropdown-content">
                         <div class="drop-profil">
-                            <img src="<?= $_SESSION['user']['profilePicture'] ?>" alt="" class="dropbtn" />
+                            <img src="<?= $_SESSION['user']['profilePicture'] ?>" alt="" class="dropbtn" width="30px" height="30px />
                             <h3><?= $_SESSION['user']['username'] ?></h3>
                         </div>
                         <hr />
-                        <div class="drop-profil">
+                        <div class=" drop-profil">
                             <label class="switch">
                                 <span class="switch__span"><?= $enJson['profile']['navBar']['labelThemeDark'] ?> </span>
                                 <input class="switch__input" type="checkbox" />

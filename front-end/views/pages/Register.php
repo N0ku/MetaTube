@@ -7,7 +7,7 @@ ob_start() ?>
 <div class="backform"></div>
 
 <div class="wrap--form" style="margin-top: 40px">
-   <form enctype="multipart/form-data" class="form--register" id="form" method="post" action="/back-end/actions/register_action.php">
+   <form enctype="multipart/form-data" class="form--register" id="form" method="post" action="/back-end/actions/RegisterAction.php">
       <div class="close-form">
          <a href="/index.php?name=Home"><img src="./front-end/assets/img/Logo/x.svg" alt=""></a>
 
