@@ -15,8 +15,9 @@
 
  .feature-channel-flex-items:nth-child(1) {
   display: block;
-  padding:30%;
-  height: 25%;
+  margin: 5% 0%;
+  width: 100%;
+  height: 100%;
   background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
   background-size: contain;
  
@@ -158,7 +159,6 @@
  
 
 
-
  .feature-channel-video-intro{
      width: 100%;
      display: block;
@@ -198,4 +198,18 @@
    border: none;
 
  }
+ .custom-file-channel {
+   flex-direction: row;
+  justify-content: flex-end;
+  padding: 0% !important;
+  margin: 0% !important;
+}
+.previewProfile {
+  border-radius: 50%;
+  padding: 10% 0%;
+  height: 5%;
+  width: 10%;
+  border: none;
+  object-fit: contain;
+}
 

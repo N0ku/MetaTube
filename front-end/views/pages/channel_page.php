@@ -5,10 +5,10 @@
 <div class="feature-channel-flex-container">
 
 <div class="feature-channel-flex-items">
-<div class="custom-file">
+<div class="custom-file-channel">
             <label for="avatar" class="label-file"><?= $enJson['form']['register']['labelProfile'] ?></label>
-            <input accept="image/png, image/jpeg" type="file" name="avatar" id="avatar" class="input-file" value="">
-            <img class="previewProfile"  src="/front-end/assets/img/default.png">
+            <input accept="image/png, image/jpeg, image/webp, image/svg" type="file" name="avatar" id="avatar" class="input-file" value="">
+            <img class="previewProfile"  src="/front-end/assets/img/Logo/Banner.svg">
          </div>
 </div>
 <div class="feature-channel-flex-items">
@@ -94,7 +94,6 @@ $('input[type="file"]').on('change', (e) => {
         if (that.files && that.files[0]) {
             let reader = new FileReader() 
             reader.onload = (e) => {
-                $('.previewProfile').attr('src', e.target.result)
                 $('.feature-channel-flex-items:nth-child(1)').css('backgroundImage','url(' + e.target.result +')')
                 console.log(e.target.result)
 
