@@ -1,4 +1,9 @@
-<?php ob_start() ?>
+<?php
+
+
+
+
+ob_start() ?>
 
 <nav class="wrapper--navbar">
     <div class="box--navbar">
@@ -6,16 +11,21 @@
             <div class="hamburger-button-home" onclick="openMenu()">
                 <img src="./front-end/assets/img/Logo/menu.svg" alt="">
             </div>
-            <button href="index.php?name=Home" class="btn--logo--nav tooltip">
-                <div class="header-menu">
-                    <p class="meta-rgb">Meta</p>
-                    <p class="logo-header-menu">Tube</p>
-                </div>
-                <span class="tooltiptext"><?= $enJson['profile']['navBar']['tooltipMeta'] ?></span>
-            </button>
+            <a href=" index.php?name=Home">
+                <button class="btn--logo--nav tooltip">
+                    <div class="header-menu">
+                        <p class="meta-rgb">Meta</p>
+                        <p class="logo-header-menu">Tube</p>
+                    </div>
+                    <span class="tooltiptext"><?= $enJson['profile']['navBar']['tooltipMeta'] ?></span>
+                </button>
+            </a>
         </div>
         <form method="POST" action="./back-end/actions/filters.php" class="navbar--center">
-            <input type="text" name="searchBar" class="navbar__center__input" placeholder="<?= $enJson['profile']['navBar']['placeHolderSearch'] ?>" value=" <?= $_SESSION["srch_cntnt"] ?>" />
+
+            <input type="text" name="searchBar" class="navbar__center__input" placeholder="<?= $enJson['profile']['navBar']['placeHolderSearch'] ?>" value="<?php if ($_SESSION["srch_cntnt"] == null) {
+                                                                                                                                                                echo $_SESSION["srch_cntnt"];
+                                                                                                                                                            }  ?>" />
             <button class="navbar__center__search-btn" onclick="window.location.href = 'index.php?name=SearchPage';">
                 <img src="./front-end/assets/img/Logo/search.svg" alt="">
 

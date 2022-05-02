@@ -22,8 +22,8 @@ include __DIR__ . '/front-end/views/pages/upload.php'; //$channelVideoUpload
 include __DIR__ . '/front-end/views/pages/channel.php';
 include __DIR__ . '/front-end/views/components/FilterBar.php'; // $filterbar
 include  __DIR__ . '/front-end/views/pages/' . $pageName . '.php'; // $page 
-include   __DIR__ . "/front-end/partials/Menu.php"; // $menu
-include   __DIR__ . "/front-end/partials/Navbar.php"; // $navBar
+include  __DIR__ . "/front-end/partials/Menu.php"; // $menu
+include  __DIR__ . "/front-end/partials/Navbar.php"; // $navBar
 
 
 require_once './template.php';
