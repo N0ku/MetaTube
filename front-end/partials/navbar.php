@@ -49,9 +49,8 @@
          </button>
       </div>
       <div class="navbar--side">
-         <div class="btn--navbar--icon--upload--video">
-            <button onclick="feature_open_upload_function()"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg></button>
-            <a href="/">  </a>
+         <div class="btn--navbar--icon">
+            <a href="/"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg></a>
          </div>
          <div class="btn--navbar--icon">
             <a href="/"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></a>
@@ -86,7 +85,7 @@
                   </label>
                </div>
                <!-- LINK TO CHANNEL -->
-               <button class="drop--element--btn--account" onclick="feature_open_accountCreator_function()">
+               <a href="/" class="drop--element">
                   <div>
                      <svg
                         viewBox="0 0 24 24"
@@ -106,7 +105,7 @@
                      </svg>
                   </div>
                   <?= $enJson['profile']['navBar']['buttonChannel'] ?>
-               </button>
+               </a>
                <!-- LINK TO BUY A -->
                <a href="/" class="drop-profil">
                   <div>
