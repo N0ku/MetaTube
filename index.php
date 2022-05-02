@@ -7,7 +7,7 @@ $enJson = json_decode($Json, true);
 // Prevent the user from going on non-existing pages
 session_start();
 $page_title = 'Unknown page?';
-$existing_pages = ['Home', 'Explorer', 'Subscriptions', 'Library', 'History', 'LikedVideo', 'WatchLater', 'Profile', 'Register', 'Login', 'SearchPage'];
+$existing_pages = ['Home', 'Explorer', 'Subscriptions', 'Library', 'History', 'LikedVideo', 'WatchLater', 'Profile', 'Register', 'Login', 'SearchPage','Watch'];
 $homeBar = $_GET['name'];
 
 if (empty($_GET['name']) == false) {

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./front-end/views/pages/Explorer.css">
     <link rel="stylesheet" href="./front-end/views/components/FilterBar.css">
     <link rel="stylesheet" href="./front-end/assets/css/SearchPage.css">
+    <link rel="stylesheet" href="./front-end/assets/css/Watch.css">
 
 </head>
 
@@ -40,8 +41,10 @@
 
     </div>
     <!-- Add js library and script here -->
+    <script src="/front-end/assets/js/script-watch.js"></script>
     <script src="/front-end/assets/js/script-menu.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="/front-end/assets/js/script-explorer.js"></script>
     <script src="./front-end/assets/js/SearchPage.js"></script>
 
