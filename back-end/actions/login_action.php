@@ -1,17 +1,12 @@
 <?php 
-
+require_once __DIR__. '/../db.php';
+session_start();
 $res = $_POST;
 
-//session_start();
 
-?> 
-<?php
+$sql = 'SELECT * FROM user WHERE email = :username';
 
-var_dump($res);
-
-/* $sql = 'SELECT * FROM users WHERE username = :username';
-
-$query = $conn->prepare($sql);
+$query = $db->prepare($sql);
 
 $query->execute([
 	':username' => $res["username"],
@@ -19,29 +14,33 @@ $query->execute([
 $data = $query->fetch(PDO::FETCH_ASSOC);
 
 
-if( empty($_POST['username']) || empty( $_POST['password']) ){
-    $_SESSION['signup_error']= "Remplissez vos champs";
-    header("Location: /login ");
+if( empty($_POST['username']) || empty( $_POST['password'])){
+    $_SESSION['signup_error']= $enJson['form']['error']['signup'] ;
+    header("Location: /index.php?name=Login ");
     die();
 }
+
+$password = $_POST['password'];
 
 $password = hash('sha256',$_POST['password']);
 
 
-if ($res["username"] == $data["username"] && $password == $data["password"] ){
-    $_SESSION["useranme"] = 1;
-    $_SESSION["id"] = $data["id"];
-    header('Location: /');
+if ($res["username"] == $data["email"] && $password == $data["password"] ){
+     $_SESSION['user']= $data;
+     $_SESSION['connect'] = true;
+      $_SESSION['toastr'] = array(
+        'type'      => 'success', 
+        'message' => 'Welcome, nom',
+        'title'     => ''
+    ); 
+    header('Location: /index.php?name=Home');
 }else{
-    if($res["username"] != $data["username"]){
-    $_SESSION['signup_error']= "Le nom d’utilisateur entré n’appartient à aucun compte.";
-    header("Location: /login");
-    die();
+    if($res["username"] != $data["email"]){
+    $_SESSION['signup_error']= "sd";
+    header("Location: /index.php?name=Login ");
     }else{
-    $_SESSION['signup_error']= "Votre mot de passe est incorrect.";
-    header("Location: /login");
-    die();
-    }
-} */
+    $_SESSION['signup_error']= $enJson['form']['error']['password'];
+    header("Location: /index.php?name=Login ");}
 
-?>
+}
+

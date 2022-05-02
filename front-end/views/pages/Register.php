@@ -1,53 +1,123 @@
- <?php 
-$title ="Register";
-ob_start() ?>
-<div class="wrap--from">
-        <form class="form--register" @submit="checkForm">
-            <h2><?= $enJson['register']['form']['titleRegister'] ?></h2>
+<?php 
+   $title ="Register";
+   ob_start() ?>
+   <?php if (isset($_SESSION['connect']) == true){
+    header('Location: /index.php?name=Home');
+}?>
+<div class="backform"></div>
 
-            <label for="firstname"><?= $enJson['register']['form']['labelFirstName'] ?></label>
+<div class="wrap--form" style="margin-top: 40px">
+   <form enctype="multipart/form-data" class="form--register" id="form" method="post" action="/back-end/actions/register_action.php">
+             <div class="close-form">
+                <a href="/index.php?name=Home"><img src="./front-end/assets/img/Logo/x.svg" alt=""></a>
+    
+</div>
+      <div class="header-from">
+         <p><?= $enJson['form']['register']['titleRegister'] ?></p>
+         <?php if(isset($_SESSION['signup_error'])) { ?>
+         <div class="error--warning">
+            <?= $_SESSION['signup_error'] ?>
+         </div>
+         <?php 
+            unset($_SESSION['signup_error']);
+            } 
+            ?>
+         <div class="custom-file">
+            <label for="avatar" class="label-file"><?= $enJson['form']['register']['labelProfile'] ?></label>
+            <input accept="image/png, image/jpeg" type="file" name="avatar" id="avatar" class="input-file" value="">
+            <img id="previewProfile" class="" src="/front-end/assets/img/default.png">
+         </div>
+      </div>
+      <div class="wrapper-part">
+         <div class="wrap--input">
+            <label for="username"><?= $enJson['form']['register']['labelPseudo'] ?></label>
             <input
-                class="input--register"
-                type="text"
-                placeholder="<?= $enJson['register']['form']['placeholderFirstName'] ?>"
-                id="firstname"
-            />
-            <label for="lastname"><?= $enJson['register']['form']['labellastName'] ?></label>
+               name="username"
+               class="input--register"
+               type="text"
+               placeholder="<?= $enJson['form']['register']['placeholderPseudo'] ?>"
+               id="username"
+               />
+         </div>
+         <div class="wrap--input">
+            <label for="dateofbirthday"><?= $enJson['form']['register']['labelBirthday'] ?></label>
             <input
-                class="input--register"
-                type="text"
-                placeholder="<?= $enJson['register']['form']['placeholderLastName'] ?>"
-                id="lastname"
-            />
-            <label for="dateofbirthday"><?= $enJson['register']['form']['labelBirthday'] ?></label>
+               name="dateBirth"
+               class="input--register"
+               type="date"
+               id="dateofbirthday"
+               />
+         </div>
+         <div class="wrap--input">
+            <label for="email"><?= $enJson['form']['register']['labelAdress'] ?></label>
             <input
-                class="input--register"
-                type="date"
-                id="dateofbirthday"
-            />
-            <label for="email"><?= $enJson['register']['form']['labelAdress'] ?></label>
+               name="email"
+               class="input--register"
+               type="email"
+               placeholder="<?= $enJson['form']['register']['placeholderAdress'] ?>"
+               id="email"
+               />
+         </div>
+         <div class="wrap--input">
+            <label for="password"><?= $enJson['form']['register']['labelPassword'] ?></label>
             <input
-                class="input--register"
-                type="text"
-                placeholder="<?= $enJson['register']['form']['placeholderAdress'] ?>"
-                id="email"
-            />
-            <label for="password"><?= $enJson['register']['form']['labelPassword'] ?></label>
-            <input
-                class="input--register"
-                type="password"
-                placeholder="<?= $enJson['register']['form']['placeholderPassword'] ?>"
-                id="password"
-            />
-            <label for="confirm-passord"><?= $enJson['register']['form']['labelConfirmPassword'] ?></label>
-            <input
-                class="input--register"
-                type="password"
-                placeholder="<?= $enJson['register']['form']['placeholderConfirmPassword'] ?>"
-                id="confirm-password"
-            />
-            <button class="btn--register"><?= $enJson['register']['form']['buttonRegister'] ?></button>
-             <a href="index.php?name=Login"><?= $enJson['register']['form']['buttonToLogin'] ?></a>
-        </form>
-    </div>
-    <?php $pageName = ob_get_clean(); 
+               name="password"
+               class="input--register"
+               type="password"
+               placeholder="<?= $enJson['form']['register']['placeholderPassword'] ?>"
+               id="password"
+               />
+         </div>
+         <!-- <div class="g-recaptcha" data-sitekey="your_site_key"></div> -->
+      </div>
+      <div>
+         <button class="btn--register" id="connexion"><?= $enJson['form']['register']['buttonRegister'] ?></button>
+         <div class="backtoback">
+            <a   href="index.php?name=Login"><?= $enJson['form']['register']['buttonToLogin'] ?></a>
+         </div>
+      </div>
+   </form>
+</div>
+<script>
+   var data = [];
+   data.push(document.getElementById('username'));
+   data.push(document.getElementById('password'));
+   data.push(document.getElementById('email'));
+   data.push(document.getElementById('dateofbirthday'));
+   
+    
+   $('input[type="file"]').on('change', (e) => {
+        let that = e.currentTarget
+        if (that.files && that.files[0]) {
+            let reader = new FileReader()
+            reader.onload = (e) => {
+                $('#previewProfile').attr('src', e.target.result)
+            }
+            reader.readAsDataURL(that.files[0])
+        }
+    }) 
+   
+   form.addEventListener("keyup", function (e){
+   for( var i in data){
+   
+     if(data[i].value != 0){
+         data[i].classList.remove("show-error-connection");
+     }
+     }
+   });
+   
+   form.onsubmit = (e) => {
+   for( var i in data){
+     if(data[i].value == 0){
+         e.preventDefault();
+         data[i].placeholder = ('Put your ' + data[i].id);
+         data[i].classList.add("show-error-connection");
+       
+     
+   
+     }
+   
+   }
+   }
+</script>
+<?php $pageName = ob_get_clean();

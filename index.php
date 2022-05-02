@@ -1,5 +1,4 @@
 <?php
-
 $Json = file_get_contents('./front-end/wordingUtils/en.json');
 
 $enJson = json_decode($Json, true);
