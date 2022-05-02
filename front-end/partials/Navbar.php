@@ -20,13 +20,15 @@
             </button>
         </div>
         <div class="navbar--center">
-            <input type="text" class="navbar__center__input" placeholder=" <?= $enJson['profile']['navBar']['placeolderSearch'] ?>" />
-            <button class="navbar__center__search-btn">
-                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="navbar--logo">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-            </button>
+            <form method="POST" action="./back-end/actions/filters.php" class="navbar--center">
+                <input type="text" name="searchBar" class="navbar__center__input" placeholder=" <?= $_SESSION["srch_cntnt"] ?>" />
+                <button class="navbar__center__search-btn" onclick="window.location.href = 'index.php?name=SearchPage';">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="navbar--logo">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </form>
         </div>
         <div class="navbar--side">
             <div class="btn--navbar--icon">
