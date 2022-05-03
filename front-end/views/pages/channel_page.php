@@ -5,11 +5,10 @@
 <div class="feature-channel-flex-container">
 
 <div class="feature-channel-flex-items">
-<div class="custom-file-channel">
-            <label for="avatar" class="label-file"><?= $enJson['form']['register']['labelProfile'] ?></label>
-            <input accept="image/png, image/jpeg, image/webp, image/svg" type="file" name="avatar" id="avatar" class="input-file" value="">
-            <img class="previewProfile"  src="/front-end/assets/img/Logo/Banner.svg">
-         </div>
+<div class="feature-channel-custom-file">
+            <label for="banner" class="feature-channel-label-test"><img class="feature-channel-label-img" src="<?php echo $enJson['creation']['Image'] ?>" alt=""> </label>
+            <input accept="image/png, image/jpeg, image/webp, image/svg" type="file" name="banner" id="banner" class="feature-channel-input-banner" value="">
+</div>
 </div>
 
 <div class="feature-channel-flex-items">
@@ -22,7 +21,7 @@
          <div class="feature-channel-navigation-container-profil">
 
             <div class="feature-channel-navigation-container-profilPicture">
-               <button>
+               <button class="label-file">
                   <img class="img-profile-channel" src="<?php echo $enJson['creation']['Image'] ?>" alt="">
                </button>
             </div>
@@ -116,7 +115,7 @@
 </body>
 <script>
    const test = document.querySelector(".feature-channel-flex-items:nth-child(1)");
-$('input[type="file"]').on('change', (e) => {
+      $('input[type="file"]').on('change', (e) => {
         let that = e.currentTarget
         if (that.files && that.files[0]) {
             let reader = new FileReader() 

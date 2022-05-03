@@ -13,13 +13,65 @@
    align-content: normal;
  }
 
+ .feature-channel-custom-file {
+   opacity: 0;
+    display: flex;
+    margin-top: 2%;
+    margin-right: 2%;
+    flex-direction: row;
+    align-items: flex-end;
+    text-align: center;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    padding: 1px;
+    bottom: 0%;
+    background-color: rgba(97, 89, 89, 0.121);
+    align-content: space-around;
+    justify-content: center;
+    overflow: hidden;
+  
+    
+}
+ .feature-channel-input-banner{
+    display: none;
+ }
+
+
+ .feature-channel-label-img{
+   width: 100%;
+   height:100%;
+  padding: 10% 10%;
+   
+   overflow: hidden;
+
+ }
+ .feature-channel-flex-items:nth-child(1):hover .feature-channel-label-img {
+  
+  animation-duration: 10s; /* same as transition duration */
+  animation-timing-function: linear; /* kind of same as transition timing */
+  animation-iteration-count: infinite; /* set to 2 to make it run twice, or Infinite to run forever!*/
+  animation-direction: normal; /* can be set to "alternate" to run animation, then run it backwards.*/
+  animation-fill-mode:initial; /* can be used to retain keyframe styling after animation, with "forwards" */
+  animation-play-state: running; 
+  animation-name: onHoverAnimation;
+ }
+
+ .feature-channel-flex-items:nth-child(1):hover .feature-channel-custom-file {
+    animation-duration: 1s;
+   animation-fill-mode: forwards;
+    animation-name: opacitySwitch ; 
+ }
  .feature-channel-flex-items:nth-child(1) {
-  display: block;
-  margin: 5% 0% 0%;
+  display: flex;
+ padding-bottom: 20%;
+ margin-top: 0%;
+ padding-top: 5%;
   width: 100%;
   height: 100%;
   background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
   background-size:cover;
+  flex-direction: row-reverse;
  
 }
  
@@ -357,12 +409,7 @@
    border: none;
 
  }
- .custom-file-channel {
-   flex-direction: row;
-  justify-content: flex-end;
-  padding: 0% !important;
-  margin: 0% !important;
-}
+
 .previewProfile {
   border-radius: 50%;
   padding: 10% 0%;
