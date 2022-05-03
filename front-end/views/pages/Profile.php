@@ -18,6 +18,8 @@
          </div>
       </div>
    </div>
+
+   
    <!-- TOOLS FOR USER  -->
    <div class="profilestools">
        <!-- UPDATE PASSWORD -->
@@ -29,7 +31,10 @@
           <?php include   ("front-end/partials/ModalDeleteAccount.php");?>
       </div>
       <div class="tools">
-          <button class="buttonModale" >View advanced settings</button>
+
+          <!-- <button class="buttonModale" >View advanced settings</button> -->
+          <?php
+           include ("front-end/partials/ModalUpdateUser.php");?>
       </div>
       <!-- <div class="tools-info">
          <span><?= $_SESSION['user']['username'] ?></span>
@@ -39,4 +44,17 @@
       </div> -->
    </div>
 </section>
+
+<script>
+    $(function(){
+        <?php
+        if(isset($_SESSION['toastr']))
+        {
+            echo 'toastr.'.$_SESSION['toastr']['type'].'("'.$_SESSION['toastr']['message'].'", "'.$_SESSION['toastr']['title'].'")';
+            unset($_SESSION['toastr']);
+        }
+        ?>          
+    });
+</script>
 <?php $pageName = ob_get_clean();
+
