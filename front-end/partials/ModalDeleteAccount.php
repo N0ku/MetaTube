@@ -2,7 +2,7 @@
 
 <div id="delete" class="modal">
   
-  <form class="modal-content" action="/action_page.php">
+  <form class="modal-content" action="/back-end/actions/DeleteAccount.php">
     <span onclick="document.getElementById('delete').style.display='none'" class="close" title="Close Modal">&times;</span>
     <div class="container">
       <h1>Delete Account</h1>
