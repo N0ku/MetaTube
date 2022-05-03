@@ -2,6 +2,20 @@ const menu = document.getElementsByClassName("hamburger-menu-container");
 const menuShort = document.getElementsByClassName('short-menu');
 const root = document.documentElement;
 const burgerButton = document.getElementsByClassName("hamburger-button-home");
+const nameUrl = location.search.split('name=')[1];
+const navElements = document.getElementsByClassName('nav-item p');
+
+console.log(nameUrl);
+console.log(navElements)
+
+switch (nameUrl) {
+    case "Home":
+
+        break;
+
+    default:
+        break;
+}
 
 function closeMenu() {
     burgerButton[0].setAttribute("onclick", "openMenu()");
