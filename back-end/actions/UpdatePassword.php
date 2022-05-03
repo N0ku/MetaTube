@@ -28,7 +28,21 @@ if(empty($_POST['password']) || empty($_POST['new-password']) || empty($_POST['c
                 'message' => 'Your password as be changed',
                 'title'     => ''
             );
+            $_SESSION['user']['password'] = $new_password;
+            unset($_SESSION['process']);
+        }else{
+            $_SESSION['toastr'] = array(
+                'type'      => 'error', 
+                'message' => 'Password is not similar',
+                'title'     => ''
+            );
         }
+    }else{
+        $_SESSION['toastr'] = array(
+            'type'      => 'error', 
+            'message' => 'Your old password is incorrect',
+            'title'     => ''
+        );
     }
 }else{
     
