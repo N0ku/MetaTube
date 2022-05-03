@@ -9,6 +9,8 @@ $page_title = 'Unknown page?';
 $existing_pages = ['Home', 'Explorer', 'Subscriptions', 'Library', 'History', 'LikedVideo', 'WatchLater', 'Settings', 'Report', 'Help', 'SendFeedback', 'Profile', 'Register', 'Login', 'ChannelPage', 'Upload', 'SearchPage', 'Watch', 'MetaTubePremium', '404'];
 $homeBar = $_GET['name'];
 
+
+
 if (empty($_GET['name']) == false) {
     if (in_array($_GET['name'], $existing_pages)) {
         $pageName = $_GET['name'];
