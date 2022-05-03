@@ -219,6 +219,14 @@
         "text-dl":"Downloads",
         "text-dl2":"Save videos for when you really need them – like when you’re on a plane or commuting.",
         "text-music":"MetaTube Music Premium",
-        "text-music2":"Download our new music app and listen without interruptions."
+        "text-music2":"Download our new music app and listen without interruptions.",
+        "title-adFree": "Ad-free",
+        "message-adFree":"Enjoy watching YouTube uninterrupted by ads whenever you sign in - on your mobile device, desktop, or enabled TV.",
+        "title-dlgo": "Download and go",
+        "message-dlgo":"Save videos for when you’re low on data or can’t get online.",
+        "title-bkplay": "Background play",
+        "message-bkplay":"With MetaTube Premium, your video plays uninterrupted in the background, even when you open another app.",
+        "title-music-prem": "MetaTube Music Premium",
+        "message-music-prem":"Easily explore the world of music ad-free, offline, and with the screen locked. Available on mobile and desktop."
     }
 }

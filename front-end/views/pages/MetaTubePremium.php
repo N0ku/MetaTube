@@ -33,4 +33,42 @@ $page = "MetaTubePremium"; ?>
     </div>
 </div>
 
+<div class="container-slides">
+
+    <div class="container-ad-free">
+        
+        <div class="message">
+            <p class="title-adFree"><?= $enJson['MetaTubePremium']['title-adFree'] ?></p>
+            <p class="message-adFree"><?= $enJson['MetaTubePremium']['message-adFree'] ?></p>
+        </div>
+
+    </div>
+    <div class="container-download">
+        
+        <div class="message">
+            <p class="title-adFree"><?= $enJson['MetaTubePremium']['title-dlgo'] ?></p>
+            <p class="message-adFree"><?= $enJson['MetaTubePremium']['message-dlgo'] ?></p>
+        </div>
+
+    </div>
+    <div class="container-background-play">
+        
+        <div class="message">
+            <p class="title-adFree"><?= $enJson['MetaTubePremium']['title-bkplay'] ?></p>
+            <p class="message-adFree"><?= $enJson['MetaTubePremium']['message-bkplay'] ?></p>
+        </div>
+
+    </div>
+    <div class="container-metatube-music-premium">
+        
+        <div class="message">
+            <p class="title-adFree"><?= $enJson['MetaTubePremium']['title-music-prem'] ?></p>
+            <p class="message-adFree"><?= $enJson['MetaTubePremium']['message-music-prem'] ?></p>
+        </div>
+
+    </div>
+
+    
+</div>
+
 <?php $pageName = ob_get_clean() ?>
