@@ -4,7 +4,7 @@
 <div id="update--form" class="modal">
    <form class="modal-content" enctype="multipart/form-data" id="form" method="post" action="/back-end/actions/update_user.php">
       <div class="close-form">
-         <a onclick="document.getElementById('password').style.display='none'" class="close" title="Close Modal"><img src="./front-end/assets/img/Logo/x.svg" alt=""></a>
+         <a onclick="document.getElementById('update--form').style.display='none'" class="close" title="Close Modal"><img src="./front-end/assets/img/Logo/x.svg" alt=""></a>
       </div>
       <table>
          <tr>
