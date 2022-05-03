@@ -17,9 +17,9 @@ module.exports = class timelineManager
         let result = await DatabaseManager.executeQuery(query);
         if( result.error )
         {
-            console.error('%cQUERY OR SOMETHING HAS BEEN FUCKED UP', 'color:red');
+            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
             res.status(500);
         }
-        else res.status(200);
+        else res.status(200).json(result.data);
     }
 }

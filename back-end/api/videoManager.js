@@ -5,13 +5,13 @@ module.exports = class VideoManager
     static eventListener(app)
     {
         app.post('/upload/video', (req, res) => { this.upload(req, res) });
-        app.get('/search/:data', (req, res) => { this.search(req, res) });
+        app.post('/search/:data', (req, res) => { this.search(req, res) });
         app.get('/video/:id', (req, res) => { this.mainVideo(req, res) });
     }
 
     static async upload(req, res)
     {
-        console.log("POST - /upload/video");
+        console.log("%cPOST - /upload/video", 'color:blue');
         const data = req.body;
 
         /* DATA FORMAT
@@ -43,7 +43,7 @@ module.exports = class VideoManager
         let result = await DatabaseManager.executeQuery(query);
         if( result.error ) 
         {
-            console.error('%cQUERY OR SOMETHING HAS BEEN FUCKED UP', 'color:red');
+            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
             res.status(500);
         }
         else res.status(200);
@@ -51,7 +51,7 @@ module.exports = class VideoManager
 
     static async search(req, res)
     {
-        console.log("GET - /search");
+        console.log("%cPOST - /search", "color:blue");
         const data = JSON.parse(req.params.data);
         /*
         {
@@ -78,7 +78,7 @@ module.exports = class VideoManager
         let result = await DatabaseManager.executeQuery(`SELECT * FROM video WHERE title LIKE %${data.filterBoxTitle}%`);
         if( result.error )
         {
-            console.error('%cQUERY OR SOMETHING HAS BEEN FUCKED UP', 'color:red');
+            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
             res.status(500);
         }
         else res.status(200);
@@ -86,7 +86,7 @@ module.exports = class VideoManager
 
     static async mainVideo(req, res)
     {
-        console.log("GET - /video/");
+        console.log('GET - /video/');
         let data = req.params;
         console.log(`  id : ${data.id}`);
         let query = `SELECT * FROM video WHERE id = '${data.id}'`;
@@ -94,7 +94,7 @@ module.exports = class VideoManager
         let result = await DatabaseManager.executeQuery(query);
         if( result.error ) 
         {
-            console.error('%cQUERY OR SOMETHING HAS BEEN FUCKED UP', 'color:red');
+            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
             res.status(500).json([]);
         }
         else res.status(200).json(result.data);

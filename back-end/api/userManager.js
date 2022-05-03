@@ -29,7 +29,7 @@ module.exports = class UserManager
         let result = await DatabaseManager.executeQuery(`INSERT INTO user (id, username, email, password) VALUES ('${data.id}', '${data.username}', '${data.email}', '${data.password}')`);
         if( result.error )
         {
-            console.error('%cQUERY OR SOMETHING HAS BEEN FUCKED UP', 'color:red');
+            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
             res.status(500).json([]);
         }
         else res.status(200).json(result.data);
