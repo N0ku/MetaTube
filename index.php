@@ -6,7 +6,7 @@ $enJson = json_decode($Json, true);
 // Prevent the user from going on non-existing pages
 session_start();
 $page_title = 'Unknown page?';
-$existing_pages = ['Home', 'Explorer', 'Subscriptions', 'Library', 'History', 'LikedVideo', 'WatchLater','Settings', 'Report', 'Help', 'SendFeedback', 'Profile', 'Register', 'Login', 'Channel_page', 'Upload', 'SearchPage', 'SearchPage', 'Watch', 'MetaTubePremium', '404'];
+$existing_pages = ['Home', 'Explorer', 'Subscriptions', 'Library', 'History', 'LikedVideo', 'WatchLater', 'Settings', 'Report', 'Help', 'SendFeedback', 'Profile', 'Register', 'Login', 'ChannelPage', 'Upload', 'SearchPage', 'Watch', 'MetaTubePremium', '404'];
 $homeBar = $_GET['name'];
 
 if (empty($_GET['name']) == false) {
