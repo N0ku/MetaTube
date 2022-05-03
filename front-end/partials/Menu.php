@@ -102,10 +102,12 @@
             <strong class="title-others">
                 <?= $enJson['menu']['titles']['others'] ?>
             </strong>
-            <div class="nav-item">
-                <img src="./front-end/assets/img/Menu-svg/ytb-premium.svg" alt="MetaTube Premium" srcset="" class="nav-logo" />
-                <p><a href="https://www.youtube.com/premium"><?= $enJson['menu']['nav-elements']['MetaTube Premium'] ?></a></p>
-            </div>
+            <a href="index.php?name=MetaTubePremium">
+                <div class="nav-item">
+                    <img src="./front-end/assets/img/Menu-svg/ytb-premium.svg" alt="MetaTube Premium" srcset="" class="nav-logo" />
+                    <p><?= $enJson['menu']['nav-elements']['MetaTube Premium'] ?></p>
+                </div>
+            </a>
             <div class="nav-item">
                 <img src="./front-end/assets/img/Menu-svg/movies.svg" alt="Movies and Shows" srcset="" class="nav-logo" />
                 <p><a href="https://www.youtube.com/feed/storefront?bp=ogUCKAI%3D"><?= $enJson['menu']['nav-elements']['Movies and Shows'] ?></a></p>

@@ -1,0 +1,39 @@
+.MetaTubePremium-container{
+    background-image: url(../img/MetaTubePremium/ytk_lp2_hero_white_desktop_2880x1200.png);
+    padding: var(--ytd-margin-24x) 0 var(--ytd-margin-12x);
+    background-position: center top;
+    background-size: cover;
+    min-height: 800px;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button-container{
+    padding: 3%;
+    display: flex;
+}
+
+button.btn-free {
+    border-radius: 10px;
+    border: 1px solid blue;
+    padding: 10px;
+    background-color: royalblue;
+    color: white;
+    font-weight: bold;
+}
+
+.premium-p{
+    font-size: 50px;
+    font-weight: lighter;
+    margin: 0;
+
+}
+
+.link-premium{
+    color:royalblue;
+    font-weight: bold;
+}
