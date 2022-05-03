@@ -203,5 +203,15 @@
         "Learning":"Learning",
         "Fashion":"Fashion & Beauty",
         "TrendingTitle":"Trending Videos"
+    },
+
+    "MetaTubePremium":{
+        "title":"MetaTube and MetaTube Music ad-free offline, and in the background",
+        "txt-button":"Try it Free",
+        "price":"2-month free trial • Then €11.99/month",
+        "remind-text":"We'll remind you 7 days before your trial ends Recurring billing • Cancel anytime",
+        "add-price":"Or save money with a ",
+        "link-add-price":"family or student plan",
+        "link-premium":"Restrictions apply. Learn more here."
     }
 }
