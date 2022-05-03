@@ -1,6 +1,20 @@
 /* ==========================================================================
    #Custom HTML5 Video Player
    ========================================================================== */
+@keyframes ButtonBorder {
+    0% {
+        border-width: 0%;
+    }
+
+    50% {
+        border-width: 50%;
+    }
+
+    100% {
+        border-width: 100%;
+    }
+}
+
 
 :root {
     --youtube-red: #FE0900;
@@ -480,6 +494,7 @@ input[type=range].volume::-moz-range-thumb {
     color: var(--dark-text);
     border: none;
     height: 100%;
+    outline: 0;
 }
 
 .comments-video {
@@ -549,6 +564,7 @@ input[type=range].volume::-moz-range-thumb {
     flex-direction: row;
     align-items: center;
     margin-top: 5px;
+    outline: 0;
 }
 
 .add-comment-buttons button {
@@ -575,6 +591,7 @@ input[type=range].volume::-moz-range-thumb {
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     color: var(--dark-text);
+    outline: 0;
 }
 
 .watch-comments {
@@ -606,6 +623,11 @@ input[type=range].volume::-moz-range-thumb {
     font-family: var(--font);
     font-size: 15 px;
     color: rgb(153, 150, 150);
+}
+
+.sub-button-watch:active, .comment-button:active {
+    border: 2px white solid;
+    animation: ButtonBorder 5s ease-in-out;
 }
 
 .comments-reply {
