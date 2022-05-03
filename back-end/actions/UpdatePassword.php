@@ -16,6 +16,7 @@ if(!empty($_POST['password']) || !empty($_POST['new-password']) || !empty($_POST
         // CHECK IF NEW PASSWORD ARE SIMILAR
         if($new_password == $confirm_password){
             // UPTADE IN DATABASE 
+            if($new_password != $old_password){
             $sql = 'UPDATE user SET password = :password WHERE id = :id';
             $query = $db->prepare($sql);
             $query->execute([
@@ -33,7 +34,13 @@ if(!empty($_POST['password']) || !empty($_POST['new-password']) || !empty($_POST
             //FINISH PROCESS
             unset($_SESSION['process']);
             header("Location: /index.php?name=Profile ");
-            
+        }else{
+            $_SESSION['toastr'] = array(
+                'type'      => 'error', 
+                'message' => 'New password is similar to old',
+                'title'     => ''
+            );
+        }
         }else{
             $_SESSION['toastr'] = array(
                 'type'      => 'error', 
