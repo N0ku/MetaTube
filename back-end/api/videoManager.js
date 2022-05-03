@@ -5,13 +5,13 @@ module.exports = class VideoManager
     static eventListener(app)
     {
         app.post('/upload/video', (req, res) => { this.upload(req, res) });
-        app.get('/search/:data', (req, res) => { this.search(req, res) });
+        app.post('/search/:data', (req, res) => { this.search(req, res) });
         app.get('/video/:id', (req, res) => { this.mainVideo(req, res) });
     }
 
     static async upload(req, res)
     {
-        console.log("POST - /upload/video");
+        console.log("%cPOST - /upload/video", 'color:blue');
         const data = req.body;
 
         /* DATA FORMAT
@@ -51,7 +51,7 @@ module.exports = class VideoManager
 
     static async search(req, res)
     {
-        console.log("GET - /search");
+        console.log("%cPOST - /search", "color:blue");
         const data = JSON.parse(req.params.data);
         /*
         {
@@ -86,7 +86,7 @@ module.exports = class VideoManager
 
     static async mainVideo(req, res)
     {
-        console.log("GET - /video/");
+        console.log('GET - /video/');
         let data = req.params;
         console.log(`  id : ${data.id}`);
         let query = `SELECT * FROM video WHERE id = '${data.id}'`;

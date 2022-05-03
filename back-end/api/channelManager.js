@@ -23,7 +23,7 @@ module.exports = class channelManager
 
         console.log(`User id : ${data.id}`);
         console.log(`channelName : ${data.channelName}`);
-        console.log(`channelProfilePicture : ${data.channelProfilePicture}`);
+        // console.log(`channelProfilePicture : ${data.channelProfilePicture}`);
 
         let result = await DatabaseManager.executeQuery(`INSERT INTO channel (id, channelName, channelProfilePicture) VALUES ('${data.id}', '${data.channelName}', '${data.channelProfilePicture}')`);
         if( result.error )
