@@ -212,6 +212,12 @@
         "remind-text":"We'll remind you 7 days before your trial ends Recurring billing • Cancel anytime",
         "add-price":"Or save money with a ",
         "link-add-price":"family or student plan",
-        "link-premium":"Restrictions apply. Learn more here."
+        "link-premium":"Restrictions apply. Learn more here.",
+        "text-ad":"Ad-free & background play",
+        "text-ad2":"Watch videos uninterrupted by ads, while using other apps, or when the screen is locked.",
+        "text-dl":"Downloads",
+        "text-dl2":"Save videos for when you really need them – like when you’re on a plane or commuting.",
+        "text-music":"MetaTube Music Premium",
+        "text-music2":"Download our new music app and listen without interruptions."
     }
 }

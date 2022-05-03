@@ -1,4 +1,5 @@
-<?php ob_start(); $page = "MetaTubePremium"; ?>
+<?php ob_start(); 
+$page = "MetaTubePremium"; ?>
 
 <div class="MetaTubePremium-container">
 
@@ -16,7 +17,19 @@
 
 <div class="container2">
     <div class="ad-free">
-        
+        <img class= "no-add-play-logo" src="../../../front-end/assets/img/MetaTubePremium/no-add-play.svg" alt="pub-img">
+        <p class="text-ad"><?= $enJson['MetaTubePremium']['text-ad'] ?></p>
+        <p class="text-ad2"><?= $enJson['MetaTubePremium']['text-ad2'] ?></p>
+    </div>
+    <div class="ad-free">
+        <img class= "no-add-play-logo" src="../../../front-end/assets/img/MetaTubePremium/download-logo.svg" alt="pub-img">
+        <p class="text-ad"><?= $enJson['MetaTubePremium']['text-dl'] ?></p>
+        <p class="text-ad2"><?= $enJson['MetaTubePremium']['text-dl2'] ?></p>
+    </div>
+    <div class="ad-free">
+        <img class= "no-add-play-logo" src="../../../front-end/assets/img/MetaTubePremium/music-logo.svg" alt="pub-img">
+        <p class="text-ad"><?= $enJson['MetaTubePremium']['text-music'] ?></p>
+        <p class="text-ad2"><?= $enJson['MetaTubePremium']['text-music2'] ?></p>
     </div>
 </div>
 
