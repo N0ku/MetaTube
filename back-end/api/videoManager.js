@@ -11,7 +11,7 @@ module.exports = class VideoManager
 
     static async upload(req, res)
     {
-        console.log("%cPOST - /upload/video", 'color:blue');
+        console.log("POST - /upload/video");
         const data = req.body;
 
         /* DATA FORMAT

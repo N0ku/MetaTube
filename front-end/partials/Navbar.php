@@ -29,10 +29,17 @@
                 <?php if (empty($_SESSION['user'])) { ?>
                     <a href="index.php?name=Login">
                         <span class="tooltiptext"><?= $enJson['profile']['navBar']['tooltipUploadNoConnect'] ?></span>
-                    <?php } else { ?>
+                    <?php } else { 
+                                $id = $_SESSION['user']['id'];
+                                $creator = getApi('channel/' . $id);
+                                if ($creator != null) {  
+                                ?>
                         <a onclick="feature_open_upload_function()">
                             <span class="tooltiptext"><?= $enJson['profile']['navBar']['tooltipUpload'] ?></span>
-                        <?php } ?>
+                        <?php } else { ?>
+                            <a onclick="feature_open_accountCreator_function()">
+                            <span class="tooltiptext"><?= $enJson['profile']['navBar']['tooltipUpload'] ?></span>
+                            <?php } }?>
                         <img src="./front-end/assets/img/Logo/video.svg" alt="">
                         </a>
 

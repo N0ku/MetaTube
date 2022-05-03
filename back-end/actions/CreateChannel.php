@@ -7,7 +7,7 @@ function createChannel()
 
 
     $creator = getApi('channel/' . $id);
-    if ($creator != null) {
+    if ($creator == null) {
         $img_file = $_FILES['channelImg']['tmp_name'];
         $imgData = base64_encode(file_get_contents($img_file));
 
