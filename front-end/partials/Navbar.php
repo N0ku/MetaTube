@@ -59,7 +59,7 @@ ob_start() ?>
                             <?php } else { ?>
                                 <img src="data:image/png;base64,<?= $_SESSION['user']['profilePicture'] ?>" alt="" onclick="OpenTheDoor()" class="dropbtn" width="30px" height="30px" />
                             <?php } ?>
-                            <h3><?= $_SESSION['user']['username'] ?></h3>
+                            <h3 class="userUsername"><?= $_SESSION['user']['username'] ?></h3>
                         </div>
                         <hr />
                         <div class=" drop-profil">

@@ -6,11 +6,13 @@
    }
    ?>
 <section id="pageprofile">
+   <!-- TITLE PROFILE -->
    <div class="headerprofile">
       <h2 id="titleProfile"><?= $enJson['profile']['page']['title'] ?></h2>
       <small><?= $enJson['profile']['page']['smallTitle'] ?> <?= $_SESSION['user']['email'] ?></small>
    </div>
    <hr class="division--part">
+   <!-- ACCORDION -->
    <div class="accordion">
       <input type="radio" name="select" class="accordion-select" checked />
       <div class="accordion-title">
@@ -24,10 +26,11 @@
                <?php } else { ?>
                <img class="profile-user" src="data:image/png;base64,<?= $_SESSION['user']['profilePicture'] ?>" alt="">
                <?php } ?>
-               <h2>
+               <h2 style="font-family: fantasy;">
                <?= $_SESSION['user']['username'] ?>
                <h2>
             </div>
+            <button class="btnprofile"><?= $enJson['profile']['accordeon']['ButtonChannel'] ?></button>
             <button class="btnprofile"><?= $enJson['profile']['accordeon']['buttonCreate'] ?></button>
          </div>
       </div>
@@ -59,18 +62,22 @@
       <div class="accordion-content">
           <div class="profile-info">
             <div class="profilestools">
-               <!-- UPDATE PASSWORD -->
+               <!-- USERNAME -->
                <div class="tools">
-                 <?= $_SESSION['user']['username'] ?>
+                  <label class="label-accordeon"for=""><?= $enJson['profile']['accordeon']['labelUsername'] ?></label>
+                 <h1><?= $_SESSION['user']['username'] ?></h1>
           
                </div>
-               <!-- DELETE YOUR ACCOUNT -->
+               <!-- ADRESS MAIL -->
                <div class="tools">
-                   <?= $_SESSION['user']['email'] ?>
+                   <label class="label-accordeon" for=""><?= $enJson['profile']['accordeon']['labelUEmail'] ?></label>
+                  <h1> <?= $_SESSION['user']['email'] ?></h1>
             
                </div>
+               <!-- DATE OF BIRTHDAY -->
                <div class="tools">
-                  <?= $_SESSION['user']['birthday'] ?>
+                   <label class="label-accordeon" for=""><?= $enJson['profile']['accordeon']['labelDate'] ?></label>
+                 <h1> <?= $_SESSION['user']['birthday'] ?></h1>
                </div>
             </div>
          </div>
