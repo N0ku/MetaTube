@@ -279,3 +279,9 @@ a {
     opacity: 1;
     
 }
+
+
+.userName {
+    padding-left: 10%;
+    color: var(--dark-text);
+}

@@ -51,11 +51,11 @@
                 </div>
             <?php } else { ?>
                 <div class="dropdown">
-                    <img src="<?= $_SESSION['user']['profilePicture'] ?>" alt="" onclick="OpenTheDoor()" class="dropbtn" width="30px" height="30px" />
+                    <img src="data:image/png;base64,<?= $_SESSION['user']['profilePicture'] ?>" alt="" onclick="OpenTheDoor()" class="dropbtn" width="30px" height="30px" />
                     <div id="myDropdown" class="dropdown-content">
                         <div class="drop-profil">
-                            <img src="<?= $_SESSION['user']['profilePicture'] ?>" alt="" class="dropbtn" width="30px" height="30px" />
-                            <h3><?= $_SESSION['user']['username'] ?></h3>
+                            <img src="data:image/jpg;base64,<?= $_SESSION['user']['profilePicture'] ?>" alt="" class="dropbtn" width="30px" height="30px" />
+                            <h3 class="userName"><?= $_SESSION['user']['username'] ?></h3>
                         </div>
                         <hr />
                         <div class=" drop-profil">
