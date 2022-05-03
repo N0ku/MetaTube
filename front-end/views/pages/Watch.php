@@ -125,7 +125,7 @@
 
             <div class="below-video-content">
                 <div class="video-informations">
-                    <p class="video-title">Robin - While True (clip) ft.PH,Romuald</p>
+                    <p class="watch-vid-title">Robin - While True (clip) ft.PH,Romuald</p>
                     <div class="video-views-date-desc">
                         <div class="video-date-views">
                             <p class="watch-video-views">7,679,097 views</p>
@@ -410,7 +410,7 @@
             <div class="watch-video-content">
                 <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail-watch" />
                 <div class="watch-next-content">
-                    <strong class="watch-video-title">I'M THE TITLE OF THE VIDEO</strong>
+                    <strong class="watch-watch-vid-title">I'M THE TITLE OF THE VIDEO</strong>
                     <div class="watch-content-infos">
                         <p class="watch-video-channel-name">Name of the chanel</p>
                         <div class="watch-video-infos">
@@ -425,7 +425,7 @@
             <div class="watch-video-content">
                 <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail-watch" />
                 <div class="watch-next-content">
-                    <strong class="watch-video-title">I'M THE TITLE OF THE VIDEO</strong>
+                    <strong class="watch-watch-vid-title">I'M THE TITLE OF THE VIDEO</strong>
                     <div class="watch-content-infos">
                         <p class="watch-video-channel-name">Name of the chanel</p>
                         <div class="watch-video-infos">
@@ -440,7 +440,7 @@
             <div class="watch-video-content">
                 <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail-watch" />
                 <div class="watch-next-content">
-                    <strong class="watch-video-title">I'M THE TITLE OF THE VIDEO</strong>
+                    <strong class="watch-watch-vid-title">I'M THE TITLE OF THE VIDEO</strong>
                     <div class="watch-content-infos">
                         <p class="watch-video-channel-name">Name of the chanel</p>
                         <div class="watch-video-infos">
@@ -455,7 +455,7 @@
             <div class="watch-video-content">
                 <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail-watch" />
                 <div class="watch-next-content">
-                    <strong class="watch-video-title">I'M THE TITLE OF THE VIDEO</strong>
+                    <strong class="watch-watch-vid-title">I'M THE TITLE OF THE VIDEO</strong>
                     <div class="watch-content-infos">
                         <p class="watch-video-channel-name">Name of the chanel</p>
                         <div class="watch-video-infos">
@@ -470,7 +470,7 @@
             <div class="watch-video-content">
                 <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail-watch" />
                 <div class="watch-next-content">
-                    <strong class="watch-video-title">I'M THE TITLE OF THE VIDEO</strong>
+                    <strong class="watch-watch-vid-title">I'M THE TITLE OF THE VIDEO</strong>
                     <div class="watch-content-infos">
                         <p class="watch-video-channel-name">Name of the chanel</p>
                         <div class="watch-video-infos">
@@ -485,7 +485,7 @@
             <div class="watch-video-content">
                 <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail-watch" />
                 <div class="watch-next-content">
-                    <strong class="watch-video-title">I'M THE TITLE OF THE VIDEO</strong>
+                    <strong class="watch-watch-vid-title">I'M THE TITLE OF THE VIDEO</strong>
                     <div class="watch-content-infos">
                         <p class="watch-video-channel-name">Name of the chanel</p>
                         <div class="watch-video-infos">
@@ -500,7 +500,7 @@
             <div class="watch-video-content">
                 <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail-watch" />
                 <div class="watch-next-content">
-                    <strong class="watch-video-title">I'M THE TITLE OF THE VIDEO</strong>
+                    <strong class="watch-watch-vid-title">I'M THE TITLE OF THE VIDEO</strong>
                     <div class="watch-content-infos">
                         <p class="watch-video-channel-name">Name of the chanel</p>
                         <div class="watch-video-infos">
@@ -515,7 +515,7 @@
             <div class="watch-video-content">
                 <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail-watch" />
                 <div class="watch-next-content">
-                    <strong class="watch-video-title">I'M THE TITLE OF THE VIDEO</strong>
+                    <strong class="watch-watch-vid-title">I'M THE TITLE OF THE VIDEO</strong>
                     <div class="watch-content-infos">
                         <p class="watch-video-channel-name">Name of the chanel</p>
                         <div class="watch-video-infos">
@@ -530,7 +530,7 @@
             <div class="watch-video-content">
                 <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail-watch" />
                 <div class="watch-next-content">
-                    <strong class="watch-video-title">I'M THE TITLE OF THE VIDEO</strong>
+                    <strong class="watch-watch-vid-title">I'M THE TITLE OF THE VIDEO</strong>
                     <div class="watch-content-infos">
                         <p class="watch-video-channel-name">Name of the chanel</p>
                         <div class="watch-video-infos">
@@ -545,7 +545,7 @@
             <div class="watch-video-content">
                 <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail-watch" />
                 <div class="watch-next-content">
-                    <strong class="watch-video-title">I'M THE TITLE OF THE VIDEO</strong>
+                    <strong class="watch-watch-vid-title">I'M THE TITLE OF THE VIDEO</strong>
                     <div class="watch-content-infos">
                         <p class="watch-video-channel-name">Name of the chanel</p>
                         <div class="watch-video-infos">
@@ -560,7 +560,7 @@
             <div class="watch-video-content">
                 <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail-watch" />
                 <div class="watch-next-content">
-                    <strong class="watch-video-title">I'M THE TITLE OF THE VIDEO</strong>
+                    <strong class="watch-watch-vid-title">I'M THE TITLE OF THE VIDEO</strong>
                     <div class="watch-content-infos">
                         <p class="watch-video-channel-name">Name of the chanel</p>
                         <div class="watch-video-infos">
@@ -575,7 +575,7 @@
             <div class="watch-video-content">
                 <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail-watch" />
                 <div class="watch-next-content">
-                    <strong class="watch-video-title">I'M THE TITLE OF THE VIDEO</strong>
+                    <strong class="watch-watch-vid-title">I'M THE TITLE OF THE VIDEO</strong>
                     <div class="watch-content-infos">
                         <p class="watch-video-channel-name">Name of the chanel</p>
                         <div class="watch-video-infos">
