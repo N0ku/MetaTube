@@ -20,8 +20,8 @@
         },
         "button": {
             "buttonPassword": "Update your password",
-            "buttonDelete": "Delete your acompte",
-            "buttonUser": "Update Your Profil"
+            "buttonDelete": "Delete your account",
+            "buttonUser": "Update your Profil"
         },
         "passModal": {
             "oldpassword": "Your old password",
