@@ -49,7 +49,7 @@ ob_start() ?>
                     <img src="<?= $_SESSION['user']['profilePicture'] ?>" alt="" onclick="OpenTheDoor()" class="dropbtn" width="30px" height="30px" />
                     <div id="myDropdown" class="dropdown-content">
                         <div class="drop-profil">
-                            <img src="<?= $_SESSION['user']['profilePicture'] ?>" alt="" class="dropbtn" width="30px" height="30px />
+                            <img src="<?= $_SESSION['user']['profilePicture'] ?>" alt="" class="dropbtn" width="30px" height="30px" />
                             <h3><?= $_SESSION['user']['username'] ?></h3>
                         </div>
                         <hr />
