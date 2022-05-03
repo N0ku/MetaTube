@@ -1,11 +1,10 @@
  <button class="buttonModale" onclick="document.getElementById('password').style.display='block'">Update password</button>
  
-         <div id="password" class="modal" <?php if($_SESSION['process'] == true) echo 'style = "display : block";'?>>
-            <span onclick="document.getElementById('password').style.display='none'" class="close" title="Close Modal">
-         </span>
+         <div id="password" class="modal" <?php if($_SESSION['process'] == 'password') echo 'style = "display : block";'?>>
+           
             <form class="modal-content" enctype="multipart/form-data"  id="form" method="post" action="/back-end/actions/UpdatePassword.php">
             <div class="close-form">
-         <a href="/index.php?name=Profile"><img src="./front-end/assets/img/Logo/x.svg" alt=""></a>
+         <a onclick="document.getElementById('password').style.display='none'"><img src="./front-end/assets/img/Logo/x.svg" alt=""></a>
 
       </div>
                <div class="wrapper-part-profile">
