@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./front-end/assets/css/Register.css">
     <link rel="stylesheet" href="./front-end/assets/css/Profile.css">
     <link rel="stylesheet" href="./front-end/assets/css/Menu.css">
-    <link rel="stylesheet" href="./front-end/assets/css/Home.css">
     <link rel="stylesheet" href="./front-end/assets/css/Channel.css">
     <link rel="stylesheet" href="./front-end/assets/css/Upload.css">
     <link rel="stylesheet" href="./front-end/assets/css/ChannelPage.css">
@@ -28,6 +27,7 @@
     <?= $channelVideoUpload ?>
 
     <?php if ($pageName != "404") {
+        echo $channelCreation;
         echo $navBar;
     } ?>
     <div class="content">

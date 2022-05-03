@@ -1,26 +1,12 @@
-<?php function checkid($id)
-{
-	/*$opts = array(
-'http' => array(
-'method' => "GET",
-)
-);
+<?php
+include './back-end/helper/Function.php';
 
-$context = stream_context_create($opts);
-
-$fp = fopen($apiUrl . 'video/' . $id, 'r', false, $context);
-fpassthru($fp);
-fclose($fp);
-var_dump($context);*/
-}
 
 function upload()
 {
 
-	// $_SESSION['message'] = $_FILES;
 
 	$apiUrl = 'http://93.16.2.231:8081/';
-	// $apiUrl = 'http://127.0.0.1:8081/';
 
 	$id = giveId();
 
@@ -56,23 +42,14 @@ function upload()
 
 					$data = array(
 						"id" => $id,
-						"creator" => "00000000000000000000",
+						"creator" => $_SESSION['user']['id'],
 						"title" => $_POST['title'],
 						"description" => $_POST['description'],
 						"privacy" => "public",
 						"thumbnail" => $imgData
 					);
 
-					$option = array(
-						'http' => array(
-							'method' => 'POST',
-							'content' => json_encode($data),
-							'header' => "Content-Type: application/json\r\n" . "Accept: application/json\r\n"
-						)
-					);
-					$context = stream_context_create($option);
-					$result = file_get_contents($apiUrl . 'upload/video', false, $context);
-					$response = json_decode($result);
+					postApi($data, 'upload/video');
 				}
 			}
 		} else {
@@ -81,6 +58,6 @@ function upload()
 	} else {
 		$_SESSION['message'] = "Please select a file.";
 	}
-	header('location: index.php?name=channel_page');
+	header('location: index.php?name=ChannelPage');
 	exit;
 }
