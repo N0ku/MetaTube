@@ -46,7 +46,7 @@ $page = "MetaTubePremium"; ?>
     <div class="container-download">
         
         <div class="message">
-            <p class="title-adFree"><?= $enJson['MetaTubePremium']['title-dlgo'] ?></p>
+            <p class="title-dlgo"><?= $enJson['MetaTubePremium']['title-dlgo'] ?></p>
             <p class="message-adFree"><?= $enJson['MetaTubePremium']['message-dlgo'] ?></p>
         </div>
 
@@ -54,7 +54,7 @@ $page = "MetaTubePremium"; ?>
     <div class="container-background-play">
         
         <div class="message">
-            <p class="title-adFree"><?= $enJson['MetaTubePremium']['title-bkplay'] ?></p>
+            <p class="title-bkplay"><?= $enJson['MetaTubePremium']['title-bkplay'] ?></p>
             <p class="message-adFree"><?= $enJson['MetaTubePremium']['message-bkplay'] ?></p>
         </div>
 
@@ -62,7 +62,7 @@ $page = "MetaTubePremium"; ?>
     <div class="container-metatube-music-premium">
         
         <div class="message">
-            <p class="title-adFree"><?= $enJson['MetaTubePremium']['title-music-prem'] ?></p>
+            <p class="title-music-prem"><?= $enJson['MetaTubePremium']['title-music-prem'] ?></p>
             <p class="message-adFree"><?= $enJson['MetaTubePremium']['message-music-prem'] ?></p>
         </div>
 
