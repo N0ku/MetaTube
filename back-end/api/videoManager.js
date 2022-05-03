@@ -43,7 +43,7 @@ module.exports = class VideoManager
         let result = await DatabaseManager.executeQuery(query);
         if( result.error ) 
         {
-            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
+            console.error('%cQUERY OR SOMETHING HAS BEEN FUCKED UP', 'color:red');
             res.status(500);
         }
         else res.status(200);
@@ -78,7 +78,7 @@ module.exports = class VideoManager
         let result = await DatabaseManager.executeQuery(`SELECT * FROM video WHERE title LIKE %${data.filterBoxTitle}%`);
         if( result.error )
         {
-            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
+            console.error('%cQUERY OR SOMETHING HAS BEEN FUCKED UP', 'color:red');
             res.status(500);
         }
         else res.status(200);
@@ -94,7 +94,7 @@ module.exports = class VideoManager
         let result = await DatabaseManager.executeQuery(query);
         if( result.error ) 
         {
-            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
+            console.error('%cQUERY OR SOMETHING HAS BEEN FUCKED UP', 'color:red');
             res.status(500).json([]);
         }
         else res.status(200).json(result.data);

@@ -28,7 +28,7 @@ module.exports = class channelManager
         let result = await DatabaseManager.executeQuery(`INSERT INTO channel (id, channelName, channelProfilePicture) VALUES ('${data.id}', '${data.channelName}', '${data.channelProfilePicture}')`);
         if( result.error )
         {
-            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
+            console.error('%cQUERY OR SOMETHING HAS BEEN FUCKED UP', 'color:red');
             res.status(500).json([]);
         }
         else res.status(200).json(result.data);
@@ -41,7 +41,7 @@ module.exports = class channelManager
         let result = await DatabaseManager.executeQuery(`SELECT * FROM channel WHERE id = '${req.params.id}'`);
         if( result.error )
         {
-            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
+            console.error('%cQUERY OR SOMETHING HAS BEEN FUCKED UP', 'color:red');
             res.status(500).json([]);
         }
         else res.status(200).json(result.data);

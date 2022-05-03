@@ -3,7 +3,9 @@ const   express = require('express'),
         UserManager = require('./userManager'),
         VideoManager = require('./videoManager'),
         Channelmanager = require('./channelManager'),
-        DatabaseManager = require('./databaseManager');
+        DatabaseManager = require('./databaseManager'),
+        TimelineManager = require('./timelineManager.js'),
+        CommentManager = require('./commentManager');
 var     config = require('./config.json');
 const   app = express();
 
@@ -19,7 +21,8 @@ app.use(express.urlencoded({
     limit: '50mb'
 }));
 
-UserManager.eventListener(app); 
+TimelineManager.eventListener(app);
+UserManager.eventListener(app);
 VideoManager.eventListener(app);
 Channelmanager.eventListener(app);
 
