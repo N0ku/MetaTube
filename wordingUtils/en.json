@@ -151,18 +151,39 @@
             "WatchLaters": "Watch Laters",
             "LikedVideos": "Liked Videos",
             "More": "More",
-            "Less": "Less"
+            "Less": "Less",
+            "MetaTube Premium":"MetaTube Premium",
+            "Movies and Shows":"Movies and Shows",
+            "Gaming":"Gaming",
+            "Live":"Live",
+            "Music":"Music",
+            "Sports":"Sports",
+            "Learning":"Learning",
+            "News":"News",
+            "Fashion & Beauty":"Fashion & Beauty",
+            "Settings":"Settings",
+            "Report":"Report History",
+            "Help":"Help",
+            "SendFeedback":"Send Feedback"
         },
         "titles": {
             "subscriptions": "SUBSCRIPTIONS",
-            "others": "OTHERS YOUTUBE CONTENTS"
+            "others": "MORE FROM METATUBE"
         },
         "footer": {
-            "link1": "Link1",
-            "link2": "Link2",
-            "link3": "Link3",
-            "link4": "Link4",
-            "link5": "Link5",
+            "About": "About",
+            "Press": "Press",
+            "Copyright": "Copyright",
+            "Contact us": "Contact us",
+            "Creators": "Creators",
+            "Advertise":"Advertise",
+            "Developers":"Developers",
+            "Report hateful content under LCEN":"Report hateful content under LCEN",
+            "Terms":"Terms",
+            "Privacy":"Privacy",
+            "Policy & Safety":"Policy & Safety",
+            "How YouTube works":"How YouTube works",
+            "Test new features":"Test new features",
             "copyright": "© 2022 Metatubes -L1 Alt Cergy/Paris ❤️"
         }
     },
@@ -182,5 +203,21 @@
         "Learning":"Learning",
         "Fashion":"Fashion & Beauty",
         "TrendingTitle":"Trending Videos"
+    },
+
+    "MetaTubePremium":{
+        "title":"MetaTube and MetaTube Music ad-free offline, and in the background",
+        "txt-button":"Try it Free",
+        "price":"2-month free trial • Then €11.99/month",
+        "remind-text":"We'll remind you 7 days before your trial ends Recurring billing • Cancel anytime",
+        "add-price":"Or save money with a ",
+        "link-add-price":"family or student plan",
+        "link-premium":"Restrictions apply. Learn more here.",
+        "text-ad":"Ad-free & background play",
+        "text-ad2":"Watch videos uninterrupted by ads, while using other apps, or when the screen is locked.",
+        "text-dl":"Downloads",
+        "text-dl2":"Save videos for when you really need them – like when you’re on a plane or commuting.",
+        "text-music":"MetaTube Music Premium",
+        "text-music2":"Download our new music app and listen without interruptions."
     }
 }

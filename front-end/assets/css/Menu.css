@@ -236,18 +236,27 @@
 }
 
 .menu-text-footer {
-    margin-top: 10px;
     cursor: pointer;
     color: var(--title-menu-color);
     letter-spacing: 0.5px;
-    font-weight: bold;
+    font-weight: 550;
     font-size: 15px;
-    margin-left: var(--margin-left-nav-item);
+    margin-right: 8px;
     font-family: var(--font);
+}
+
+.primary-guide-links{
+    padding: 16px 24px 0;
+}
+
+.secondary-guide-links{
+    padding: 16px 24px 0;
 }
 
 .copyright {
     font-size: 10px;
+    padding: 16px 24px;
+    font-family: "Roboto","Arial",sans-serif;
 }
 
 a {
