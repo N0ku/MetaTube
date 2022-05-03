@@ -4,6 +4,10 @@
     }
 }
 
+.menus{
+    margin-top: var(--navBar-height);
+}
+
 .sticky-menu {
     flex-direction: column;
     display: flex;

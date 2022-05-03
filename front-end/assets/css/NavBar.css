@@ -43,9 +43,8 @@
     padding: 10px 30px;
     background: #858585;
 }
-
-.btn--navbar--icon {
-    padding: 10px 30px;
+.btn--navbar--icon, .btn--navbar--icon--upload--video {
+    padding: 3px 30px;
     border-radius: 100px;
 }
 
@@ -137,7 +136,8 @@ a {
     color: #858585;
     border: none;
     margin: 0;
-    width: 85px;
+    width: 4%;
+    text-align: center;
 }
 
 .navbar__center__search-btn:active{
@@ -250,4 +250,38 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: var(--font-Xsmall);
+}
+   
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    
+}
+
+
+.userName {
+    padding-left: 10%;
+    color: var(--dark-text);
 }
