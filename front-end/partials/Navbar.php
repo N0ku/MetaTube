@@ -46,10 +46,19 @@ ob_start() ?>
                 </div>
             <?php } else { ?>
                 <div class="dropdown">
-                    <img src="<?= $_SESSION['user']['profilePicture'] ?>" alt="" onclick="OpenTheDoor()" class="dropbtn" width="30px" height="30px" />
+                    <?php if ($_SESSION['user']['profilePicture'] == "No photo") { ?>
+                        <img src="/front-end//assets//img//default-user-img.jpeg" alt="" onclick="OpenTheDoor()" class="dropbtn" width="30px" height="30px" />
+                    <?php } else { ?>
+                        <img src="data:image/png;base64,<?= $_SESSION['user']['profilePicture'] ?>" alt="" onclick="OpenTheDoor()" class="dropbtn" width="30px" height="30px" />
+                    <?php } ?>
+
                     <div id="myDropdown" class="dropdown-content">
                         <div class="drop-profil">
-                            <img src="<?= $_SESSION['user']['profilePicture'] ?>" alt="" class="dropbtn" width="30px" height="30px" />
+                            <?php if ($_SESSION['user']['profilePicture'] == "No photo") { ?>
+                                <img src="/front-end//assets//img//default-user-img.jpeg" alt="" onclick="OpenTheDoor()" class="dropbtn" width="30px" height="30px" />
+                            <?php } else { ?>
+                                <img src="data:image/png;base64,<?= $_SESSION['user']['profilePicture'] ?>" alt="" onclick="OpenTheDoor()" class="dropbtn" width="30px" height="30px" />
+                            <?php } ?>
                             <h3><?= $_SESSION['user']['username'] ?></h3>
                         </div>
                         <hr />

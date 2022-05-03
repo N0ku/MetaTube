@@ -1,56 +1,62 @@
-<button class="buttonModale" onclick="document.getElementById('update--form').style.display='block';">View advanced settings</button>
+<button class="btnprofile" onclick="document.getElementById('update--form').style.display='block';"><?=$enJson['profile']['button']['buttonUser']?></button>
 
 
-<div id="update--form" class="modal">
-   <form class="modal-content" enctype="multipart/form-data" id="form" method="post" action="/back-end/actions/update_user.php">
+<div id="update--form" class="modal" <?php if ($_SESSION['process'] == "user") echo 'style = "display : block";' ?>>
+   <form class="modal-content" enctype="multipart/form-dataUser" id="formUpdateUser" method="post" action="/back-end/actions/UpdateInfoUser.php">
       <div class="close-form">
-         <a onclick="document.getElementById('update--form').style.display='none'" class="close" title="Close Modal"><img src="./front-end/assets/img/Logo/x.svg" alt=""></a>
+         <a onclick="document.getElementById('update--form').style.display='none' <?php unset($_SESSION['process']) ?>" class="close" title="Close Modal">&times;</a>
       </div>
-      <table>
-         <tr>
-            <td>
-               <span>Your Username : </span>
-            </td>
-            <td>
-               <span>
-                  <?= $_SESSION['user']['username'] ?> </span>
+      <div class="wrapper-part-profile">
+         <h3><?=$enJson['profile']['profilModal']['title']?><h3>
+               <div>
+                  <label class="label-form" for="username"><?= $enJson['form']['register']['labelPseudo']?></label>
+                  <input id="new-username" name="username" class="input--register" type="text" value="<?= $_SESSION['user']['username'] ?>" />
+               </div>
 
-            </td>
-            <td> <input name="username" class="input--register" type="text" />
-            </td>
-         </tr>
-         <tr>
-            <td>
-               <span>Your Email : </span>
-            </td>
-            <td>
-               <span>
-                  <?= $_SESSION['user']['email'] ?> </span>
+               <div>
+                  <label class="label-form" for="email"><?= $enJson['form']['register']['labelAdress'] ?></label>
+                  <input id="new-email" name="email" class="input--register" type="text" value="<?= $_SESSION['user']['email'] ?>" placeholder="New email" />
+               </div>
 
-            </td>
-            <td><input name="email" class="input--register" type="text" placeholder="New email" id="password" />
-            </td>
-         </tr>
-         <tr>
-            <td>
-               <span>Your Birthday : </span>
-            </td>
-            <td>
-               <span>
-                  <?= $_SESSION['user']['birthday'] ?> </span>
-
-            </td>
-            <td> <input name="dateBirth" class="input--register" type="date" id="dateofbirthday" />
-            </td>
-         </tr>
-      </table>
+               <div>
+                  <label class="label-form" for="dateBirth"><?= $enJson['form']['register']['labelBirthday'] ?></label>
+                  <input id="new-birth" name="dateBirth" value="<?= $_SESSION['user']['birthday'] ?>" class="input--register" type="date" />
+               </div>
+      </div>
 
       <div class="backtoback">
-         <button class="btn--register" id="update">Update your profile</button>
+         <button class="btn--register" id="updateProfile"><?=$enJson['profile']['profilModal']['title']?></button>
       </div>
    </form>
 </div>
 <script>
+   const dataUser = [];
+   dataUser.push(document.getElementById('new-username'));
+   dataUser.push(document.getElementById('new-email'));
+   dataUser.push(document.getElementById('new-birth'));
+   formUpdateUser.addEventListener("keyup", function(e) {
+      for (const i in dataUser) {
+
+         if (dataUser[i].value != 0) {
+            dataUser[i].classList.remove("show-error-connection");
+         }
+      }
+   });
+   formUpdateUser.onsubmit = (e) => {
+      for (const i in dataUser) {
+         if (dataUser[i].value == 0) {
+            e.preventDefault();
+            dataUser[i].placeholder = ('Put your ' + dataUser[i].id);
+            dataUser[i].classList.add("show-error-connection");
+         }
+      }
+      setTimeout(() => {
+         $(function() {
+            toastr.error('<?= $enJson['form']['error']['signup'] ?>', '');
+         });
+      }, 200);
+
+   }
    $('input[type="file"]').on('change', (e) => {
       let that = e.currentTarget
       if (that.files && that.files[0]) {
@@ -58,7 +64,7 @@
          reader.onload = (e) => {
             $('#previewProfile').attr('src', e.target.result)
          }
-         reader.readAsDataURL(that.files[0])
+         reader.readAsdataUserURL(that.files[0])
       }
    })
 </script>

@@ -1,35 +1,39 @@
 <?php
 require_once __DIR__ . '/../Db.php';
 session_start();
-$old_password =  $_SESSION['user']['password'];
-$id = $_SESSION['user']['id'];
-$_SESSION['process'] = 'password';
+$old_password =  $_SESSION['user']['password']; // OLD PASSWORD
+$id = $_SESSION['user']['id']; // ID USER
+$_SESSION['process'] = 'password'; // PROCESS FOR KEEP THE MODAL PASSWORD
 
 
-
-if(empty($_POST['password']) || empty($_POST['new-password']) || empty($_POST['confirm-password'])){
+//CHECK IF ALL INPUT HAVE VALUE
+if(!empty($_POST['password']) || !empty($_POST['new-password']) || !empty($_POST['confirm-password'])){
     $password = hash('sha256',$_POST['old-password']);
     $new_password = hash('sha256',$_POST['new-password']);
     $confirm_password = hash('sha256',$_POST['confirm-password']);
- 
+    // CHECK IF OLD PASSWORD IS CORRECT
     if($password == $old_password){
+        // CHECK IF NEW PASSWORD ARE SIMILAR
         if($new_password == $confirm_password){
+            // UPTADE IN DATABASE 
             $sql = 'UPDATE user SET password = :password WHERE id = :id';
-
             $query = $db->prepare($sql);
             $query->execute([
 	            ":password" => $new_password,
                 ":id" => $id
             ]);
-            $_SESSION['process'] = false;
-            header("Location: /index.php?name=Profile ");
+            //TOASTR
             $_SESSION['toastr'] = array(
                 'type'      => 'success', 
                 'message' => 'Your password as be changed',
                 'title'     => ''
             );
+            //CHANGE PASSWORD IN SESSION
             $_SESSION['user']['password'] = $new_password;
+            //FINISH PROCESS
             unset($_SESSION['process']);
+            header("Location: /index.php?name=Profile ");
+            
         }else{
             $_SESSION['toastr'] = array(
                 'type'      => 'error', 
@@ -44,8 +48,6 @@ if(empty($_POST['password']) || empty($_POST['new-password']) || empty($_POST['c
             'title'     => ''
         );
     }
-}else{
-    
 }
 
 header("Location: /index.php?name=Profile ");
