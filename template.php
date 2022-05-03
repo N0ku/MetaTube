@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./front-end/assets/css/404.css">
     <link rel="stylesheet" href="./front-end/assets/css/SearchPage.css">
     <link rel="stylesheet" href="./front-end/assets/css/Watch.css">
+    <link rel="stylesheet" href="./front-end/assets/css/MetaTubePremium.css">
 </head>
 
 <body>
