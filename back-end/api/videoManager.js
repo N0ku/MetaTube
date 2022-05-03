@@ -4,7 +4,7 @@ module.exports = class VideoManager
 {
     static eventListener(app)
     {
-        app.post('/upload/video', (req, res) => { this.uploadVideo(req, res) });
+        app.post('/upload/video', (req, res) => { this.upload(req, res) });
         app.get('/search/:data', (req, res) => { this.search(req, res) });
         app.get('/video/:id', (req, res) => { this.mainVideo(req, res) });
     }
@@ -27,7 +27,6 @@ module.exports = class VideoManager
         console.log(`Video id : ${data.id}`);
         console.log(`Creator id : ${data.creator}`);
         console.log(`Title : ${data.title}`);
-        console.log(`Thumbnail : ${data.thumbnail}`);
         console.log(`Description : ${data.description}`);
         console.log(`Privacy : ${data.privacy}`);
         
