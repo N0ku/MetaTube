@@ -4,11 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title><?= $enJson['global']['title'] ?></title>
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="./front-end/assets/js/toastr.min.js"></script>
-    <script src="./front-end/assets/js/toastr.js.map"></script>
-
-
     <link rel="shortcut icon" href="./front-end/assets/img/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./front-end/assets/css/Global.css">
     <link rel="stylesheet" href="./front-end/assets/css/NavBar.css">
