@@ -4,7 +4,6 @@ if (isset($_POST['channelCreated'])) {
     createChannel();
 }
 
-
 ob_start() ?>
 
 

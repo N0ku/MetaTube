@@ -72,7 +72,6 @@ function postApi($data, $route)
 
 function getApi($route)
 {
-  $id = 'q12TFuL18592n4l0irF1';
   $opts = array(
     'http' => array(
       'method' => "GET",
