@@ -1,4 +1,4 @@
-<?php ob_start();  ?>
+<?php ob_start();?>
 
 <div class="main-page">
 
@@ -9,7 +9,6 @@
             <div class="page-title-container">
 
                 <h1 class="title-channel-page">Channel dashboard</h1>
-                <a href="index.php?name=MetaCreator&link=Content"><h2>link to content page (test)</h2></a>
 
                 <div class="container-buttons">
 
@@ -36,7 +35,15 @@
 
             <div class="dashboard-cards">
 
+                <div class="card-colomn">
+                    
+                    <div class="card-upload">
+
+
+
+                    </div>
                 
+                </div>
 
             </div>
 
