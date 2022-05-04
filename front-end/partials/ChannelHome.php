@@ -1,4 +1,4 @@
-<div class="feature-channel-flex-container-item " >
+<div class="feature-channel-flex-container-item" >
       <h3>Video Online</h3>
       <?php include "./front-end/views/components/video.php" ?>
    </div>
