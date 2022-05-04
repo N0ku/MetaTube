@@ -82,3 +82,34 @@
     padding: 24px 24px 0 0;
     min-height: calc(100% - (168px + 24px));
 }
+
+.dashboard-cards{
+    justify-content: flex-start;
+    max-width: calc(1848px - 24px);
+}
+
+.card-colomn{
+    flex: none;
+    margin-left: 24px;
+    width: calc(33.3333333333% - 24px);
+    color:#fff;
+    margin-bottom: 24px 48px;
+    overflow: hidden;
+}
+
+.card-upload{
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto","Noto",sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    font-size: 13px;
+    line-height: 20px;
+    background-color: #282828;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
