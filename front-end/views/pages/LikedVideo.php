@@ -1,11 +1,8 @@
-<?php ob_start();
-$page = "LikedVideo"; ?>
+<?php ob_start(); ?>
 
 <div class="likedVideo-container">
-
-    <h1>video likes</h1>
     <div class="home-video-content">
-
+        <h1>You haven't liked any videos yet :(</h1>
     </div>
 
 </div>

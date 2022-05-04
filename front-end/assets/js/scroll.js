@@ -1,7 +1,7 @@
-const page = document.querySelector('.page');
+const page = document.querySelector('.home-video-grid');
 const pageContent = document.querySelector('.page-content');
 
-const grid = `<div class="home-videos - grid">
+const grid = `
     <? php
     for ($i = 0; $i < count($vids); $i++) {
     $creator = getCreator($vids[$i] -> creator);
@@ -27,7 +27,12 @@ const grid = `<div class="home-videos - grid">
         </div>
     </a>
 
-    <?php }?></div >`;
+    <?php }?>`;
+
+    /* 
+    const grid = document.querySelector('.home-video-grid');
+    
+    */
 
 function loadGrid() {
     page.appendChild(grid);
@@ -37,4 +42,8 @@ pageContent.addEventListener('scroll', evt => {
     var scrollPosY = evt.target.scrollTop;
     var pageHeight = page.offsetHeight;
     var heightPourcent = (scrollPosY * 7) / pageHeight * 100;
+    if (heightPourcent > 80) {
+        console.log("RATIO SUP A 80%")
+        loadGrid();
+    }
 });

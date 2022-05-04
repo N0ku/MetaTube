@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="./front-end/assets/css/Watch.css">
     <link rel="stylesheet" href="./front-end/assets/css/MetaTubePremium.css">
     <link rel="stylesheet" href="./front-end/assets/css/flash.css">
+    <link rel="stylesheet" href="./front-end/assets/css/likedvideo.css">
     <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
 
 </head>
@@ -53,8 +54,7 @@
     </div>
 
     <!-- Add js library and script here -->
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="/front-end/assets/js/scroll.js"></script>
     <script src="./front-end/assets/js/SearchPage.js"></script>
     <script src="/front-end/assets/js/feature-channel-modal-createCreator.js"></script>
@@ -65,23 +65,23 @@
     <script src="./front-end/assets/js/toastr.js.map"></script>
 
     <script>
-    toastr.options = {
-        "closeButton": true,
-        "debug": false,
-        "newestOnTop": false,
-        "progressBar": true,
-        "positionClass": "toast-bottom-full-width",
-        "preventDuplicates": false,
-        "onclick": null,
-        "showDuration": "300",
-        "hideDuration": "1000",
-        "timeOut": "3000",
-        "extendedTimeOut": "1000",
-        "showEasing": "swing",
-        "hideEasing": "linear",
-        "showMethod": "fadeIn",
-        "hideMethod": "fadeOut"
-    }
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": true,
+            "positionClass": "toast-bottom-full-width",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "3000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
     </script>
 
 
