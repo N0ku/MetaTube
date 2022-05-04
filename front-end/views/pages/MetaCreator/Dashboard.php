@@ -61,6 +61,62 @@
                 
                 </div>
 
+                <div class="card-colomn">
+                    
+                    <div class="card-analytics">
+
+                        <div class="card-analytics-container">
+
+                            <div class="main-container-card">
+
+                                <div class="elements-container-dashboard">
+
+                                    <div class="final-container">
+
+                                        <p class="title-analytics"><?= $enJson['MetaCreator']['analytic-title']?></p>
+
+                                        <div class="container-p-analytics">
+
+                                            <p class="txt-analytics"><?= $enJson['MetaCreator']['analytic-current-subscribers']?></p>
+                                            <p>3</p>
+
+                                        </div>
+                                        <hr></hr>
+
+                                    </div>
+
+                                    <div class="summary-container">
+                                        <p class="title-summary"><?= $enJson['MetaCreator']['summary-title'] ?></p>
+                                        <p class=date-summary>Last 24 days</p>
+                                    </div>
+
+                                    <div class="whatch-time-container">
+                                        <p class="views"><?= $enJson['MetaCreator']['views'] ?></p>
+                                        <p class="watch-time"><?= $enJson['MetaCreator']['watch-time'] ?></p>
+                                    </div>
+
+                                    <hr></hr>
+                                    <div class="top-videos-container">
+                                        <p class="views"><?= $enJson['MetaCreator']['top-videos-title']?></p>
+                                        <p class="date-summary">Last 48 hours · Views</p>
+                                    </div>
+
+                                    <button class="btn-upload">GOT TO THE CHANNEL ANALYTICS</button>
+
+
+                                </div>
+
+                        
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
             </div>
 
         </div>

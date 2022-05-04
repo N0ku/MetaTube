@@ -227,6 +227,12 @@
         "Dashbord":"Dashboard",
         "Content":"Content",
         "dashboard-title":"Channel dashboard",
-        "dashboard-upload-video-p":"Want to see metrics on your recent video? Upload and publish a video to get started."
+        "dashboard-upload-video-p":"Want to see metrics on your recent video? Upload and publish a video to get started.",
+        "analytic-title":"Channel analytics",
+        "analytic-current-subscribers":"Current subscribers",
+        "summary-title":"Summary",
+        "views":"Views",
+        "watch-time":"Watch time (hours)",
+        "top-videos-title":"Top video"
     }
 }
