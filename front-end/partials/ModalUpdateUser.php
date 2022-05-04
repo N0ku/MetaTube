@@ -1,6 +1,6 @@
 <button class="btnprofile" onclick="document.getElementById('update--form').style.display='block';"><?=$enJson['profile']['button']['buttonUser']?></button>
 
-<div id="update--form" class="modal" <?php if (isset($_SESSION['process']) == "user") echo 'style = "display : block";' ?>>
+<div id="update--form" class="modal" <?php if ($_SESSION['process'] == 'user') echo 'style = "display : block";' ?>>
    <form class="modal-content" enctype="multipart/form-dataUser" id="formUpdateUser" method="post" action="/back-end/actions/UpdateInfoUser.php">
       <div class="close-form">
          <a onclick="document.getElementById('update--form').style.display='none' <?php unset($_SESSION['process']) ?>" class="close" title="Close Modal">&times;</a>
