@@ -1,4 +1,10 @@
-<?php ob_start(); ?>
+<?php ob_start();
+
+include_once './back-end/actions/ContentBack.php';
+
+$vids = getVids($_SESSION['channel'][0]->channelId);
+?>
+
 <div class="MetaStudio-content-global">
     <div class="MetaStudio-title">
         <h1 id="MetaStudio-title-h1">Content of the channel</h1>
@@ -13,7 +19,7 @@
         </div>
     </div>
     <div class="MetaStudio-filter-bar">
-    <h2>FilterBar</h2>
+        <h2>FilterBar</h2>
     </div>
     <div class="MetaStudio-user-video-config">
         <h4 class="MetaStudio-videolist">Video</h4>
@@ -51,4 +57,4 @@
 
 </div>
 
-<?php $pageMeta = ob_get_clean();?>
+<?php $pageMeta = ob_get_clean(); ?>
