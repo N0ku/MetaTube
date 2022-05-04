@@ -12,25 +12,7 @@ $homeBar = $_GET['name'];
 
 
 
-if (empty($_GET['name']) == false) {
-    if (in_array($_GET['name'], $existing_pages)) {
-        $pageName = $_GET['name'];
-    } else {
-        $pageName = "404";
-        header('Location: index.php?name=404');
-    }
-} else {
-    header('Location: index.php?name=Home');
-}
 
-include __DIR__ . '/front-end/views/pages/upload.php'; //$channelVideoUpload
-include __DIR__ . '/front-end/views/components/FilterBar.php'; // $filterbar
-include  __DIR__ . '/front-end/views/pages/' . $pageName . '.php'; // $page 
-include  __DIR__ . "/front-end/partials/Menu.php"; // $menu
-include __DIR__ . '/front-end/views/pages/Channel.php';
-include  __DIR__ . "/front-end/partials/NavBar.php"; // $navBar
-include __DIR__ . '/front-end/views/pages/upload.php'; //$channelVideoUpload
-include __DIR__ . '/front-end/views/pages/Channel.php';
 
 if ($homeBar == "MetaCreator") {
     $link = $_GET['link'];
@@ -51,9 +33,23 @@ if ($homeBar == "MetaCreator") {
 
 
 } else {
+    if (empty($_GET['name']) == false) {
+        if (in_array($_GET['name'], $existing_pages)) {
+            $pageName = $_GET['name'];
+        } else {
+            $pageName = "404";
+            header('Location: index.php?name=404');
+        }
+    } else {
+        header('Location: index.php?name=Home');
+    }
+
     include __DIR__ . '/front-end/views/components/FilterBar.php'; // $filterbar
     include  __DIR__ . '/front-end/views/pages/' . $pageName . '.php'; // $page 
     include  __DIR__ . "/front-end/partials/Menu.php"; // $menu
+    include __DIR__ . '/front-end/views/pages/Channel.php';
+    include  __DIR__ . "/front-end/partials/NavBar.php"; // $navBar
+    include __DIR__ . '/front-end/views/pages/upload.php'; //$channelVideoUpload
 }
 
 

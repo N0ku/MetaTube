@@ -6,7 +6,6 @@ $video_id = $_GET["id"];
 $vid = getVid($video_id)[0];
 
 $source = "http://93.16.2.231:8081/watch/" . $video_id;
-var_dump($source);
 ?>
 
 <div class="watch-content">
