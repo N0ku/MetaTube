@@ -1,5 +1,6 @@
 <?php  ob_start();
-include_once './back-end/actions/Search.php';
+
+include_once './../../../back-end/actions/Search.php';
 ?>
 
     <section id="searchPage">

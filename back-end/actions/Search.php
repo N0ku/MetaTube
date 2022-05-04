@@ -1,6 +1,6 @@
 <?php
 
-
+include_once '../back-end/helper/function.php';
 function getVids($number)
 {
     $vids = getApi('timeline/video/' . $number);
@@ -8,10 +8,16 @@ function getVids($number)
 }
 
 function postAPIString($string){
-    $arrayJSon = array(
-        'searchRequest' => $string
-    );
-    return postApi($arrayJSon, "search");
+    if( $string == ''){
+        $vids = getVids(10);
+    }else{
+        $arrayJSon = array(
+            'searchRequest' => $string
+        );
+        $vids = postApi($arrayJSon, "search");
+    }
+
+    return $vids;
 }
 
 
@@ -21,7 +27,9 @@ function getCreator($id)
     return $creator;
 }
 
+    $vids = postAPIString('e');
+    // $vids = Searchupdate( $vids);
 
-    $vids = getVids(10);
-    // var_dump($vids);
+    var_dump($vids);
+    die;
         ?>
