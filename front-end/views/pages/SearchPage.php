@@ -1,13 +1,12 @@
 <?php  ob_start();
 include_once './back-end/actions/Search.php';
-
 ?>
 
     <section id="searchPage">
         <button onclick="displayFilter()" type="button" class="filterButton"><?php echo ($enJson["global"]['filterButton']) ?></button>
         <div id="searchPageContent" class="row">
             <!-- Filter Menu with 3 columns: Upload date / Type / Order by -->
-            <form method="post" action="SearchPage.php" id="searchFilterForm">
+            <form method="post" action="back-end/actions/Search.php" id="searchFilterForm">
                 <div id="filterBox" class="row">
                     <div class="column filterBoxMenu">
                         <label class="filterBoxTitle"><?php echo ($enJson["global"]['filterBoxTitle1']) ?></label>
