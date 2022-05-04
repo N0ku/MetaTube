@@ -24,6 +24,4 @@ function getCreator($id)
 
     $vids = getVids(10);
     // var_dump($vids);
-
-        header('Location: /index.php?name=SearchPage');
         ?>
