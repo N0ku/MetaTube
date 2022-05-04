@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+
 :root {
     --primary-color: rgb(185, 15, 15);
     --secondary-color: rgb(158, 12, 12);
@@ -14,10 +16,10 @@
     --elements-hover: rgb(42, 42, 42);
     --elements-border: rgb(65, 64, 64);
 
-    --font: "Roboto", sans-serif;
-    --font-Xsmall: 0.6rem;
+    --font: 'Roboto', sans-serif;
+    --font-Xsmall: 0.7rem;
     --font-small: 0.9rem;
-    --font-medium: 1.15rem;
+    --font-medium: 1.2rem;
     --font-large: 1.8rem;
     --font-Xlarge: 2.3rem;
 
@@ -26,26 +28,27 @@
     --hamburger-button-active: rgb(72, 72, 72);
     --menu-border-color: rgb(115, 115, 115);
     --background-color-nav: rgba(32, 32, 32, 1);
-}
-body {
-    background-color: var(--dark-theme);
-}
-.content {
-    overflow: scroll;
-    margin-top: 5%;
-}
 
     --background-color-nav: #202020f3;
-    --header-height: 208px;
-    --navBar-height: 88px;
+    --header-height: 120px;
+    --navBar-height: 56px;
     --height-page: 98px;
 
     --video-elements: rgb(148, 148, 148);
 }
 
+
+.content {
+    overflow: scroll;
+}
+
+/* CSS common to all pages as well as the CSS of components that can be/are on all pages */
+/* /!\  Please never changed values without notice here except for variables /!\ */
+
 body {
     background-color: var(--dark-theme);
     height: 100%;
+    scrollbar-width: none;
 }
 
 .page-content {
@@ -67,10 +70,15 @@ body {
     height: 100%;
 }
 
-.menus {
-    margin-top: var(--navBar-height);
-}
+button {
+    all: unset;
+    cursor: pointer;
+  }
 
-.explorer-video-channel-name, .explorer-video-number-views, .explorer-video-date, .explorer-description, .video-number-views, .video-date, .video-channel-name  {
-color: var(--video-elements);
+
+
+/* Components */
+
+.explorer-video-channel-name, .explorer-video-number-views, .explorer-video-date, .explorer-description, .video-number-views, .video-date, .video-channel-name {
+    color: var(--video-elements);
 }
