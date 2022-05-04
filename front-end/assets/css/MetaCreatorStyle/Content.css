@@ -1,0 +1,36 @@
+.MetaStudio-content-global h1,h2,h3,h4,h5 {
+    margin: 0%;
+    padding: 0%;
+}
+
+.MetaStudio-content-global{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: normal;
+    align-content: normal;
+    color: white;
+}
+
+
+#MetaStudio-title-h1{
+    margin-top: 10%;
+    padding-left: 3vw;
+    background-color: red;
+}
+.MetaStudio-separator-rgb{
+  top:0%;
+  right: 0%;
+  left: 0;
+  bottom: 0%;
+  border: 0.3px solid ;
+  padding-bottom: 0.3%;
+  background: linear-gradient(-45deg, #ee7752,
+  #e73c7e, #23a6d5, #23d5ab, #d57f23, #d5c923);
+  background-size: 300% 300%;
+  animation: gradient 15s ease infinite;
+    width : 100%;
+    left: 0;
+   display: inline-block;
+}
