@@ -1,6 +1,8 @@
 <?php
 require_once __DIR__ . '/../db.php';
-require_once __DIR__ . '/../helper/function.php';
+if (!function_exists('giveId')) {
+    include_once __DIR__ . '/../helper/function.php';
+}
 session_start();
 
 $id = giveId();
