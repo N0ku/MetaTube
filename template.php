@@ -6,7 +6,6 @@
     <title><?= $enJson['global']['title'] ?></title>
     <link rel="shortcut icon" href="./front-end/assets/img/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./front-end/assets/css/Global.css">
-    <link rel="stylesheet" href="./front-end/assets/css/loadingBar.css">
     <link rel="stylesheet" href="./front-end/assets/css/NavBar.css">
     <link rel="stylesheet" href="./front-end/assets/css/Register.css">
     <link rel="stylesheet" href="./front-end/assets/css/Profile.css">

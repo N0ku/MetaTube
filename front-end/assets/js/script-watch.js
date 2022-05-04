@@ -19,6 +19,7 @@ const fullscreenButton = document.getElementById('fullscreen-button');
 const videoContainer = document.getElementById('video-container');
 const fullscreenIcons = fullscreenButton.querySelectorAll('use');
 const pipButton = document.getElementById('pip-button');
+const loopButton = document.getElementById('loop-button');
 const repliesButton = document.getElementsByClassName('replies-comment');
 const likeButton = document.getElementsByClassName('like-button');
 const dislikeButton = document.getElementsByClassName('dislike-button');
@@ -227,6 +228,11 @@ async function togglePip() {
     }
 }
 
+
+async function toggleLoop() {
+    video.loop = !video.loop;
+}
+
 // hideControls hides the video controls when not in use
 // if the video is paused, the controls must remain visible
 function hideControls() {
@@ -262,6 +268,9 @@ function keyboardShortcuts(event) {
             break;
         case 'm':
             toggleMute();
+            break;
+        case 'l':
+            toggleLoop();
             break;
         case 'f':
             toggleFullScreen();
@@ -305,6 +314,7 @@ volumeButton.addEventListener('click', toggleMute);
 fullscreenButton.addEventListener('click', toggleFullScreen);
 videoContainer.addEventListener('fullscreenchange', updateFullscreenButton);
 pipButton.addEventListener('click', togglePip);
+loopButton.addEventListener('click', toggleLoop);
 
 
 document.addEventListener('DOMContentLoaded', () => {
