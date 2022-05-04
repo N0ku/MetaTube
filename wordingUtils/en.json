@@ -225,6 +225,8 @@
 
     "MetaCreator":{
         "Dashbord":"Dashboard",
-        "Content":"Content"
+        "Content":"Content",
+        "dashboard-title":"Channel dashboard",
+        "dashboard-upload-video-p":"Want to see metrics on your recent video? Upload and publish a video to get started."
     }
 }
