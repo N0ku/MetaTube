@@ -8,7 +8,7 @@
 
             <div class="page-title-container">
 
-                <h1 class="title-channel-page">Channel dashboard</h1>
+                <h1 class="title-channel-page"><?= $enJson['MetaCreator']['dashboard-title']?></h1>
 
                 <div class="container-buttons">
 
@@ -39,7 +39,23 @@
                     
                     <div class="card-upload">
 
+                        <div class="card-video-upload">
 
+                            <div class="main-container-card">
+
+                                <div class="img-card-upload">
+                                    <img class="img-container" src="https://www.gstatic.com/youtube/img/creator/no_content_illustration_upload_video_v3_darkmode.svg" alt="img-video-upload">
+                                </div>
+                                <div class="p-container">
+                                    <p class="p-txt-video-upload"><?= $enJson['MetaCreator']['dashboard-upload-video-p']?></p>
+                                </div>
+                                <div class="button-container">
+                                    <button class="btn-upload">UPLOAD VIDEOS</button>
+                                </div>
+
+                            </div>
+
+                        </div>
 
                     </div>
                 
