@@ -21,6 +21,7 @@ app.use(express.urlencoded({
     limit: '50mb'
 }));
 
+CommentManager.eventListener(app);
 TimelineManager.eventListener(app);
 UserManager.eventListener(app);
 VideoManager.eventListener(app);
