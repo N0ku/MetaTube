@@ -61,6 +61,34 @@
     border:1px solid #23a6d5;
     padding: 3% 10%;
 }
+
+.MetaStudio-user-video-config{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: normal;
+        align-items: normal;
+        align-content: normal;
+
+}
+.MetaStudio-user-video-config h4{
+    opacity: 0.8;
+    width : 100%;
+    left: 0;
+    display: inline-block;
+
+
+}
+
+.MetaStudio-videolist{
+    text-align:left;
+    padding-left: 2%;
+    padding-right: 15%;
+}
+.MetaStudio-visibilitylist,.MetaStudio-restrictionlist,.MetaStudio-datelist,.MetaStudio-viewlist,.MetaStudio-numbercommentarylist,.MetaStudio-likelist{
+text-align: center;
+}
+
 .Metastudio-user-video-container{
     display: flex;
     flex-direction: row;
@@ -69,3 +97,4 @@
     align-items: normal;
     align-content: normal;
 }
+
