@@ -33,18 +33,10 @@ ob_start();
 
     <form class="form--register" action="/back-end/actions/LoginAction.php" id="form" method="POST">
         <div class="close-form">
-            <a href="/index.php?name=Home"><img src="./front-end/assets/img/Logo/x.svg" alt=""></a>
+            <a href="/index.php?name=Home">&times;</a>
 
         </div>
         <h2><?= $enJson['form']['login']['titleLogin'] ?></h2>
-        <?php if (isset($_SESSION['signup_error'])) { ?>
-            <div style="color:red;">
-                <?= $_SESSION['signup_error'] ?>
-            </div>
-        <?php
-            unset($_SESSION['signup_error']);
-        }
-        ?>
         <label for="username"><?= $enJson['form']['login']['titleLogin'] ?></label>
         <input class="input--register" type="text" placeholder="<?= $enJson['form']['login']['adress'] ?>" id="mailLogin" name="username" />
         <label for="password"><?= $enJson['form']['login']['password'] ?></label>
