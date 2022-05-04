@@ -25,7 +25,7 @@ include __DIR__ . '/front-end/views/pages/upload.php'; //$channelVideoUpload
 include __DIR__ . '/front-end/views/pages/Channel.php';
 
 if ($homeBar == "MetaCreator") {
-    include __DIR__ . '/front-end/views/pages/MetaCreator.php'; //$metacreator
+    include __DIR__ . '/front-end/views/pages/MetaCreator/MetaCreator.php'; //$metacreator
 } else {
     include __DIR__ . '/front-end/views/components/FilterBar.php'; // $filterbar
     include  __DIR__ . '/front-end/views/pages/' . $pageName . '.php'; // $page 
