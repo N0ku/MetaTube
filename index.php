@@ -21,6 +21,7 @@ if (empty($_GET['name']) == false) {
 } else {
     header('Location: index.php?name=Home');
 }
+
 include __DIR__ . '/front-end/views/pages/upload.php'; //$channelVideoUpload
 include __DIR__ . '/front-end/views/components/FilterBar.php'; // $filterbar
 include  __DIR__ . '/front-end/views/pages/' . $pageName . '.php'; // $page 

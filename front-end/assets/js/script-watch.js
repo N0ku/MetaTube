@@ -19,12 +19,19 @@ const fullscreenButton = document.getElementById('fullscreen-button');
 const videoContainer = document.getElementById('video-container');
 const fullscreenIcons = fullscreenButton.querySelectorAll('use');
 const pipButton = document.getElementById('pip-button');
+const repliesButton = document.getElementsByClassName('replies-comment');
+const likeButton = document.getElementsByClassName('like-button');
+const dislikeButton = document.getElementsByClassName('dislike-button');
+const dislikeImg = document.getElementsByClassName('dislike-svg');
+const likeImg = document.getElementsByClassName('like-svg');
 
-const videoWorks = !!document.createElement('video').canPlayType;
+const videoWorks = document.createElement('video').canPlayType;
 if (videoWorks) {
     video.controls = false;
     videoControls.classList.remove('hidden');
 }
+
+var isCliked;
 
 // Add functions here
 
@@ -265,6 +272,18 @@ function keyboardShortcuts(event) {
     }
 }
 
+function showReplies(index) {
+    console.log("hey")
+    if (repliesButton[index].style.display=="none") {
+        repliesButton[index].classList.add('replies-show');
+        repliesButton[index].classList.remove('replies-hidden');
+    }
+    else {
+        repliesButton[index].classList.remove('replies-show');
+        repliesButton[index].classList.add('replies-hidden');
+    }
+}
+
 // Add eventlisteners here
 playButton.addEventListener('click', togglePlay);
 video.addEventListener('play', updatePlayButton);
@@ -287,9 +306,15 @@ fullscreenButton.addEventListener('click', toggleFullScreen);
 videoContainer.addEventListener('fullscreenchange', updateFullscreenButton);
 pipButton.addEventListener('click', togglePip);
 
+
 document.addEventListener('DOMContentLoaded', () => {
     if (!('pictureInPictureEnabled' in document)) {
         pipButton.classList.add('hidden');
     }
 });
 document.addEventListener('keyup', keyboardShortcuts);
+
+
+likeButton[0].addEventListener('click', function () {
+    console.log(likeImg[0]);
+});

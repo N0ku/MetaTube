@@ -1,12 +1,16 @@
-const DatabaseManager = require('./databaseManager');
+const { log } = require('console');
+const   DatabaseManager = require('./databaseManager'),
+        fs = require('fs'),
+        config = require('./config.json');
 
 module.exports = class VideoManager
 {
     static eventListener(app)
     {
-        app.post('/upload/video', (req, res) => { this.upload(req, res) });
-        app.post('/search/:data', (req, res) => { this.search(req, res) });
-        app.get('/video/:id', (req, res) => { this.mainVideo(req, res) });
+        app.post('/upload/video', (req, res)  => { this.upload(req, res) });
+        app.post('/search/:data', (req, res)  => { this.search(req, res) });
+        app.get('/video/:id', (req, res)      => { this.mainVideo(req, res) });
+        app.get('/watch/:id', (req, res)          => { this.streaming(req, res) });
     }
 
     static async upload(req, res)
@@ -98,5 +102,34 @@ module.exports = class VideoManager
             res.status(500).json([]);
         }
         else res.status(200).json(result.data);
+    }
+
+    static async streaming(req, res)
+    {
+        console.log(config.storageLocation + req.params.id + '.mp4');
+        console.log(config.storageLocation + req.params.id + '.mp4');
+        const range = req.headers.range;
+        if(!range)
+        {
+            console.error("C'est la merde...");
+            res.status(500);
+            return;
+        }
+        const   videoId = req.params.id,
+                videoPath = config.storageLocation + videoId + '.mp4',
+                videoSize = fs.statSync(videoPath).size,
+                packet_size = 1024 * 10 ** 6, // 1 Mo
+                start = Number(range.replace(/\D/g, "")),
+                end = Math.min(start + packet_size, videoSize - 1),
+                contentLength = end - start + 1,
+                header = {
+                    'Content-Range': `bytes ${start}-${end}/${videoSize}`,
+                    'Accept-Ranges': 'bytes',
+                    'Content-Length': contentLength,
+                    'Content-Type': 'video/mp4',
+                };
+        res.writeHead(206, header);
+        const videoStream = fs.createReadStream(videoPath, { start, end });
+        videoStream.pipe(res);
     }
 }

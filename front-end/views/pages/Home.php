@@ -8,8 +8,9 @@ $vids = getVids(10);
     <?php
     for ($i = 0; $i < count($vids); $i++) {
         $creator = getCreator($vids[$i]->creator);
+
     ?>
-        <a href="index.php?name=Watch">
+        <a href="index.php?name=Watch&id=<?= $vids[$i]->id ?>">
             <div class="home-video-content">
                 <img src="data:image/png;base64,<?= $vids[$i]->thumbnail ?>" alt="thumbnail" class="thumbnail" />
                 <div class="below-content">

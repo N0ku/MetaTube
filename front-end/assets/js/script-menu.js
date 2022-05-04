@@ -6,9 +6,6 @@ const nameUrl = location.search.split('name=')[1];
 const navElements = document.getElementsByClassName('nav-item-text');
 const navElementsCase = document.getElementsByClassName('nav-item');
 
-console.log(nameUrl);
-console.log(navElementsCase)
-
 switch (nameUrl) {
     case "Home":
         navElementsCase[0].classList.add('nav-item-active')
