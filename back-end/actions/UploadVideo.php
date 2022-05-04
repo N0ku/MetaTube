@@ -1,6 +1,7 @@
 <?php
-include './back-end/helper/Function.php';
-
+if (!function_exists('giveId')) {
+	include_once __DIR__ . '/../helper/function.php';
+}
 
 function upload()
 {

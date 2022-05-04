@@ -48,6 +48,7 @@
 body {
     background-color: var(--dark-theme);
     height: 100%;
+    scrollbar-width: none;
 }
 
 .page-content {

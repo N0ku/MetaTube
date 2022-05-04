@@ -3,15 +3,15 @@
    ========================================================================== */
 @keyframes ButtonBorder {
     0% {
-        border-width: 0%;
+        border-color: rgb(0, 255, 51);
     }
 
     50% {
-        border-width: 50%;
+        border-color: rgb(60, 0, 255);
     }
 
     100% {
-        border-width: 100%;
+        border-color: red;
     }
 }
 
@@ -34,7 +34,9 @@
     margin-top: 88px;
 }
 
-.container-watch *, .container-watch *::before, .container-watch *::after {
+.container-watch *,
+.container-watch *::before,
+.container-watch *::after {
     margin: 0;
     padding: 0;
 }
@@ -103,13 +105,15 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-    background: var(--youtube-red);
+    background: #23a6d5;
+
     border-radius: 2px;
 }
 
 progress::-moz-progress-bar {
     border: 1px solid var(--youtube-red);
-    background: var(--youtube-red);
+    background: #23a6d5;
+
 }
 
 .seek {
@@ -161,7 +165,8 @@ progress::-moz-progress-bar {
     transition: all 0.4s ease;
 }
 
-.volume-controls:hover input, .volume-controls input:focus {
+.volume-controls:hover input,
+.volume-controls input:focus {
     width: 100px;
     opacity: 1;
 }
@@ -249,7 +254,9 @@ input[type=range]::-webkit-slider-thumb {
     height: 16px;
     width: 16px;
     border-radius: 16px;
-    background: var(--youtube-red);
+    background: linear-gradient(-45deg, #ee7752,
+            #e73c7e, #23a6d5, #23d5ab, #d57f23, #d5c923);
+    animation: gradient 15s ease infinite;
     cursor: pointer;
     -webkit-appearance: none;
     margin-left: -1px;
@@ -289,7 +296,9 @@ input[type=range]::-moz-range-thumb {
     width: 14px;
     border-radius: 50px;
     border: 1px solid var(--youtube-red);
-    background: var(--youtube-red);
+    background: linear-gradient(-45deg, #ee7752,
+            #e73c7e, #23a6d5, #23d5ab, #d57f23, #d5c923);
+    animation: gradient 15s ease infinite;
     cursor: pointer;
     margin-top: 5px;
 }
@@ -299,7 +308,7 @@ input[type=range]:focus::-moz-range-track {
 }
 
 input[type=range].volume::-moz-range-thumb {
-    border: 1px solid #fff;
+    border: 0.5px solid #fff;
     background: #fff;
 }
 
@@ -329,8 +338,10 @@ input[type=range].volume::-moz-range-thumb {
 }
 
 .suggestions-video {
-    margin-top: 88px;
-    width: 30%;
+    width: 50%;
+    border-left: 0.5px solid var(--menu-border-color);
+    padding-left: 10px;
+    margin-left: 10px;
 }
 
 .thumbnail-watch {
@@ -347,7 +358,6 @@ input[type=range].volume::-moz-range-thumb {
     background-color: rgb(12, 12, 12);
     display: flex;
     flex-direction: row;
-    width: 100%;
 }
 
 .watch-video-content * {
@@ -355,18 +365,11 @@ input[type=range].volume::-moz-range-thumb {
     padding: 0;
 }
 
-.watch-watch-vid-title {
-    font-size: 15px;
-}
+
 
 .watch-video-channel-name {
     font-size: 12px;
 }
-
-.watch-video-date {
-    padding-left: 13px;
-}
-
 
 .watch-content-infos {
     display: flex;
@@ -375,23 +378,17 @@ input[type=range].volume::-moz-range-thumb {
 }
 
 
-.watch-video-infos {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
-
 .watch-video-infos * {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
     font-size: 10px;
 }
 
+.bell-below {
+    margin: 0 15px;
+}
 
+.video-icon p {
+    margin-left: 10px;
+}
 
 .watch-next-content {
     padding: 0 5px;
@@ -407,6 +404,7 @@ input[type=range].volume::-moz-range-thumb {
     font-size: var(--font-large);
     font-weight: 500;
     margin-top: 10px;
+    color: var(--dark-text);
 }
 
 .video-icon {
@@ -415,6 +413,8 @@ input[type=range].volume::-moz-range-thumb {
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
+    font-family: var(--font);
+    font-weight: 500;
 }
 
 .video-icons {
@@ -453,6 +453,11 @@ input[type=range].volume::-moz-range-thumb {
 
 .video-watch-subscribers {
     color: rgb(153, 150, 150);
+    white-space: nowrap;
+}
+
+.replies-comment {
+    white-space: nowrap;
 }
 
 .channel-watch {
@@ -460,13 +465,6 @@ input[type=range].volume::-moz-range-thumb {
     flex-direction: row;
     padding: 5px;
     align-items: center;
-}
-
-.watch-video-infos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .watch-chan-infos {
@@ -486,7 +484,6 @@ input[type=range].volume::-moz-range-thumb {
 
 .sub-button-watch {
     margin-left: auto;
-    width: 150px;
     background: linear-gradient(-45deg, #ee7752,
             #e73c7e, #23a6d5, #23d5ab, #d57f23, #d5c923);
     background-size: 400% 400%;
@@ -495,6 +492,8 @@ input[type=range].volume::-moz-range-thumb {
     border: none;
     height: 100%;
     outline: 0;
+    padding: 0 10px;
+    border-radius: 2px;
 }
 
 .comments-video {
@@ -548,6 +547,10 @@ input[type=range].volume::-moz-range-thumb {
     margin-left: 10px;
 }
 
+.add-comment-text:focus {
+    border-bottom-color: var(--dark-text);
+}
+
 .add-comment-text::placeholder {
     color: #737070;
     font-family: var(--font);
@@ -571,7 +574,6 @@ input[type=range].volume::-moz-range-thumb {
     padding: 10px;
     font-family: var(--font);
     background-color: rgb(12, 12, 12);
-    width: 130px;
     border: none;
     border-radius: 2px;
     margin: 0 10px;
@@ -617,21 +619,27 @@ input[type=range].volume::-moz-range-thumb {
 .name-comment-user {
     font-weight: bold;
     font-family: var(--font);
+    margin-left: 10px;
+    white-space: nowrap;
+
 }
 
 .date-comments {
     font-family: var(--font);
     font-size: 15 px;
     color: rgb(153, 150, 150);
+    white-space: nowrap;
+    margin-left: 10px;
 }
 
-.sub-button-watch:active, .comment-button:active {
+.sub-button-watch:active,
+.comment-button:active {
     border: 2px white solid;
     animation: ButtonBorder 5s ease-in-out;
 }
 
 .comments-reply {
-    width: 15%;
+    width: 100%;
     background-color: transparent;
     display: flex;
     justify-content: space-between;
@@ -656,20 +664,45 @@ input[type=range].volume::-moz-range-thumb {
     align-items: center;
 }
 
-.comment-like, .comment-dislike {
+.comment-like,
+.comment-dislike {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .comment-dislike {
     padding: 0 15px;
 }
 
-.comment-like img, .comment-dislike img {
+.comment-like img,
+.comment-dislike img {
     width: 20px;
     height: 20px;
+    margin: 0px 5px;
+}
+
+.comments-section {
+    width: 50%;
+}
+
+.comments-suggestions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.replies-hidden {
+    display: none;
+}
+
+.replies-show {
+    display: block;
 }
 
 @media screen and (max-width: 1200px) {
