@@ -6,7 +6,7 @@ $page = "Subscriptions"; ?>
     <?php ob_start();
 
     include './back-end/actions/Timeline.php';
-    $vids = getVids(10);
+    $vids = getVids(12);
     ?>
 
     <div class="home-videos-grid">

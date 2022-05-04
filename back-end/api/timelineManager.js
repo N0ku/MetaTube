@@ -12,7 +12,7 @@ module.exports = class timelineManager
         console.log('GET - /timeline/video/');
         const number = req.params.number;
         console.log(`Returning ${number} videos ...`);
-        let query = `SELECT * FROM video ORDER BY RAND () LIMIT ${number};`;
+        let query = `SELECT channel.channelProfilePicture, channel.channelName, channel.channelId, video.* FROM video, channel WHERE channel.channelId = video.creator ORDER BY RAND () LIMIT ${number};`;
 
         let result = await DatabaseManager.executeQuery(query);
         if( result.error )

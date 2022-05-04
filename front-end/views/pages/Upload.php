@@ -8,28 +8,34 @@ if (isset($_POST['but_upload'])) {
 ?>
 
 <?php ob_start() ?>
-
-<div>
-
-   <body>
-      <!-- Put all components here -->
       <div class="feature-channel-modal-background"></div>
       <div class="modal-container-channel">
          <div class="feature-channel-modal-overlay-uploadVideo"></div>
          <div class="modal-channel">
-            <button class="feature-channel-modal-close" onclick="feature_remove_upload_function()">X</button>
+            <button class="feature-channel-modal-close" onclick="feature_remove_upload_function()">&times;</button>
             <h1 id="feature-channel-modal-container-title">Upload</h1>
             <form method="post" action="" enctype='multipart/form-data'>
-               <label for="video">Choose a video</label>
-               <input type='file' name='video' />
-               <label for="title">Enter the title</label>
-               <input type="text" name="title">
-               <label for="title">Enter the description</label>
-               <input type="text" name="description">
-               <label for="video">Choose a thumbnail</label>
-               <input type='file' name='thumbnail' />
-               <input type='submit' value='Upload' name='but_upload'>
-            </form>
+            <div class="wrapper-modal-channel">
+               <div>
+                  <label class="label-file"for="video">Choose a video</label>
+                  <input type='file' name='video' />
+               </div>
+               <div>
+                  <label class="label-file" for="title">Enter the title</label>
+                  <input class="input--register" type="text" name="title">
+               </div>
+               <div>
+                  <label class="label-file" for="title">Enter the description</label>
+                  <input class="input--register" type="text" name="description">
+               </div>
+               <div class="">
+                  <label class="label-file" for="video" >Choose a thumbnail</label>
+                  <input  type='file'  name='thumbnail' /> 
+               </div>
+                  <input class="btn--register" type='submit' value='Upload' name='but_upload'>
+            </div>
+            
+         </form>
             <div>
 
                <!-- Upload response -->
@@ -44,8 +50,5 @@ if (isset($_POST['but_upload'])) {
          </div>
 
       </div>
-
-
-</div>
-
+      
 <?php $channelVideoUpload = ob_get_clean() ?>
