@@ -64,9 +64,21 @@
 }
 
 .upload-logo{
-    width: 24px;
+    width: 16px;
 }
 
 .golive-logo{
-    width: 12px;
+    width: 16px;
+}
+
+.golive-btn{
+    background-color: #282828;
+    border:1px solid #717171;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.channel{
+    padding: 24px 24px 0 0;
+    min-height: calc(100% - (168px + 24px));
 }

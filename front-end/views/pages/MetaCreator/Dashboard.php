@@ -15,13 +15,13 @@
 
                     <a class="btn1">
                         <button class="upload-btn">
-                            <img src="../../../front-end/assets/img/MetaCreator/logo-upload.svg" alt="upload-btn" class="upload-logo">
+                            <img src="../../../front-end/assets/img/MetaCreatorImg/logo-upload.svg" alt="upload-btn" class="upload-logo">
                         </button>
                     </a>
 
                     <a class="btn1">
                         <button class="golive-btn">
-                            <img src="../../../front-end/assets/img/MetaCreator/logo-go-live.svg" alt="upload-btn" class="upload-logo">
+                            <img src="../../../front-end/assets/img/MetaCreatorImg/logo-go-live.svg" alt="upload-btn" class="upload-logo">
                         </button>
                     </a>
                     
@@ -32,9 +32,13 @@
 
         </div>
 
-        
-
         <div class="channel">
+
+            <div class="dashboard-cards">
+
+                
+
+            </div>
 
         </div>
 
