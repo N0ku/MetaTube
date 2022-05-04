@@ -433,3 +433,8 @@
     left: 0;
    display: inline-block;
 }
+.tabcontent{
+  margin: 5%;
+  min-height: 600px;
+
+}
