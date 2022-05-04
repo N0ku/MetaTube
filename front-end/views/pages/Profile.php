@@ -11,7 +11,6 @@
       <h2 id="titleProfile"><?= $enJson['profile']['page']['title'] ?></h2>
       <small><?= $enJson['profile']['page']['smallTitle'] ?> <?= $_SESSION['user']['email'] ?></small>
    </div>
-   <hr class="division--part">
    <!-- ACCORDION -->
    <div class="accordion">
       <input type="radio" name="select" class="accordion-select" checked />
