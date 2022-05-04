@@ -34,3 +34,25 @@
     left: 0;
    display: inline-block;
 }
+
+.MetaStudio-selected-category{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+}
+
+.MetaStudio-selected-video,.MetaStudio-selected-commentary{
+    margin-top: 2vh;
+}
+
+
+.MetaStudio-selected-video{
+    padding-left: 3vw;
+}
+
+.MetaStudio-selected-commentary{
+    padding-left: 10%;
+}
