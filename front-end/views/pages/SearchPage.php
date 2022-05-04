@@ -1,5 +1,5 @@
 <?php ob_start();
-    include './back-end/actions/Timeline.php';
+    //include './back-end/actions/Timeline.php';
     $vids = getVids(10);
     $en_json = file_get_contents('./wordingUtils/en.json');
     $decoded_en_json = json_decode($en_json, true);
@@ -40,10 +40,10 @@
                                     } ?></option>
                             <option value="<?php echo ($decoded_en_json["global"]['filterBoxMenuButton5']) ?>">
                                 <?php echo ($decoded_en_json["global"]['filterBoxMenuButton5']) ?></option>
-                            <option value="<?php echo ($decoded_en_json["global"]['filterBoxMenuButton6']) ?>">
-                                <?php echo ($decoded_en_json["global"]['filterBoxMenuButton6']) ?></option>
-                            <option value="<?php echo ($decoded_en_json["global"]['filterBoxMenuButton7']) ?>">
-                                <?php echo ($decoded_en_json["global"]['filterBoxMenuButton7']) ?></option>
+                            <!--<option value="<?//php echo ($decoded_en_json["global"]['filterBoxMenuButton6']) ?>">
+                                <?php //echo ($decoded_en_json["global"]['filterBoxMenuButton6']) ?></option>
+                            <option value="<?php //echo ($decoded_en_json["global"]['filterBoxMenuButton7']) ?>">
+                                <?php //echo ($decoded_en_json["global"]['filterBoxMenuButton7']) ?></option>-->
                         </select>
                     </div>
                     <div class="column filterBoxMenu">

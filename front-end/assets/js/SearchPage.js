@@ -18,7 +18,7 @@ function displayFilter() {
     }
 }
 
-function Searchupdate( thejson ){
+function Searchupdate( $thejson ){
     $filterDATE = document.getElementById("filter_upload_date"); // Last hour, This week, This month, This year
     $filterTYPE = document.getElementById("filter_type"); // Channel, Playlist, Video
     $filterORDER = document.getElementById("filter_order_by"); // View count, Relevance, Upload date, Rating
@@ -51,7 +51,7 @@ function Searchupdate( thejson ){
     switch($filterTYPE.value) {
         case "Video":
             for (var i = 0; i < ObjectInJson.length; i++) {
-                if (ObjectInJson[i].type == "video"){
+                if (ObjectInJson[i]){
                     buffertable.push(ObjectInJson[i])
                 }
             }
@@ -73,15 +73,6 @@ function Searchupdate( thejson ){
                                         Enddata[i] = Enddata[j];
                                         Enddata[j] = saveView;
                                     }
-                                }
-                                Enddata.push(Enddata[i]);
-                                Enddata.splice(i);
-                            }
-                            buffertable = "0";
-                            for( var i = 0; i < Enddata.length; i++){
-                                if( "0" >= Enddata[buff_last_position]){
-                                    buff_last_position += 1;
-                                    buffertable.splice(buff_last_position, 1, Enddata[i])
                                 }
                             }
                             break;
@@ -105,6 +96,28 @@ function Searchupdate( thejson ){
                         }
                     }
                     buffertable = [];
+                    switch($filterORDER.value) {
+                        case "View count":
+                            for (var i = 0; i < Enddata.length; i++){
+                                for( var j = 0; j< Enddata.length; j++){    
+                                    if(Enddata[i].viewscount < Enddata[j].viewcount){
+                                        saveView = Enddata[i];
+                                        Enddata[i] = Enddata[j];
+                                        Enddata[j] = saveView;
+                                    }
+                                }
+                            }
+                            break;
+                        case "Rating":
+                            
+                            break;
+                        case "Upload date":
+
+                            break;
+                        case "Relevance":
+
+                            break;
+                    }
                     break;
 
                 case "This month":
@@ -115,6 +128,28 @@ function Searchupdate( thejson ){
                         }
                     }
                     buffertable = [];
+                    switch($filterORDER.value) {
+                        case "View count":
+                            for (var i = 0; i < Enddata.length; i++){
+                                for( var j = 0; j< Enddata.length; j++){    
+                                    if(Enddata[i].viewscount < Enddata[j].viewcount){
+                                        saveView = Enddata[i];
+                                        Enddata[i] = Enddata[j];
+                                        Enddata[j] = saveView;
+                                    }
+                                }
+                            }
+                            break;
+                        case "Rating":
+                            
+                            break;
+                        case "Upload date":
+
+                            break;
+                        case "Relevance":
+
+                            break;
+                    }
                     break;
 
                 case "This year":
@@ -125,13 +160,36 @@ function Searchupdate( thejson ){
                         }
                     }
                     buffertable = [];
+                    switch($filterORDER.value) {
+                        case "View count":
+                            for (var i = 0; i < Enddata.length; i++){
+                                for( var j = 0; j< Enddata.length; j++){    
+                                    if(Enddata[i].viewscount < Enddata[j].viewcount){
+                                        saveView = Enddata[i];
+                                        Enddata[i] = Enddata[j];
+                                        Enddata[j] = saveView;
+                                    }
+                                }
+                            }
+                            break;
+                        case "Rating":
+                            
+                            break;
+                        case "Upload date":
+
+                            break;
+                        case "Relevance":
+
+                            break;
+                    }
                     break;
+            }
             break;
 
         case "Channel":
             for (var i = 0; i < ObjectInJson.length; i++) {
                 if (ObjectInJson[i].type == "Channel"){
-                    buffertable.push(ObjectInJson[i])
+                    Enddata.push(ObjectInJson[i])
                 }
             }
             break;
@@ -139,27 +197,27 @@ function Searchupdate( thejson ){
         case "Playlist":
             for (var i = 0; i < ObjectInJson.length; i++) {
                 if (ObjectInJson[i].type == "Playlist"){
-                    buffertable.push(ObjectInJson[i])
+                    Enddata.push(ObjectInJson[i])
                 }
             }
             break;
         default:
             for (var i = 0; i < ObjectInJson.length; i++) {
                 if (ObjectInJson[i].type == "video"){
-                    buffertable.push(ObjectInJson[i])
+                    Enddata.push(ObjectInJson[i])
                 }
             }
             for (var i = 0; i < ObjectInJson.length; i++) {
                 if (ObjectInJson[i].type == "Channel"){
-                    buffertable.push(ObjectInJson[i])
+                    Enddata.push(ObjectInJson[i])
                 }
             }
             for (var i = 0; i < ObjectInJson.length; i++) {
                 if (ObjectInJson[i].type == "Playlist"){
-                    buffertable.push(ObjectInJson[i])
+                    Enddata.push(ObjectInJson[i])
                 }
             }
     }
-
+    return Enddata;
 }
-} 
+
