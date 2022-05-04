@@ -1,15 +1,26 @@
-<?php ob_start();
-    //include './back-end/actions/Timeline.php';
+<?php 
+    include_once '../../../back-end/helper/function.php';
+    
+function getVids($number)
+{
+    $vids = getApi('timeline/video/' . $number);
+    return $vids;
+}
+
+function getCreator($id)
+{
+    $creator = getApi('channel/' . $id);
+    return $creator;
+}
+
+
     $vids = getVids(10);
-    $en_json = file_get_contents('./wordingUtils/en.json');
+    $en_json = file_get_contents('../../../wordingUtils/en.json');
     $decoded_en_json = json_decode($en_json, true);
-    $sendJson = json_encode($vids);
-    var_dump($vids[0]);
+    var_dump($vids);
+    ob_start();
 ?>
 
-<script>
-    var JsonVideos = JSON.parse('<?= $sendJson ?>');
-</script>
     <section id="searchPage">
         <button onclick="displayFilter()" type="button" class="filterButton"><?php echo ($decoded_en_json["global"]['filterButton']) ?></button>
         <div id="searchPageContent" class="row">
@@ -67,11 +78,6 @@
                     </div>
                 </div>
             </form>
-
-            <?php
-
-            ?>
-
             <!-- We duplicate video cards with a template video card-->
             <?php
     for ($i = 0; $i < count($vids); $i++) {
@@ -97,4 +103,7 @@
         </div>
     </section>
 
-    <?php $pageName = ob_get_clean() ?>
+    <?php $pageName = ob_get_clean();
+
+
+?>

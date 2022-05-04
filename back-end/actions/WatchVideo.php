@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../helper/function.php';
+include_once __DIR__ . '/../helper/function.php';
 $path_key = "C:/Users/Ruiseki/sprint/MetaTube/storage/";
 
 function getVid($id){
