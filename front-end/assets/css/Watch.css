@@ -639,7 +639,7 @@ input[type=range].volume::-moz-range-thumb {
 }
 
 .comments-reply {
-    width: 15%;
+    width: 100%;
     background-color: transparent;
     display: flex;
     justify-content: space-between;
