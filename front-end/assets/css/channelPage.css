@@ -13,21 +13,83 @@
    align-content: normal;
  }
 
-
-
- 
- .feature-channel-flex-items:nth-child(1) {
-   display: block;
-   height: 20%;
-   background-color: var( --dark-theme);
+ .feature-channel-custom-file {
+   opacity: 0;
+    display: flex;
+    margin-top: 2%;
+    margin-right: 2%;
+    flex-direction: row;
+    align-items: flex-end;
+    text-align: center;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    padding: 1px;
+    bottom: 0%;
+    background-color: rgba(97, 89, 89, 0.121);
+    align-content: space-around;
+    justify-content: center;
+    overflow: hidden;
   
+    
+}
+ .feature-channel-input-banner{
+    display: none;
  }
+
+
+ .feature-channel-label-img{
+   width: 100%;
+   height:100%;
+  padding: 10% 10%;
+   
+   overflow: hidden;
+
+ }
+ .feature-channel-flex-items:nth-child(1):hover .feature-channel-label-img {
+  
+  animation-duration: 10s; /* same as transition duration */
+  animation-timing-function: linear; /* kind of same as transition timing */
+  animation-iteration-count: infinite; /* set to 2 to make it run twice, or Infinite to run forever!*/
+  animation-direction: normal; /* can be set to "alternate" to run animation, then run it backwards.*/
+  animation-fill-mode:initial; /* can be used to retain keyframe styling after animation, with "forwards" */
+  animation-play-state: running; 
+  animation-name: onHoverAnimation;
+ }
+
+ .feature-channel-flex-items:nth-child(1):hover .feature-channel-custom-file {
+    animation-duration: 1s;
+   animation-fill-mode: forwards;
+    animation-name: opacitySwitch ; 
+ }
+ .feature-channel-flex-items:nth-child(1) {
+  display: flex;
+ padding-bottom: 20%;
+ margin-top: 0%;
+ padding-top: 5%;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
+  background-size:cover;
+  flex-direction: row-reverse;
+ 
+}
+ 
+
  
  .feature-channel-flex-items:nth-child(2) {
    display: block;
-   height:100%;
+   height: 25%;
    background:rgba(255, 255, 255, 0.13);
-
+   
+  
+ }
+ 
+ .feature-channel-flex-items:nth-child(3) {
+   display: flex;
+   height:50%;
+   background:var(--dark-theme);
+   flex-direction: row;
    flex-grow: 0;
    flex-shrink: 1;
    flex-basis: auto;
@@ -47,7 +109,94 @@
    justify-content: space-around;
    align-items: flex-end;
    align-content: stretch;
+   animation-duration: 10s; /* same as transition duration */
+   animation-timing-function: linear; /* kind of same as transition timing */
+   animation-iteration-count: infinite; /* set to 2 to make it run twice, or Infinite to run forever!*/
+   animation-direction: normal; /* can be set to "alternate" to run animation, then run it backwards.*/
+   animation-fill-mode:initial; /* can be used to retain keyframe styling after animation, with "forwards" */
+   animation-play-state: running; /* can be set dynamically to pause mid animation*/
  }
+
+ @keyframes onHoverAnimation {
+  0% {
+    
+    background:initial;
+  }
+  10% {
+    background:#ff0000;
+  }20% {
+    background: #ff7300;
+  }30% {
+    background:#fffb00;
+  }40% {
+    background:#48ff00;
+  }50% {
+    background:#00ffd5;
+    
+  }60% {
+    background:#002bff;
+  }
+  70% {
+    background:#7a00ff;
+  }
+  80% {
+    background:#ff00c8;
+  }
+  90% {
+    background:#ff0000;
+  }
+  100% {
+    background:initial;
+  }
+}
+@keyframes color-change {
+  0% { color: initial; }
+  100% { color: var(--dark-theme); }
+}
+
+.feature-channel-navigation-optionChannelPage{
+  display: flex;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+ 
+
+  justify-content: center;
+  align-items: stretch;
+  font-size: var(--font-small);
+  flex-wrap: nowrap;
+  flex-direction: row;
+  text-align: center;
+  
+}
+.feature-channel-navigation-optionChannelPage button{
+  background-color: var(--dark-theme);
+  color: var(--dark-text);
+  white-space:nowrap;
+  width: 100%;
+  margin: 0% 10%;
+  
+  border-radius: 5%;
+  padding: 0% 10%;
+
+}
+
+
+ .feature-channel-navigation-container:hover{
+  /* content: '';
+  background-size: 500%;
+  z-index: -1;
+  -webkit-transition: opacity 3s ease-in-out;
+  -moz-transition: opacity 3s ease-in-out;
+  transition: opacity 3s ease-in-out;
+  animation-name  : onHoverAnimation ; */
+ }
+
+ .feature-channel-navigation-container:hover h3, .feature-channel-navigation-container:hover h2{
+  
+ }
+
 
  .feature-channel-elements:nth-child(1) {
    display: block;
@@ -95,13 +244,13 @@
  }
  
  .feature-channel-navigation-container-zone1{
-   margin-top: 10vh;
+   padding: 5vh 0vh;
    width: 100%;
-   height: 50%;
+   height: 70%;
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
-   justify-content: space-around;
+   justify-content: space-between;
    align-content: stretch;
  }
 
@@ -116,39 +265,109 @@
    
  }
 
+ .feature-channel-navigation-container-profil{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: normal;
+ }
+ .feature-channel-navigation-container-profilPicture {
+  margin: 0% 20%;
+}
+
+
  .feature-channel-navigation-container-profilPicture img{
-     width: 50px;
-     height: 50px;
-     background-color: blueviolet;
+     width: 100px;
+     height: 100px;
+     margin-bottom: 20%;
+     background-color: lightgray;
+     opacity: 1;
    border-radius: 200px 200px 200px 200px;
    -webkit-border-radius: 200px 200px 200px 200px;
    -moz-border-radius: 200px 200px 200px 200px;
  }
 
- 
+ .feature-channel-navigation-container-profilPicture:hover{
+  
+  -ms-transform: scale(1.3); /* IE 9 */
+  -webkit-transform: scale(1.3); /* Safari 3-8 */
+  transform: scale(1.3);
+  transition: 2s;
+  border-radius: 10px;
+ }
 
-.feature-channel-btn-Home, .feature-channel-btn-Videos ,.feature-channel-btn-Playlists ,.feature-channel-btn-Channels ,.feature-channel-btn-Locker,.feature-channel-btn-AboutUs{
- color: var(--bright-theme);
- border:none;
-   background: none; 
-   width: 8vw;
-   height: 5vh; 
-   margin: 10% 0%;
+ .feature-channel-navigation-container-profilPicture:hover img{
+  content: '';
+  transition: 1.5s;
+  background: black;
+  opacity: 0.4;
+ }
+
+ .feature-channel-navigation-userInformation{
+   padding: 20% 0%;
+ }
+ 
+ @keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+@keyframes  opacitySwitch {
+  0% {
+   opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+  }
 
 }
 
-.feature-channel-btn-Home:hover, .feature-channel-btn-Videos:hover ,.feature-channel-btn-Playlists:hover ,.feature-channel-btn-Channels:hover ,.feature-channel-btn-Locker:hover,.feature-channel-btn-AboutUs:hover{
-  color: var(--primary-color);
-  border: 5px solid white;
-  border-radius: 5%;
--moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
-    background: #f5f5f5; 
+
+.feature-channel-btn-Home:after, .feature-channel-btn-Videos:after ,.feature-channel-btn-Playlists:after ,.feature-channel-btn-Channels:after ,.feature-channel-btn-Locker,.feature-channel-btn-AboutUs:after {
+    content: '';
+  position: relative;
+  left: 0;
+  display: inline-block;
+  height: 0.4em;
+  width: 100%;
+  border-bottom: 3px solid var(--dark-text);
+  opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
+}
+
+
+
+
+.feature-channel-btn-Home, .feature-channel-btn-Videos ,.feature-channel-btn-Playlists ,.feature-channel-btn-Channels ,.feature-channel-btn-Locker,.feature-channel-btn-AboutUs{
+ color: var(--bright-theme);
+ font-size:0.8rem ;
+ border:none;
+  background: none; 
+  width: 8vw;
+  height: 5vh; 
+  margin: 10% 0% ;
+  
+  align-items: center;
+  text-align: center;
+}
+
+.feature-channel-btn-Home:hover:after, .feature-channel-btn-Videos:hover:after ,.feature-channel-btn-Playlists:hover:after ,.feature-channel-btn-Channels:hover:after ,.feature-channel-btn-Locker:hover:after,.feature-channel-btn-AboutUs:hover:after{
+  opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
  }
  
-
+ .feature-channel-flex-container-item h3{
+   color: var(--bright-theme);
+ }
 
 
  .feature-channel-video-intro{
@@ -191,3 +410,31 @@
 
  }
 
+.previewProfile {
+  border-radius: 50%;
+  padding: 10% 0%;
+  height: 5%;
+  width: 10%;
+  border: none;
+  object-fit: contain;
+}
+.feature-channel-separator{
+  top:0%;
+  right: 0%;
+  left: 0;
+  bottom: 0%;
+  border: 0.3px solid ;
+  padding-bottom: 0.3%;
+  background: linear-gradient(-45deg, #ee7752,
+  #e73c7e, #23a6d5, #23d5ab, #d57f23, #d5c923);
+  background-size: 300% 300%;
+  animation: gradient 15s ease infinite;
+    width : 100%;
+    left: 0;
+   display: inline-block;
+}
+.tabcontent{
+  margin: 5%;
+  min-height: 600px;
+
+}
