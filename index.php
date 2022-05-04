@@ -27,8 +27,8 @@ if ($homeBar == "MetaCreator") {
         header('Location: index.php?name=MetaCreator&link=Dashboard');
     }
     // Include here MetaCreator Menu
-    include __DIR__ . "/front-end/partials/MetaCreatorNavbar.php"; // $menu
-    include __DIR__ . "/front-end/partials/MetaCreatorMenu.php"; // $menu
+    include __DIR__ . "/front-end/partials/MetaCreatorNavbar.php"; // $CreatorNavbar
+    include __DIR__ . "/front-end/partials/MetaCreatorMenu.php"; // $CreatorMen
     include  __DIR__ . '/front-end/views/pages/MetaCreator/' . $pageMeta . '.php'; // $page
 
 

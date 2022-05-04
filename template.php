@@ -43,10 +43,19 @@
 </head>
 
 <body>
-    <?= $channelVideoUpload ?>
+    <?php
+    if (isset($channelVideoUpload)) {
+        echo ($channelVideoUpload);
+    }
+    ?>
 
-    <?php if ($pageName != "404") {
-        echo $channelCreation;
+    <?php
+    if (isset($pageName)) {
+        if ($pageName != "404") {
+            echo $channelCreation;
+            echo $navBar;
+        }
+    } else {
         echo $navBar;
     } ?>
 

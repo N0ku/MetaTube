@@ -1,4 +1,7 @@
-<?php ob_start(); ?>
+<?php ob_start();
+
+?>
+
 <div class="MetaStudio-content-global">
     <div class="MetaStudio-title">
         <h1 id="MetaStudio-title-h1">Content of the channel</h1>
@@ -13,32 +16,32 @@
         </div>
     </div>
     <div class="MetaStudio-filter-bar">
-    <h2>FilterBar</h2>
+        <h2>FilterBar</h2>
     </div>
     <div class="MetaStudio-user-video-config">
-    <div class="MetaStudio-user-video-template">
-         <div class="MetaStudo-user-video-container">
-         <div class="MetaStudo-user-video-this-video">
-            <div class="home-video-content">
-            <?php include "./front-end/views/components/templateMetaCreatorVideo.php" ?>
+        <div class="MetaStudio-user-video-template">
+            <div class="MetaStudo-user-video-container">
+                <div class="MetaStudo-user-video-this-video">
+                    <div class="home-video-content">
+                        <?php include "./front-end/views/components/templateMetaCreatorVideo.php" ?>
 
+                    </div>
+                </div>
+                <div class="MetaStudo-user-video-this-visibility">
+
+                </div>
+                <div class="MetaStudo-user-video-this-restriction"></div>
+                <div class="MetaStudo-user-video-this-date"></div>
+                <div class="MetaStudo-user-video-this-vues"></div>
+                <div class="MetaStudo-user-video-this-commentary"></div>
+                <div class="MetaStudo-user-video-this-like"></div>
             </div>
-         </div>
-         <div class="MetaStudo-user-video-this-visibility">
 
-         </div>
-         <div class="MetaStudo-user-video-this-restriction"></div>
-         <div class="MetaStudo-user-video-this-date"></div>
-         <div class="MetaStudo-user-video-this-vues"></div>
-         <div class="MetaStudo-user-video-this-commentary"></div>
-         <div class="MetaStudo-user-video-this-like"></div>
-    </div>
+        </div>
 
     </div>
-   
-</div>
 
 
 </div>
 
-<?php $pageMeta = ob_get_clean();?>
+<?php $pageMeta = ob_get_clean(); ?>
