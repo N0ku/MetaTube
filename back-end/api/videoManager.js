@@ -1,4 +1,3 @@
-const { log } = require('console');
 const   DatabaseManager = require('./databaseManager'),
         fs = require('fs'),
         config = require('./config.json');
@@ -9,8 +8,9 @@ module.exports = class VideoManager
     {
         app.post('/upload/video', (req, res)  => { this.upload(req, res) });
         app.post('/search/:data', (req, res)  => { this.search(req, res) });
+        app.post('/like/:id', (req, res)      => { this.likeVideo(req, res) });
         app.get('/video/:id', (req, res)      => { this.mainVideo(req, res) });
-        app.get('/watch/:id', (req, res)          => { this.streaming(req, res) });
+        app.get('/watch/:id', (req, res)      => { this.streaming(req, res) });
     }
 
     static async upload(req, res)
@@ -50,7 +50,11 @@ module.exports = class VideoManager
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
             res.status(500);
         }
-        else res.status(200);
+        else
+        {
+            console.log(`Video id ${data.id} uploaded !`);
+            res.status(200);
+        }
     }
 
     static async search(req, res)
@@ -106,8 +110,6 @@ module.exports = class VideoManager
 
     static async streaming(req, res)
     {
-        console.log(config.storageLocation + req.params.id + '.mp4');
-        console.log(config.storageLocation + req.params.id + '.mp4');
         const range = req.headers.range;
         if(!range)
         {
@@ -131,5 +133,10 @@ module.exports = class VideoManager
         res.writeHead(206, header);
         const videoStream = fs.createReadStream(videoPath, { start, end });
         videoStream.pipe(res);
+    }
+
+    static async likeVideo(req, res)
+    {
+        
     }
 }
