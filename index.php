@@ -7,7 +7,9 @@ $enJson = json_decode($Json, true);
 session_start();
 $page_title = 'Unknown page?';
 $existing_pages = ['Home', 'Explorer', 'Subscriptions', 'Library', 'History', 'LikedVideo', 'WatchLater', "MetaCreator", 'Settings', 'Report', 'Help', 'SendFeedback', 'Profile', 'Register', 'Login', 'ChannelPage', 'Upload', 'SearchPage', 'Watch', 'MetaTubePremium', '404'];
+$existing_studio = ['Dashboard','Content'];
 $homeBar = $_GET['name'];
+
 
 if (empty($_GET['name']) == false) {
     if (in_array($_GET['name'], $existing_pages)) {
@@ -25,7 +27,19 @@ include __DIR__ . '/front-end/views/pages/upload.php'; //$channelVideoUpload
 include __DIR__ . '/front-end/views/pages/Channel.php';
 
 if ($homeBar == "MetaCreator") {
-    include __DIR__ . '/front-end/views/pages/MetaCreator/MetaCreator.php'; //$metacreator
+    $link = $_GET['link'];
+    if (empty($_GET['link']) == false) {
+    if (in_array($_GET['link'], $existing_studio)) {
+        $pageMeta = $_GET['link'];
+    } else {
+        $pageName = "404";
+        header('Location: index.php?name=404');
+    }
+} else {
+    header('Location: index.php?name=MetaCreator&link=Dashboard');
+}
+    // Include here MetaCreator Menu
+    include  __DIR__ . '/front-end/views/pages/MetaCreator/' . $pageMeta . '.php'; // $page 
 } else {
     include __DIR__ . '/front-end/views/components/FilterBar.php'; // $filterbar
     include  __DIR__ . '/front-end/views/pages/' . $pageName . '.php'; // $page 

@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="./front-end/assets/css/SearchPage.css">
     <link rel="stylesheet" href="./front-end/assets/css/Watch.css">
     <link rel="stylesheet" href="./front-end/assets/css/MetaTubePremium.css">
+    <link rel="stylesheet" href="./front-end/assets/css/MetaCreator.css">
 </head>
 
 <body>
@@ -31,25 +32,36 @@
         echo $navBar;
     } ?>
 
-    <?php if ($homeBar != "MetaCreator") { ?>
-    <div class="content">
-        <div class="menus">
+<div class="content">
+    <div class="menus">
+            <?php if ($homeBar != "MetaCreator") { ?>
             <?php if ($pageName != "404") {
                     echo $menu;
                 } ?>
+        <?php } ?>
+        <?php if($homeBar == "MetaCreator"){ ?>
+
+             <!-- Include here MetaCreator MENU variables for display  °\(°0°)/°-->
+
+            <?php } ?>
         </div>
         <div class="page-content">
             <div class="page">
+                        <?php if ($homeBar != "MetaCreator") { ?>
+
                 <?php if ($homeBar == "Home") {
                         echo $filterbar;
                     } ?>
                 <?php if ($pageName != "404") {
                         echo $pageName;
                     } ?>
+                    <?php } ?>
+                    <?php if($homeBar == "MetaCreator"){ ?>
+                        <?= $pageMeta ?>
+                    <?php } ?>
             </div>
         </div>
     </div>
-    <?php } ?>
 
     <!-- Add js library and script here -->
 

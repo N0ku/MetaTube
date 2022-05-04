@@ -73,7 +73,7 @@
                     <p><?= $enJson['menu']['nav-elements']['History'] ?></p>
                 </div>
             </a>
-            <a href="index.php?name=MetaCreator" class="menu-link">
+            <a href="index.php?name=MetaCreator&link=Dashboard" class="menu-link">
                 <div class="nav-item">
                     <img src="./front-end/assets/img/Menu-svg/MetaCreator.svg" alt="" srcset="" class="nav-logo" />
                     <p><?= $enJson['menu']['nav-elements']['MetaCreator'] ?></p>

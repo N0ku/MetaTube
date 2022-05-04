@@ -1,0 +1,72 @@
+.main-page{
+    background-color: #282828;
+    overflow: auto;
+    display: flex;
+    flex: 1;
+    position: relative;
+}
+
+.all-pages {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    min-width: 0;
+    z-index: 0;
+}
+
+.title-header{
+    color: #fff;
+    margin-top: 50px;
+}
+
+.page-title-container{
+    display: flex;
+    position: relative;
+    max-width: 1278px;
+    min-height: 48px;
+}
+
+.title-channel-page{
+    white-space: initial;
+    overflow: initial;
+    text-overflow: initial;
+    font-family: "YouTube Sans","Roboto","Arial",sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 32px;
+    flex-shrink: 1;
+    left: 0;
+    padding-left: 32px;
+    padding-top: 23px;
+    position: sticky;
+    position: -webkit-sticky;
+    white-space: nowrap;
+}
+
+.container-buttons{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    display: flex;
+    margin: 16.75px;
+}
+
+.btn1{
+    margin-left: 16px;
+}
+
+.upload-btn{
+    background-color: #282828;
+    border:1px solid #717171;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.upload-logo{
+    width: 24px;
+}
+
+.golive-logo{
+    width: 12px;
+}
