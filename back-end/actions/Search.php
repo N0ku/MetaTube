@@ -1,6 +1,6 @@
 <?php
 
-include_once '../back-end/helper/function.php';
+include_once './../../../back-end/helper/function.php';
 function getVids($number)
 {
     $vids = getApi('timeline/video/' . $number);
@@ -27,7 +27,7 @@ function getCreator($id)
     return $creator;
 }
 
-    $vids = postAPIString('e');
+    $vids = postAPIString('#DCS');
     // $vids = Searchupdate( $vids);
 
     var_dump($vids);

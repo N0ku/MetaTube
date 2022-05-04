@@ -60,9 +60,9 @@ module.exports = class VideoManager
     static async search(req, res)
     {
         console.log('POST - /search');
-        const data = JSON.parse(req.body);
+        const data = req.body;
 
-        if(data.searchRequest = "")
+        if(data.searchRequest == "")
         {
             res.status(200).json([]);
             return;
@@ -73,7 +73,8 @@ module.exports = class VideoManager
             videos : []
         };
 
-        let result = await DatabaseManager.executeQuery(`SELECT * FROM channel WHERE channelName LIKE %${data.searchRequest}%`);
+        let query = `SELECT * FROM channel WHERE channelName LIKE '%${data.searchRequest}%'`;
+        let result = await DatabaseManager.executeQuery(query);
         if( result.error )
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
@@ -81,9 +82,10 @@ module.exports = class VideoManager
             return
         }
 
-        json.channels = result;
+        json.channels = result.data;
 
-        result = await DatabaseManager.executeQuery(`SELECT * FROM video WHERE title LIKE %${data.searchRequest}%`);
+        query = `SELECT * FROM video WHERE title LIKE '%${data.searchRequest}%' OR description LIKE '%${data.sear}%'`;
+        result = await DatabaseManager.executeQuery(query);
         if( result.error )
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
@@ -91,7 +93,7 @@ module.exports = class VideoManager
             return
         }
 
-        json.videos = result;
+        json.videos = result.data;
 
         res.status(200).json(json);
     }
