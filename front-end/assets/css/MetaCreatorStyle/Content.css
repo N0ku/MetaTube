@@ -61,3 +61,11 @@
     border:1px solid #23a6d5;
     padding: 3% 10%;
 }
+.Metastudio-user-video-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: normal;
+    align-content: normal;
+}
