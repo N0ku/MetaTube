@@ -32,9 +32,13 @@
 
         </div>
 
-        
-
         <div class="channel">
+
+            <div class="dashboard-cards">
+
+                
+
+            </div>
 
         </div>
 
