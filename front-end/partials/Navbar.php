@@ -81,7 +81,7 @@
                             <?= $enJson['profile']['navBar']['buttonSubscription'] ?>
                         </a>
                         <!-- YOUTUBE STUDIO -->
-                        <a href="/" class="drop-profil">
+                        <a href="index.php?name=MetaCreator" class="drop-profil">
                             <div>
                                 <img src="./front-end/assets/img/Logo/tv.svg" alt="">
                             </div>
