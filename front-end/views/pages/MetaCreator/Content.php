@@ -13,11 +13,24 @@
         </div>
     </div>
     <div class="MetaStudio-filter-bar">
-<h2>Bite</h2>
+    <h2>FilterBar</h2>
     </div>
     <div class="MetaStudio-user-video-config">
-        <h3>Salam</h3>
+    <div class="MetaStudio-user-video-template">
+         <div class="MetaStudo-user-video-container">
+         <div class="MetaStudo-user-video-this-video"></div>
+         <div class="MetaStudo-user-video-this-visibility"></div>
+         <div class="MetaStudo-user-video-this-restriction"></div>
+         <div class="MetaStudo-user-video-this-date"></div>
+         <div class="MetaStudo-user-video-this-vues"></div>
+         <div class="MetaStudo-user-video-this-commentary"></div>
+         <div class="MetaStudo-user-video-this-like"></div>
     </div>
+
+    </div>
+   
+</div>
+
 
 </div>
 

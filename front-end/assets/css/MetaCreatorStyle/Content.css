@@ -56,3 +56,8 @@
 .MetaStudio-selected-commentary{
     padding-left: 10%;
 }
+
+.MetaStudio-filter-bar{
+    border:1px solid #23a6d5;
+    padding: 3% 10%;
+}
