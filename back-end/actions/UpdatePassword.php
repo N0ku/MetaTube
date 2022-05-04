@@ -32,7 +32,7 @@ if(!empty($_POST['password']) || !empty($_POST['new-password']) || !empty($_POST
             //CHANGE PASSWORD IN SESSION
             $_SESSION['user']['password'] = $new_password;
             //FINISH PROCESS
-            unset($_SESSION['process']);
+            $_SESSION['process'] = '';
             header("Location: /index.php?name=Profile ");
         }else{
             $_SESSION['toastr'] = array(

@@ -3,10 +3,10 @@
 
 
 
- <div id="password" class="modal" <?php if ($_SESSION['process'] == 'password') echo 'style = "display : block";' ?>>
+ <div id="password" class="modal" <?php if ($_SESSION['process'] == 'password') echo 'style = "display : block";'; ?>>
     <form class="modal-content" enctype="multipart/form-data" id="formUpdatePass" method="post" action="/back-end/actions/UpdatePassword.php">
        <div class="close-form">
-          <a onclick="document.getElementById('password').style.display='none'" class="close" title="Close Modal">&times;</a>
+          <a onclick="document.getElementById('password').style.display='none' <?php $_SESSION['process'] = '' ?>" class="close" title="Close Modal">&times;</a>
 
        </div>
        <div class="wrapper-part-profile">
@@ -33,6 +33,7 @@
  </div>
 
  <script>
+    i = true;
     const dataPass = [];
     dataPass.push(document.getElementById('old-password'));
     dataPass.push(document.getElementById('new-password'));

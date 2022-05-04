@@ -1,9 +1,9 @@
 <button class="btnprofile" onclick="document.getElementById('update--form').style.display='block';"><?=$enJson['profile']['button']['buttonUser']?></button>
 
-<div id="update--form" class="modal" <?php if ($_SESSION['process'] == 'user') echo 'style = "display : block";' ?>>
+<div id="update--form" class="modal" <?php if(isset($_SESSION['processUser'])){if($_SESSION['processUser'] == true) echo 'style = "display : block";';} ?>>
    <form class="modal-content" enctype="multipart/form-dataUser" id="formUpdateUser" method="post" action="/back-end/actions/UpdateInfoUser.php">
       <div class="close-form">
-         <a onclick="document.getElementById('update--form').style.display='none' <?php unset($_SESSION['process']) ?>" class="close" title="Close Modal">&times;</a>
+         <a onclick="document.getElementById('update--form').style.display='none' <?php $_SESSION['processUser'] = false ;?>" class="close" title="Close Modal">&times;</a>
       </div>
       <div class="wrapper-part-profile">
          <h3><?=$enJson['profile']['profilModal']['title']?><h3>
@@ -46,13 +46,14 @@
             e.preventDefault();
             dataUser[i].placeholder = ('Put your ' + dataUser[i].id);
             dataUser[i].classList.add("show-error-connection");
+            i = false;
          }
       }
-      setTimeout(() => {
+     if(i == false){
          $(function() {
             toastr.error('<?= $enJson['form']['error']['signup'] ?>', '');
          });
-      }, 200);
+      }
 
    }
    $('input[type="file"]').on('change', (e) => {
