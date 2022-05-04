@@ -96,8 +96,11 @@
 <section class="tabcontent" id="Abouts">
     <?php include "./front-end/partials/ChannelAbout.php" ?>
 </section>
+
 <script>
+
 const test = document.querySelector(".feature-channel-flex-items:nth-child(1)");
+console.log(test)
 $('input[type="file"]').on('change', (e) => {
     let that = e.currentTarget
     if (that.files && that.files[0]) {

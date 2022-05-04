@@ -73,7 +73,7 @@
         "createTitle":"Here how the others will see you",
         "create": "Create a Channel",
         "name":"Name",
-        "Image":"./assets/img/Logo/banner.svg",
+        "Image":"./front-end/assets/img/Logo/banner.svg",
         "Import": "Importer picture",
         "cancel": "Cancel"
   
