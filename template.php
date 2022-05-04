@@ -4,11 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title><?= $enJson['global']['title'] ?></title>
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="./front-end/assets/js/toastr.min.js"></script>
     <script src="./front-end/assets/js/toastr.js.map"></script>
-
-
     <link rel="shortcut icon" href="./front-end/assets/img/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./front-end/assets/css/Global.css">
     <link rel="stylesheet" href="./front-end/assets/css/NavBar.css">
@@ -29,7 +26,7 @@
     <link rel="stylesheet" href="./front-end/assets/css/MetaTubePremium.css">
     <link rel="stylesheet" href="./front-end/assets/css/MetaCreator.css">
     <link rel="stylesheet" href="./front-end/assets/css/MetaCreatorStyle/DashboardStyle.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -65,7 +62,6 @@
     <script src="./front-end/assets/js/SearchPage.js"></script>
     <script src="/front-end/assets/js/feature-channel-modal-createCreator.js"></script>
     <script src="/front-end/assets/js/script-menu.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="/front-end/assets/js/script-explorer.js"></script>
     <script src="/front-end/assets/js/script-watch.js"></script>
     <script src="./front-end/assets/js/toastr.min.js"></script>
