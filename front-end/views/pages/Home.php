@@ -10,7 +10,7 @@ $vids = getVids(10);
         $creator = getCreator($vids[$i]->creator);
 
     ?>
-        <a href="index.php?name=Watch&id=<?= $vids[$i]->id ?>">
+        <a href="index.php?name=Watch&id=<?= $vids[$i]->id ?>" class="video-link-home">
             <div class="home-video-content">
                 <img src="data:image/png;base64,<?= $vids[$i]->thumbnail ?>" alt="thumbnail" class="thumbnail" />
                 <div class="below-content">
