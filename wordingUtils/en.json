@@ -221,5 +221,10 @@
         "text-dl2":"Save videos for when you really need them – like when you’re on a plane or commuting.",
         "text-music":"MetaTube Music Premium",
         "text-music2":"Download our new music app and listen without interruptions."
+    },
+
+    "MetaCreator":{
+        "Dashbord":"Dashboard",
+        "Content":"Content"
     }
 }
