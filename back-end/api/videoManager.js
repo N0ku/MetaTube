@@ -28,9 +28,9 @@ module.exports = class VideoManager
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
             res.status(500);
         }
-        query = `UPDATE video SET likeNumber = ${result.data.likeNumber + 1} WERE id = '${data.video}'`;
+        query = `UPDATE video SET likeNumber = ${result.data[0].likeNumber + 1} WERE id = '${data.video}'`;
         result = await DatabaseManager(query);
-        if( result.error ) 
+        if( result.error )
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
             res.status(500);
@@ -57,7 +57,7 @@ module.exports = class VideoManager
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
             res.status(500);
         }
-        query = `UPDATE video SET viewNumber = ${result.data.viewNumber + 1} WERE id = '${data.id}'`;
+        query = `UPDATE video SET viewNumber = ${result.data[0].viewNumber + 1} WHERE id = '${data.id}'`;
         result = await DatabaseManager.executeQuery(query);
         if( result.error ) 
         {
