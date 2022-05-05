@@ -17,7 +17,7 @@
             </a>
         </div>
 
-        <form method="POST" action="./front-end/views/pages/SearchPage.php" class="navbar--center">
+        <form method="POST" action="index.php?name=SearchPage" class="navbar--center">
             <input type="text" name="searchBar" class="navbar__center__input" placeholder="<?= $enJson['profile']['navBar']['placeHolderSearch'] ?>" />
             <?php if ($homeBar != "SearchPage") { ?>
                 <button class="navbar__center__search-btn" onclick="window.location.href = 'index.php?name=SearchPage';">
@@ -132,7 +132,6 @@
     </div>
 </nav>
 <script>
-    << << << < HEAD
     const dropprofil = document.getElementById("dropdown");
 
     function OpenTheDoor() {
@@ -151,8 +150,7 @@
                 }
             }
         }
-    }; ===
-    === =
+    };
     const dropprofil = document.getElementById("dropdown");
 
     function OpenTheDoor() {
@@ -171,9 +169,7 @@
                 }
             }
         }
-    }; >>>
-    >>> > 3 a62f77(feature / Search5 add experimental filters.Need to
-        try them.)
+    };
 </script>
 
 <?php $navBar = ob_get_clean(); ?>
