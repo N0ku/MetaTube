@@ -51,14 +51,14 @@ module.exports = class VideoManager
         console.log(`    target video : ${data.id}`);
 
         let query = `SELECT viewNumber FROM video WHERE id = '${data.id}'`;
-        let result = await DatabaseManager(query);
+        let result = await DatabaseManager.executeQuery(query);
         if( result.error ) 
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
             res.status(500);
         }
         query = `UPDATE video SET viewNumber = ${result.data.viewNumber + 1} WERE id = '${data.id}'`;
-        result = await DatabaseManager(query);
+        result = await DatabaseManager.executeQuery(query);
         if( result.error ) 
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
