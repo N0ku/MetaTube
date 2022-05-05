@@ -8,7 +8,6 @@
             <strong class="video-title"><?= $vids[$i]->title?></strong>
             <div class="video-infos">
                <p class="video-number-views"><?= $vids[$i]->viewNumber?></p>
-             
             </div>
          </div>
       </div>
