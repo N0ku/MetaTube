@@ -7,10 +7,43 @@ module.exports = class VideoManager
     static eventListener(app)
     {
         app.post('/upload/video', (req, res) => { this.upload(req, res) });
-        app.post('/search', (req, res) => { this.search(req, res) });
+        app.post('/search', (req, res)       => { this.search(req, res) });
+        app.post('/video/view', (req, res)   => { this.addView(req, res) });
+        app.post('/video/like', (req, res)   => { this.addLike(req, res) });
         app.post('/like/:id', (req, res)     => { this.likeVideo(req, res) });
         app.get('/video/:id', (req, res)     => { this.mainVideo(req, res) });
         app.get('/watch/:id', (req, res)     => { this.streaming(req, res) });
+    }
+
+    static async addLike(req, res)
+    {
+        console.log("POST - /video/like");
+        const data = req.body
+        console.log(`    target video : ${data.video}`);
+    
+        let query = `UPDATE video SET likeNumber = likeNumber + 1 WERE id = '${data.video}'; INSERT INTO likedVideo VALUES ('${data.id}', '${data.video}');`;
+        let result = await DatabaseManager(query);
+        if( result.error )
+        {
+            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
+            res.status(500);
+        } else res.status(200).send();
+    }
+
+    static async addView(req, res)
+    {
+        console.log("GET - /video/view/");
+        const data = req.body;
+        console.log(`    target video : ${data.id}`);
+
+        let query = `UPDATE video SET viewNumber = viewNumber + 1 WHERE id = '${data.id}'; `;
+        let result = await DatabaseManager.executeQuery(query);
+        if( result.error ) 
+        {
+            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
+            res.status(500);
+        }
+        else res.status(200).send();
     }
 
     static async upload(req, res)
@@ -48,12 +81,12 @@ module.exports = class VideoManager
         if( result.error ) 
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
-            res.status(500);
+            res.status(500).send();
         }
         else
         {
             console.log(`Video id ${data.id} uploaded !`);
-            res.status(200);
+            res.status(200).send();
         }
     }
 
@@ -78,7 +111,7 @@ module.exports = class VideoManager
         if( result.error )
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
-            res.status(500);
+            res.status(500).send();
             return
         }
 
@@ -89,7 +122,7 @@ module.exports = class VideoManager
         if( result.error )
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
-            res.status(500);
+            res.status(500).send();
             return
         }
 
@@ -120,7 +153,7 @@ module.exports = class VideoManager
         if(!range)
         {
             console.error("C'est la merde...");
-            res.status(500);
+            res.status(500).send();
             return;
         }
         const   videoId = req.params.id,

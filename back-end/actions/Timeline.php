@@ -19,3 +19,8 @@ function getCreator($id)
     $creator = getApi('channel/' . $id);
     return $creator;
 }
+
+if (isset($_SESSION['user'])) {
+    $creator = getCreator($_SESSION['user']['id']);
+    $_SESSION['channel'] = $creator;
+}

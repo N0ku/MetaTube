@@ -18,7 +18,7 @@ module.exports = class timelineManager
         if( result.error )
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
-            res.status(500);
+            res.status(500).send();
         }
         else res.status(200).json(result.data);
     }

@@ -5,43 +5,58 @@
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
+    margin-top: 5%;
 }
-.backgroundprofile {
+.headerprofile {
     width: 100%;
-    background-image: url("/front-end/assets/img/Logo/meta.svg");
     display: flex;
-    align-items: center;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
 }
-
+#titleProfile {
+    text-shadow: #e7f6ff 0 -1px 0, #a80a02 1px 1px 0, #dd3705 2px 2px 0,
+        #fd8e3a 3px 3px 0, #9b0102 4px 4px 0, #541402 5px 5px 0,
+        #333 5px 5px 10px;
+    color: #ffe200;
+}
+.underTitle {
+    text-shadow: #e7f6ff 0 -1px 0, #a74a0c 1px 1px 0, #d97f32 2px 2px 0,
+        #f5993d 3px 3px 0, #fec362 4px 4px 0, #ffe687 5px 5px 0,
+        #333 5px 5px 10px;
+    color: var(--title--profile);
+    font-size: 1em;
+}
 .profile-info {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     align-content: center;
-    padding: 2% 2% 0% 3%;
-    margin: 5%;
     width: fit-content;
     height: max-content;
-    box-shadow: -1px 7px 20px 20px;
-    border-radius: 50%;
-    background-color: var(--dark-theme);
+    justify-content: space-between;
+    width: auto;
 }
+
 .profile-user {
-    width: 200px;
+    width: 30%;
     border-radius: 58%;
-    height: 200px;
+    height: 30%;
 }
+
 .profile-name {
     color: var(--primary-color);
 }
 .profilestools {
-    background-color: var(--dark-theme);
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+}
+.cheat-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 .tools-info {
@@ -49,6 +64,148 @@
     flex-direction: column;
     justify-content: space-around;
     align-content: center;
+}
+.tools {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.label-accordeon {
+    color: var( --dark-text);
+    font-weight: bold;
+}
+
+.btnprofile {
+    box-shadow: -5px 1px 5px -31px #9fb4f2;
+    background: linear-gradient(to bottom, #e82159 5%, #476e9e 100%);
+    background-color: #e82159;
+    border-radius: 10%;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1em;
+    padding: 3% 3%;
+    text-decoration: none;
+    text-shadow: 5px 7px 44px #283966;
+}
+
+.btnprofile:hover {
+    background: linear-gradient(to bottom, #476e9e 5%, #e82159 100%);
+    background-color: var(--button-profile--hover);
+}
+.btnprofile:active {
+    position: relative;
+    top: 1px;
+}
+small {
+    color: red;
+    font-size: unset;
+}
+/* 
+        Accordion
+*/
+.accordion {
+    box-sizing: border-box;
+    display: flex;
+    font-family: var(--font);
+    overflow: hidden;
+    width: 80%;
+}
+
+.accordion-select {
+    cursor: pointer;
+    margin: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+.accordion-title {
+    position: relative;
+}
+
+.accordion-title:not(:nth-last-child(2))::after {
+    border: 1px solid transparent;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.accordion-title span {
+    bottom: 0px;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.accordion-content {
+    box-sizing: border-box;
+    overflow: auto;
+    position: relative;
+    transition: margin 0.3s ease 0.1s;
+}
+
+.accordion-select:checked + .accordion-title + .accordion-content {
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+/* 
+Generated styles starts here 
+*/
+
+.accordion {
+    border-color: var(--dark-theme);
+    border-radius: 29px;
+    border-width: 23px;
+    flex-direction: column;
+    height: auto;
+}
+
+.accordion-title,
+.accordion-select {
+    background-color: var(--dark-theme);
+    color: #7f8787;
+    width: 100%;
+    height: 65px;
+    font-size: 24px;
+}
+
+.accordion-select {
+    margin-bottom: -65px;
+    margin-right: -65px;
+}
+
+.accordion-title:not(:nth-last-child(2))::after {
+    border-bottom-color: rgb(234, 234, 234);
+    border-right-color: transparent;
+}
+
+.accordion-select:hover + .accordion-title,
+.accordion-select:checked + .accordion-title {
+    background-color:  var(--dark-theme);
+}
+
+.accordion-title span {
+    transform: rotate(0deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+    padding-left: 33px;
+    padding-right: 33px;
+    line-height: 65px;
+}
+
+.accordion-content {
+    background-color: var(--dark-theme);
+    color: #7f8787;
+    height: 230px;
+    margin-bottom: -230px;
+    margin-right: 0;
+    padding: 25px;
+    width: 100%;
 }
 
 /* MODAL UPDATE && MODAL DELETE */
@@ -106,15 +263,18 @@
     padding-top: 50px;
 }
 
-
-/* Modal Content/Box */
+/*
+ 
+        Modal Content/Box 
+ 
+ */
 .modal-content {
     background-color: rgba(255, 255, 255, 0.13);
     color: #ffffff;
     border-radius: 10px;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 40px rgb(8 7 16 / 60%);
-    padding: 25px 25px;
+    padding: 3% 4%;
     letter-spacing: 0.5px;
     display: flex;
     flex-direction: column;
@@ -122,14 +282,14 @@
     align-items: center;
     z-index: 5001;
     position: absolute;
-    top: 25%;
-    left: 25%;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    top: 20%;
+    left: 20%;
+    margin: 5% auto 15% auto;
     border: 1px solid #888;
-    width: 60%; /* Could be more or less, depending on screen size */
+    width: 65%; /* Could be more or less, depending on screen size */
 }
 
-.wrapper-part-profile{
+.wrapper-part-profile {
     display: flex;
     align-content: center;
     justify-content: space-around;
@@ -137,6 +297,13 @@
     flex-direction: column;
     flex-wrap: wrap;
     max-width: 400px;
+}
+.clearfix {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 5%;
 }
 
 /* The Modal Close Button (x) */
@@ -151,10 +318,9 @@
 
 .close:hover,
 .close:focus {
-    color: #f44336;
+    color: var(--title--profile);
     cursor: pointer;
 }
-
 
 /* Change styles for cancel button and delete button on extra small screens */
 @media screen and (max-width: 300px) {
