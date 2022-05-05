@@ -20,7 +20,7 @@ module.exports = class VideoManager
     {
         console.log('GET - /video/topView');
         
-        let query = 'SELECT * FROM video ORDER BY viewNumber DESC LIMIT 20;';
+        let query = 'SELECT video.title, video.description, video.thumbnail, video.date, video.viewNumber, channel.channelName, channel.channelProfilePicture FROM video, channel WHERE ORDER BY viewNumber DESC LIMIT 20;';
         let result = await DatabaseManager.executeQuery(query);
         if(result.error)
         {
