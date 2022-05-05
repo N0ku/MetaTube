@@ -41,7 +41,7 @@
 
                         <div class="card-video-upload">
 
-                            <div class="main-container-card">
+                            <div id="dropzone" class="main-container-card">
 
                                 <div class="img-card-upload">
                                     <img class="img-container" src="https://www.gstatic.com/youtube/img/creator/no_content_illustration_upload_video_v3_darkmode.svg" alt="img-video-upload">

@@ -164,7 +164,7 @@
     flex: 1 1;
     padding: 20px;
     font-weight: bold;
-
+    text-align: center;
 }
 
 .card-analytics{
@@ -260,3 +260,4 @@ p.title-analytics {
     font-weight: bold;
     font-size: 16px;
 }
+

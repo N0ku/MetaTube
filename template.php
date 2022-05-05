@@ -30,16 +30,9 @@
     <link rel="stylesheet" href="./front-end/assets/css/MetaCreatorStyle/Content.css">
     <link rel="stylesheet" href="./front-end/assets/css/flash.css">
     <link rel="stylesheet" href="./front-end/assets/css/MetaCreatorStyle/MenuCreator.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-    <script src="./front-end/assets/js/SearchPage.js"></script>
-    <script src="/front-end/assets/js/feature-channel-modal-createCreator.js"></script>
-    <script src="/front-end/assets/js/script-menu.js"></script>
-    <script src="/front-end/assets/js/script-explorer.js"></script>
-    <script src="/front-end/assets/js/script-watch.js"></script>
-    <script src="./front-end/assets/js/toastr.min.js"></script>
-    <script src="./front-end/assets/js/toastr.js.map"></script>
+   
 
 </head>
 
@@ -92,6 +85,16 @@
     </div>
 
 
+    <script src="./front-end/assets/js/SearchPage.js"></script>
+    <script src="/front-end/assets/js/feature-channel-modal-createCreator.js"></script>
+    <script src="/front-end/assets/js/script-menu.js"></script>
+    <script src="/front-end/assets/js/script-explorer.js"></script>
+    <script src="/front-end/assets/js/script-watch.js"></script>
+    <script src="./front-end/assets/js/toastr.min.js"></script>
+    <script src="./front-end/assets/js/toastr.js.map"></script>
+    <script src="./front-end/assets/js/drag-drop-upload-metacreator.js"></script> 
+
+
     <script>
         toastr.options = {
             "closeButton": true,
@@ -111,7 +114,6 @@
             "hideMethod": "fadeOut"
         }
     </script>
-
 
 </body>
 
