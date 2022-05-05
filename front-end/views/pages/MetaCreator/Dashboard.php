@@ -117,6 +117,32 @@
 
                 </div>
 
+                <div class="card-colomn">
+                    
+                    <div class="card-analytics">
+
+                        <div class="card-analytics-container">
+
+                            <div class="main-container-card">
+
+                                <div class="elements-container-dashboard">
+
+                                    <p class="title-analytics"><?= $enJson['MetaCreator']['dashboard-recent-desc']?></p>
+                                    <p class="date-summary">Lifetime</p>
+                                    <button class="btn-upload">SEE ALL</button>
+                                </div>
+
+                        
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
             </div>
 
         </div>

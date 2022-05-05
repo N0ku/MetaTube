@@ -233,6 +233,7 @@
         "summary-title":"Summary",
         "views":"Views",
         "watch-time":"Watch time (hours)",
-        "top-videos-title":"Top video"
+        "top-videos-title":"Top video",
+        "dashboard-recent-desc":"Recent subscribers"
     }
 }

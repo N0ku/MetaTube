@@ -255,3 +255,8 @@ hr{
     padding-bottom: 0;
     display: block;
 }
+
+p.title-analytics {
+    font-weight: bold;
+    font-size: 16px;
+}
