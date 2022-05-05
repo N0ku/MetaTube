@@ -1,6 +1,11 @@
+
 <div class="feature-channel-flex-container-item" >
-      <h3>Video Online</h3>
-      <?php include "./front-end/views/components/video.php" ?>
+<h3>Video Online</h3>
+<?php for ($i = 0; $i < count($vids); $i++) { ?>
+    <?php include "./front-end/views/components/templateChannelPageVideo.php"?>
+      
+
+    <?php } ?>        
    </div>
    <div class="feature-channel-video-online">
       <button><?php echo $enJson['channel']['videoOnline'] ?></button>

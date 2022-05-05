@@ -1,4 +1,12 @@
-<?php ob_start() ?>
+<?php ob_start();
+
+include_once './back-end/actions/ContentBack.php';
+
+$vids = getVids($_SESSION['channel'][0]->channelId);
+?>
+
+
+
 <div class="feature-channel-flex-container">
     <div class="feature-channel-flex-items">
         <div class="feature-channel-custom-file">
@@ -14,7 +22,16 @@
                 <div class="feature-channel-navigation-container-profil">
                     <div class="feature-channel-navigation-container-profilPicture">
                         <button class="label-file">
-                            <img class="img-profile-channel" src="<?php echo $enJson['creation']['Image'] ?>" alt="">
+                             <div class="avatar-upload">
+                                <div class="avatar-edit">
+                                    <input type='file' name="" id="profileChannel" accept=".png, .jpg, .jpeg" />
+                                    <label for="profileChannel"></label>
+                                </div>
+                                <div class="avatar-preview">
+                                    <div id="profileChannelPreview" class="img-profile-channel"style="background-image: url();">
+                                    </div>
+                                </div>
+                            </div>
                         </button>
                     </div>
                     <div class="feature-channel-navigation-userInformation">
@@ -118,6 +135,21 @@ $('input[type="file"]').on('change', (e) => {
     }
 
 })
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            $('#profileChannelPreview').css('background-image', 'url('+e.target.result +')');
+            $('#profileChannelPreview').hide();
+            $('#profileChannelPreview').fadeIn(650);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#profileChannel").change(function() {
+    readURL(this);
+});
 
 function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
