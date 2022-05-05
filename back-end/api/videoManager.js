@@ -61,6 +61,7 @@ module.exports = class VideoManager
     {
         console.log('POST - /search');
         const data = req.body;
+        console.log(`    Request : ${data.searchRequest}`);
 
         if(data.searchRequest == "")
         {
