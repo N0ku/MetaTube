@@ -3,7 +3,24 @@ $title = "login";
 ob_start();
 //require_once __DIR__ .'/../../../back-end/actions/login_action.php';
 ?>
+<script>
+    $(function() {
+        <?php
+        if (isset($_POST['toastr'])) {
+            console_log($_POST['toastr']);
+        }
 
+        //console_log(isset($_POST['toastr']));
+        if (isset($_SESSION['toastr'])) {
+            echo 'toastr.' . $_SESSION['toastr']['type'] . '("' . $_SESSION['toastr']['message'] . '", "' . $_SESSION['toastr']['title'] . '")';
+            unset($_SESSION['toastr']);
+        } else if (isset($_POST['toastr'])) {
+            echo 'toastr.' . $_POST['toastr']['type'] . '("' . $_POST['toastr']['message'] . '", "' . $_POST['toastr']['title'] . '")';
+            unset($_POST['toastr']);
+        }
+        ?>
+    });
+</script>
 <?php if (isset($_SESSION['connect']) == true) {
     header('Location: /index.php?name=Home');
 } ?>
@@ -13,18 +30,10 @@ ob_start();
 
     <form class="form--register" action="/back-end/actions/LoginAction.php" id="form" method="POST">
         <div class="close-form">
-            <a href="/index.php?name=Home"><img src="./front-end/assets/img/Logo/x.svg" alt=""></a>
+            <a href="/index.php?name=Home">&times;</a>
 
         </div>
         <h2><?= $enJson['form']['login']['titleLogin'] ?></h2>
-        <?php if (isset($_SESSION['signup_error'])) { ?>
-            <div style="color:red;">
-                <?= $_SESSION['signup_error'] ?>
-            </div>
-        <?php
-            unset($_SESSION['signup_error']);
-        }
-        ?>
         <label for="username"><?= $enJson['form']['login']['titleLogin'] ?></label>
         <input class="input--register" type="text" placeholder="<?= $enJson['form']['login']['adress'] ?>" id="mailLogin" name="username" />
         <label for="password"><?= $enJson['form']['login']['password'] ?></label>
@@ -40,6 +49,14 @@ ob_start();
 
 
 <script>
+    $(function() {
+        <?php
+        if (isset($_SESSION['toastr'])) {
+            echo 'toastr.' . $_SESSION['toastr']['type'] . '("' . $_SESSION['toastr']['message'] . '", "' . $_SESSION['toastr']['title'] . '")';
+            unset($_SESSION['toastr']);
+        }
+        ?>
+    });
     var data = [];
     data.push(document.getElementById('mailLogin'));
     data.push(document.getElementById('passwordLogin'));
@@ -51,20 +68,19 @@ ob_start();
             }
         }
     });
-
     form.onsubmit = (e) => {
         for (var i in data) {
             if (data[i].value == 0) {
                 e.preventDefault();
                 data[i].placeholder = ('Put your ' + data[i].id);
                 data[i].classList.add("show-error-connection");
-
-                $(function() {
-                    toastr.success('Hé, <b>ça marche !</b>', 'Test');
-                });
-
+                i = false;
             }
-
+        }
+        if (i == false) {
+            $(function() {
+                toastr.error('<?= $enJson['form']['error']['signup'] ?>', '');
+            });
         }
     }
 </script>

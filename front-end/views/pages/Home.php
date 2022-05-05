@@ -36,5 +36,14 @@ $someI = 0;
 
 </div>
 
-
+<script>
+$(function() {
+    <?php
+        if (isset($_SESSION['toastr'])) {
+            echo 'toastr.' . $_SESSION['toastr']['type'] . '("' . $_SESSION['toastr']['message'] . '", "' . $_SESSION['toastr']['title'] . '")';
+            unset($_SESSION['toastr']);
+        }
+        ?>
+});
+</script>
 <?php $pageName = ob_get_clean() ?>

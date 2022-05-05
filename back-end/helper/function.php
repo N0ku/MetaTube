@@ -47,6 +47,7 @@ function giveId()
 }
 
 
+
 function console_log($data)
 {
   echo '<script>';
@@ -60,13 +61,18 @@ function postApi($data, $route)
     'http' => array(
       'method' => 'POST',
       'content' => json_encode($data),
-      'header' => "Content-Type: application/json\r\n" . "Accept: application/json\r\n"
+      'header' => "Content-Type: application/json\r\n" . "Accept: application/json\r\n",
+      "timeout" => 5,
+      "user-agent" => "toto",
     )
   );
 
   $context = stream_context_create($option);
-  $result = file_get_contents('http://93.16.2.231:8081/' . $route, false, $context);
-  $response = json_decode($result);
+  $fp = fopen('http://93.16.2.231:8081/' . $route, 'r', false, $context) or die(error_get_last());
+  $data = stream_get_contents($fp);
+  fclose($fp);
+  $response = json_decode($data);
+
   return $response;
 }
 
@@ -79,7 +85,6 @@ function getApi($route)
   );
 
   $context = stream_context_create($opts);
-
   $fp = fopen('http://93.16.2.231:8081/' . $route, 'r', false, $context);
   $data = stream_get_contents($fp);
   fclose($fp);
@@ -106,4 +111,13 @@ function checkid($path)
       }
     }
   }
+}
+
+
+function HowOldAreYou($date_naissance)
+{
+  $am = $date_naissance;
+  $an = explode('/', date('d/m/Y'));
+  if (($am[1] < $an[1]) || (($am[1] == $an[1]) && ($am[0] <= $an[0]))) return $an[2] - $am[2];
+  return $an[2] - $am[2] - 1;
 }

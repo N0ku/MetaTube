@@ -1,31 +1,61 @@
 {
     "profile": {
-    "navBar": {
-        "placeHolderSearch": "Search",
-        "buttonLogin": "Login",
-        "buttonChannel": "My Channel",
-        "buttonSubscription": "Subscription",
-        "buttonStudio": "MetaStudio",
-        "buttonSignOut": "Sign Out",
-        "buttonAccount": "My Account",
-        "buttonData": "Your data in Meta Tube",
-        "buttonRestricted": "Restricted Mode : Off",
-        "labelThemeDark": "Dark",
-        "labelThemeBright": "Bright",
-        "tooltipSearch": "Search something",
-        "tooltipLogin" : "Log in your account",
-        "tooltipUpload" : "Upload a video",
-        "tooltipUploadNoConnect" : "Connect you to Upload Video",
-        "tooltipNotification" : "Notifications",
-        "tooltipMeta" : "MetaTube Homepage"
-    }
-},
+        "navBar": {
+            "placeHolderSearch": "Search",
+            "buttonLogin": "Login",
+            "buttonChannel": "My Channel",
+            "buttonSubscription": "Subscription",
+            "buttonStudio": "MetaStudio",
+            "buttonSignOut": "Sign Out",
+            "buttonAccount": "My Account",
+            "buttonData": "Your data in Meta Tube",
+            "buttonRestricted": "Restricted Mode : Off",
+            "labelThemeDark": "Dark",
+            "labelThemeBright": "Bright",
+            "tooltipSearch": "Search something",
+            "tooltipLogin": "Log in your account",
+            "tooltipUpload": "Upload a video",
+            "tooltipNotification": "Notifications",
+            "tooltipMeta": "MetaTube Homepage"
+        },
+        "button": {
+            "buttonPassword": "Update your password",
+            "buttonDelete": "Delete your account",
+            "buttonUser": "Update your Profil"
+        },
+        "passModal": {
+            "oldpassword": "Your old password",
+            "confirmpassword": "Confirm your password",
+            "newpassword": "Your new password"
+        },
+        "deleteModal": {
+            "title": "Delete Account",
+            "sentence": "Are you sure you want to delete your account?"
+        },
+        "profilModal": {
+            "title": "Update your profil"
+        },
+        "page": {
+            "title": "Choose how you appear and what you see on MetaTube",
+            "smallTitle": "Connected with address:   "
+        },
+        "accordeon": {
+            "underTitle1": "Your MetaTube's Channel",
+            "underTitle2": "Your account",
+            "underTitle3": "Your Information",
+            "buttonCreate":"Create your channel",
+            "ButtonChannel":"Mychannel",
+            "labelUsername":"Username",
+            "labelUEmail":"Email",
+            "labelDate":"Date of Birthday"
+        }
+    },
 
     "global": {
         "title": "MetaTube",
         "filterButton": "Filters",
         "filterBoxTitle1": "Upload date",
-        "filterBoxTitle2": "Type", 
+        "filterBoxTitle2": "Type",
         "filterBoxTitle3": "Order by",
         "filterBoxMenuButton1": "Last hour",
         "filterBoxMenuButton2": "This week",
@@ -49,7 +79,7 @@
             "searchpageChannelIcon": "./front-end/assets/img/metatuber.jpeg",
             "filterBoxTitle": "Video under this video don't talk about cucumbers."
         },
-        
+
         "search2": {
             "videoWatchCount": "666 views",
             "videoDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate tellus non dolor viverra pretium. Sed neque ipsum, ultrices et vehicula id, imperdiet id neque. Donec iaculis a sapien ut lobortis. Cras aliquet id ex vitae scelerisque. Vestibulum rhoncus, velit sit amet pellentesque sodales, nisi arcu semper lorem, quis placerat quam sapien in orci. Sed quis feugiat tortor. Integer cursus metus sem, at dapibus lectus ultricies nec. Ut malesuada diam convallis sem feugiat sagittis. Suspendisse at neque malesuada, mattis felis sed, dictum ex.",
@@ -74,22 +104,22 @@
         "create": "Create a Channel",
         "name":"Name",
         "Image":"./assets/img/Channel/play.png",
-        "Import": "Importer picture",
+        "Import": "Import picture",
         "cancel": "Cancel"
   
     },
 
-    "channel":{
-        "HomeSelection":"Home",
-        "VideoSelection":"Videos",
-        "PlaylistsSelection":"Playlists",
-        "ChannelSelection":"Channels",
-        "AboutUsSelection":"About Us",
-        "LockerSelection":"Locker",
-        "introduction":"Video Intro",
-        "videoOnline":"Video Online",
-        "popular":"Video Popular",
-        "play":"./assets/img/Channel/play.png"
+    "channel": {
+        "HomeSelection": "Home",
+        "VideoSelection": "Videos",
+        "PlaylistsSelection": "Playlists",
+        "ChannelSelection": "Channels",
+        "AboutUsSelection": "About Us",
+        "LockerSelection": "Locker",
+        "introduction": "Video Intro",
+        "videoOnline": "Video Online",
+        "popular": "Video Popular",
+        "play": "./assets/img/Channel/play.png"
     },
 
     "form": {

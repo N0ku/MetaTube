@@ -59,7 +59,6 @@ function view($id)
     );
     postApi($data, 'video/view/');
 }
-
 function like($video, $like)
 {
     $data = array(

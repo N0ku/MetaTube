@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../Db.php';
 session_start();
+//DESTROY SESSION
 $lastPage = $_SESSION['lastPage'];
 $_SESSION = array();
 session_destroy();
