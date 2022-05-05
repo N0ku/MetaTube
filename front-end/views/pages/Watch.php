@@ -5,8 +5,31 @@ $video_id = $_GET["id"];
 // $path = $path_key . $video_id;
 $vid = getVid($video_id)[0];
 
+$comments = getComments($video_id);
+
 $source = "http://93.16.2.231:8081/watch/" . $video_id;
-var_dump($source);
+
+$tags = "";
+$description = $vid->description;
+if ($description != null) {
+    $descriptionExploded = explode(' ', $description);
+    foreach ($descriptionExploded as $word) {
+        if (substr($word, 0, 1) == "#") {
+            $tags = $tags . ' ' . $word;
+        }
+    }
+}
+if (isset($_POST['com'])) {
+    postComment($_POST['com'], $_SESSION['user']['id'], $video_id);
+    if (isset($_SESSION['comment'])) {
+        $_SESSION['comment'];
+    }
+}
+$_SESSION['lastPage'] = "index.php?name=Watch&id=" . $video_id;
+
+if (isset($video_id)) {
+    view($video_id);
+}
 ?>
 
 <div class="watch-content">
@@ -62,6 +85,54 @@ var_dump($source);
                             </div>
 
                             <div class="right-controls">
+                                <button data-title="Loop (l)" class="loop-button lectorbutton" id="loop-button">
+                                    <svg version="1.1" class="lectorsvg" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="545.487px" height="545.487px" viewBox="0 0 545.487 545.487" style="enable-background:new 0 0 545.487 545.487;" xml:space="preserve">
+                                        <g>
+                                            <path d="M545.487,269.909v7.995c0,65.811-53.546,119.338-119.344,119.338H331.24c0,0,22.023-14.931,17.235-46.589h77.668
+		c40.122,0,72.761-32.633,72.761-72.755v-7.995c0-40.125-32.645-72.761-72.761-72.761h-106.85l0,0h-28.176l16.443,41.632
+		c0.579,1.469,0.106,3.142-1.152,4.091c-1.266,0.957-3.003,0.951-4.256-0.018l-86.123-66.198c-0.872-0.665-1.374-1.696-1.374-2.784
+		c0-1.09,0.502-2.125,1.374-2.79l86.123-66.204c0.632-0.496,1.389-0.733,2.146-0.733c0.745,0,1.489,0.231,2.116,0.707
+		c1.259,0.952,1.731,2.627,1.146,4.093l-16.432,41.636h28.17v-0.006h106.844C491.941,150.562,545.487,204.104,545.487,269.909z
+		 M243.34,302.628c-1.253-0.964-2.991-0.97-4.256-0.012c-1.259,0.951-1.731,2.63-1.149,4.09l16.438,41.63h-28.174l0,0H119.344
+		c-40.122,0-72.758-32.646-72.758-72.762v-7.997c0-40.117,32.642-72.759,72.758-72.759h77.667
+		c-4.788-31.649,17.233-46.586,17.233-46.586h-94.9C53.543,148.233,0,201.767,0,267.578v7.997
+		c0,65.811,53.543,119.345,119.344,119.345h106.843v-0.007h28.173l-16.438,41.63c-0.582,1.472-0.109,3.15,1.149,4.096
+		c0.63,0.479,1.375,0.71,2.119,0.71c0.75,0,1.513-0.236,2.143-0.733l86.12-66.2c0.875-0.668,1.377-1.696,1.377-2.79
+		c0-1.1-0.502-2.122-1.377-2.79L243.34,302.628z" />
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                    </svg>
+                                    </img>
+                                </button>
                                 <button data-title="PIP (p)" class="pip-button lectorbutton" id="pip-button">
                                     <svg class="lectorsvg">
                                         <use href="#pip"></use>
@@ -126,25 +197,53 @@ var_dump($source);
 
             <div class="below-video-content">
                 <div class="video-informations">
+                    <p class="tags"><?= $tags ?>
+                    </p>
                     <p class="watch-vid-title">
                         <?= $vid->title ?>
                     </p>
                     <div class="video-views-date-desc">
                         <div class="video-date-views">
-                            <p class="watch-video-views"> 97,435,663
+                            <p class="watch-video-views"> <?= $vid->viewNumber ?> views
                             </p>
-                            <p class="watch-video-date">12 jan 2003</p>
                         </div>
-                        <p class="video-description">lorem zml,dzmak,flkznlfjnzljnflnfjqkrnbfrqhihfirqhouvhrqouhvoqlqhroiuhoqoirhvouhsohvosdh</p>
+
+                        <p class="video-description"> <?= $vid->description ?></p>
                     </div>
                     <div class="video-icons">
+
                         <div class="video-icon like-button">
-                            <img src="/front-end/assets/img/like.svg" alt="" class="like-svg">
-                            <p>125k</p>
+                            <form action="/back-end/actions/InterAction.php" method="post" class="interaction">
+                                <?php if (isset($_SESSION['connect'])) { ?>
+                                    <button>
+                                        <img src="/front-end/assets/img/like.svg" alt="" class="like-svg">
+                                        <input type="hidden" name="idVideo" value="<?= $vid->id ?>">
+                                        <input type="hidden" name="idUser" value="<?= $_SESSION['user']['id'] ?>">
+                                    </button>
+                                <?php } else { ?>
+                                    <a href="index.php?name=Login">
+                                        <img src="/front-end/assets/img/like.svg" alt="" class="like-svg">
+                                    </a>
+                                <?php } ?>
+                            </form>
+                            <p><?= $vid->likeNumber ?></p>
                         </div>
                         <div class="video-icon dislike-button">
-                            <img src="/front-end/assets/img/dislike.svg" alt="" class="dislike-svg">
-                            <p>Dislike</p>
+                            <form action="/back-end/actions/InterAction.php" method="post" class="interaction">
+                                <?php if (isset($_SESSION['connect'])) { ?>
+                                    <button>
+                                        <img src="/front-end/assets/img/dislike.svg" alt="" class="dislike-svg">
+                                        <input type="hidden" name="dislike" value="<?= $vid->id ?>">
+                                        <input type="hidden" name="idUser" value="<?= $_SESSION['user']['id'] ?>">
+                                    </button>
+                                <?php } else { ?>
+                                    <a href="index.php?name=Login">
+                                        <img src="/front-end/assets/img/dislike.svg" alt="" class="dislike-svg">
+
+                                    </a>
+                                <?php } ?>
+                            </form>
+                            <p><?= $vid->dislikeNumber ?></p>
                         </div>
                         <div class="video-icon">
                             <img src="/front-end/assets/img/share.svg" alt="">
@@ -167,23 +266,28 @@ var_dump($source);
                         <div class="video-icon">
                             <img src="/front-end/assets/img/dot.svg" alt="">
                         </div>
+
                     </div>
                 </div>
                 <div class="below-content-box">
                     <div class="channel-watch box-below">
-                        <img src="/front-end/assets/img/favicon.svg" alt="" width="36px" height="36px">
+                        <img src="data:image/png;base64,<?= $vid->channelProfilePicture ?>" alt="" width="36px" height="36px">
                         <div class="watch-chan-infos">
-                            <div class="video-watch-name-channel">Robin the Gang</div>
-                            <div class="video-watch-subscribers">100k subscribers</div>
+                            <div class="video-watch-name-channel"><?= $vid->channelName ?></div>
+                            <div class="video-watch-subscribers"><?= $vid->subscriberNumber ?></div>
                         </div>
-                        <button class="sub-button-watch">SUBSCRIBE</button>
-                        <img src="/front-end/assets/img/Logo/bell.svg" alt="" class="bell-below">
+                        <?php if (isset($_SESSION['connect'])) { ?>
+                            <button class="sub-button-watch">SUBSCRIBE</button>
+                        <?php } else { ?>
+                            <a class="sub-button-watch-link" href="index.php?name=Login">SUBSCRIBE</a>
+                        <?php } ?>
+                        <img src=" /front-end/assets/img/Logo/bell.svg" alt="" class="bell-below">
                     </div>
 
                     <div class="comments-video box-below">
                         <div class="watch-chan-infos comment-box">
-                            <div class="video-watch-name-channel">Comments</div>
-                            <div class="video-watch-subscribers">27.4k</div>
+                            <div class="video-watch-name-channel">Top Comment</div>
+                            <div class="video-watch-subscribers"></div>
                         </div>
                         <img src="/front-end/assets/img/bonhomme-baton.jpeg" alt="" width="25px" height="25px" style="border-radius: 50%; margin-left:5px;">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt perspiciatis iure commodi
@@ -197,95 +301,87 @@ var_dump($source);
                     <div class="comments-section-infos">
                         <p class="comments-section-number">27,400 Comments</p>
                     </div>
-                    <form action="/back-end/actions/Comment.php">
+                    <form method="post">
                         <div class="add-comment">
-                            <div class="add-comment-line">
-                                <img src="/front-end/assets/img/cucumber.jpeg" alt="" style="border-radius:50%; width:40px; height:40px;">
-                                <input type="text" name="" class="add-comment-text" cols=" 30" rows="10" placeholder="Add a comment.." />
-
-                            </div>
+                            <?php if (isset($_SESSION['connect'])) { ?>
+                                <div class="add-comment-line">
+                                    <img src="data:image/png;base64,<?= $_SESSION['user']['profilePicture'] ?>" alt="" style="border-radius:50%; width:40px; height:40px;">
+                                    <input type="text" name="com" class="add-comment-text" cols=" 30" rows="10" placeholder="Add a comment.." <?php if (isset($_SESSION['comment'])) {
+                                                                                                                                                ?> value="<?= $_SESSION['comment']; ?>" <?php }
+                                                                                                                                                                                        ?> />
+                                </div>
+                            <?php } else { ?>
+                                <div class="add-comment-line">
+                                    <img src="" alt="" style="border-radius:50%; width:40px; height:40px;">
+                                    <input type="text" name="comNotLogin" class="add-comment-text" cols=" 30" rows="10" placeholder="Add a comment.." />
+                                </div>
+                            <?php } ?>
                             <div class="add-comment-buttons">
-                                <button class="cancel-button">CANCEL</button>
-                                <button class="comment-button">COMMENT</button>
+                                <?php if (isset($_SESSION['connect'])) { ?>
+                                    <button class="cancel-button">CANCEL</button>
+                                    <input type="submit" class="comment-button" value="COMMENT">
+                                <?php } else {
+                                    if (isset($_POST['comNotLogin'])) {
+                                        $_SESSION['comment'] = $_POST['comNotLogin'];
+                                    }
+                                ?>
+                                    <a class="cancel-button-link" href="index.php?name=Login">CANCEL</a>
+                                    <a href="index.php?name=Login">
+                                        <input type="submit" class="comment-button" value="COMMENT">
+                                    </a>
+                                <?php } ?>
                             </div>
                         </div>
                     </form>
-                    <div class="watch-comments">
-                        <div class="comments-name">
-                            <img src="/front-end/assets/img/bonhomme-baton.jpeg" alt="" class="img-comment-user" style="border-radius:50%; width:40px; height:40px;">
-                            <p class="name-comment-user">Romuald</p>
-                            <p class="date-comments">2mins ago</p>
-                        </div>
-                        <p class="comments-content">
-                            This clip is amazing !!! You are my god of the music ❤️
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequuntur ullam?
-                            Perferendis libero dignissimos consectetur odit ab veniam, perspiciatis doloremque est dicta
-                            architecto iste assumenda dolorum exercitationem? Numquam, est reiciendis!
-                        </p>
-                        <div class="comment-likes">
-                            <div class="comment-like">
-                                <img src="/front-end/assets/img/like.svg" alt="like" class="comment-like-img">
-                                <p class="comment-like-number">1.1k</p>
+
+                    <?php for ($i = 0; $i < count($comments); $i++) { ?>
+
+                        <div class="watch-comments">
+                            <div class="comments-name">
+                                <img src="data:image/png;base64,<?= $comments[$i]->channelProfilePicture ?>" alt="" class="img-comment-user" style="border-radius:50%; width:40px; height:40px;">
+                                <p class="name-comment-user"><?= $comments[$i]->channelName ?></p>
+                                <p class="date-comments"><?= $comments[$i]->date ?></p>
                             </div>
-                            <div class="comment-dislike">
-                                <img src="/front-end/assets/img/dislike.svg" alt="dislike" class="comment-dislike-img">
-                                <p class="comment-disike-number">107k</p>
+                            <p class="comments-content">
+                                <?= $comments[$i]->content ?>
+
+                            </p>
+                            <div class="comment-likes">
+                                <div class="comment-like">
+                                    <img src="/front-end/assets/img/like.svg" alt="like" class="comment-like-img">
+                                    <p class="comment-like-number"><?= $comments[$i]->likeNumber ?></p>
+                                </div>
+                                <div class="comment-dislike">
+                                    <img src="/front-end/assets/img/dislike.svg" alt="dislike" class="comment-dislike-img">
+                                    <p class="comment-disike-number"><?= $comments[$i]->dislikeNumber ?></p>
+                                </div>
                             </div>
+                            <button class="comments-reply">
+                                <img src="/front-end/assets/img/arrow-reply.svg" alt="">
+                                <p class="replies-comment"> View <?= $comments[$i]->responseNumber ?> replies</p>
+                            </button>
                         </div>
-                        <button class="comments-reply">
-                            <img src="/front-end/assets/img/arrow-reply.svg" alt="">
-                            <p class="replies-comment"> Views x replies</p>
-                        </button>
-                        <div class="comment-replies replies-hidden">
-                            <div class="watch-comments">
-                                <div class="comments-name">
-                                    <img src="/front-end/assets/img/bonhomme-baton.jpeg" alt="" class="img-comment-user" style="border-radius:50%; width:40px; height:40px;">
-                                    <p class="name-comment-user">Romuald</p>
-                                    <p class="date-comments">2mins ago</p>
+                </div>
+            <?php } ?>
+
+            <div class="suggestions-video">
+                <a href="index.php?name=Watch">
+                    <div class="watch-video-content">
+                        <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail-watch" />
+                        <div class="watch-next-content">
+                            <strong class="watch-watch-vid-title">I'M THE TITLE OF THE VIDEO</strong>
+                            <div class="watch-content-infos">
+                                <p class="watch-video-channel-name">Name of the chanel</p>
+                                <div class="watch-video-infos">
+                                    <p class="watch-video-number-views">200k views</p>
+                                    <p class="watch-video-date">2 weeks ago</p>
                                 </div>
-                                <p class="comments-content">
-                                    This clip is amazing !!! You are my god of the music ❤️
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequuntur ullam?
-                                    Perferendis libero dignissimos consectetur odit ab veniam, perspiciatis doloremque est dicta
-                                    architecto iste assumenda dolorum exercitationem? Numquam, est reiciendis!
-                                </p>
-                                <div class="comment-likes">
-                                    <div class="comment-like">
-                                        <img src="/front-end/assets/img/like.svg" alt="like" class="comment-like-img">
-                                        <p class="comment-like-number">1.1k</p>
-                                    </div>
-                                    <div class="comment-dislike">
-                                        <img src="/front-end/assets/img/dislike.svg" alt="dislike" class="comment-dislike-img">
-                                        <p class="comment-disike-number">107k</p>
-                                    </div>
-                                </div>
-                                <button class="comments-reply" onclick="showReplies(0)">
-                                    <img src="/front-end/assets/img/arrow-reply.svg" alt="">
-                                    <p class="replies-comment replies-hidden"> Views x replies</p>
-                                </button>
                             </div>
                         </div>
                     </div>
+                </a>
 
-                </div>
-                <div class="suggestions-video">
-                    <a href="index.php?name=Watch">
-                        <div class="watch-video-content">
-                            <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail" class="thumbnail-watch" />
-                            <div class="watch-next-content">
-                                <strong class="watch-watch-vid-title">I'M THE TITLE OF THE VIDEO</strong>
-                                <div class="watch-content-infos">
-                                    <p class="watch-video-channel-name">Name of the chanel</p>
-                                    <div class="watch-video-infos">
-                                        <p class="watch-video-number-views">200k views</p>
-                                        <p class="watch-video-date">2 weeks ago</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                </div>
+            </div>
             </div>
         </div>
 

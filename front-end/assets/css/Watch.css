@@ -213,6 +213,12 @@ progress::-moz-progress-bar {
     height: 26px;
 }
 
+.loop-button svg {
+    width: 26px;
+    height: 26px;
+}
+
+
 .playback-animation {
     pointer-events: none;
     position: absolute;
@@ -403,7 +409,6 @@ input[type=range].volume::-moz-range-thumb {
 .watch-vid-title {
     font-size: var(--font-large);
     font-weight: 500;
-    margin-top: 10px;
     color: var(--dark-text);
 }
 
@@ -494,6 +499,22 @@ input[type=range].volume::-moz-range-thumb {
     outline: 0;
     padding: 0 10px;
     border-radius: 2px;
+}
+
+.sub-button-watch-link {
+    margin-left: auto;
+    background: linear-gradient(-45deg, #ee7752,
+            #e73c7e, #23a6d5, #23d5ab, #d57f23, #d5c923);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: var(--dark-text);
+    border: none;
+    height: 100%;
+    outline: 0;
+    padding: 0 10px;
+    border-radius: 2px;
+    height: 70%;
+    padding-top: 2%;
 }
 
 .comments-video {
@@ -595,6 +616,16 @@ input[type=range].volume::-moz-range-thumb {
     color: var(--dark-text);
     outline: 0;
 }
+.comment-button-link {
+    background: linear-gradient(-45deg, #ee7752,
+            #e73c7e, #23a6d5, #23d5ab, #d57f23, #d5c923);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: var(--dark-text);
+    outline: 0;
+    height: 720%;
+    padding-top: 2%;
+}
 
 .watch-comments {
     margin: 30px 0;
@@ -633,6 +664,7 @@ input[type=range].volume::-moz-range-thumb {
 }
 
 .sub-button-watch:active,
+.sub-button-watch-link:active,
 .comment-button:active {
     border: 2px white solid;
     animation: ButtonBorder 5s ease-in-out;
@@ -721,4 +753,16 @@ input[type=range].volume::-moz-range-thumb {
     .box-below {
         width: 100%;
     }
+}
+
+.tags {
+    color:rgb(0, 179, 255);
+    margin-top: 10px;
+}
+.interaction{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
 }
