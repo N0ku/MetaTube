@@ -5,8 +5,6 @@ include_once './back-end/actions/ContentBack.php';
 $vids = getVids($_SESSION['channel'][0]->channelId);
 ?>
 
-
-
 <div class="feature-channel-flex-container">
     <div class="feature-channel-flex-items">
         <div class="feature-channel-custom-file">
@@ -28,7 +26,7 @@ $vids = getVids($_SESSION['channel'][0]->channelId);
                                     <label for="profileChannel"></label>
                                 </div>
                                 <div class="avatar-preview">
-                                    <div id="profileChannelPreview" class="img-profile-channel"style="background-image: url();">
+                                    <div id="profileChannelPreview" class="img-profile-channel">
                                     </div>
                                 </div>
                             </div>
@@ -118,38 +116,34 @@ $vids = getVids($_SESSION['channel'][0]->channelId);
 
 const test = document.querySelector(".feature-channel-flex-items:nth-child(1)");
 console.log(test)
-$('input[type="file"]').on('change', (e) => {
+$('#banner').on('change', (e) => {
     let that = e.currentTarget
     if (that.files && that.files[0]) {
         let reader = new FileReader()
         reader.onload = (e) => {
             $('.feature-channel-flex-items:nth-child(1)').css('backgroundImage', 'url(' + e.target.result +
                 ')')
-            console.log(e.target.result)
-
         }
         reader.readAsDataURL(that.files[0])
-        console.log(test)
 
 
     }
 
 })
-function readURL(input) {
-    if (input.files && input.files[0]) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            $('#profileChannelPreview').css('background-image', 'url('+e.target.result +')');
-            $('#profileChannelPreview').hide();
-            $('#profileChannelPreview').fadeIn(650);
-        }
-        reader.readAsDataURL(input.files[0]);
-    }
-}
+$('#profileChannel').on('change', (e) => {
+    let that = e.currentTarget
+    if (that.files && that.files[0]) {
+        let reader = new FileReader()
+        reader.onload = (e) => {
+            $('#profileChannelPreview').css('backgroundImage', 'url(' + e.target.result +
+                ')')
 
-$("#profileChannel").change(function() {
-    readURL(this);
-});
+        }
+        reader.readAsDataURL(that.files[0])
+    }
+
+})
+
 
 function openCity(evt, cityName) {
     var i, tabcontent, tablinks;

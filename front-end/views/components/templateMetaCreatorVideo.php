@@ -1,7 +1,7 @@
      <div class="MetaStudio-user-video-config">
         <div class="MetaStudo-user-video-this-video">           
                     <strong class="video-title"><?= $vids[$i]->title ?></strong>
-                    <img src="data:image/png;base64,<?= $vids[$i]->thumbnail ?> ">
+                    <img src="data:image/png;base64,<?= $vids[$i]->thumbnail ?> ">  
                     </div>
             <div class="MetaStudio-user-video-template">
                 <div class="MetaStudo-user-video-container">
