@@ -2,10 +2,10 @@
 
 <nav class="wrapper--navbar">
     <div class="box--navbar">
-        <div class="navbar--side">
+        <div class="navbar--side meta-creator-logo">
             <a href=" index.php?name=Home">
                 <button class="btn--logo--nav tooltip">
-                    <div class="header-menu meta-creator-logo">
+                    <div class="header-menu ">
                         <p class="meta-rgb">Meta</p>
                         <p class="logo-header-menu">Creator</p>
                     </div>
