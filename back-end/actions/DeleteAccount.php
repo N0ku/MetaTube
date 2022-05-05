@@ -10,10 +10,10 @@ if (!empty($_SESSION['user']['id'])) {
         ":id" => $_SESSION['user']['id']
     ]);
     //DELETE COMMENT ROWs
-    $sql = 'DELETE FROM comment WHERE creator = :creator ';
+    $sql = 'DELETE FROM comment WHERE author = :author ';
     $query = $db->prepare($sql);
     $query->execute([
-        ":creator" => $_SESSION['user']['id']
+        ":author" => $_SESSION['user']['id']
     ]);
      //DELETE VIDEO ROWs
      $sql = 'DELETE FROM video WHERE creator = :creator ';
@@ -22,10 +22,10 @@ if (!empty($_SESSION['user']['id'])) {
          ":creator" => $_SESSION['user']['id']
      ]);
      //DELETE CHANNEL ROWs
-     $sql = 'DELETE FROM video WHERE channelId = :channelId';
+     $sql = 'DELETE FROM channel WHERE channelId = :channeIId';
      $query = $db->prepare($sql);
      $query->execute([
-         ":channelId" => $_SESSION['user']['id']
+         ":channeIId" => $_SESSION['user']['id']
      ]);
     // EMPTY THE SESSION 
     $_SESSION = array();
