@@ -20,11 +20,7 @@
       <div class="accordion-content">
          <div class="profile-info">
             <div class="profile-name">
-               <?php if ($_SESSION['user']['profilePicture'] == "No photo") { ?>
-               <img class="profile-user" src="/front-end//assets/img/default-user-img.jpeg" alt="" />
-               <?php } else { ?>
                <img class="profile-user" src="data:image/png;base64,<?= $_SESSION['user']['profilePicture'] ?>" alt="">
-               <?php } ?>
                <h2 style="font-family: fantasy;">
                <?= $_SESSION['user']['username'] ?>
                <h2>
@@ -48,6 +44,7 @@
                <div class="tools">
                   <?php include("front-end/partials/ModalDeleteAccount.php"); ?>
                </div>
+               <!-- UPDATE YOUR DATA INFO -->
                <div class="tools">
                   <?php include("front-end/partials/ModalUpdateUser.php"); ?>
                </div>
