@@ -1,5 +1,5 @@
 <div class="home-video-content">
-    <a href="index.php?name=Watch&id=<?= $vids[$i]->id ?>" class="video-link-home">
+    <a href="index.php?name=Watch&id=<?= $vids[$i]->id ?>" >
       <img src="data:image/png;base64,<?= $vids[$i]->thumbnail ?>"  alt="thumbnail" class="thumbnail" />
       <div class="below-content">
          <div class="below-content-img">
