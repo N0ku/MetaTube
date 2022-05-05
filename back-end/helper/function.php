@@ -87,3 +87,23 @@ function getApi($route)
   $data = json_decode($data);
   return $data;
 }
+
+
+function checkid($path)
+{
+  $id = giveId();
+
+  $check = getApi($path . $id);
+  if ($check == null) {
+    return $id;
+  } else {
+    $badId = True;
+    while ($badId) {
+      $id = giveId();
+      $check = getApi($path . $id);
+      if ($check == null) {
+        return $id;
+      }
+    }
+  }
+}
