@@ -21,50 +21,29 @@ module.exports = class VideoManager
         const data = req.body
         console.log(`    target video : ${data.video}`);
     
-        let query = `SELECT likeNumber FROM video WHERE id = '${data.video}'`;
+        let query = `UPDATE video SET likeNumber = likeNumber + 1 WERE id = '${data.video}'; INSERT INTO likedVideo VALUES ('${data.id}', '${data.video}');`;
         let result = await DatabaseManager(query);
-        if( result.error ) 
-        {
-            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
-            res.status(500);
-        }
-        query = `UPDATE video SET likeNumber = ${result.data[0].likeNumber + 1} WERE id = '${data.video}'`;
-        result = await DatabaseManager(query);
         if( result.error )
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
             res.status(500);
-        }
-        query = `INSERT INTO likedVideo VALUES ('${data.id}', '${data.video}')`;
-        result = await DatabaseManager(query);
-        if( result.error ) 
-        {
-            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
-            res.status(500);
-        } res.status(200);
+        } else res.status(200).send();
     }
 
     static async addView(req, res)
     {
-        console.log("POST - /video/view");
-        const data = req.body
+        console.log("GET - /video/view/");
+        const data = req.body;
         console.log(`    target video : ${data.id}`);
 
-        let query = `SELECT viewNumber FROM video WHERE id = '${data.id}'`;
+        let query = `UPDATE video SET viewNumber = viewNumber + 1 WHERE id = '${data.id}'; `;
         let result = await DatabaseManager.executeQuery(query);
         if( result.error ) 
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
             res.status(500);
         }
-        query = `UPDATE video SET viewNumber = ${result.data[0].viewNumber + 1} WHERE id = '${data.id}'`;
-        result = await DatabaseManager.executeQuery(query);
-        if( result.error ) 
-        {
-            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
-            res.status(500);
-        }
-        else res.status(200);
+        else res.status(200).send();
     }
 
     static async upload(req, res)
