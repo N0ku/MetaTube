@@ -20,7 +20,7 @@ module.exports = class VideoManager
     {
         console.log('GET - /video/topView');
         
-        let query = 'SELECT video.title, video.description, video.thumbnail, video.date, video.viewNumber, channel.channelName, channel.channelProfilePicture FROM video, channel WHERE ORDER BY viewNumber DESC LIMIT 20;';
+        let query = 'SELECT video.title, video.description, video.thumbnail, video.date, video.viewNumber, channel.channelName, channel.channelProfilePicture FROM video, channel ORDER BY viewNumber DESC LIMIT 20;';
         let result = await DatabaseManager.executeQuery(query);
         if(result.error)
         {
@@ -132,7 +132,7 @@ module.exports = class VideoManager
 
         json.channels = result;
 
-        result = await DatabaseManager.executeQuery(`SELECT * FROM video WHERE title LIKE '%${data.searchRequest}%' OR description LIKE '%${data.searchRequest}%'`);
+        result = await DatabaseManager.executeQuery(`SELECT * FROM video, channel WHERE title LIKE '%${data.searchRequest}%' OR video.description LIKE '%${data.searchRequest}%' OR channel.channelName LIKE '%${data.searchRequest}%'`);
         if( result.error )
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
