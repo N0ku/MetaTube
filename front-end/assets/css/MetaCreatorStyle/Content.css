@@ -4,6 +4,8 @@
 }
 
 .MetaStudio-content-global{
+    overflow: hidden;
+    background-color: var(--elements-border);
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -17,7 +19,6 @@
 #MetaStudio-title-h1{
     margin-top: 10%;
     padding-left: 3vw;
-    background-color: red;
 }
 .MetaStudio-separator-rgb{
   top:0%;
@@ -58,8 +59,7 @@
 }
 
 .MetaStudio-filter-bar{
-    border:1px solid #23a6d5;
-    padding: 3% 10%;
+    margin:4% 0%;
 }
 
 .MetaStudio-user-video-config{
@@ -69,6 +69,7 @@
         justify-content: normal;
         align-items: normal;
         align-content: normal;
+        margin-bottom: 10%;
 
 }
 .MetaStudio-user-video-config h4{
@@ -77,6 +78,17 @@
     left: 0;
     display: inline-block;
 
+
+}
+
+.MetaStudo-user-video-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+    width: 100%;
 
 }
 
@@ -89,12 +101,41 @@
 text-align: center;
 }
 
-.Metastudio-user-video-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: normal;
-    align-items: normal;
-    align-content: normal;
+
+
+.MetaStudio-user-video-template{
+   display: flex;
+   width: 100%;
 }
+
+.MetaStudio-stats{
+   
+    font-size:2rem;
+    background: #3e3e3e;
+    color: #ffffff;
+    width: 100%;
+    height: auto;
+    padding: 0.6vh 1.6vw;
+    border-top: 3px solid #ababab;
+    border-bottom: 3px solid #ababab;
+    background: linear-gradient(-45deg, #ee7752,
+    #e73c7e, #23a6d5, #23d5ab, #d57f23, #d5c923);
+    background-size: 300% 300%;
+    animation: gradient 15s ease infinite;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.53);
+    -moz-box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.53);
+    -webkit-box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.53);
+  }
+  .MetaStudo-user-video-this-visibility{
+   padding-left: 50px;
+    
+  }
+
+  .MetaStudo-user-video-this-restriction,.MetaStudo-user-video-this-date,.MetaStudo-user-video-this-vues,.MetaStudo-user-video-this-commentary,.MetaStudo-user-video-this-like{
+    padding-left: 50px;
+
+  }
 
