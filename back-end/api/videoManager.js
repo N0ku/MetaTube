@@ -62,7 +62,7 @@ module.exports = class VideoManager
         console.log('POST - /search');
         const data = JSON.parse(req.body);
 
-        if(data.searchRequest = "")
+        if(data.searchRequest == "")
         {
             res.status(200).json([]);
             return;
