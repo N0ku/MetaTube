@@ -7,7 +7,7 @@ $enJson = json_decode($Json, true);
 session_start();
 $page_title = 'Unknown page?';
 $existing_pages = ['Home', 'Explorer', 'Subscriptions', 'Library', 'History', 'LikedVideo', 'WatchLater', "MetaCreator", 'Settings', 'Report', 'Help', 'SendFeedback', 'Profile', 'Register', 'Login', 'ChannelPage', 'Upload', 'SearchPage', 'Watch', 'MetaTubePremium', '404'];
-$existing_studio = ['Dashboard', 'Content','Analystic'];
+$existing_studio = ['Dashboard', 'Content', 'Analystic'];
 $homeBar = $_GET['name'];
 
 
@@ -30,6 +30,7 @@ if ($homeBar == "MetaCreator") {
     include __DIR__ . "/front-end/partials/MetaCreatorNavbar.php"; // $CreatorNavbar
     include __DIR__ . "/front-end/partials/MetaCreatorMenu.php"; // $CreatorMen
     include  __DIR__ . '/front-end/views/pages/MetaCreator/' . $pageMeta . '.php'; // $page
+    include __DIR__ . '/front-end/views/pages/upload.php'; //$channelVideoUpload
 
 
 } else {

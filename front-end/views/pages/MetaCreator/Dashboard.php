@@ -1,4 +1,4 @@
-<?php ob_start();?>
+<?php ob_start(); ?>
 
 <div class="main-page">
 
@@ -8,7 +8,7 @@
 
             <div class="page-title-container">
 
-                <h1 class="title-channel-page"><?= $enJson['MetaCreator']['dashboard-title']?></h1>
+                <h1 class="title-channel-page"><?= $enJson['MetaCreator']['dashboard-title'] ?></h1>
 
                 <div class="container-buttons">
 
@@ -23,7 +23,7 @@
                             <img src="../../../front-end/assets/img/MetaCreatorImg/logo-go-live.svg" alt="upload-btn" class="upload-logo">
                         </button>
                     </a>
-                    
+
                 </div>
 
             </div>
@@ -36,7 +36,7 @@
             <div class="dashboard-cards">
 
                 <div class="card-colomn">
-                    
+
                     <div class="card-upload">
 
                         <div class="card-video-upload">
@@ -47,10 +47,10 @@
                                     <img class="img-container" src="https://www.gstatic.com/youtube/img/creator/no_content_illustration_upload_video_v3_darkmode.svg" alt="img-video-upload">
                                 </div>
                                 <div class="p-container">
-                                    <p class="p-txt-video-upload"><?= $enJson['MetaCreator']['dashboard-upload-video-p']?></p>
+                                    <p class="p-txt-video-upload"><?= $enJson['MetaCreator']['dashboard-upload-video-p'] ?></p>
                                 </div>
                                 <div class="button-container">
-                                    <button class="btn-upload">UPLOAD VIDEOS</button>
+                                    <button class="btn-upload" onclick="feature_open_upload_function()">UPLOAD VIDEOS</button>
                                 </div>
 
                             </div>
@@ -58,11 +58,11 @@
                         </div>
 
                     </div>
-                
+
                 </div>
 
                 <div class="card-colomn">
-                    
+
                     <div class="card-analytics">
 
                         <div class="card-analytics-container">
@@ -73,15 +73,16 @@
 
                                     <div class="final-container">
 
-                                        <p class="title-analytics"><?= $enJson['MetaCreator']['analytic-title']?></p>
+                                        <p class="title-analytics"><?= $enJson['MetaCreator']['analytic-title'] ?></p>
 
                                         <div class="container-p-analytics">
 
-                                            <p class="txt-analytics"><?= $enJson['MetaCreator']['analytic-current-subscribers']?></p>
+                                            <p class="txt-analytics"><?= $enJson['MetaCreator']['analytic-current-subscribers'] ?></p>
                                             <p>3</p>
 
                                         </div>
-                                        <hr></hr>
+                                        <hr>
+                                        </hr>
 
                                     </div>
 
@@ -95,9 +96,10 @@
                                         <p class="watch-time"><?= $enJson['MetaCreator']['watch-time'] ?></p>
                                     </div>
 
-                                    <hr></hr>
+                                    <hr>
+                                    </hr>
                                     <div class="top-videos-container">
-                                        <p class="views"><?= $enJson['MetaCreator']['top-videos-title']?></p>
+                                        <p class="views"><?= $enJson['MetaCreator']['top-videos-title'] ?></p>
                                         <p class="date-summary">Last 48 hours · Views</p>
                                     </div>
 
@@ -106,7 +108,7 @@
 
                                 </div>
 
-                        
+
                             </div>
 
 
@@ -118,7 +120,7 @@
                 </div>
 
                 <div class="card-colomn">
-                    
+
                     <div class="card-analytics">
 
                         <div class="card-analytics-container">
@@ -127,12 +129,12 @@
 
                                 <div class="elements-container-dashboard">
 
-                                    <p class="title-analytics"><?= $enJson['MetaCreator']['dashboard-recent-desc']?></p>
+                                    <p class="title-analytics"><?= $enJson['MetaCreator']['dashboard-recent-desc'] ?></p>
                                     <p class="date-summary">Lifetime</p>
                                     <button class="btn-upload">SEE ALL</button>
                                 </div>
 
-                        
+
                             </div>
 
 

@@ -32,17 +32,14 @@
     <link rel="stylesheet" href="./front-end/assets/css/MetaCreatorStyle/MenuCreator.css">
     <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-   
+
 
 </head>
 
 <body>
     <?php
-    if (isset($channelVideoUpload)) {
-        echo ($channelVideoUpload);
-    }
+    echo ($channelVideoUpload);
     ?>
-
     <?php
     if (isset($pageName)) {
         if ($pageName != "404") {
@@ -92,7 +89,7 @@
     <script src="/front-end/assets/js/script-watch.js"></script>
     <script src="./front-end/assets/js/toastr.min.js"></script>
     <script src="./front-end/assets/js/toastr.js.map"></script>
-    <script src="./front-end/assets/js/drag-drop-upload-metacreator.js"></script> 
+    <script src="./front-end/assets/js/drag-drop-upload-metacreator.js"></script>
 
 
     <script>
