@@ -9,6 +9,18 @@ if (!empty($_SESSION['user']['id'])) {
     $query->execute([
         ":id" => $_SESSION['user']['id']
     ]);
+    //DELETE COMMENT ROWs
+    $sql = 'DELETE FROM comment WHERE creator = :creator ';
+    $query = $db->prepare($sql);
+    $query->execute([
+        ":creator" => $_SESSION['user']['id']
+    ]);
+     //DELETE VIDEO ROWs
+     $sql = 'DELETE FROM video WHERE creator = :creator ';
+     $query = $db->prepare($sql);
+     $query->execute([
+         ":creator" => $_SESSION['user']['id']
+     ]);
     // EMPTY THE SESSION 
     $_SESSION = array();
     session_destroy();
