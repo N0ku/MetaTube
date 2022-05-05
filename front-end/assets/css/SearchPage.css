@@ -108,3 +108,8 @@
         display: none;
         visibility: hidden;
     }
+
+    .channelImg {
+
+        max-width: 15%;
+    }
