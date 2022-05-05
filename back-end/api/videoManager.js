@@ -132,7 +132,7 @@ module.exports = class VideoManager
 
         json.channels = result;
 
-        result = await DatabaseManager.executeQuery(`SELECT * FROM video, channel WHERE title LIKE '%${data.searchRequest}%' OR video.description LIKE '%${data.searchRequest}%' OR channel.channelName LIKE '%${data.searchRequest}%'`);
+        result = await DatabaseManager.executeQuery(`SELECT DISTINCT * FROM video, channel WHERE title LIKE '%${data.searchRequest}%' OR video.description LIKE '%${data.searchRequest}%' OR channel.channelName LIKE '%${data.searchRequest}%'`);
         if( result.error )
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
