@@ -2,27 +2,25 @@
 
 include_once './back-end/actions/Timeline.php';
 $vids = getVids(12);
-$someVar = 0;
-$someI = 0;
 ?>
 <div class="home-videos-grid">
     <?php
-    for ($someI = 0; $someI < count($vids); $someI++) {
+    for ($i = 0; $someI < count($vids); $i++) {
     ?>
-    <a href="index.php?name=Watch&id=<?= $vids[$someVar]->id ?>" class="video-link-home">
+    <a href="index.php?name=Watch&id=<?= $vids[$i]->id ?>" class="video-link-home">
         <div class="home-video-content">
-            <img src="data:image/png;base64,<?= $vids[$someVar]->thumbnail ?>" alt="thumbnail" class="thumbnail" />
+            <img src="data:image/png;base64,<?= $vids[$i]->thumbnail ?>" alt="thumbnail" class="thumbnail" />
             <div class="below-content">
                 <div class="below-content-img">
-                    <img src="data:image/png;base64,<?= $vids[$someVar]->channelProfilePicture ?>" alt=""
+                    <img src="data:image/png;base64,<?= $vids[$i]->channelProfilePicture ?>" alt=""
                         class="video-channel-img" />
                 </div>
                 <div class="below-content-text">
-                    <strong class="video-title"><?= $vids[$someVar]->title ?></strong>
-                    <p class="video-channel-name"><?= $vids[$someVar]->channelName; ?></p>
+                    <strong class="video-title"><?= $vids[$i]->title ?></strong>
+                    <p class="video-channel-name"><?= $vids[$i]->channelName; ?></p>
                     <div class="video-infos">
-                        <p class="video-number-views"><?= $vids[$someVar]->viewNumber ?></p>
-                        <p class="video-date"><?= $vids[$someVar]->date ?></p>
+                        <p class="video-number-views"><?= $vids[$i]->viewNumber ?></p>
+                        <p class="video-date"><?= $vids[$i]->date ?></p>
                     </div>
                 </div>
             </div>
@@ -30,7 +28,6 @@ $someI = 0;
     </a>
 
     <?php
-        $someVar = $someVar + 1;
     }
     ?>
 
