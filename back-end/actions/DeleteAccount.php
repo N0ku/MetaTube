@@ -21,6 +21,12 @@ if (!empty($_SESSION['user']['id'])) {
      $query->execute([
          ":creator" => $_SESSION['user']['id']
      ]);
+     //DELETE CHANNEL ROWs
+     $sql = 'DELETE FROM video WHERE channelId = :channelId';
+     $query = $db->prepare($sql);
+     $query->execute([
+         ":channelId" => $_SESSION['user']['id']
+     ]);
     // EMPTY THE SESSION 
     $_SESSION = array();
     session_destroy();
