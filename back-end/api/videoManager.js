@@ -9,25 +9,55 @@ module.exports = class VideoManager
         app.post('/upload/video', (req, res) => { this.upload(req, res) });
         app.post('/search', (req, res)       => { this.search(req, res) });
         app.post('/video/view', (req, res)   => { this.addView(req, res) });
+        app.post('/video/like', (req, res)   => { this.addLike(req, res) });
         app.post('/like/:id', (req, res)     => { this.likeVideo(req, res) });
         app.get('/video/:id', (req, res)     => { this.mainVideo(req, res) });
         app.get('/watch/:id', (req, res)     => { this.streaming(req, res) });
     }
 
-    static async addView()
+    static async addLike(req, res)
     {
-        console.log("POST - /video/view");
+        console.log("POST - /video/like");
         const data = req.body
-        console.log(`    target video : ${data.id}`);
-
-        let query = `SELECT viewNumber FROM video WHERE id = ${data.id}`;
+        console.log(`    target video : ${data.video}`);
+    
+        let query = `SELECT likeNumber FROM video WHERE id = '${data.video}'`;
         let result = await DatabaseManager(query);
         if( result.error ) 
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
             res.status(500);
         }
-        query = `UPDATE video SET viewNumber = ${result.data.viewNumber + 1} WERE id = ${data.id}`;
+        query = `UPDATE video SET likeNumber = ${result.data.likeNumber + 1} WERE id = '${data.video}'`;
+        result = await DatabaseManager(query);
+        if( result.error ) 
+        {
+            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
+            res.status(500);
+        }
+        query = `INSERT INTO likedVideo VALUES ('${data.id}', '${data.video}')`;
+        result = await DatabaseManager(query);
+        if( result.error ) 
+        {
+            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
+            res.status(500);
+        } res.status(200);
+    }
+
+    static async addView(req, res)
+    {
+        console.log("POST - /video/view");
+        const data = req.body
+        console.log(`    target video : ${data.id}`);
+
+        let query = `SELECT viewNumber FROM video WHERE id = '${data.id}'`;
+        let result = await DatabaseManager(query);
+        if( result.error ) 
+        {
+            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
+            res.status(500);
+        }
+        query = `UPDATE video SET viewNumber = ${result.data.viewNumber + 1} WERE id = '${data.id}'`;
         result = await DatabaseManager(query);
         if( result.error ) 
         {
@@ -97,7 +127,7 @@ module.exports = class VideoManager
             videos : []
         };
 
-        let result = await DatabaseManager.executeQuery(`SELECT * FROM channel WHERE channelName LIKE %${data.searchRequest}%`);
+        let result = await DatabaseManager.executeQuery(`SELECT * FROM channel WHERE channelName LIKE '%${data.searchRequest}%'`);
         if( result.error )
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
@@ -107,7 +137,7 @@ module.exports = class VideoManager
 
         json.channels = result;
 
-        result = await DatabaseManager.executeQuery(`SELECT * FROM video WHERE title LIKE %${data.searchRequest}%`);
+        result = await DatabaseManager.executeQuery(`SELECT * FROM video WHERE title LIKE '%${data.searchRequest}%' OR description LIKE '%${data.searchRequest}%'`);
         if( result.error )
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
