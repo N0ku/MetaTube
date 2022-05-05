@@ -38,8 +38,8 @@ $vids = getVids($_SESSION['channel'][0]->channelId);
                     </div>
                 </div>
                 <div class="feature-channel-navigation-optionChannelPage">
-                    <button class="feature-channel-btn-customChannel">CUSTOMIZE THE CHANNEL <href="index.php?name=ChannelPage"></button>
-                    <button href="index.php?name=MetaCreator" class="feature-channel-btn-metaStudio">EDIT YOUR VIDEOS
+                    <button class="feature-channel-btn-customChannel"><a href="index.php?name=MetaCreator&link=Dashboard"> CUSTOM VIDEO</a></button>
+                    <button class="feature-channel-btn-metaStudio">EDIT YOUR VIDEOS
                     </button>
                 </div>
             </div>

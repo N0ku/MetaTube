@@ -1,9 +1,13 @@
      <div class="MetaStudio-user-video-config">
-        <div class="MetaStudo-user-video-this-video">           
-                    <strong class="video-title"><?= $vids[$i]->title ?></strong>
-                    <img src="data:image/png;base64,<?= $vids[$i]->thumbnail ?> ">  
+        <div class="MetaStudo-user-video-this-video">    
+                    <div class="MetaStudio-user-border">
+                   <strong class="video-title-MetaCreator"><?= $vids[$i]->title ?></strong>
+
+                    <img src="data:image/png;base64,<?= $vids[$i]->thumbnail ?> " class="thumbnail-MetaCreator" >  
+                    </div>      
+             
                     </div>
-            <div class="MetaStudio-user-video-template">
+            <div class="MetaStudo-user-video-template">
                 <div class="MetaStudo-user-video-container">
                     <div class="MetaStudo-user-video-this-visibility">
                     <strong class="MetaStudio-stats"><?= $vids[$i]->viewNumber ?></strong>

@@ -139,3 +139,18 @@ text-align: center;
 
   }
 
+  .thumbnail-MetaCreator, .MetaStudio-user-border {
+    width: 250px;
+    object-fit: cover;
+  }
+
+  .video-title-MetaCreator {
+    box-sizing: content-box;
+    width: 100%;
+    text-overflow: ellipsis;
+    font-family: var(--font);
+    color: var(--dark-text);
+    font-size: 15px;
+  }
+  
+
