@@ -54,10 +54,18 @@ function getComments($id)
 
 function view($id)
 {
-    $data = array(
-        "id" => $id,
-    );
-    postApi($data, 'video/view/');
+    /*$url = 'http://93.16.2.231:8081/video/view/' . $id;
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+    //for debug only!
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+
+    $resp = curl_exec($curl);
+    curl_close($curl);*/
+    getApi('video/view/' . $id);
 }
 
 function like($video, $like)
