@@ -39,7 +39,7 @@ module.exports = class CommentManager
             if( result.error ) 
             {
                 console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
-                res.status(500);
+                res.status(500).send();
                 return;
             }
             else
@@ -55,9 +55,9 @@ module.exports = class CommentManager
         if( result.error ) 
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
-            res.status(500);
+            res.status(500).send();
         }
-        else res.status(200);
+        else res.status(200).send();
     }
 
     static async mainComment(req, res)
