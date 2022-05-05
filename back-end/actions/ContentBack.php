@@ -2,8 +2,8 @@
 include_once './back-end/helper/function.php';
 
 
-function getVids($number)
+function getVids($id)
 {
-    $vids = getApi('videos/' . $number);
+    $vids = getApi('videos/' . $id);
     return $vids;
 }

@@ -7,7 +7,7 @@ $enJson = json_decode($Json, true);
 session_start();
 $page_title = 'Unknown page?';
 $existing_pages = ['Home', 'Explorer', 'Subscriptions', 'Library', 'History', 'LikedVideo', 'WatchLater', "MetaCreator", 'Settings', 'Report', 'Help', 'SendFeedback', 'Profile', 'Register', 'Login', 'ChannelPage', 'Upload', 'SearchPage', 'Watch', 'MetaTubePremium', '404'];
-$existing_studio = ['Dashboard', 'Content'];
+$existing_studio = ['Dashboard', 'Content','Analystic'];
 $homeBar = $_GET['name'];
 
 
