@@ -11,9 +11,9 @@ module.exports = class VideoManager
         app.post('/video/view', (req, res)   => { this.addView(req, res) });
         app.post('/video/like', (req, res)   => { this.addLike(req, res) });
         app.post('/like/:id', (req, res)     => { this.likeVideo(req, res) });
-        app.get('/video/:id', (req, res)     => { this.mainVideo(req, res) });
         app.get('/video/topView', (req, res) => { this.topView(req, res) });
         app.get('/watch/:id', (req, res)     => { this.streaming(req, res) });
+        app.get('/video/:id', (req, res)     => { this.mainVideo(req, res) });
     }
 
     static async topView(req, res)
