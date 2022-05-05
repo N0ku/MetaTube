@@ -26,6 +26,10 @@ if (isset($_POST['com'])) {
     }
 }
 $_SESSION['lastPage'] = "index.php?name=Watch&id=" . $video_id;
+
+if (isset($video_id)) {
+    view($video_id);
+}
 ?>
 
 <div class="watch-content">

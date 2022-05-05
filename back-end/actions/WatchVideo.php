@@ -51,3 +51,20 @@ function getComments($id)
     $comments = getApi('comment/' . $id);
     return $comments;
 }
+
+function view($id)
+{
+    $data = array(
+        "id" => $id,
+    );
+    postApi($data, 'video/view/');
+}
+
+function like($video, $like)
+{
+    $data = array(
+        "video" => $video,
+        "like" => $like,
+    );
+    postApi($data, 'video/like/');
+}
