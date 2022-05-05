@@ -81,12 +81,12 @@ module.exports = class VideoManager
         if( result.error ) 
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
-            res.status(500);
+            res.status(500).send();
         }
         else
         {
             console.log(`Video id ${data.id} uploaded !`);
-            res.status(200);
+            res.status(200).send();
         }
     }
 
@@ -111,7 +111,7 @@ module.exports = class VideoManager
         if( result.error )
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
-            res.status(500);
+            res.status(500).send();
             return
         }
 
@@ -121,7 +121,7 @@ module.exports = class VideoManager
         if( result.error )
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
-            res.status(500);
+            res.status(500).send();
             return
         }
 
@@ -152,7 +152,7 @@ module.exports = class VideoManager
         if(!range)
         {
             console.error("C'est la merde...");
-            res.status(500);
+            res.status(500).send();
             return;
         }
         const   videoId = req.params.id,
