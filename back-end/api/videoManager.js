@@ -12,7 +12,22 @@ module.exports = class VideoManager
         app.post('/video/like', (req, res)   => { this.addLike(req, res) });
         app.post('/like/:id', (req, res)     => { this.likeVideo(req, res) });
         app.get('/video/:id', (req, res)     => { this.mainVideo(req, res) });
+        app.get('/video/topView', (req, res) => { this.topView(req, res) });
         app.get('/watch/:id', (req, res)     => { this.streaming(req, res) });
+    }
+
+    static async topView(req, res)
+    {
+        console.log('GET - /video/topView');
+        
+        let query = 'SELECT * FROM video ORDER BY viewNumber DESC LIMIT 20;';
+        let result = await DatabaseManager.executeQuery(query);
+        if(result.error)
+        {
+            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
+            res.status(500).send();
+        }
+        else res.status(200).json(result.data);
     }
 
     static async addLike(req, res)
