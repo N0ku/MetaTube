@@ -18,5 +18,6 @@ function createChannel()
         );
 
         postApi($data, 'upload/channel');
+        $_SESSION['channel'] = $data;
     }
 }

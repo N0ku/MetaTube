@@ -17,11 +17,18 @@
             </a>
         </div>
 
-        <form method="POST" action="./back-end/actions/filters.php" class="navbar--center">
+        <form method="POST" action="index.php?name=SearchPage" class="navbar--center">
             <input type="text" name="searchBar" class="navbar__center__input" placeholder="<?= $enJson['profile']['navBar']['placeHolderSearch'] ?>" />
-            <button class="navbar__center__search-btn" onclick="window.location.href = 'index.php?name=SearchPage';">
-                <img src="./front-end/assets/img/Logo/search.svg" alt="">
-            </button>
+            <?php if ($homeBar != "SearchPage") { ?>
+                <button class="navbar__center__search-btn" onclick="window.location.href = 'index.php?name=SearchPage';">
+                    <img src="./front-end/assets/img/Logo/search.svg" alt="">
+                </button>
+            <?php } ?>
+            <?php if ($homeBar == "SearchPage") { ?>
+                <button class="navbar__center__search-btn" onclick="Search()">
+                    <img src="./front-end/assets/img/Logo/search.svg" alt="">
+                </button>
+            <?php } ?>
         </form>
 
         <div class="navbar--side">
@@ -30,7 +37,9 @@
                     <a href="index.php?name=Login">
                         <span class="tooltiptext"><?= $enJson['profile']['navBar']['tooltipUploadNoConnect'] ?></span>
                         <?php } else {
-                        if (isset($_SESSION['channel'])) {
+                        $id = $_SESSION['user']['id'];
+                        $creator = getApi('channel/' . $id);
+                        if ($creator != null) {
                         ?>
                             <a onclick="feature_open_upload_function()">
                                 <span class="tooltiptext"><?= $enJson['profile']['navBar']['tooltipUpload'] ?></span>
@@ -73,54 +82,49 @@
                             </label>
                         </div>
                         <!-- LINK TO CHANNEL -->
-                        <?php if (isset($_SESSION['channel'])) { ?>
-                            <a class="drop--element" href="index.php?name=ChannelPage">
-                            <?php } else { ?>
-                                <a class="drop--element" onclick="feature_open_accountCreator_function()">
-
-                                <?php } ?>
-                                <div>
-                                    <img src="./front-end/assets/img/Logo/link.svg" alt="">
-                                </div>
-                                <?= $enJson['profile']['navBar']['buttonChannel'] ?>
-                                </a>
-                                <!-- LINK TO BUY A -->
-                                <a href="/" class="drop-profil">
-                                    <div>
-                                        <img src="./front-end/assets/img/Logo/dollar-sign.svg" alt="">
-                                    </div>
-                                    <?= $enJson['profile']['navBar']['buttonSubscription'] ?>
-                                </a>
-                                <!-- YOUTUBE STUDIO -->
-                                <a href="/" class="drop-profil">
-                                    <div>
-                                        <img src="./front-end/assets/img/Logo/tv.svg" alt="">
-                                    </div>
-                                    <?= $enJson['profile']['navBar']['buttonStudio'] ?>
-                                </a>
-                                <!-- LINK TO SIGN OUT -->
-                                <a href="/back-end/actions/disconnect.php" class="drop-profil">
-                                    <div>
-                                        <img src="./front-end/assets/img/Logo/log-out.svg" alt="">
-                                    </div>
-                                    <?= $enJson['profile']['navBar']['buttonSignOut'] ?>
-                                </a>
-                                <!-- LINK TO GO ON PROFIL -->
-                                <a href="index.php?name=Profile" class="drop-profil">
-                                    <div>
-                                        <img src="./front-end/assets/img/Logo/user.svg" alt="">
-                                    </div>
-                                    <?= $enJson['profile']['navBar']['buttonAccount'] ?>
-                                </a>
-                                <!-- LINK TO DATA -->
-                                <a href="/" class="drop-profil">
-                                    <div>
-                                        <img src="./front-end/assets/img/Logo/database.svg" alt="">
-                                    </div>
-                                    <?= $enJson['profile']['navBar']['buttonData'] ?>
-                                </a>
-                                <hr />
-                                <a href="/" class="drop-profil"><?= $enJson['profile']['navBar']['buttonRestricted'] ?></a>
+                        <a class="drop--element" onclick="feature_open_accountCreator_function()">
+                            <div>
+                                <img src="./front-end/assets/img/Logo/link.svg" alt="">
+                            </div>
+                            <?= $enJson['profile']['navBar']['buttonChannel'] ?>
+                        </a>
+                        <!-- LINK TO BUY A -->
+                        <a href="/" class="drop-profil">
+                            <div>
+                                <img src="./front-end/assets/img/Logo/dollar-sign.svg" alt="">
+                            </div>
+                            <?= $enJson['profile']['navBar']['buttonSubscription'] ?>
+                        </a>
+                        <!-- YOUTUBE STUDIO -->
+                        <a href="/" class="drop-profil">
+                            <div>
+                                <img src="./front-end/assets/img/Logo/tv.svg" alt="">
+                            </div>
+                            <?= $enJson['profile']['navBar']['buttonStudio'] ?>
+                        </a>
+                        <!-- LINK TO SIGN OUT -->
+                        <a href="/back-end/actions/disconnect.php" class="drop-profil">
+                            <div>
+                                <img src="./front-end/assets/img/Logo/log-out.svg" alt="">
+                            </div>
+                            <?= $enJson['profile']['navBar']['buttonSignOut'] ?>
+                        </a>
+                        <!-- LINK TO GO ON PROFIL -->
+                        <a href="index.php?name=Profile" class="drop-profil">
+                            <div>
+                                <img src="./front-end/assets/img/Logo/user.svg" alt="">
+                            </div>
+                            <?= $enJson['profile']['navBar']['buttonAccount'] ?>
+                        </a>
+                        <!-- LINK TO DATA -->
+                        <a href="/" class="drop-profil">
+                            <div>
+                                <img src="./front-end/assets/img/Logo/database.svg" alt="">
+                            </div>
+                            <?= $enJson['profile']['navBar']['buttonData'] ?>
+                        </a>
+                        <hr />
+                        <a href="/" class="drop-profil"><?= $enJson['profile']['navBar']['buttonRestricted'] ?></a>
                     </div>
                 </div>
             <?php } ?>

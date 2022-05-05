@@ -5,6 +5,13 @@ module.exports = class UserManager
     static eventListener(app)
     {
         app.post('upload/user', (req, res) => { this.upload(req, res) });
+        app.get('user/liked/:userId', (req, res) => { this.getLikedVideo(req, res) });
+    }
+
+    static async getLikedVideo(req, res)
+    {
+        console.log('GET - /user/liked/');
+        
     }
 
     static async upload(req, res)

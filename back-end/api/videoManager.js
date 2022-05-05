@@ -7,10 +7,58 @@ module.exports = class VideoManager
     static eventListener(app)
     {
         app.post('/upload/video', (req, res) => { this.upload(req, res) });
-        app.post('/search', (req, res) => { this.search(req, res) });
+        app.post('/search', (req, res)       => { this.search(req, res) });
+        app.post('/video/view', (req, res)   => { this.addView(req, res) });
+        app.post('/video/like', (req, res)   => { this.addLike(req, res) });
         app.post('/like/:id', (req, res)     => { this.likeVideo(req, res) });
-        app.get('/video/:id', (req, res)     => { this.mainVideo(req, res) });
+        app.get('/video/topView', (req, res) => { this.topView(req, res) });
         app.get('/watch/:id', (req, res)     => { this.streaming(req, res) });
+        app.get('/video/:id', (req, res)     => { this.mainVideo(req, res) });
+    }
+
+    static async topView(req, res)
+    {
+        console.log('GET - /video/topView');
+        
+        let query = 'SELECT video.title, video.description, video.thumbnail, video.date, video.viewNumber, channel.channelName, channel.channelProfilePicture FROM video, channel ORDER BY viewNumber DESC LIMIT 20;';
+        let result = await DatabaseManager.executeQuery(query);
+        if(result.error)
+        {
+            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
+            res.status(500).send();
+        }
+        else res.status(200).json(result.data);
+    }
+
+    static async addLike(req, res)
+    {
+        console.log("POST - /video/like");
+        const data = req.body
+        console.log(`    target video : ${data.video}`);
+    
+        let query = `UPDATE video SET likeNumber = likeNumber + 1 WERE id = '${data.video}'; INSERT INTO likedVideo VALUES ('${data.id}', '${data.video}');`;
+        let result = await DatabaseManager(query);
+        if( result.error )
+        {
+            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
+            res.status(500);
+        } else res.status(200).send();
+    }
+
+    static async addView(req, res)
+    {
+        console.log("GET - /video/view/");
+        const data = req.body;
+        console.log(`    target video : ${data.id}`);
+
+        let query = `UPDATE video SET viewNumber = viewNumber + 1 WHERE id = '${data.id}'; `;
+        let result = await DatabaseManager.executeQuery(query);
+        if( result.error ) 
+        {
+            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
+            res.status(500);
+        }
+        else res.status(200).send();
     }
 
     static async upload(req, res)
@@ -48,19 +96,20 @@ module.exports = class VideoManager
         if( result.error ) 
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
-            res.status(500);
+            res.status(500).send();
         }
         else
         {
             console.log(`Video id ${data.id} uploaded !`);
-            res.status(200);
+            res.status(200).send();
         }
     }
 
     static async search(req, res)
     {
         console.log('POST - /search');
-        const data = JSON.parse(req.body);
+        const data = req.body;
+        console.log(`    Request : ${data.searchRequest}`);
 
         if(data.searchRequest == "")
         {
@@ -73,21 +122,21 @@ module.exports = class VideoManager
             videos : []
         };
 
-        let result = await DatabaseManager.executeQuery(`SELECT * FROM channel WHERE channelName LIKE %${data.searchRequest}%`);
+        let result = await DatabaseManager.executeQuery(`SELECT * FROM channel WHERE channelName LIKE '%${data.searchRequest}%'`);
         if( result.error )
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
-            res.status(500);
+            res.status(500).send();
             return
         }
 
         json.channels = result;
 
-        result = await DatabaseManager.executeQuery(`SELECT * FROM video WHERE title LIKE %${data.searchRequest}%`);
+        result = await DatabaseManager.executeQuery(`SELECT * FROM video, channel WHERE title LIKE '%${data.searchRequest}%' OR video.description LIKE '%${data.searchRequest}%' OR channel.channelName LIKE '%${data.searchRequest}%'`);
         if( result.error )
         {
             console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
-            res.status(500);
+            res.status(500).send();
             return
         }
 
@@ -118,7 +167,7 @@ module.exports = class VideoManager
         if(!range)
         {
             console.error("C'est la merde...");
-            res.status(500);
+            res.status(500).send();
             return;
         }
         const   videoId = req.params.id,

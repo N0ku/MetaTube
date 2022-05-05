@@ -1,12 +1,25 @@
 <?php
 
-include_once '/Users/celian/Documents/MetaFix/MetaTube - dev/back-end/helper/function.php';
-
+include_once __DIR__ . '/../helper/function.php';
 function getVids($number)
 {
     $vids = getApi('timeline/video/' . $number);
     return $vids;
 }
+
+function postAPIString($string)
+{
+    if ($string == '') {
+        $vids = getVids(10);
+    } else {
+        $arrayJSon = array(
+            'searchRequest' => $string
+        );
+        $vids = postApi($arrayJSon, "search");
+    }
+    return $vids;
+}
+
 
 function getCreator($id)
 {
@@ -14,6 +27,4 @@ function getCreator($id)
     return $creator;
 }
 
-
-$vids = getVids(10);
-    // var_dump($vids);
+    // $vids = Searchupdate( $vids);
