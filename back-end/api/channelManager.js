@@ -8,6 +8,22 @@ module.exports = class channelManager
         app.post('/channel/subscribe', (req, res)       => { this.subscribing(req, res) });
         app.get('/channel/:id', (req, res)              => { this.mainChannel(req, res) });
         app.get('/channel/subscriber/:id', (req, res)   => { this.getSubscriber(req, res) });
+        app.get('/videos/:id', (req, res)               => { this.getAllVideosOfaChannel(req, res) });
+    }
+
+    static async getAllVideosOfaChannel(req, res)
+    {
+        console.log('GET - /channel/videos/');
+        let channelId = req.params.id;
+
+        let query = `SELECT video.* FROM video WHERE video.creator = '${channelId}'`;
+        let result = await DatabaseManager.executeQuery(query);
+        if( result.error )
+        {
+            console.error('QUERY OR SOMETHING HAS BEEN FUCKED UP');
+            res.status(500).json([]);
+        }
+        else res.status(200).json(result.data);
     }
 
     static async upload(req, res)
