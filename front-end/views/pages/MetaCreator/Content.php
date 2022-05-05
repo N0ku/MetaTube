@@ -12,15 +12,13 @@ $vids = getVids($_SESSION['channel'][0]->channelId);
     <div class="MetaStudio-separator-rgb"></div>
     <div class="MetaStudio-selected-category">
         <div class="MetaStudio-selected-video">
-            <h2 id="MetaStudio-selected-video-h2">Videos</h2>
+            <boutton class="btn-content"><a href="http://www.google.fr">Selected video</a></boutton>
         </div>
         <div class="MetaStudio-selected-commentary">
-            <h2 id="MetaStudio-selected-commentary-h2">Commentary</h2>
+            <boutton class="btn-content"><a href="http://www.google.fr">Coomentary</a></boutton>
         </div>
     </div>
-    <div class="MetaStudio-filter-bar">
-        <h2>FilterBar</h2>
-    </div>
+    <div class="MetaStudio-filter-bar"></div>
     <div class="MetaStudio-user-video-config">
         <h4 class="MetaStudio-videolist">Video</h4>
         <h4 class="MetaStudio-visibilitylist">Visibility</h4>
