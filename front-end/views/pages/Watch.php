@@ -3,31 +3,29 @@ ob_start();
 include_once "./back-end/actions/WatchVideo.php";
 $video_id = $_GET["id"];
 // $path = $path_key . $video_id;
-$vid = getVid($video_id);
+$vid = getVid($video_id)[0];
 
 $comments = getComments($video_id);
 
-$creator = getCreator($vid->creator);
 $source = "http://93.16.2.231:8081/watch/" . $video_id;
 
 $tags = "";
 $description = $vid->description;
-$descriptionExploded = explode(' ', $description);
-
-foreach ($descriptionExploded as $word) {
-    if (substr($word, 0, 1) == "#") {
-        $tags = $tags . ' ' . $word;
+if ($description != null) {
+    $descriptionExploded = explode(' ', $description);
+    foreach ($descriptionExploded as $word) {
+        if (substr($word, 0, 1) == "#") {
+            $tags = $tags . ' ' . $word;
+        }
     }
 }
-
-
 if (isset($_POST['com'])) {
     postComment($_POST['com'], $_SESSION['user']['id'], $video_id);
     if (isset($_SESSION['comment'])) {
         $_SESSION['comment'];
     }
 }
-$_SESSION['lastPage'] = "index.php?name=Watch&id=" . $video_id
+$_SESSION['lastPage'] = "index.php?name=Watch&id=" . $video_id;
 ?>
 
 <div class="watch-content">
@@ -269,10 +267,10 @@ $_SESSION['lastPage'] = "index.php?name=Watch&id=" . $video_id
                 </div>
                 <div class="below-content-box">
                     <div class="channel-watch box-below">
-                        <img src="data:image/png;base64,<?= $creator->channelProfilePicture ?>" alt="" width="36px" height="36px">
+                        <img src="data:image/png;base64,<?= $vid->channelProfilePicture ?>" alt="" width="36px" height="36px">
                         <div class="watch-chan-infos">
-                            <div class="video-watch-name-channel"><?= $creator->channelName ?></div>
-                            <div class="video-watch-subscribers"><?= $creator->subscriberNumber ?></div>
+                            <div class="video-watch-name-channel"><?= $vid->channelName ?></div>
+                            <div class="video-watch-subscribers"><?= $vid->subscriberNumber ?></div>
                         </div>
                         <?php if (isset($_SESSION['connect'])) { ?>
                             <button class="sub-button-watch">SUBSCRIBE</button>
