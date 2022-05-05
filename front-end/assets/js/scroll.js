@@ -1,49 +1,72 @@
-const page = document.querySelector('.home-video-grid');
+const page = document.querySelector('.page');
 const pageContent = document.querySelector('.page-content');
+const grid = document.querySelector('.home-video-grid');
 
-const grid = `
-    <? php
-    for ($i = 0; $i < count($vids); $i++) {
-    $creator = getCreator($vids[$i] -> creator);
+console.log("scroll file load")
 
-    ?>
-    <a href="index.php?name=Watch&id=<?= $vids[$i]->id ?>" class="video-link-home">
-        <div class="home-video-content">
-            <img src="data:image/png;base64,<?= $vids[$i]->thumbnail ?>" alt="thumbnail" class="thumbnail" />
-            <div class="below-content">
-                <div class="below-content-img">
-                    <img src="data:image/png;base64,<?= $creator[0]->channelProfilePicture ?>" alt=""
-                        class="video-channel-img" />
-                </div>
-                <div class="below-content-text">
-                    <strong class="video-title"><?= $vids[$i]->title ?></strong>
-                    <p class="video-channel-name"><?= $creator[0]->channelName; ?></p>
-                    <div class="video-infos">
-                        <p class="video-number-views"><?= $vids[$i]->viewNumber ?></p>
-                        <p class="video-date"><?= $vids[$i]->date ?></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
 
-    <?php }?>`;
-
-    /* 
-    const grid = document.querySelector('.home-video-grid');
-    
-    */
+var pageHeight = page.offsetHeight;
 
 function loadGrid() {
-    page.appendChild(grid);
+    var text = document.createElement("div");
+    text.className = "home-videos-grid";
+    for (let index = 0; index < 6; index++) {
+        text.appendChild(createVid());
+    }
+    page.appendChild(text);
 }
 
-pageContent.addEventListener('scroll', evt => {
-    var scrollPosY = evt.target.scrollTop;
-    var pageHeight = page.offsetHeight;
-    var heightPourcent = (scrollPosY * 7) / pageHeight * 100;
-    if (heightPourcent > 80) {
-        console.log("RATIO SUP A 80%")
-        loadGrid();
+
+function createVid() {
+    var vidA = document.createElement('a');
+    vidA.setAttribute("href", "index.php ? name = Watch & id=<?= $vids[$i] -> id ?>");
+    vidA.className = "video-link-home";
+    var vidContent = document.createElement('div');
+    vidContent.className = "home-video-content";
+    var thumbnail = document.createElement('img');
+    thumbnail.className = "thumbnail";
+    thumbnail.setAttribute("src", "data: image / png; base64,<?= $vids[$i] -> thumbnail ?>");
+    var belowContent = document.createElement('div');
+    belowContent.className = "below-content";
+    var belowContentImg = document.createElement('div');
+    belowContentImg.className = "below-content-img";
+    var channelImg = document.createElement('img');
+    channelImg.className = "video-channel-img";
+    channelImg.setAttribute("src", "data:image/png;base64,<?= $creator[0]->channelProfilePicture ?>");
+    var belowContentText = document.createElement('div');
+    belowContentText.className = "below-content-text";
+    var videoTitle = document.createElement('strong');
+    videoTitle.className = "video-title";
+    var videoChanName = document.createElement('p');
+    videoChanName.className = "video-channel-name";
+    var vidInfo = document.createElement('div');
+    vidInfo.className = "video-infos";
+    var numberView = document.createElement('p');
+    numberView.className = "video-number-views";
+    var dateVideo = document.createElement('p');
+    dateVideo.className = "video-date";
+    vidInfo.appendChild(numberView);
+    vidInfo.appendChild(dateVideo);
+    belowContentText.appendChild(videoTitle);
+    belowContentText.appendChild(videoChanName);
+    belowContentText.appendChild(vidInfo);
+    belowContentImg.appendChild(channelImg);
+    belowContent.appendChild(belowContentImg);
+    belowContent.appendChild(belowContentText);
+    vidContent.appendChild(thumbnail);
+    vidContent.appendChild(belowContent);
+    vidA.appendChild(vidContent);
+    return vidA;
+}
+
+
+
+pageContent.addEventListener('scroll', () => {
+    var lastDiv = document.querySelector(".page > div:last-child");
+    var lastDivOffset = lastDiv.offsetTop + lastDiv.clientHeight;
+    var pageOffset = pageContent.scrollTop + pageContent.clientHeight;
+
+    if (pageOffset > lastDivOffset - 10) {
+        setTimeout(loadGrid, 2000)
     }
 });
