@@ -60,13 +60,18 @@ function postApi($data, $route)
     'http' => array(
       'method' => 'POST',
       'content' => json_encode($data),
-      'header' => "Content-Type: application/json\r\n" . "Accept: application/json\r\n"
+      'header' => "Content-Type: application/json\r\n" . "Accept: application/json\r\n",
+      "timeout" => 5,
+      "user-agent" => "toto",
     )
   );
 
   $context = stream_context_create($option);
-  $result = file_get_contents('http://93.16.2.231:8081/' . $route, false, $context);
-  $response = json_decode($result);
+  $fp = fopen('http://93.16.2.231:8081/' . $route, 'r', false, $context) or die(error_get_last());
+  $data = stream_get_contents($fp);
+  fclose($fp);
+  $response = json_decode($data);
+
   return $response;
 }
 
