@@ -1,25 +1,25 @@
 {
     "profile": {
-    "navBar": {
-        "placeHolderSearch": "Search",
-        "buttonLogin": "Login",
-        "buttonChannel": "My Channel",
-        "buttonSubscription": "Subscription",
-        "buttonStudio": "MetaStudio",
-        "buttonSignOut": "Sign Out",
-        "buttonAccount": "My Account",
-        "buttonData": "Your data in Meta Tube",
-        "buttonRestricted": "Restricted Mode : Off",
-        "labelThemeDark": "Dark",
-        "labelThemeBright": "Bright",
-        "tooltipSearch": "Search something",
-        "tooltipLogin" : "Log in your account",
-        "tooltipUpload" : "Upload a video",
-        "tooltipUploadNoConnect" : "Connect you to Upload Video",
-        "tooltipNotification" : "Notifications",
-        "tooltipMeta" : "MetaTube Homepage"
-    }
-},
+        "navBar": {
+            "placeHolderSearch": "Search",
+            "buttonLogin": "Login",
+            "buttonChannel": "My Channel",
+            "buttonSubscription": "Subscription",
+            "buttonStudio": "MetaStudio",
+            "buttonSignOut": "Sign Out",
+            "buttonAccount": "My Account",
+            "buttonData": "Your data in Meta Tube",
+            "buttonRestricted": "Restricted Mode : Off",
+            "labelThemeDark": "Dark",
+            "labelThemeBright": "Bright",
+            "tooltipSearch": "Search something",
+            "tooltipLogin" : "Log in your account",
+            "tooltipUpload" : "Upload a video",
+            "tooltipUploadNoConnect" : "Connect you to Upload Video",
+            "tooltipNotification" : "Notifications",
+            "tooltipMeta" : "MetaTube Homepage"
+        }
+    },
 
     "global": {
         "title": "MetaTube",
@@ -76,7 +76,6 @@
         "Image":"./assets/img/Channel/play.png",
         "Import": "Importer picture",
         "cancel": "Cancel"
-  
     },
 
     "channel":{

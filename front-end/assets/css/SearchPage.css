@@ -77,6 +77,14 @@
         width: 350px;
         height: 200px;
         margin-right: 16px;
+        object-fit: cover;
+    }
+    .channelImg{
+        width: 200px;
+        height: 200px;
+        margin-left: 75px;
+        margin-right: 91px;
+        object-fit: cover;
     }
     .videoDescription{
         color: var(--dark-text);

@@ -17,13 +17,14 @@
             </a>
         </div>
 
-        <form method="POST" action="./front-end/views/pages/SearchPage.php" class="navbar--center">
+        <form method="POST" action="index.php?name=SearchPage" class="navbar--center">
+            
             <input type="text" name="searchBar" class="navbar__center__input"
                 placeholder="<?= $enJson['profile']['navBar']['placeHolderSearch'] ?>" />
                 <?php if ($homeBar != "SearchPage"){?>
-            <button class="navbar__center__search-btn" onclick="window.location.href = 'index.php?name=SearchPage';">
+            <a class="navbar__center__search-btn" href = 'index.php?name=SearchPage'>
                 <img src="./front-end/assets/img/Logo/search.svg" alt="">
-            </button>
+                </a>
             <?php } ?>
             <?php if ($homeBar == "SearchPage"){?>
                 <button class="navbar__center__search-btn" onclick="Search()">
@@ -155,4 +156,4 @@ window.onclick = function(event) {
 };
 </script>
 
-<?php $navBar = ob_get_clean(); ?>
+<?php $navBar = ob_get_clean();?>

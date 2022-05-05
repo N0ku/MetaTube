@@ -1,13 +1,5 @@
 const searchBar = document.getElementsByClassName("navbar__center__input");
 
-function Search(thejson) {
-    var searchText = searchBar[0].textContent;
-    console.log(searchText);
-    Searchupdate(thejson);
-}
-
-
-
 function displayFilter() {
 
     if (document.getElementById("filterBox").style.display == "none") {
@@ -221,3 +213,20 @@ function Searchupdate( $thejson ){
     return Enddata;
 }
 
+function Search(thejson) {
+    var searchText = searchBar[0].textContent;
+    console.log(searchText);
+    Searchupdate(thejson);
+}
+
+function updateFiltersAndSearch(){
+    $searchContentString = Document.getElementById("").value;
+    //$filter1 = Document.getElementById("filter_upload_date").value;
+    //$filter2 = Document.getElementById("filter_type").value;
+    //$filter3 = Document.getElementById("filter_order_by").value;
+
+
+    $stringforFilterArgs = '&content='+$searchContentString;//+'&filter1='+$filter1 + '&filter2='+$filter2 + '&filter3='+$filter3;
+    document.getElementById("searchArgs").value = $stringforFilterArgs
+    alert(document.getElementById("searchArgs").value)
+}

@@ -19,10 +19,11 @@
     <link rel="stylesheet" href="./front-end/assets/css/Explorer.css">
     <link rel="stylesheet" href="./front-end/assets/css/FilterBar.css">
     <link rel="stylesheet" href="./front-end/assets/css/404.css">
-    <link rel="stylesheet" href="./front-end/assets/css/SearchPage.css">
     <link rel="stylesheet" href="./front-end/assets/css/Watch.css">
     <link rel="stylesheet" href="./front-end/assets/css/MetaTubePremium.css">
     <link rel="stylesheet" href="./front-end/assets/css/flash.css">
+    <link rel="stylesheet" href="./front-end/assets/css/SearchPage.css">
+
     <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
 
 </head>

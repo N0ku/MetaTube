@@ -1,13 +1,21 @@
+<link rel="stylesheet" href="">
 <?php  ob_start();
 
-include_once './../../../back-end/actions/Search.php';
+include_once './back-end/actions/Search.php';
+$vidvidvid = postAPIString($_POST["searchBar"]);
+
+$vids = (($vidvidvid -> videos)-> data);
+//$vidvideos = echo '<script>', 'SearchUpdate();', '</script>';
+$channel = (($vidvidvid -> channels) -> data); 
 ?>
+
 
     <section id="searchPage">
         <button onclick="displayFilter()" type="button" class="filterButton"><?php echo ($enJson["global"]['filterButton']) ?></button>
         <div id="searchPageContent" class="row">
             <!-- Filter Menu with 3 columns: Upload date / Type / Order by -->
-            <form method="post" action="back-end/actions/Search.php" id="searchFilterForm">
+            <form method="post" action="index.php?name=SearchPage" id="searchFilterForm">
+                <input type="hidden" id="searchArgs" value=""/>
                 <div id="filterBox" class="row">
                     <div class="column filterBoxMenu">
                         <label class="filterBoxTitle"><?php echo ($enJson["global"]['filterBoxTitle1']) ?></label>
@@ -56,35 +64,49 @@ include_once './../../../back-end/actions/Search.php';
                         </select>
                     </div>
                     <div class="row" id="applyFilter">
-                        <button type="submit" class="filterButton" id="filterButton">Apply</button>
+                        <button type="submit" class="filterButton" onclick="updateFiltersAndSearch()" id="filterButton">Apply</button>
                     </div>
                 </div>
             </form>
             <!-- We duplicate video cards with a template video card-->
             <?php
-    for ($i = 0; $i < count($vids); $i++) {
-        $creator = getCreator($vids[$i]->creator);
-    ?>
+    for ($i = 0; $i < count($vids); $i++) {    ?>
                 <div class="column searchCard">
-                    <a href="index.php?name=Watch&id=<?= $vids[$i]->id ?>">
+                    <a href="index.php?name=Watch&id=<?= $vids[$i] ->id ?>">
                         <div class="row">
-                            <img src="data:image/png;base64,<?= $vids[$i]->thumbnail ?>" class="videoImg" alt="thumbnail">
+                            <img src="data:image/png;base64,<?= $vids[$i] ->thumbnail ?>" class="videoImg" alt="thumbnail">
                             <div class="searchpageDescriptionSide">
-                                <h3 class="filterBoxTitle videoTitle"><?= $vids[$i]->title ?></h3>
-                                <p class="videoText videoWatchCount"><?= $vids[$i]->viewNumber ?></p>
+                                <h3 class="filterBoxTitle videoTitle"><?= $vids[$i] ->title ?></h3>
+                                <p class="videoText videoWatchCount"><?= $vids[$i] ->viewNumber ?></p>
                                 <a href="" class="row">
-                                    <img src="data:image/png;base64,<?= $creator[0]->channelProfilePicture ?>" alt="channel icon" class="searchpageChannelIcon">
-                                    <p class="searchpageChannelName"><?= $creator[0]->channelName; ?></p>
+                                    <img src="data:image/png;base64,<?= $vids[$i]->channelProfilePicture ?>" alt="channel icon" class="searchpageChannelIcon">
+                                    <p class="searchpageChannelName"><?= $vids[$i]->channelName; ?></p>
                                 </a>
-                                <p class="videoText videoDescription"><?= $vids[$i]->date ?></p>
+                                <p class="videoText videoDescription"><?= $vids[$i] ->date ?></p>
                             </div>
                         </div>
                 </a>
                 </div>
             <?php } ?>
+            <?php
+    for ($i = 0; $i < count($channel); $i++) {    ?>
+                <div class="column searchCard">
+                    <a href="index.php?name=Watch&id=<?= $channel[$i] ->id ?>">
+                        <div class="row">
+                            <img src="data:image/png;base64,<?= $channel[$i] ->channelProfilePicture ?>" class="channelImg" style="border-radius :50%;"alt="thumbnail">
+                            <div class="searchpageDescriptionSide">
+                                <h3 class="filterBoxTitle videoTitle"><?= $channel[$i] ->channelName ?></h3>
+                                <p class="videoText videoWatchCount"><?= $channel[$i] ->viewNumber ?></p>
+                                <p class="videoText videoDescription"><?= $channel[$i] ->creationDate ?></p>
+                            </div>
+                        </div>
+                </a>
+                </div>
+            <?php } ?>
+    
         </div>
     </section>
-
+    <script src="./front-end/assets/js/SearchPage.js"></script>
     <?php $pageName = ob_get_clean();
 
 
