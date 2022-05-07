@@ -5,7 +5,7 @@ $vids = getVids(12);
 ?>
 <div class="home-videos-grid">
     <?php
-    for ($i = 0; $someI < count($vids); $i++) {
+    for ($i = 0; $i < count($vids); $i++) {
     ?>
     <a href="index.php?name=Watch&id=<?= $vids[$i]->id ?>" class="video-link-home">
         <div class="home-video-content">
