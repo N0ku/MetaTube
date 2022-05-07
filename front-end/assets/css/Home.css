@@ -25,7 +25,7 @@ body {
   width: var(--video-content-width);
   min-width: var(--video-content-minwidth);
   height: fit-content;
-  max-height: 220px;
+  max-height: 230px;
   overflow: hidden;
   background-color: rgb(12, 12, 12);
 }
@@ -53,6 +53,7 @@ body {
 .below-content {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 .thumbnail {
@@ -75,6 +76,11 @@ body {
   flex-wrap: nowrap;
   justify-content: space-between;
   font-family: var(--font);
+  width: 100%;
+}
+
+.below-content-text{
+  width: 100%;
 }
 
 .video-channel-name {
