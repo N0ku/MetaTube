@@ -1,6 +1,5 @@
 const menu = document.getElementsByClassName("hamburger-menu-container");
 const menuShort = document.getElementsByClassName('short-menu');
-const root = document.documentElement;
 const burgerButton = document.getElementsByClassName("hamburger-button-home");
 const nameUrl = location.search.split('name=')[1];
 const navElements = document.getElementsByClassName('nav-item-text');

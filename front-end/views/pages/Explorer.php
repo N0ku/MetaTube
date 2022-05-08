@@ -215,10 +215,10 @@ $vids = getVids();
                             </div>
                         </div>
                     </a>
-                    <button class="prev hide-arrow"><img src="/front-end/assets/img/prev.svg" alt="prev">
+                    <button class="prev hide-arrow"><img src="/front-end/assets/img/prev.svg" alt="prev" class="svg">
                     </button>
                 </div>
-                <button class="next"><img src="/front-end/assets/img/next.svg" alt="next">
+                <button class="next"><img src="/front-end/assets/img/next.svg" alt="next" class="svg">
                 </button>
             </div>
         </div>
@@ -231,6 +231,7 @@ $vids = getVids();
         <p class="trending-title"><?= $enJson['explore']['TrendingTitle'] ?></p>
         <?php
         for ($i = 0; $i < count($vids); $i++) {
+            $videoDate = formatDate($vids[$i]->date)
         ?>
         <div class="trending-video-grid">
             <a href="index.php?name=Watch&id=<?= $vids[$i]->id ?>">
@@ -242,7 +243,7 @@ $vids = getVids();
                         <div class="next-content-infos">
                             <p class="explorer-video-channel-name"><?= $vids[$i]->channelName; ?></p>
                             <p class="explorer-video-number-views"><?= $vids[$i]->viewNumber ?></p>
-                            <p class="explorer-video-date"><?= $vids[$i]->date ?></p>
+                            <p class="explorer-video-date"><?= $videoDate ?></p>
                         </div>
                         <p class="explorer-description">
                             <?= $vids[$i]->description ?>

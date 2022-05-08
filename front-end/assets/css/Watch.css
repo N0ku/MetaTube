@@ -409,7 +409,7 @@ input[type=range].volume::-moz-range-thumb {
 .watch-vid-title {
     font-size: var(--font-large);
     font-weight: 500;
-    color: var(--dark-text);
+    color: var(--color-text);
 }
 
 .video-icon {
@@ -431,7 +431,7 @@ input[type=range].volume::-moz-range-thumb {
 }
 
 .video-icon p {
-    color: var(--dark-text);
+    color: var(--color-text);
 }
 
 .video-icon img {
@@ -443,7 +443,7 @@ input[type=range].volume::-moz-range-thumb {
     display: flex;
     flex-direction: row;
     align-items: center;
-    color: var(--dark-text);
+    color: var(--color-text);
     font-weight: 500;
     font-family: "Roboto";
 }
@@ -453,7 +453,7 @@ input[type=range].volume::-moz-range-thumb {
 }
 
 .video-watch-name-channel {
-    color: var(--dark-text);
+    color: var(--color-text);
 }
 
 .video-watch-subscribers {
@@ -493,7 +493,7 @@ input[type=range].volume::-moz-range-thumb {
             #e73c7e, #23a6d5, #23d5ab, #d57f23, #d5c923);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-    color: var(--dark-text);
+    color: var(--color-text);
     border: none;
     height: 100%;
     outline: 0;
@@ -507,7 +507,7 @@ input[type=range].volume::-moz-range-thumb {
             #e73c7e, #23a6d5, #23d5ab, #d57f23, #d5c923);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-    color: var(--dark-text);
+    color: var(--color-text);
     border: none;
     height: 100%;
     outline: 0;
@@ -543,7 +543,7 @@ input[type=range].volume::-moz-range-thumb {
 }
 
 .box-below p {
-    color: var(--dark-text);
+    color: var(--color-text);
     font-family: var(--font-Xsmall);
     margin-left: 5px;
 }
@@ -569,7 +569,7 @@ input[type=range].volume::-moz-range-thumb {
 }
 
 .add-comment-text:focus {
-    border-bottom-color: var(--dark-text);
+    border-bottom-color: var(--color-text);
 }
 
 .add-comment-text::placeholder {
@@ -605,7 +605,7 @@ input[type=range].volume::-moz-range-thumb {
 }
 
 .comments-section * {
-    color: var(--dark-text);
+    color: var(--color-text);
 }
 
 .comment-button {
@@ -613,15 +613,16 @@ input[type=range].volume::-moz-range-thumb {
             #e73c7e, #23a6d5, #23d5ab, #d57f23, #d5c923);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-    color: var(--dark-text);
+    color: var(--color-text);
     outline: 0;
 }
+
 .comment-button-link {
     background: linear-gradient(-45deg, #ee7752,
             #e73c7e, #23a6d5, #23d5ab, #d57f23, #d5c923);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-    color: var(--dark-text);
+    color: var(--color-text);
     outline: 0;
     height: 720%;
     padding-top: 2%;
@@ -756,10 +757,11 @@ input[type=range].volume::-moz-range-thumb {
 }
 
 .tags {
-    color:rgb(0, 179, 255);
+    color: rgb(0, 179, 255);
     margin-top: 10px;
 }
-.interaction{
+
+.interaction {
     display: flex;
     flex-direction: row;
     align-items: center;

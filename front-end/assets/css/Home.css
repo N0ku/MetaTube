@@ -1,44 +1,36 @@
 :root {
   --video-content-width: 10%;
-  --video-content-padding: 20px;
+  --video-content-margin: 20px;
   --video-content-minwidth: 290px;
 }
 
 body {
-  background-color: var(--dark-theme);
+  background-color: var(--color-theme);
   margin: 0;
 }
 
 
 .home-videos-grid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: var(--dark-theme);
-    margin-top: var(--header-height);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: var(--color-theme);
+  margin-top: var(--header-height);
 }
 
 .video-link-home {
-  padding: var(--video-content-padding);
-  max-width: var(--video-content-width);
+  margin: var(--video-content-margin);
   width: var(--video-content-width);
   min-width: var(--video-content-minwidth);
   height: fit-content;
   max-height: 230px;
   overflow: hidden;
-  background-color: rgb(12, 12, 12);
+  background-color: var(--color-theme);
 }
 
 .home-video-content {
-    max-width: var(--video-content-width);
-  padding: var(--video-content-padding);
-  width: var(--video-content-width);
-  min-width: var(--video-content-minwidth);
-  height: fit-content;
-  max-height: 230px;
-  overflow: hidden;
-  background-color: rgb(12, 12, 12);
+  width: 100%;
 }
 
 .home-video-content:hover {
@@ -77,20 +69,25 @@ body {
   justify-content: space-between;
   font-family: var(--font);
   width: 100%;
+  word-wrap: break-word;
 }
 
-.below-content-text{
-  width: 100%;
+.below-content-text {
+  width: 80%;
+  word-wrap: break-word;
 }
 
 .video-channel-name {
   font-family: var(--font);
   color: rgb(124, 124, 124);
   font-size: 15px;
+  word-wrap: none;
+  white-space: nowrap;
 }
 
 .video-title {
   font-family: var(--font);
-  color: var(--dark-text);
+  color: var(--color-text);
   font-size: 15px;
+  word-wrap: break-word;
 }

@@ -227,13 +227,13 @@ if (isset($video_id)) {
                             <form action="/back-end/actions/InterAction.php" method="post" class="interaction">
                                 <?php if (isset($_SESSION['connect'])) { ?>
                                 <button>
-                                    <img src="/front-end/assets/img/like.svg" alt="" class="like-svg">
+                                    <img src="/front-end/assets/img/like.svg" alt="" class="like-svg svg">
                                     <input type="hidden" name="idVideo" value="<?= $vid->id ?>">
                                     <input type="hidden" name="idUser" value="<?= $_SESSION['user']['id'] ?>">
                                 </button>
                                 <?php } else { ?>
                                 <a href="index.php?name=Login">
-                                    <img src="/front-end/assets/img/like.svg" alt="" class="like-svg">
+                                    <img src="/front-end/assets/img/like.svg" alt="" class="like-svg svg">
                                 </a>
                                 <?php } ?>
                             </form>
@@ -243,13 +243,13 @@ if (isset($video_id)) {
                             <form action="/back-end/actions/InterAction.php" method="post" class="interaction">
                                 <?php if (isset($_SESSION['connect'])) { ?>
                                 <button>
-                                    <img src="/front-end/assets/img/dislike.svg" alt="" class="dislike-svg">
+                                    <img src="/front-end/assets/img/dislike.svg" alt="" class="dislike-svg svg">
                                     <input type="hidden" name="dislike" value="<?= $vid->id ?>">
                                     <input type="hidden" name="idUser" value="<?= $_SESSION['user']['id'] ?>">
                                 </button>
                                 <?php } else { ?>
                                 <a href="index.php?name=Login">
-                                    <img src="/front-end/assets/img/dislike.svg" alt="" class="dislike-svg">
+                                    <img src="/front-end/assets/img/dislike.svg" alt="" class="dislike-svg svg">
 
                                 </a>
                                 <?php } ?>
@@ -257,25 +257,25 @@ if (isset($video_id)) {
                             <p><?= $vid->dislikeNumber ?></p>
                         </div>
                         <div class="video-icon">
-                            <img src="/front-end/assets/img/share.svg" alt="">
+                            <img src="/front-end/assets/img/share.svg" alt="" class="svg">
                             <p>Share</p>
                         </div>
                         <div class="video-icon">
-                            <img src="/front-end/assets/img/download.svg" alt="">
+                            <img src="/front-end/assets/img/download.svg" alt="" class="svg">
                             <a href="index.php?name=MetaTubePrenium">
                                 <p>Download</p>
                             </a>
                         </div>
                         <div class="video-icon">
-                            <img src="/front-end/assets/img/cut.svg" alt="">
+                            <img src="/front-end/assets/img/cut.svg" alt="" class="svg">
                             <p>Clip</p>
                         </div>
                         <div class="video-icon">
-                            <img src="/front-end/assets/img/playlist.svg" alt="">
+                            <img src="/front-end/assets/img/playlist.svg" alt="" class="svg">
                             <p>Save</p>
                         </div>
                         <div class="video-icon">
-                            <img src="/front-end/assets/img/dot.svg" alt="">
+                            <img src="/front-end/assets/img/dot.svg" alt="" class="svg">
                         </div>
 
                     </div>
@@ -293,7 +293,7 @@ if (isset($video_id)) {
                         <?php } else { ?>
                         <a class="sub-button-watch-link" href="index.php?name=Login">SUBSCRIBE</a>
                         <?php } ?>
-                        <img src=" /front-end/assets/img/Logo/bell.svg" alt="" class="bell-below">
+                        <img src=" /front-end/assets/img/Logo/bell.svg" alt="" class="bell-below svg">
                     </div>
 
                     <div class="comments-video box-below">
@@ -368,16 +368,17 @@ if (isset($video_id)) {
                         </p>
                         <div class="comment-likes">
                             <div class="comment-like">
-                                <img src="/front-end/assets/img/like.svg" alt="like" class="comment-like-img">
+                                <img src="/front-end/assets/img/like.svg" alt="like" class="comment-like-img svg">
                                 <p class="comment-like-number"><?= $comments[$i]->likeNumber ?></p>
                             </div>
                             <div class="comment-dislike">
-                                <img src="/front-end/assets/img/dislike.svg" alt="dislike" class="comment-dislike-img">
+                                <img src="/front-end/assets/img/dislike.svg" alt="dislike"
+                                    class="comment-dislike-img svg">
                                 <p class="comment-disike-number"><?= $comments[$i]->dislikeNumber ?></p>
                             </div>
                         </div>
                         <button class="comments-reply">
-                            <img src="/front-end/assets/img/arrow-reply.svg" alt="">
+                            <img src="/front-end/assets/img/arrow-reply.svg" alt="" class="svg">
                             <p class="replies-comment"> View <?= $comments[$i]->responseNumber ?> replies</p>
                         </button>
                     </div>

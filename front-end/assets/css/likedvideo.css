@@ -1,5 +1,5 @@
-.likedVideo-container{
+.likedVideo-container {
     text-align: center;
     margin-top: 88px;
-    color: var(--dark-text);
+    color: var(--color-text);
 }

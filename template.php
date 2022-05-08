@@ -71,6 +71,7 @@
     <script src="/front-end/assets/js/script-watch.js"></script>
     <script src="./front-end/assets/js/toastr.min.js"></script>
     <script src="./front-end/assets/js/toastr.js.map"></script>
+    <script src="./front-end/assets/js/MetaTubeTheme.js"></script>
 
     <script>
     toastr.options = {

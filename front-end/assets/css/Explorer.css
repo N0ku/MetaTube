@@ -62,7 +62,7 @@
 .category-explorer-title {
     font-family: var(--font);
     font-weight: bold;
-    color: var(--dark-text);
+    color: var(--color-text);
 }
 
 /* Creator rise Category */
@@ -100,7 +100,7 @@
 .creator-rise-content-name {
     font-family: var(--font);
     font-size: 20px;
-    color: var(--dark-text);
+    color: var(--color-text);
 }
 
 .creator-rise-content-tag {
@@ -179,7 +179,7 @@
     font-family: var(--font);
     font-weight: bold;
     margin-left: 7%;
-    color: var(--dark-text);
+    color: var(--color-text);
 }
 
 .thumbnail-trend-explorer {
@@ -226,11 +226,11 @@
 
 .explorer-video-title {
     width: 100%;
-    color: var(--dark-text);
+    color: var(--color-text);
     font-family: var(--font);
 }
 
 .explorer-video-channel-name:hover {
-    color: var(--dark-theme);
+    color: var(--color-theme);
     -webkit-text-stroke: black;
 }

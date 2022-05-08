@@ -4,6 +4,8 @@
     border-radius: 50%;
     background: none;
     border-radius: 50%;
+    object-fit: cover;
+    margin-right: 5px;
 }
 
 .dropdown {
@@ -20,8 +22,12 @@
     z-index: 1;
     margin: 12px 0px 0px -50px;
     width: 200px;
-    background-color: var(--dark-theme);
+    background-color: var(--color-theme);
 
+}
+
+.dropdown-content a div {
+    margin-right: 10px;
 }
 
 .dropdown-content a {
@@ -51,7 +57,7 @@
 
 a {
     text-decoration: none;
-    color: var(--dark-text);
+    color: var(--color-text);
 }
 
 .btn--logo--nav {
@@ -72,7 +78,7 @@ a {
 }
 
 .navbar--logo {
-    color: var(--dark-text);
+    color: var(--color-text);
 }
 
 .wrapper--navbar {
@@ -111,7 +117,7 @@ a {
 }
 
 .navbar__center__input {
-    background: #121212;
+    background: var(--color-search);
     width: 70%;
     max-width: 600px;
     border: 1px solid #313131;
@@ -133,7 +139,7 @@ a {
 
 .navbar__center__search-btn {
     padding: 6px 30px;
-    background: #313131;
+    background: var(--search-btn-color);
     color: #858585;
     border: none;
     margin: 0;
@@ -230,7 +236,7 @@ a {
     font-size: 14px;
     margin-left: 5px;
     font-weight: 400;
-    color: #fff;
+    color: var(--color-text)
 }
 
 .meta-rgb {
@@ -284,5 +290,5 @@ a {
 
 .userName {
     padding-left: 10%;
-    color: var(--dark-text);
+    color: var(--color-text);
 }
