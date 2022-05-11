@@ -13,11 +13,13 @@ function formatDate($date)
 
     $time = explode(":", $dateAndTime[1]);
 
-    if ($time[0] == 23 && $time[1] < 59 && $interval->d == 0 && $interval->m == 0 && $interval->y == 0) {
-        return $time[0] . " hours";
-    } elseif ($time[0] == 00 && $time[1] < 59 && $interval->d == 0 && $interval->m == 0 && $interval->y == 0) {
-        return $time[1] . " minutes";
-    } elseif ($time[0] == 01 && $interval->d == 0 && $interval->m == 0 && $interval->y == 0) {
+
+
+    if ((int)$time[0] == 23 && (int)$time[1] < 59 && $interval->d == 0 && $interval->m == 0 && $interval->y == 0) {
+        return (int)$time[0] . " hours";
+    } elseif ((int)$time[0] == 00 && (int)$time[1] < 59 && $interval->d == 0 && $interval->m == 0 && $interval->y == 0) {
+        return (int)$time[1] . " minutes";
+    } elseif ((int)$time[0] == 01 && $interval->d == 0 && $interval->m == 0 && $interval->y == 0) {
         return 1 . " hour";
     } else {
         if ($interval->d > 30 && $interval->y < 1 && $interval->m > 1) {
