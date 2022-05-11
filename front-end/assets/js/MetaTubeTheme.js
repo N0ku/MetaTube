@@ -7,11 +7,11 @@ console.log("file theme load")
 function changeTheme() {
     if (switchTheme.getAttribute("value") == 0) {
         switchTheme.setAttribute("value", "1");
-        root.style.setProperty('--color-theme', "rgb(230, 229, 229)");
+        root.style.setProperty('--color-theme', "rgb(243, 243, 243)");
         root.style.setProperty('--color-text', "rgb(20, 20, 20)");
-        root.style.setProperty('--background-color-nav', "rgb(230, 229, 229)");
-        root.style.setProperty('--color-search', "rgb(230, 229, 229)");
-        root.style.setProperty('--color-filter', "rgb(230, 229, 229)");
+        root.style.setProperty('--background-color-nav', "rgb(243, 243, 243)");
+        root.style.setProperty('--color-search', "rgb(243, 243, 243)");
+        root.style.setProperty('--color-filter', "rgb(243, 243, 243)");
         root.style.setProperty('--elements-hover', "rgba(187, 185, 185, 0.739)");
         root.style.setProperty('--svg-color', "invert(100%) sepia(0%) saturate(2%) hue-rotate(169deg) brightness(103%) contrast(101%)");
         bigMenu.style.borderRight = "1px var(--menu-border-color) solid";
