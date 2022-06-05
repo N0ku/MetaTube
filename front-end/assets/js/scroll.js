@@ -7,7 +7,6 @@ const grid = document.querySelector('.home-video-grid');
 
 
 
-var pageHeight = page.offsetHeight;
 
 
 function loadGrid() {
@@ -26,12 +25,12 @@ function createVid() {
     return thumbnail;
 }
 
-pageContent.addEventListener('scroll', () => {
-    var lastDiv = document.querySelector(".page > div:last-child");
-    var lastDivOffset = lastDiv.offsetTop + lastDiv.clientHeight;
-    var pageOffset = pageContent.scrollTop + pageContent.clientHeight;
+pageContent.addEventListener('scroll', evt => {
 
-    if (pageOffset > lastDivOffset - 10) {
+    console.log(document.clientHeight);
+    console.log(evt.target.scrollTop);
+
+    if ((evt.target.scrollTop / document.clientHeight) * 100 > 80) {
         /* setTimeout(loadGrid, 2000) */
         fetch("front-end/views/components/video.php")
             .then(response => {
