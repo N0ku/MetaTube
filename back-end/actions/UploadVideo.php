@@ -7,7 +7,7 @@ function upload()
 {
 
 
-	$apiUrl = 'http://93.16.2.231:8081/';
+	$apiUrl = 'http://92.95.32.114:8082/';
 
 	$id = giveId();
 

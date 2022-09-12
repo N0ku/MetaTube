@@ -7,7 +7,7 @@ module.exports = class DatabaseManager
     static createConn()
     {
         sqlConn = mysql.createConnection({
-            host     : '93.16.2.231',
+            host     : '92.95.32.114',
             user     : 'codeur',
             password : 'coding',
             database : 'metatube'
