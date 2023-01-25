@@ -19,12 +19,20 @@ const fullscreenButton = document.getElementById('fullscreen-button');
 const videoContainer = document.getElementById('video-container');
 const fullscreenIcons = fullscreenButton.querySelectorAll('use');
 const pipButton = document.getElementById('pip-button');
+const loopButton = document.getElementById('loop-button');
+const repliesButton = document.getElementsByClassName('replies-comment');
+const likeButton = document.getElementsByClassName('like-button');
+const dislikeButton = document.getElementsByClassName('dislike-button');
+const dislikeImg = document.getElementsByClassName('dislike-svg');
+const likeImg = document.getElementsByClassName('like-svg');
 
-const videoWorks = !!document.createElement('video').canPlayType;
+const videoWorks = document.createElement('video').canPlayType;
 if (videoWorks) {
     video.controls = false;
     videoControls.classList.remove('hidden');
 }
+
+var isCliked;
 
 // Add functions here
 
@@ -220,6 +228,11 @@ async function togglePip() {
     }
 }
 
+
+async function toggleLoop() {
+    video.loop = !video.loop;
+}
+
 // hideControls hides the video controls when not in use
 // if the video is paused, the controls must remain visible
 function hideControls() {
@@ -256,12 +269,27 @@ function keyboardShortcuts(event) {
         case 'm':
             toggleMute();
             break;
+        case 'l':
+            toggleLoop();
+            break;
         case 'f':
             toggleFullScreen();
             break;
         case 'p':
             togglePip();
             break;
+    }
+}
+
+function showReplies(index) {
+    console.log("hey")
+    if (repliesButton[index].style.display=="none") {
+        repliesButton[index].classList.add('replies-show');
+        repliesButton[index].classList.remove('replies-hidden');
+    }
+    else {
+        repliesButton[index].classList.remove('replies-show');
+        repliesButton[index].classList.add('replies-hidden');
     }
 }
 
@@ -286,6 +314,8 @@ volumeButton.addEventListener('click', toggleMute);
 fullscreenButton.addEventListener('click', toggleFullScreen);
 videoContainer.addEventListener('fullscreenchange', updateFullscreenButton);
 pipButton.addEventListener('click', togglePip);
+loopButton.addEventListener('click', toggleLoop);
+
 
 document.addEventListener('DOMContentLoaded', () => {
     if (!('pictureInPictureEnabled' in document)) {
@@ -293,3 +323,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 document.addEventListener('keyup', keyboardShortcuts);
+
+
+likeButton[0].addEventListener('click', function () {
+    console.log(likeImg[0]);
+});

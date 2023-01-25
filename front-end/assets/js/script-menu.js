@@ -1,7 +1,35 @@
 const menu = document.getElementsByClassName("hamburger-menu-container");
 const menuShort = document.getElementsByClassName('short-menu');
-const root = document.documentElement;
 const burgerButton = document.getElementsByClassName("hamburger-button-home");
+const nameUrl = location.search.split('name=')[1];
+const navElements = document.getElementsByClassName('nav-item-text');
+const navElementsCase = document.getElementsByClassName('nav-item');
+
+switch (nameUrl) {
+    case "Home":
+        navElementsCase[0].classList.add('nav-item-active')
+        break;
+    case "Explorer":
+        navElementsCase[1].classList.add('nav-item-active')
+        break;
+    case "Subscriptions":
+        navElementsCase[2].classList.add('nav-item-active')
+        break;
+    case "Library":
+        navElementsCase[3].classList.add('nav-item-active')
+        break;
+    case "History":
+        navElementsCase[4].classList.add('nav-item-active')
+        break;
+    case "WatchLater":
+        navElementsCase[5].classList.add('nav-item-active')
+        break;
+    case "LikedVideo":
+        navElementsCase[6].classList.add('nav-item-active')
+        break;
+    default:
+        break;
+}
 
 function closeMenu() {
     burgerButton[0].setAttribute("onclick", "openMenu()");
@@ -10,7 +38,6 @@ function closeMenu() {
     menuShort[0].style.display = "flex";
     menu[0].style.display = "none"
     root.style.setProperty('--video-content-width', '20%');
-    root.style.setProperty('--video-content-padding', '30px');
 }
 
 function openMenu() {
@@ -19,6 +46,5 @@ function openMenu() {
     menu[0].style.transition = "transform 500ms ease-out";
     menuShort[0].style.display = "none";
     menu[0].style.display = "flex";
-    root.style.setProperty('--video-content-width', '15%');
-    root.style.setProperty('--video-content-padding', '20px');
+    root.style.setProperty('--video-content-width', '10%');
 }

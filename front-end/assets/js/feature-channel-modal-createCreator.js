@@ -6,13 +6,12 @@ const modalCreateUploadVideo = document.querySelector(".feature-channel-modal-ov
 console.log('fichier chargé')
 
 function feature_open_accountCreator_function(){
-    console.log("test open account")
+    console.log(modalAccount)
     modalAccount.classList.add("show");
     modalCreationAccount.classList.add("show");
 }
 
 function feature_remove_accountCreator_function() {
-    console.log("test close account")
     modalAccount.classList.remove("show");
      modalCreationAccount.classList.remove("show");    
 }

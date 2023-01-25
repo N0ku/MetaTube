@@ -4,12 +4,13 @@ ob_start() ?>
 <?php if (isset($_SESSION['connect']) == true) {
    header('Location: /index.php?name=Home');
 } ?>
+<!-- OVERLAY -->
 <div class="backform"></div>
-
+<!-- WRAPPER REGISTER -->
 <div class="wrap--form" style="margin-top: 40px">
    <form enctype="multipart/form-data" class="form--register" id="form" method="post" action="/back-end/actions/RegisterAction.php">
       <div class="close-form">
-         <a href="/index.php?name=Home"><img src="./front-end/assets/img/Logo/x.svg" alt=""></a>
+         <a href="/index.php?name=Home">&times;</a>
 
       </div>
       <div class="header-from">
@@ -25,7 +26,7 @@ ob_start() ?>
          <div class="custom-file">
             <label for="avatar" class="label-file"><?= $enJson['form']['register']['labelProfile'] ?></label>
             <input accept="image/png, image/jpeg" type="file" name="avatar" id="avatar" class="input-file" value="">
-            <img id="previewProfile" class="" src="/front-end/assets/img/default.png">
+            <img id="previewProfile" class="" src="/front-end/assets/img/default-user-img.jpeg">
          </div>
       </div>
       <div class="wrapper-part">
@@ -45,7 +46,6 @@ ob_start() ?>
             <label for="password"><?= $enJson['form']['register']['labelPassword'] ?></label>
             <input name="password" class="input--register" type="password" placeholder="<?= $enJson['form']['register']['placeholderPassword'] ?>" id="password" />
          </div>
-         <!-- <div class="g-recaptcha" data-sitekey="your_site_key"></div> -->
       </div>
       <div>
          <button class="btn--register" id="connexion"><?= $enJson['form']['register']['buttonRegister'] ?></button>
@@ -56,13 +56,24 @@ ob_start() ?>
    </form>
 </div>
 <script>
+   //TOASTR JS 
+   $(function(){
+        <?php
+        if(isset($_SESSION['toastr']))
+        {
+            echo 'toastr.'.$_SESSION['toastr']['type'].'("'.$_SESSION['toastr']['message'].'", "'.$_SESSION['toastr']['title'].'")';
+            unset($_SESSION['toastr']);
+        }
+        ?>          
+    });
+   //GET INPUT DATA 
    var data = [];
    data.push(document.getElementById('username'));
    data.push(document.getElementById('password'));
    data.push(document.getElementById('email'));
    data.push(document.getElementById('dateofbirthday'));
 
-
+    //PREWIEW FOR THE PROFIL PICTURE
    $('input[type="file"]').on('change', (e) => {
       let that = e.currentTarget
       if (that.files && that.files[0]) {
@@ -73,7 +84,7 @@ ob_start() ?>
          reader.readAsDataURL(that.files[0])
       }
    })
-
+   // KEYUP FOR INPUT CHANGE
    form.addEventListener("keyup", function(e) {
       for (var i in data) {
 
@@ -82,19 +93,24 @@ ob_start() ?>
          }
       }
    });
-
+   //CHECK IF ALL INPUT HAVE VALUE (ELSE STOP THE RESQUEST AND MSG ERROR)
    form.onsubmit = (e) => {
       for (var i in data) {
          if (data[i].value == 0) {
             e.preventDefault();
             data[i].placeholder = ('Put your ' + data[i].id);
             data[i].classList.add("show-error-connection");
-
-
-
+            i = false;
          }
 
       }
+      if (i == false){
+         $(function() {
+             toastr.error('<?= $enJson['form']['error']['signup'] ?>', '');
+          });
+       }
+      
+     
    }
 </script>
 <?php $pageName = ob_get_clean();

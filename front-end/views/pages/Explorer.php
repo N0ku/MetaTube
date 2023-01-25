@@ -1,5 +1,9 @@
 <?php ob_start();
-$page = "Explorer"; ?>
+include './back-end/actions/trending.php';
+
+$vids = getVids();
+
+?>
 
 <div class="explorer-container">
     <!-- Categories --START -->
@@ -211,10 +215,10 @@ $page = "Explorer"; ?>
                             </div>
                         </div>
                     </a>
-                    <button class="prev hide-arrow"><img src="/front-end/assets/img/prev.svg" alt="prev">
+                    <button class="prev hide-arrow"><img src="/front-end/assets/img/prev.svg" alt="prev" class="svg">
                     </button>
                 </div>
-                <button class="next"><img src="/front-end/assets/img/next.svg" alt="next">
+                <button class="next"><img src="/front-end/assets/img/next.svg" alt="next" class="svg">
                 </button>
             </div>
         </div>
@@ -225,107 +229,32 @@ $page = "Explorer"; ?>
     <!-- Trending --START -->
     <div class="trending">
         <p class="trending-title"><?= $enJson['explore']['TrendingTitle'] ?></p>
+        <?php
+        for ($i = 0; $i < count($vids); $i++) {
+            $videoDate = formatDate($vids[$i]->date)
+        ?>
         <div class="trending-video-grid">
-            <a href="index.php?name=Watch">
+            <a href="index.php?name=Watch&id=<?= $vids[$i]->id ?>">
                 <div class="trending-video-content">
-                    <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail"
+                    <img src="data:image/png;base64,<?= $vids[$i]->thumbnail ?>" alt="thumbnail"
                         class="thumbnail-trend-explorer" />
                     <div class="next-content">
-                        <strong class="explorer-video-title">I'M THE TITLE OF THE VIDEO</strong>
+                        <strong class="explorer-video-title"><?= $vids[$i]->title ?></strong>
                         <div class="next-content-infos">
-                            <p class="explorer-video-channel-name">Name of the chanel</p>
-                            <p class="explorer-video-number-views">200k views</p>
-                            <p class="explorer-video-date">2 weeks ago</p>
+                            <p class="explorer-video-channel-name"><?= $vids[$i]->channelName; ?></p>
+                            <p class="explorer-video-number-views"><?= $vids[$i]->viewNumber ?></p>
+                            <p class="explorer-video-date"><?= $videoDate ?></p>
                         </div>
                         <p class="explorer-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, odit temporibus. Iste
-                            autem,
-                            quas ducimus ut saepe explicabo eveniet harum minima illo fuga, hic corrupti ex aliquam, a
-                            voluptatum eligendi.
+                            <?= $vids[$i]->description ?>
                         </p>
                     </div>
                 </div>
             </a>
-            <a href="index.php?name=Watch">
-                <div class="trending-video-content">
-                    <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail"
-                        class="thumbnail-trend-explorer" />
-                    <div class="next-content">
-                        <strong class="explorer-video-title">I'M THE TITLE OF THE VIDEO</strong>
-                        <div class="next-content-infos">
-                            <p class="explorer-video-channel-name">Name of the chanel</p>
-                            <p class="explorer-video-number-views">200k views</p>
-                            <p class="explorer-video-date">2 weeks ago</p>
-                        </div>
-                        <p class="explorer-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, odit temporibus. Iste
-                            autem,
-                            quas ducimus ut saepe explicabo eveniet harum minima illo fuga, hic corrupti ex aliquam, a
-                            voluptatum eligendi.
-                        </p>
-                    </div>
-                </div>
-            </a>
-            <a href="index.php?name=Watch">
-                <div class="trending-video-content">
-                    <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail"
-                        class="thumbnail-trend-explorer" />
-                    <div class="next-content">
-                        <strong class="explorer-video-title">I'M THE TITLE OF THE VIDEO</strong>
-                        <div class="next-content-infos">
-                            <p class="explorer-video-channel-name">Name of the chanel</p>
-                            <p class="explorer-video-number-views">200k views</p>
-                            <p class="explorer-video-date">2 weeks ago</p>
-                        </div>
-                        <p class="explorer-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, odit temporibus. Iste
-                            autem,
-                            quas ducimus ut saepe explicabo eveniet harum minima illo fuga, hic corrupti ex aliquam, a
-                            voluptatum eligendi.
-                        </p>
-                    </div>
-                </div>
-            </a>
-            <a href="index.php?name=Watch">
-                <div class="trending-video-content">
-                    <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail"
-                        class="thumbnail-trend-explorer" />
-                    <div class="next-content">
-                        <strong class="explorer-video-title">I'M THE TITLE OF THE VIDEO</strong>
-                        <div class="next-content-infos">
-                            <p class="explorer-video-channel-name">Name of the chanel</p>
-                            <p class="explorer-video-number-views">200k views</p>
-                            <p class="explorer-video-date">2 weeks ago</p>
-                        </div>
-                        <p class="explorer-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, odit temporibus. Iste
-                            autem,
-                            quas ducimus ut saepe explicabo eveniet harum minima illo fuga, hic corrupti ex aliquam, a
-                            voluptatum eligendi.
-                        </p>
-                    </div>
-                </div>
-            </a>
-            <a href="index.php?name=Watch">
-                <div class="trending-video-content">
-                    <img src="/front-end/assets/img/Home/thumbnail.png" alt="thumbnail"
-                        class="thumbnail-trend-explorer" />
-                    <div class="next-content">
-                        <strong class="explorer-video-title">I'M THE TITLE OF THE VIDEO</strong>
-                        <div class="next-content-infos">
-                            <p class="explorer-video-channel-name">Name of the chanel</p>
-                            <p class="explorer-video-number-views">200k views</p>
-                            <p class="explorer-video-date">2 weeks ago</p>
-                        </div>
-                        <p class="explorer-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, odit temporibus. Iste
-                            autem,
-                            quas ducimus ut saepe explicabo eveniet harum minima illo fuga, hic corrupti ex aliquam, a
-                            voluptatum eligendi.
-                        </p>
-                    </div>
-                </div>
-            </a>
+
+            <?php
+        }
+            ?>
         </div>
     </div>
     <!-- Trending --END -->

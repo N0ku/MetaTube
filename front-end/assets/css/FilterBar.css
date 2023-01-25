@@ -21,6 +21,7 @@ ul.list-filter {
     padding: 0;
     margin: 0;
     background-color: var(--background-color-nav);
+    height: 50px;
 }
 
 .filters-element {
@@ -29,8 +30,8 @@ ul.list-filter {
     text-align: center;
     border: 1px solid rgb(71, 80, 87);
     border-radius: 60px;
-    padding: 10px;
-    background-color: rgb(65, 64, 64);
+    padding: 8px 9px;
+    background-color: var(--filter-color);
     margin: 12px;
     margin-left: 0;
     opacity: 0.8;
@@ -44,7 +45,7 @@ ul.list-filter {
 }
 
 .filters-element:active {
-    background-color: var(--dark-text);
+    background-color: var(--color-text);
 }
 
 .filter-text:active {
