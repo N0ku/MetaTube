@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../Db.php';
+require_once __DIR__ . '/../db.php';
 session_start();
 $_SESSION['processUser'] = true; // FOR KEEP MODAL
 
@@ -91,9 +91,3 @@ if (ctype_alnum($_POST['username'])) {
         'title'     => ''
     );
 }
-
-
-
-
-
-

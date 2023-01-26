@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../Db.php';
+require_once __DIR__ . '/../db.php';
 session_start();
 // CHECK IF USER EXIST
 if (!empty($_SESSION['user']['id'])) {

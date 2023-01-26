@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../Db.php';
+require_once __DIR__ . '/../db.php';
 session_start();
 $old_password =  $_SESSION['user']['password']; // OLD PASSWORD
 $id = $_SESSION['user']['id']; // ID USER
