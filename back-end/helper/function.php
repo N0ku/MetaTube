@@ -68,7 +68,7 @@ function postApi($data, $route)
   );
 
   $context = stream_context_create($option);
-  $fp = fopen('http://92.95.32.114:8082/' . $route, 'r', false, $context) or die(error_get_last());
+  $fp = fopen('http://192.168.39.40:40000/' . $route, 'r', false, $context) or die(error_get_last());
   $data = stream_get_contents($fp);
   fclose($fp);
   $response = json_decode($data);
@@ -85,7 +85,7 @@ function getApi($route)
   );
 
   $context = stream_context_create($opts);
-  $fp = fopen('http://92.95.32.114:8082/' . $route, 'r', false, $context);
+  $fp = fopen('http://192.168.39.40:40000/' . $route, 'r', false, $context);
   $data = stream_get_contents($fp);
   fclose($fp);
 
