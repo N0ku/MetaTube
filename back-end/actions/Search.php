@@ -1,6 +1,7 @@
 <?php
 
 include_once __DIR__ . '/../helper/function.php';
+
 function getVids($number)
 {
     $vids = getApi('timeline/video/' . $number);

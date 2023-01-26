@@ -73,7 +73,7 @@ if (!empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['d
                 // TOASTR ERROR
                 $_SESSION['toastr'] = array(
                     'type'      => 'error',
-                    'message' => 'Sorry access to Meta Tube is reserved to the person over 13 years.',
+                    'message' => 'Sorry access to MetaTube is reserved to the person over 13 years.',
                     'title'     => ''
                 );
                 header("Location: /index.php?name=Register ");
