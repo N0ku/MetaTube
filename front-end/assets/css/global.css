@@ -81,10 +81,20 @@ button {
     cursor: pointer;
 }
 
+a {
+    cursor: pointer;
+}
+
 
 
 /* Components */
 
-.explorer-video-channel-name, .explorer-video-number-views, .explorer-video-date, .explorer-description, .video-number-views, .video-date, .video-channel-name {
+.explorer-video-channel-name,
+.explorer-video-number-views,
+.explorer-video-date,
+.explorer-description,
+.video-number-views,
+.video-date,
+.video-channel-name {
     color: var(--video-elements);
 }
