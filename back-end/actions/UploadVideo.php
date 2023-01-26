@@ -20,7 +20,7 @@ function upload()
 	}
 	$maxsize = 1000000000000;
 	if (isset($_FILES['video']['name']) && $_FILES['video']['name'] != '') {
-		$path_key = "C:/Users/Ruiseki/sprint/MetaTube/storage/";
+		$path_key = "./storage/";
 		// $path_key = "/Users/celian/Documents/MetaTube/storage/";
 		$target_file = $path_key . $_FILES["video"]["name"];
 
