@@ -26,11 +26,11 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
             'message' => "Welcome, {$data['username']}",
             'title'     => ''
         );
-        if (isset($_SESSION['lastPage'])) {
+   /*      if (isset($_SESSION['lastPage'])) {
             header("Location: /" . $_SESSION['lastPage']);
         } else {
             header("Location: /index.php?name=Home");
-        }
+        } */
     } else {
         //CHECK IF EMAIL EXIST
         if ($res["username"] != $data["email"]) {
@@ -40,11 +40,11 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
                 'title'     => ''
             );
             //$_SESSION['signup_error']= $enJson['form']['error']['signup'];
-            if (isset($_SESSION['lastPage'])) {
+      /*       if (isset($_SESSION['lastPage'])) {
                 header("Location: /" . $_SESSION['lastPage']);
             } else {
                 header("Location: /index.php?name=Home");
-            };
+            }; */
         } else {
             //CHECK IF PASSWORD IS CORRECT
             $_SESSION['toastr'] = array(
