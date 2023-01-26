@@ -1,9 +1,7 @@
-const modalAccount = document.getElementsByClassName(".bloc-modal")[0];
-const modalCreationAccount = document.getElementsByClassName(".feature-channel-modal-overlay-channel")[0];
-const modalUploadVideo = document.getElementsByClassName(".modal-container-channel")[0];
-const modalCreateUploadVideo = document.getElementsByClassName(".feature-channel-modal-overlay-uploadVideo")[0];
-
-console.log('fichier chargé')
+const modalAccount = document.querySelector(".bloc-modal");
+const modalCreationAccount = document.querySelector(".feature-channel-modal-overlay-channel");
+const modalUploadVideo = document.querySelector(".modal-container-channel");
+const modalCreateUploadVideo = document.querySelector(".feature-channel-modal-overlay-uploadVideo")
 
 function feature_open_accountCreator_function(){
     console.log(modalAccount)
