@@ -4,6 +4,7 @@ if (isset($_POST['channelCreated'])) {
     createChannel();
 }
 
+
 ob_start() ?>
 
 
@@ -19,11 +20,13 @@ ob_start() ?>
                 <input class="btn-image" type="file" name="channelImg">
                 <label id="info_name">Nom :</label>
                 <input class="feature-channel-modal-username" type="text" name="channelName">
-                <input type="submit" name="channelCreated" class="btn-create" value="<?php echo $enJson['creation']['create'] ?>">
+                <input type="submit" name="channelCreated" class="btn-create"
+                    value="<?php echo $enJson['creation']['create'] ?>">
             </form>
         </div>
         <div class="feature-channel-control-btn">
-            <button class="btn-cancel" onclick="feature_remove_accountCreator_function()"><?php echo $enJson['creation']['cancel'] ?></button>
+            <button class="btn-cancel"
+                onclick="feature_remove_accountCreator_function()"><?php echo $enJson['creation']['cancel'] ?></button>
         </div>
 
 

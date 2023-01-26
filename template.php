@@ -33,9 +33,9 @@
     <?= $channelVideoUpload ?>
 
     <?php if ($pageName != "404") {
+        echo $channelCreation;
         echo $navBar;
     } ?>
-
     <div class="content">
         <div class="menus">
             <?php if ($pageName != "404") {
